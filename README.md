@@ -13,7 +13,7 @@ bonus affixes come along with each option.
 - [x] Typed data model (`model/entities.py`)
 - [x] Pruned-DFS feasibility/enumeration solver (`solver/build_solver.py`), 5 unit tests passing
 - [x] Streamlit UI (`app.py`), smoke-tested against the full dataset
-- [ ] **Socket-shape data — not scrapable from MistfallDB, confirmed by direct inspection.** Sockets are a fixed property of each base gear item; `data/processed/sockets_ruleset.csv` has all 464 items with empty `socket_count`/`socket_shapes` columns, 0 filled in so far. **The solver returns no builds until this is filled in** for at least the class/slot combos you care about (start with Sorcerer helmets). It excludes any item with unknown sockets rather than guessing.
+- [ ] **Socket-shape data — not scrapable from MistfallDB, confirmed by direct inspection.** Socket shape is a property of the specific gear VARIANT (not the base item — confirmed via Raven Priest Robe, whose 9 variants each carry a different socket-shape combo). `data/processed/variant_sockets.csv` has all 1707 variants with an empty `socket_shapes` column (9 filled in so far, from Raven Priest Robe). **The solver excludes any variant with unknown sockets rather than guessing.** Socket *count* is not manual, though — see below.
 - [ ] Per-affix stack caps — also not published by MistfallDB (its "Unlocks at" field is a different mechanic, a single roll's 1-32 level breakpoint, not a stacking cap). Add known caps to `data/processed/affix_caps_override.json` (currently just `valor: 7, elusive: 5`) and rerun `scraper/parse_affixes.py`.
 
 ## Key mechanics (confirmed 2026-08-05)
@@ -24,13 +24,18 @@ bonus affixes come along with each option.
   one stack, capped per-affix (e.g. Valor caps at 7). This is a different
   mechanic from MistfallDB's documented "affix roll level 1-32" scaling, which
   is about a single item's roll quality, not multi-item stacking.
-- Gear pieces come in fixed archetypes per base item: either 2 gem sockets, or
-  1 gem socket + 1 fixed/prebuilt affix. Some base items roll random affixes
-  (multiple "variant" URLs, e.g. Ace Assassin Boots has an Aegis/Ethereal/
-  Seeker/... roll each), others have a hardcoded fixed affix instead of a roll.
 - Gem shapes = gem type names on MistfallDB: Moonstone, Peridot, Agate, Onyx,
   Amethyst, Purple Rhomb (+ a universal "slot all" socket). Tier 1 gems grant
   one affix, tier 2 gems grant two.
+- **Socket count is derived, not manual**, from rarity + whether the variant
+  carries an affix: budget is 3 (Legendary) / 2 (Epic, Excellent) / 1 (Rare),
+  minus 1 if the variant has a named affix, 0 if it's a "Base roll." Common/
+  Damaged are unmodeled (confirmed not worth it); Holy wasn't covered by the
+  rule and needs the same manual treatment as socket shape. See
+  `model.entities.expected_socket_count` / `RARITY_SOCKET_BUDGET`.
+- **Socket shape is NOT derivable** — it's bespoke per variant (e.g. Raven
+  Priest Robe's "Aegis" roll takes a peridot gem, its "Curse" roll takes
+  amethyst). Has to be entered by hand, or pasted in bulk — see below.
 
 ## Setup
 
@@ -46,17 +51,30 @@ python scraper/fetch.py --list-sitemap                 # see URL counts by secti
 python scraper/fetch.py --section affixes               # cache all /affixes/* pages (also: gems, armor, weapons)
 python scraper/parse_affixes.py                         # -> data/processed/affixes.json
 python scraper/parse_gems.py                            # -> data/processed/gems.json
-python scraper/parse_gear.py                             # -> data/processed/gear.json + sockets_ruleset.csv template
+python scraper/parse_gear.py                             # -> data/processed/gear.json + variant_sockets.csv template
 ```
 
-## Filling in socket data
+## Filling in socket shape data
 
-Open `data/processed/sockets_ruleset.csv`. For each item you care about, fill in:
-- `socket_count`: how many gem sockets it has
-- `socket_shapes`: comma-separated shapes, e.g. `purple_rhomb,purple_rhomb` or `agate` — must
-  match a gem shape (moonstone/peridot/agate/onyx/amethyst/purple_rhomb) or `universal`
+`data/processed/variant_sockets.csv` has one row per gear **variant** (not base item), with an
+`expected_socket_count` reference column (derived from rarity, see above) and an empty
+`socket_shapes` column to fill in:
+- comma-separated shapes, e.g. `purple_rhomb,purple_rhomb` or `agate` — must match a gem shape
+  (moonstone/peridot/agate/onyx/amethyst/purple_rhomb) or `universal`
+- literal `none` for a confirmed-zero-socket variant (distinct from blank = not yet entered)
 
 No rerun needed — `model/entities.py` reads the CSV directly at load time.
+
+Fast path for bulk entry, in the compact format ("name, shape" per line, matched against real
+affix names to tell fixed-affix lines from Base-roll lines):
+
+```
+python scraper/ingest_variant_shapes.py raven-priest-robe <<'EOF'
+1. ethereal, agate
+2. tenacious, amethyst
+...
+EOF
+```
 
 ## Running the app
 

@@ -23,33 +23,33 @@ def make_game_data() -> GameData:
         Gem("stoic-agate", "Stoic Agate", "agate", 1, ("stoic",)),
     ]
 
-    # Head slot: item A has a fixed Valor roll + one purple_rhomb socket.
+    # Head slot: item A has a fixed Valor roll + one purple_rhomb socket
+    # (Legendary budget 3, minus 1 for the fixed affix = 2 -- but only 1
+    # entered here on purpose, to also cover "fewer sockets than the rarity
+    # budget allows" being handled fine since shapes are just whatever's
+    # actually entered in variant_sockets.csv, not re-derived).
     item_a = GearItem(
         slug="item-a", name="Item A", kind="armor", classes=("Sorcerer",),
         slot="Head", rarity="Legendary",
-        variants=(GearVariant("item-a-v1", "valor", 500),),
-        socket_count=1, socket_shapes=("purple_rhomb",),
+        variants=(GearVariant("item-a-v1", "valor", 500, "Legendary", ("purple_rhomb",)),),
     )
     # Head slot: item B has no innate affix, two purple_rhomb sockets.
     item_b = GearItem(
         slug="item-b", name="Item B", kind="armor", classes=("Sorcerer",),
         slot="Head", rarity="Legendary",
-        variants=(GearVariant("item-b-v1", None, 480),),
-        socket_count=2, socket_shapes=("purple_rhomb", "purple_rhomb"),
+        variants=(GearVariant("item-b-v1", None, 480, "Legendary", ("purple_rhomb", "purple_rhomb")),),
     )
     # Chest slot: item C, one agate socket only, no innate affix options relevant here.
     item_c = GearItem(
         slug="item-c", name="Item C", kind="armor", classes=("Sorcerer",),
         slot="Chest", rarity="Rare",
-        variants=(GearVariant("item-c-v1", None, 300),),
-        socket_count=1, socket_shapes=("agate",),
+        variants=(GearVariant("item-c-v1", None, 300, "Rare", ("agate",)),),
     )
-    # An item with unknown sockets must never appear in results.
+    # An item with unknown sockets (socket_shapes=None) must never appear in results.
     item_unknown = GearItem(
         slug="item-unknown", name="Item Unknown", kind="armor", classes=("Sorcerer",),
         slot="Head", rarity="Legendary",
-        variants=(GearVariant("item-unknown-v1", "valor", 999),),
-        socket_count=None, socket_shapes=(),
+        variants=(GearVariant("item-unknown-v1", "valor", 999, "Legendary", None),),
     )
     data.gear = [item_a, item_b, item_c, item_unknown]
     return data

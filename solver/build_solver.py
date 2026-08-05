@@ -11,9 +11,10 @@ possible builds," not "the best build," so this does a pruned exhaustive
 search over the (small, once filtered to target-relevant candidates)
 combinatorial space instead of using a MIP/CP-SAT solver.
 
-Only gear with `socket_count` filled in (see sockets_ruleset.csv) is
-considered -- items with unknown sockets are invisible to the solver until
-that data is entered, rather than silently assumed to have zero sockets.
+Only gear VARIANTS with `socket_shapes` filled in (see variant_sockets.csv)
+are considered -- variants with unknown sockets are invisible to the solver
+until that data is entered, rather than silently assumed to have zero
+sockets.
 """
 from __future__ import annotations
 
@@ -25,8 +26,6 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from model.entities import GameData, GearItem, GearVariant, Gem  # noqa: E402
-
-_NO_AFFIX_VARIANT = GearVariant(slug="", affix_slug=None, combat_value=0)
 
 
 @dataclass(frozen=True)
@@ -73,12 +72,7 @@ def _candidate_slot_picks(
 ) -> list[SlotPick]:
     """Every (item, variant, socket-assignment) combo for one slot that
     grants at least one target affix, via innate roll and/or socketed gems."""
-    items = [
-        g for g in data.gear
-        if g.slot == slot
-        and g.usable_by(class_req)
-        and g.socket_count is not None
-    ]
+    items = [g for g in data.gear if g.slot == slot and g.usable_by(class_req)]
 
     relevant_gems_by_shape: dict[str | None, list[Gem]] = {}
     for gem in data.gems:
@@ -88,12 +82,13 @@ def _candidate_slot_picks(
 
     picks: list[SlotPick] = []
     for item in items:
-        variants = item.variants or (_NO_AFFIX_VARIANT,)
-        for variant in variants:
+        for variant in item.variants:
+            if variant.socket_shapes is None:
+                continue  # not yet entered in variant_sockets.csv
             variant_relevant = variant.affix_slug in target_slugs
 
             per_socket_options: list[list[SocketPick]] = []
-            for shape in item.socket_shapes:
+            for shape in variant.socket_shapes:
                 options = [SocketPick(shape, None)]
                 for gshape, gems in relevant_gems_by_shape.items():
                     if shape == "universal" or gshape == shape:

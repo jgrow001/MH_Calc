@@ -8,20 +8,26 @@ Each base item's "drops with different affix rolls" section lists its
 variants (slug, affix, combat value) directly on the base page, so no
 per-variant fetch is needed.
 
-Also emits data/processed/sockets_ruleset.csv: one row per base item with
-empty socket_count / socket_shapes columns. Socket data isn't present
-anywhere on MistfallDB (confirmed 2026-08-05) -- it's a fixed property of
-each physical item that has to be filled in by hand, incrementally, only
-for the class/slot combos you actually care about.
+Also emits data/processed/variant_sockets.csv: one row per gear VARIANT
+(not base item -- confirmed 2026-08-05 that socket shape is a per-variant
+property, e.g. Raven Priest Robe's 9 variants each have their own distinct
+socket shape(s)) with an empty socket_shapes column to fill in by hand,
+plus an expected_socket_count reference column derived from the rarity
+budget rule (see model/entities.py) so you can sanity-check how many
+shapes to enter.
 """
 from __future__ import annotations
 
 import csv
 import json
 import re
+import sys
 from pathlib import Path
 
 from html_utils import dt_dd_pairs, h1_title
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from model.entities import expected_socket_count  # noqa: E402
 
 RAW_DIR = Path(__file__).resolve().parent.parent / "data" / "raw"
 OUT_DIR = Path(__file__).resolve().parent.parent / "data" / "processed"
@@ -73,44 +79,46 @@ def main() -> None:
     gear_path.write_text(json.dumps(items, indent=2), encoding="utf-8")
     print(f"wrote {len(items)} base gear items -> {gear_path}")
 
-    sockets_path = OUT_DIR / "sockets_ruleset.csv"
-    existing_slugs: set[str] = set()
-    if sockets_path.exists():
-        with sockets_path.open(newline="", encoding="utf-8") as f:
-            existing_slugs = {row["slug"] for row in csv.DictReader(f)}
-
-    fieldnames = [
-        "slug", "name", "kind", "class", "slot", "rarity",
-        "num_variants", "socket_count", "socket_shapes",
-    ]
+    sockets_path = OUT_DIR / "variant_sockets.csv"
+    existing_variant_slugs: set[str] = set()
     rows = []
     if sockets_path.exists():
         with sockets_path.open(newline="", encoding="utf-8") as f:
             rows = list(csv.DictReader(f))
+            existing_variant_slugs = {row["variant_slug"] for row in rows}
+
+    fieldnames = [
+        "variant_slug", "base_slug", "base_name", "kind", "class", "slot", "rarity",
+        "affix", "combat_value", "expected_socket_count", "socket_shapes",
+    ]
     new_rows = 0
     for item in items:
-        if item["slug"] in existing_slugs:
-            continue
-        rows.append({
-            "slug": item["slug"],
-            "name": item["name"],
-            "kind": item["kind"],
-            "class": item["class"] or "",
-            "slot": item["slot"] or "",
-            "rarity": item["rarity"] or "",
-            "num_variants": len(item["variants"]),
-            "socket_count": "",
-            "socket_shapes": "",
-        })
-        new_rows += 1
+        for v in item["variants"]:
+            if v["slug"] in existing_variant_slugs:
+                continue
+            has_affix = v["affix"] != "Base roll"
+            rows.append({
+                "variant_slug": v["slug"],
+                "base_slug": item["slug"],
+                "base_name": item["name"],
+                "kind": item["kind"],
+                "class": item["class"] or "",
+                "slot": item["slot"] or "",
+                "rarity": item["rarity"] or "",
+                "affix": v["affix"],
+                "combat_value": v["combat_value"],
+                "expected_socket_count": expected_socket_count(item["rarity"], has_affix),
+                "socket_shapes": "",
+            })
+            new_rows += 1
 
     with sockets_path.open("w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(rows)
     print(
-        f"sockets_ruleset.csv: {new_rows} new rows added, "
-        f"{len(rows)} total ({sum(1 for r in rows if r['socket_count'])} filled in) -> {sockets_path}"
+        f"variant_sockets.csv: {new_rows} new rows added, "
+        f"{len(rows)} total ({sum(1 for r in rows if r['socket_shapes'])} filled in) -> {sockets_path}"
     )
 
 

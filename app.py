@@ -26,16 +26,17 @@ data = get_data()
 
 st.title("Mistfall Hunters — Build Calculator")
 
-with_sockets = sum(1 for g in data.gear if g.socket_count is not None)
+total_variants = sum(len(g.variants) for g in data.gear)
+with_sockets = sum(1 for g in data.gear for v in g.variants if v.socket_shapes is not None)
 st.caption(
     f"{len(data.affixes_by_slug)} affixes · {len(data.gems)} gems · "
-    f"{len(data.gear)} gear items ({with_sockets} with socket data filled in)"
+    f"{len(data.gear)} gear items ({with_sockets}/{total_variants} variants with socket data filled in)"
 )
 if with_sockets == 0:
     st.warning(
-        "No gear items have socket data filled in yet (`data/processed/sockets_ruleset.csv`), "
-        "so the solver has nothing to search over. Fill in socket_count/socket_shapes for the "
-        "class/slot combos you care about, then rerun `scraper/parse_gear.py` if the base data changed."
+        "No gear variants have socket data filled in yet (`data/processed/variant_sockets.csv`), "
+        "so the solver has nothing to search over. Fill in socket_shapes for the "
+        "class/slot/variant combos you care about — no rerun needed, the app reads the CSV directly."
     )
 
 classes = data.classes()

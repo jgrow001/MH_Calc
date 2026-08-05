@@ -1,9 +1,23 @@
 """Typed data model + loader for the scraped MistfallDB data.
 
-Loads data/processed/{affixes,gems,gear}.json + sockets_ruleset.csv into a
+Loads data/processed/{affixes,gems,gear}.json + variant_sockets.csv into a
 single GameData object the solver and UI both consume. This is the one
 place that knows how the raw scrape output is shaped, so parse_*.py can
 stay dumb regex extractors.
+
+Socket shape is a property of the specific gear VARIANT, not the base item
+-- confirmed 2026-08-05 against a real example (Raven Priest Robe, 9
+variants: 7 named-affix rolls each with their own single socket shape, plus
+2 "Base roll" variants each with a different pair of socket shapes). It is
+not derivable from any general rule and has to be entered by hand per
+variant in variant_sockets.csv.
+
+Socket COUNT, however, is derivable: every variant is either a named-affix
+roll (1 fixed affix + budget-1 gem sockets) or a "Base roll" (0 affix +
+budget gem sockets), where budget is fixed per rarity (confirmed by the
+user): Legendary=3, Epic/Excellent=2, Rare=1. See RARITY_SOCKET_BUDGET.
+Common/Damaged are intentionally unmodeled (confirmed not worth it); Holy
+wasn't covered by the stated rule and needs the same manual treatment.
 """
 from __future__ import annotations
 
@@ -13,6 +27,23 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data" / "processed"
+
+RARITY_SOCKET_BUDGET: dict[str, int] = {
+    "Legendary": 3,
+    "Epic": 2,
+    "Excellent": 2,
+    "Rare": 1,
+}
+
+
+def expected_socket_count(rarity: str | None, has_affix: bool) -> int | None:
+    """Total gem sockets for a variant, derived from rarity + whether it
+    carries a fixed/rolled affix. None if the rarity isn't in the budget
+    table (unmodeled rarity, e.g. Common/Damaged/Holy)."""
+    budget = RARITY_SOCKET_BUDGET.get(rarity or "")
+    if budget is None:
+        return None
+    return max(budget - 1, 0) if has_affix else budget
 
 
 @dataclass(frozen=True)
@@ -37,6 +68,12 @@ class GearVariant:
     slug: str
     affix_slug: str | None  # None for "Base roll" (no innate affix)
     combat_value: int
+    rarity: str | None
+    socket_shapes: tuple[str, ...] | None  # None = not yet entered in variant_sockets.csv
+
+    @property
+    def expected_socket_count(self) -> int | None:
+        return expected_socket_count(self.rarity, has_affix=self.affix_slug is not None)
 
 
 @dataclass(frozen=True)
@@ -48,8 +85,6 @@ class GearItem:
     slot: str | None
     rarity: str | None
     variants: tuple[GearVariant, ...]
-    socket_count: int | None  # None = not yet filled into sockets_ruleset.csv
-    socket_shapes: tuple[str, ...]  # e.g. ("purple_rhomb", "purple_rhomb") or ("universal",)
 
     def usable_by(self, class_req: str) -> bool:
         return "Any" in self.classes or class_req in self.classes
@@ -119,23 +154,24 @@ def load_game_data(data_dir: Path = DATA_DIR) -> GameData:
                 affix_slugs=affix_slugs,
             ))
 
-    sockets_by_slug: dict[str, dict] = {}
-    sockets_path = data_dir / "sockets_ruleset.csv"
-    if sockets_path.exists():
-        with sockets_path.open(newline="", encoding="utf-8") as f:
+    shapes_by_variant_slug: dict[str, tuple[str, ...]] = {}
+    variant_sockets_path = data_dir / "variant_sockets.csv"
+    if variant_sockets_path.exists():
+        with variant_sockets_path.open(newline="", encoding="utf-8") as f:
             for row in csv.DictReader(f):
-                if row.get("socket_count"):
-                    shapes = tuple(
-                        s.strip() for s in row.get("socket_shapes", "").split(",") if s.strip()
+                raw = (row.get("socket_shapes") or "").strip()
+                if raw.lower() == "none":
+                    shapes_by_variant_slug[row["variant_slug"]] = ()  # confirmed zero sockets
+                elif raw:
+                    shapes_by_variant_slug[row["variant_slug"]] = tuple(
+                        s.strip() for s in raw.split(",") if s.strip()
                     )
-                    sockets_by_slug[row["slug"]] = {
-                        "socket_count": int(row["socket_count"]),
-                        "socket_shapes": shapes,
-                    }
+                # else: blank = not yet entered, leave unset (None) so it's excluded
 
     gear_path = data_dir / "gear.json"
     if gear_path.exists():
         for it in json.loads(gear_path.read_text(encoding="utf-8")):
+            rarity = it.get("rarity")
             variants = tuple(
                 GearVariant(
                     slug=v["slug"],
@@ -143,10 +179,11 @@ def load_game_data(data_dir: Path = DATA_DIR) -> GameData:
                         None if v["affix"] == "Base roll" else resolve_affix_name(v["affix"])
                     ),
                     combat_value=v["combat_value"],
+                    rarity=rarity,
+                    socket_shapes=shapes_by_variant_slug.get(v["slug"]),
                 )
                 for v in it.get("variants", [])
             )
-            sock = sockets_by_slug.get(it["slug"])
             raw_classes = it.get("class") or ""
             classes = tuple(c.strip() for c in raw_classes.split(",") if c.strip()) or ("Any",)
             data.gear.append(GearItem(
@@ -155,10 +192,8 @@ def load_game_data(data_dir: Path = DATA_DIR) -> GameData:
                 kind=it["kind"],
                 classes=classes,
                 slot=it.get("slot"),
-                rarity=it.get("rarity"),
+                rarity=rarity,
                 variants=variants,
-                socket_count=sock["socket_count"] if sock else None,
-                socket_shapes=sock["socket_shapes"] if sock else (),
             ))
 
     return data
@@ -173,5 +208,6 @@ if __name__ == "__main__":
         print(f"WARNING: {len(gd.unresolved_affix_names)} affix names didn't resolve to a known affix:")
         for n in sorted(gd.unresolved_affix_names)[:20]:
             print(f"  {n!r}")
-    with_sockets = sum(1 for g in gd.gear if g.socket_count is not None)
-    print(f"gear items with socket data filled in: {with_sockets}/{len(gd.gear)}")
+    total_variants = sum(len(g.variants) for g in gd.gear)
+    with_shapes = sum(1 for g in gd.gear for v in g.variants if v.socket_shapes is not None)
+    print(f"variants with socket shapes filled in: {with_shapes}/{total_variants}")
