@@ -1,11 +1,218 @@
 [
   {
+    "slug": "aegis-creation-moonstone",
+    "name": "Aegis Creation Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Spirit Shield",
+      "Creation"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "aegis-curseward-moonstone",
+    "name": "Aegis Curseward Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Spirit Shield",
+      "Curse"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "aegis-fervor-moonstone",
+    "name": "Aegis Fervor Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Spirit Shield",
+      "Fervor"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "aegis-flawless-moonstone",
+    "name": "Aegis Flawless Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Spirit Shield",
+      "Seamless"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "aegis-fury-moonstone",
+    "name": "Aegis Fury Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Spirit Shield",
+      "Wrath"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "aegis-haste-moonstone",
+    "name": "Aegis Haste Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Spirit Shield",
+      "Swift"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "aegis-ironhelm-agate",
+    "name": "Aegis: Ironhelm Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Aegis",
+      "Iron Helmet"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "aegis-stalwart-agate",
+    "name": "Aegis: Stalwart Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Aegis",
+      "Stoic"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "aegis-steelwall-agate",
+    "name": "Aegis: Steelwall Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Aegis",
+      "Bulwark"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "aegis-tenacious-agate",
+    "name": "Aegis: Tenacious Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Aegis",
+      "Tenacious"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
     "slug": "agile-peridot",
     "name": "Agile Peridot",
     "shape": "peridot",
     "tier": 1,
     "affixes": [
       "Elusive"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "agility-blessing-peridot",
+    "name": "Agility Blessing Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Elusive",
+      "Blessing"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "agility-dexterity-peridot",
+    "name": "Agility Dexterity Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Elusive",
+      "Deft"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "agility-fortune-peridot",
+    "name": "Agility Fortune Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Elusive",
+      "Wealth"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "allied-burst-moonstone",
+    "name": "Allied Burst Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Brotherhood",
+      "Burst"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "allied-unyielding-moonstone",
+    "name": "Allied Unyielding Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Brotherhood",
+      "Unyielding"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "artifice-moonstone",
+    "name": "Artifice Moonstone",
+    "shape": "moonstone",
+    "tier": 1,
+    "affixes": [
+      "Creation"
     ],
     "gem_level": "1",
     "combat_value": "25",
@@ -19,6 +226,3862 @@
     "affixes": [
       "Valor",
       "Fervor"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "battle-spirit-curse-resist-purple-rhomb-gem",
+    "name": "Battle Spirit: Curse Resist Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Valor",
+      "Curse"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "battle-spirit-fervor-purple-rhomb-gem",
+    "name": "Battle Spirit: Fervor Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Valor",
+      "Fervid"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "battle-spirit-pierce-purple-rhomb-gem",
+    "name": "Battle Spirit: Pierce Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Valor",
+      "Sky Piercer"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "battle-spirit-pursuit-purple-rhomb-gem",
+    "name": "Battle Spirit: Pursuit Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Valor",
+      "Seeker"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "battle-spirit-rage-purple-rhomb-gem",
+    "name": "Battle Spirit: Rage Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Valor",
+      "Wrath"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "battle-spirit-ranged-purple-rhomb-gem",
+    "name": "Battle Spirit: Ranged Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Valor",
+      "Ranged"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "battle-spirit-vitality-purple-rhomb-gem",
+    "name": "Battle Spirit: Vitality Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Valor",
+      "Vitality"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "battlebond-fighting-spirit-agate",
+    "name": "Battlebond \u00b7 Fighting Spirit Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Brotherhood",
+      "Valor"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "battlewill-fervor-agate",
+    "name": "Battlewill\u00b7Fervor Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Valor",
+      "Fervid"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "battlewill-focus-agate",
+    "name": "Battlewill\u00b7Focus Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Valor",
+      "Focused"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "battlewill-skysunder-agate",
+    "name": "Battlewill\u00b7Skysunder Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Valor",
+      "Sky Piercer"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "blast-moonstone",
+    "name": "Blast Moonstone",
+    "shape": "moonstone",
+    "tier": 1,
+    "affixes": [
+      "Burst"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "blessed-peridot",
+    "name": "Blessed Peridot",
+    "shape": "peridot",
+    "tier": 1,
+    "affixes": [
+      "Blessing"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "blessing-fortune-peridot",
+    "name": "Blessing Fortune Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Blessing",
+      "Wealth"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "brawl-focus-agate",
+    "name": "Brawl \u00b7 Focus Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Strife",
+      "Focused"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "brawling-peridot",
+    "name": "Brawling Peridot",
+    "shape": "peridot",
+    "tier": 1,
+    "affixes": [
+      "Strife"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "brotherhood-fervor-agate",
+    "name": "Brotherhood\u00b7Fervor Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Brotherhood",
+      "Fervid"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "brotherhood-focus-agate",
+    "name": "Brotherhood\u00b7Focus Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Brotherhood",
+      "Focused"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "brotherhood-onyx",
+    "name": "Brotherhood Onyx",
+    "shape": "onyx",
+    "tier": 1,
+    "affixes": [
+      "Brotherhood"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "brotherhood-skysunder-agate",
+    "name": "Brotherhood\u00b7Skysunder Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Brotherhood",
+      "Sky Piercer"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "brutal-alacrity-peridot",
+    "name": "Brutal Alacrity Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Smiting",
+      "Elusive"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "brutal-blessed-peridot",
+    "name": "Brutal Blessed Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Smiting",
+      "Blessing"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "brutal-cunning-peridot",
+    "name": "Brutal Cunning Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Smiting",
+      "Eloquence"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "brutal-flawless-peridot",
+    "name": "Brutal Flawless Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Smiting",
+      "Seamless"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "brutal-fortune-peridot",
+    "name": "Brutal Fortune Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Smiting",
+      "Wealth"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "brutal-sleight-peridot",
+    "name": "Brutal Sleight Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Smiting",
+      "Deft"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "brutal-vitality-peridot",
+    "name": "Brutal Vitality Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Smiting",
+      "Vitality"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "bulwark-brotherhood-agate",
+    "name": "Bulwark\u00b7Brotherhood Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Bulwark",
+      "Brotherhood"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "bulwark-endurance-agate",
+    "name": "Bulwark\u00b7Endurance Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Bulwark",
+      "Stoic"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "bulwark-iron-helm-agate",
+    "name": "Bulwark\u00b7Iron Helm Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Bulwark",
+      "Iron Helmet"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "burst-haste-moonstone",
+    "name": "Burst Haste Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Burst",
+      "Swift"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "burst-seamless-moonstone",
+    "name": "Burst Seamless Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Burst",
+      "Seamless"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "bursting-conjuring-moonstone",
+    "name": "Bursting - Conjuring Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Burst",
+      "Creation"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "bursting-cursing-moonstone",
+    "name": "Bursting - Cursing Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Burst",
+      "Curse"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "camaraderie-brawl-agate",
+    "name": "Camaraderie \u00b7 Brawl Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Brotherhood",
+      "Strife"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "camaraderie-ranged-ward-agate",
+    "name": "Camaraderie \u00b7 Ranged Ward Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Brotherhood",
+      "Distant Ward"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "carnage-onyx",
+    "name": "Carnage Onyx",
+    "shape": "onyx",
+    "tier": 1,
+    "affixes": [
+      "Strife"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "crush-melee-peridot",
+    "name": "Crush \u00b7 Melee Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Smiting",
+      "Strife"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "crushing-peridot",
+    "name": "Crushing Peridot",
+    "shape": "peridot",
+    "tier": 1,
+    "affixes": [
+      "Smiting"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "cunning-alacrity-peridot",
+    "name": "Cunning Alacrity Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Eloquence",
+      "Elusive"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "cunning-blessed-peridot",
+    "name": "Cunning Blessed Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Eloquence",
+      "Blessing"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "cunning-flawless-peridot",
+    "name": "Cunning Flawless Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Eloquence",
+      "Seamless"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "cunning-fortune-peridot",
+    "name": "Cunning Fortune Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Eloquence",
+      "Wealth"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "cunning-sleight-peridot",
+    "name": "Cunning Sleight Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Eloquence",
+      "Deft"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "cunning-vitality-peridot",
+    "name": "Cunning Vitality Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Eloquence",
+      "Vitality"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "curseward-amethyst",
+    "name": "Curseward Amethyst",
+    "shape": "amethyst",
+    "tier": 1,
+    "affixes": [
+      "Curse"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "curseward-craft-moonstone",
+    "name": "Curseward \u00b7 Craft Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Curse",
+      "Creation"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "curseward-moonstone",
+    "name": "Curseward Moonstone",
+    "shape": "moonstone",
+    "tier": 1,
+    "affixes": [
+      "Curse"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "deft-peridot",
+    "name": "Deft Peridot",
+    "shape": "peridot",
+    "tier": 1,
+    "affixes": [
+      "Deft"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "dexterity-blessing-peridot",
+    "name": "Dexterity Blessing Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Deft",
+      "Blessing"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "dexterity-fortune-peridot",
+    "name": "Dexterity Fortune Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Deft",
+      "Wealth"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "farguard-peridot",
+    "name": "Farguard Peridot",
+    "shape": "peridot",
+    "tier": 1,
+    "affixes": [
+      "Distant Ward"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "farstrike-peridot",
+    "name": "Farstrike Peridot",
+    "shape": "peridot",
+    "tier": 1,
+    "affixes": [
+      "Ranged"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fervor-amethyst",
+    "name": "Fervor Amethyst",
+    "shape": "amethyst",
+    "tier": 1,
+    "affixes": [
+      "Fervid"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fervor-brawl-agate",
+    "name": "Fervor \u00b7 Brawl Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Fervid",
+      "Strife"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fervor-craft-moonstone",
+    "name": "Fervor \u00b7 Craft Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Fervor",
+      "Creation"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fervor-curseward-moonstone",
+    "name": "Fervor \u00b7 Curseward Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Fervor",
+      "Curse"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fervor-focus-agate",
+    "name": "Fervor\u00b7Focus Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Fervid",
+      "Focused"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fervor-haste-moonstone",
+    "name": "Fervor \u00b7 Haste Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Fervor",
+      "Swift"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fervor-onyx",
+    "name": "Fervor Onyx",
+    "shape": "onyx",
+    "tier": 1,
+    "affixes": [
+      "Fervid"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fervor-seamless-moonstone",
+    "name": "Fervor \u00b7 Seamless Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Fervor",
+      "Seamless"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fierce-battle-blessed-peridot",
+    "name": "Fierce Battle: Blessed Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Strife",
+      "Blessing"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fierce-battle-deft-peridot",
+    "name": "Fierce Battle: Deft Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Strife",
+      "Deft"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fierce-battle-nimble-peridot",
+    "name": "Fierce Battle: Nimble Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Strife",
+      "Elusive"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fierce-battle-wealth-peridot",
+    "name": "Fierce Battle: Wealth Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Strife",
+      "Wealth"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fighting-spirit-brawl-agate",
+    "name": "Fighting Spirit \u00b7 Brawl Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Valor",
+      "Strife"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "flawless-agility-peridot",
+    "name": "Flawless Agility Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Seamless",
+      "Elusive"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "flawless-blessing-peridot",
+    "name": "Flawless Blessing Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Seamless",
+      "Blessing"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "flawless-dexterity-peridot",
+    "name": "Flawless Dexterity Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Seamless",
+      "Deft"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "flawless-fortune-peridot",
+    "name": "Flawless Fortune Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Seamless",
+      "Wealth"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "flawless-peridot",
+    "name": "Flawless Peridot",
+    "shape": "peridot",
+    "tier": 1,
+    "affixes": [
+      "Seamless"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "flawless-vitality-peridot",
+    "name": "Flawless Vitality Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Seamless",
+      "Vitality"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "focus-onyx",
+    "name": "Focus Onyx",
+    "shape": "onyx",
+    "tier": 1,
+    "affixes": [
+      "Focused"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fortitude-amethyst",
+    "name": "Fortitude Amethyst",
+    "shape": "amethyst",
+    "tier": 1,
+    "affixes": [
+      "Stoic"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fortitude-battle-will-purple-rhomb-gem",
+    "name": "Fortitude: Battle Will Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Stoic",
+      "Fervor"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fortitude-battlebond-agate",
+    "name": "Fortitude \u00b7 Battlebond Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Stoic",
+      "Brotherhood"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fortitude-brawl-agate",
+    "name": "Fortitude \u00b7 Brawl Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Stoic",
+      "Strife"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fortitude-brotherhood-agate",
+    "name": "Fortitude\u00b7Brotherhood Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Tenacious",
+      "Brotherhood"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fortitude-bulwark-agate",
+    "name": "Fortitude\u00b7Bulwark Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Tenacious",
+      "Bulwark"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fortitude-curse-resist-purple-rhomb-gem",
+    "name": "Fortitude: Curse Resist Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Stoic",
+      "Curse"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fortitude-endurance-agate",
+    "name": "Fortitude\u00b7Endurance Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Tenacious",
+      "Stoic"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fortitude-fervor-agate",
+    "name": "Fortitude \u00b7 Fervor Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Stoic",
+      "Fervid"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fortitude-fervor-purple-rhomb-gem",
+    "name": "Fortitude: Fervor Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Stoic",
+      "Fervid"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fortitude-fighting-spirit-agate",
+    "name": "Fortitude \u00b7 Fighting Spirit Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Stoic",
+      "Valor"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fortitude-fighting-spirit-purple-rhomb-stone",
+    "name": "Fortitude \u00b7 Fighting Spirit Purple Rhomb Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Stoic",
+      "Valor"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fortitude-focus-agate-221235",
+    "name": "Fortitude \u00b7 Focus Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Stoic",
+      "Focused"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fortitude-focus-agate",
+    "name": "Fortitude\u00b7Focus Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Tenacious",
+      "Focused"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fortitude-hotblood-agate",
+    "name": "Fortitude\u00b7Hotblood Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Tenacious",
+      "Fervid"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fortitude-iron-helm-agate",
+    "name": "Fortitude\u00b7Iron Helm Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Tenacious",
+      "Iron Helmet"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fortitude-onyx",
+    "name": "Fortitude Onyx",
+    "shape": "onyx",
+    "tier": 1,
+    "affixes": [
+      "Stoic"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fortitude-pierce-purple-rhomb-gem",
+    "name": "Fortitude: Pierce Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Stoic",
+      "Sky Piercer"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fortitude-pursuit-purple-rhomb-gem",
+    "name": "Fortitude: Pursuit Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Stoic",
+      "Seeker"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fortitude-rage-purple-rhomb-stone",
+    "name": "Fortitude \u00b7 Rage Purple Rhomb Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Stoic",
+      "Wrath"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fortitude-ranged-purple-rhomb-gem",
+    "name": "Fortitude: Ranged Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Stoic",
+      "Ranged"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fortitude-ranged-ward-agate",
+    "name": "Fortitude \u00b7 Ranged Ward Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Stoic",
+      "Distant Ward"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fortitude-resilience-purple-rhomb-gem",
+    "name": "Fortitude\u00b7Resilience Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Stoic",
+      "Resilience"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fortitude-skycleave-agate",
+    "name": "Fortitude \u00b7 Skycleave Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Stoic",
+      "Sky Piercer"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fortitude-skysunder-agate",
+    "name": "Fortitude\u00b7Skysunder Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Tenacious",
+      "Sky Piercer"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fortitude-unyielding-purple-rhomb-gem",
+    "name": "Fortitude\u00b7Unyielding Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Stoic",
+      "Unyielding"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fortitude-vitality-purple-rhomb-gem",
+    "name": "Fortitude: Vitality Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Stoic",
+      "Vitality"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fortitude-zeal-agate",
+    "name": "Fortitude\u00b7Zeal Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Tenacious",
+      "Valor"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fortune-peridot",
+    "name": "Fortune Peridot",
+    "shape": "peridot",
+    "tier": 1,
+    "affixes": [
+      "Wealth"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fury-fervor-moonstone",
+    "name": "Fury Fervor Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Wrath",
+      "Fervor"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "fury-flawless-moonstone",
+    "name": "Fury Flawless Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Wrath",
+      "Seamless"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "guardian-moonstone",
+    "name": "Guardian Moonstone",
+    "shape": "moonstone",
+    "tier": 1,
+    "affixes": [
+      "Aegis"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "haste-craft-moonstone",
+    "name": "Haste \u00b7 Craft Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Swift",
+      "Creation"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "haste-curseward-moonstone",
+    "name": "Haste \u00b7 Curseward Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Swift",
+      "Curse"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "haste-moonstone",
+    "name": "Haste Moonstone",
+    "shape": "moonstone",
+    "tier": 1,
+    "affixes": [
+      "Swift"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "hotblood-battle-zeal-purple-rhombus-stone",
+    "name": "Hotblood\u00b7Battle Zeal Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Fervid",
+      "Fervor"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "hotblood-curseward-purple-rhomb-gem",
+    "name": "Hotblood\u00b7Curseward Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Fervid",
+      "Curse"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "hotblood-pursuit-purple-rhombus-stone",
+    "name": "Hotblood\u00b7Pursuit Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Fervid",
+      "Seeker"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "hotblood-ranged-purple-rhombus-stone",
+    "name": "Hotblood\u00b7Ranged Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Fervid",
+      "Ranged"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "hotblood-vigor-purple-rhombus-stone",
+    "name": "Hotblood\u00b7Vigor Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Fervid",
+      "Vitality"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "impenetrable-moonstone",
+    "name": "Impenetrable Moonstone",
+    "shape": "moonstone",
+    "tier": 1,
+    "affixes": [
+      "Seamless"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "iron-helm-agate",
+    "name": "Iron Helm Agate",
+    "shape": "agate",
+    "tier": 1,
+    "affixes": [
+      "Iron Helmet"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "iron-helm-battlebond-agate",
+    "name": "Iron Helm \u00b7 Battlebond Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Iron Helmet",
+      "Brotherhood"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "iron-helm-brawl-agate",
+    "name": "Iron Helm \u00b7 Brawl Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Iron Helmet",
+      "Strife"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "iron-helm-fervor-agate",
+    "name": "Iron Helm \u00b7 Fervor Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Iron Helmet",
+      "Fervid"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "iron-helm-fighting-spirit-agate",
+    "name": "Iron Helm \u00b7 Fighting Spirit Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Iron Helmet",
+      "Valor"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "iron-helm-focus-agate",
+    "name": "Iron Helm \u00b7 Focus Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Iron Helmet",
+      "Focused"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "iron-helm-fortitude-agate",
+    "name": "Iron Helm \u00b7 Fortitude Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Iron Helmet",
+      "Stoic"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "iron-helm-skycleave-agate",
+    "name": "Iron Helm \u00b7 Skycleave Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Iron Helmet",
+      "Sky Piercer"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ironhelm-rangeward-agate",
+    "name": "Ironhelm\u00b7Rangeward Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Iron Helmet",
+      "Distant Ward"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "light-aegis-moonstone",
+    "name": "Light\u00b7Aegis Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Ethereal",
+      "Spirit Shield"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "light-cleansing-moonstone",
+    "name": "Light\u00b7Cleansing Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Ethereal",
+      "Curse"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "light-fervor-moonstone",
+    "name": "Light\u00b7Fervor Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Ethereal",
+      "Fervor"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "light-flawless-moonstone",
+    "name": "Light\u00b7Flawless Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Ethereal",
+      "Seamless"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "light-haste-moonstone",
+    "name": "Light\u00b7Haste Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Ethereal",
+      "Swift"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "light-unity-moonstone",
+    "name": "Light\u00b7Unity Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Ethereal",
+      "Brotherhood"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "light-wrath-moonstone",
+    "name": "Light\u00b7Wrath Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Ethereal",
+      "Wrath"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "lightfoot-moonstone",
+    "name": "Lightfoot Moonstone",
+    "shape": "moonstone",
+    "tier": 1,
+    "affixes": [
+      "Ethereal"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "lightweight-burst-moonstone",
+    "name": "Lightweight Burst Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Ethereal",
+      "Burst"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "lightweight-creation-moonstone",
+    "name": "Lightweight Creation Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Ethereal",
+      "Creation"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "melee-bulwark-peridot",
+    "name": "Melee \u00b7 Bulwark Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Strife",
+      "Seamless"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "melee-persuasion-peridot",
+    "name": "Melee \u00b7 Persuasion Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Strife",
+      "Eloquence"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "melee-vitality-peridot",
+    "name": "Melee \u00b7 Vitality Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Strife",
+      "Vitality"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "nimble-unyielding-moonstone",
+    "name": "Nimble \u00b7 Unyielding Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Ethereal",
+      "Unyielding"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "persuasive-peridot",
+    "name": "Persuasive Peridot",
+    "shape": "peridot",
+    "tier": 1,
+    "affixes": [
+      "Eloquence"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "pierce-brawl-agate",
+    "name": "Pierce \u00b7 Brawl Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Sky Piercer",
+      "Strife"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "pursuit-amethyst",
+    "name": "Pursuit Amethyst",
+    "shape": "amethyst",
+    "tier": 1,
+    "affixes": [
+      "Seeker"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "pursuit-curseward-purple-rhomb-gem",
+    "name": "Pursuit\u00b7Curseward Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Seeker",
+      "Curse"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "pursuit-ranged-purple-rhomb-gem",
+    "name": "Pursuit\u00b7Ranged Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Seeker",
+      "Ranged"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "pursuit-vitality-purple-rhomb-gem",
+    "name": "Pursuit\u00b7Vitality Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Seeker",
+      "Vitality"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "pursuit-zeal-purple-rhomb-gem",
+    "name": "Pursuit\u00b7Zeal Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Seeker",
+      "Fervor"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "rage-craft-moonstone",
+    "name": "Rage \u00b7 Craft Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Wrath",
+      "Creation"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "rage-curseward-moonstone",
+    "name": "Rage \u00b7 Curseward Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Wrath",
+      "Curse"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "rage-haste-moonstone",
+    "name": "Rage \u00b7 Haste Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Wrath",
+      "Swift"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "rage-pierce-purple-rhomb-gem",
+    "name": "Rage: Pierce Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Wrath",
+      "Sky Piercer"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ranged-agile-peridot",
+    "name": "Ranged - Agile Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Ranged",
+      "Elusive"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ranged-blessed-peridot",
+    "name": "Ranged Blessed Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Ranged",
+      "Blessing"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ranged-curseward-purple-rhomb-gem",
+    "name": "Ranged\u00b7Curseward Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Ranged",
+      "Curse"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ranged-flawless-peridot",
+    "name": "Ranged - Flawless Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Ranged",
+      "Seamless"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ranged-fortune-peridot",
+    "name": "Ranged Fortune Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Ranged",
+      "Wealth"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ranged-melee-peridot",
+    "name": "Ranged \u00b7 Melee Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Ranged",
+      "Strife"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ranged-power-amethyst",
+    "name": "Ranged Power Amethyst",
+    "shape": "amethyst",
+    "tier": 1,
+    "affixes": [
+      "Ranged"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ranged-sleight-peridot",
+    "name": "Ranged Sleight Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Ranged",
+      "Deft"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ranged-smiting-peridot",
+    "name": "Ranged - Smiting Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Ranged",
+      "Smiting"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ranged-vigorous-peridot",
+    "name": "Ranged - Vigorous Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Ranged",
+      "Vitality"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ranged-vitality-purple-rhomb-gem",
+    "name": "Ranged\u00b7Vitality Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Ranged",
+      "Vitality"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ranged-ward-agility-peridot",
+    "name": "Ranged Ward \u00b7 Agility Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Distant Ward",
+      "Elusive"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ranged-ward-blessing-peridot",
+    "name": "Ranged Ward \u00b7 Blessing Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Distant Ward",
+      "Blessing"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ranged-ward-brawl-agate",
+    "name": "Ranged Ward \u00b7 Brawl Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Distant Ward",
+      "Strife"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ranged-ward-bulwark-peridot",
+    "name": "Ranged Ward \u00b7 Bulwark Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Distant Ward",
+      "Seamless"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ranged-ward-crush-peridot",
+    "name": "Ranged Ward \u00b7 Crush Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Distant Ward",
+      "Smiting"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ranged-ward-dexterity-peridot",
+    "name": "Ranged Ward \u00b7 Dexterity Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Distant Ward",
+      "Deft"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ranged-ward-fervor-agate",
+    "name": "Ranged Ward \u00b7 Fervor Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Distant Ward",
+      "Fervid"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ranged-ward-fighting-spirit-agate",
+    "name": "Ranged Ward \u00b7 Fighting Spirit Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Distant Ward",
+      "Valor"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ranged-ward-focus-agate",
+    "name": "Ranged Ward \u00b7 Focus Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Distant Ward",
+      "Focused"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ranged-ward-fortune-peridot",
+    "name": "Ranged Ward \u00b7 Fortune Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Distant Ward",
+      "Wealth"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ranged-ward-melee-peridot",
+    "name": "Ranged Ward \u00b7 Melee Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Distant Ward",
+      "Strife"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ranged-ward-onyx",
+    "name": "Ranged Ward Onyx",
+    "shape": "onyx",
+    "tier": 1,
+    "affixes": [
+      "Distant Ward"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ranged-ward-persuasion-peridot",
+    "name": "Ranged Ward \u00b7 Persuasion Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Distant Ward",
+      "Eloquence"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ranged-ward-pierce-agate",
+    "name": "Ranged Ward \u00b7 Pierce Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Distant Ward",
+      "Sky Piercer"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ranged-ward-ranged-peridot",
+    "name": "Ranged Ward \u00b7 Ranged Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Distant Ward",
+      "Ranged"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ranged-ward-vitality-peridot",
+    "name": "Ranged Ward \u00b7 Vitality Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Distant Ward",
+      "Vitality"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ranged-wily-peridot",
+    "name": "Ranged - Wily Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Ranged",
+      "Eloquence"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ranged-zeal-purple-rhomb-gem",
+    "name": "Ranged\u00b7Zeal Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Ranged",
+      "Fervor"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "resilience-amethyst",
+    "name": "Resilience Amethyst",
+    "shape": "amethyst",
+    "tier": 1,
+    "affixes": [
+      "Resilience"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "resolve-amethyst",
+    "name": "Resolve Amethyst",
+    "shape": "amethyst",
+    "tier": 1,
+    "affixes": [
+      "Valor"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "resolve-onyx",
+    "name": "Resolve Onyx",
+    "shape": "onyx",
+    "tier": 1,
+    "affixes": [
+      "Valor"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "seamless-craft-moonstone",
+    "name": "Seamless \u00b7 Craft Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Seamless",
+      "Creation"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "seamless-curseward-moonstone",
+    "name": "Seamless \u00b7 Curseward Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Seamless",
+      "Curse"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "seamless-haste-moonstone",
+    "name": "Seamless \u00b7 Haste Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Seamless",
+      "Swift"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "skycleave-battle-zeal-purple-rhombus-stone",
+    "name": "Skycleave\u00b7Battle Zeal Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Sky Piercer",
+      "Fervor"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "skycleave-cursebreak-purple-rhombus-stone",
+    "name": "Skycleave\u00b7Cursebreak Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Sky Piercer",
+      "Curse"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "skycleave-hotblood-purple-rhombus-stone",
+    "name": "Skycleave\u00b7Hotblood Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Sky Piercer",
+      "Fervid"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "skycleave-pursuit-purple-rhombus-stone",
+    "name": "Skycleave\u00b7Pursuit Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Sky Piercer",
+      "Seeker"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "skycleave-ranged-purple-rhombus-stone",
+    "name": "Skycleave\u00b7Ranged Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Sky Piercer",
+      "Ranged"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "skycleave-vigor-purple-rhombus-stone",
+    "name": "Skycleave\u00b7Vigor Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Sky Piercer",
+      "Vitality"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "skyshatter-amethyst",
+    "name": "Skyshatter Amethyst",
+    "shape": "amethyst",
+    "tier": 1,
+    "affixes": [
+      "Sky Piercer"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "skyshatter-onyx",
+    "name": "Skyshatter Onyx",
+    "shape": "onyx",
+    "tier": 1,
+    "affixes": [
+      "Sky Piercer"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "skysunder-fervor-agate",
+    "name": "Skysunder\u00b7Fervor Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Sky Piercer",
+      "Fervid"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "skysunder-focus-agate",
+    "name": "Skysunder\u00b7Focus Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Sky Piercer",
+      "Focused"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "spellshield-burst-moonstone",
+    "name": "Spellshield Burst Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Spirit Shield",
+      "Burst"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "spellshield-moonstone",
+    "name": "Spellshield Moonstone",
+    "shape": "moonstone",
+    "tier": 1,
+    "affixes": [
+      "Spirit Shield"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "spellshield-unyielding-moonstone",
+    "name": "Spellshield Unyielding Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Spirit Shield",
+      "Unyielding"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "steel-bulwark-agate",
+    "name": "Steel Bulwark Agate",
+    "shape": "agate",
+    "tier": 1,
+    "affixes": [
+      "Bulwark"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "steel-bulwark-fervor-agate",
+    "name": "Steel Bulwark \u00b7 Fervor Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Bulwark",
+      "Fervid"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "steel-bulwark-fighting-spirit-agate",
+    "name": "Steel Bulwark \u00b7 Fighting Spirit Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Bulwark",
+      "Valor"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "steel-bulwark-focus-agate",
+    "name": "Steel Bulwark \u00b7 Focus Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Bulwark",
+      "Focused"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "steel-bulwark-skycleave-agate",
+    "name": "Steel Bulwark \u00b7 Skycleave Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Bulwark",
+      "Sky Piercer"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "steelwall-brawl-agate",
+    "name": "Steelwall\u00b7Brawl Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Bulwark",
+      "Strife"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "steelwall-rangeward-agate",
+    "name": "Steelwall\u00b7Rangeward Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Bulwark",
+      "Distant Ward"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "tenacious-agile-peridot",
+    "name": "Tenacious - Agile Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Tenacious",
+      "Elusive"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "tenacious-blessed-peridot",
+    "name": "Tenacious - Blessed Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Tenacious",
+      "Blessing"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "tenacious-dexterous-peridot",
+    "name": "Tenacious - Dexterous Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Tenacious",
+      "Deft"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "tenacious-flawless-peridot",
+    "name": "Tenacious - Flawless Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Tenacious",
+      "Seamless"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "tenacious-fortunate-peridot",
+    "name": "Tenacious - Fortunate Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Tenacious",
+      "Wealth"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "tenacious-peridot",
+    "name": "Tenacious Peridot",
+    "shape": "peridot",
+    "tier": 1,
+    "affixes": [
+      "Tenacious"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "tenacious-ranged-peridot",
+    "name": "Tenacious - Ranged Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Tenacious",
+      "Ranged"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "tenacious-smiting-peridot",
+    "name": "Tenacious - Smiting Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Tenacious",
+      "Smiting"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "tenacious-vigorous-peridot",
+    "name": "Tenacious - Vigorous Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Tenacious",
+      "Vitality"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "tenacious-wily-peridot",
+    "name": "Tenacious - Wily Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Tenacious",
+      "Eloquence"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "tenacity-agate",
+    "name": "Tenacity Agate",
+    "shape": "agate",
+    "tier": 1,
+    "affixes": [
+      "Tenacious"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "tenacity-armor-pierce-purple-rhombus-stone",
+    "name": "Tenacity \u00b7 Armor Pierce Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Resilience",
+      "Sky Piercer"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "tenacity-battle-will-purple-rhombus-stone",
+    "name": "Tenacity \u00b7 Battle Will Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Resilience",
+      "Fervor"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "tenacity-brawl-agate",
+    "name": "Tenacity\u00b7Brawl Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Tenacious",
+      "Strife"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "tenacity-curse-resistance-purple-rhombus-stone",
+    "name": "Tenacity \u00b7 Curse Resistance Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Resilience",
+      "Curse"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "tenacity-fervor-purple-rhombus-stone",
+    "name": "Tenacity \u00b7 Fervor Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Resilience",
+      "Fervid"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "tenacity-fighting-spirit-purple-rhombus-stone",
+    "name": "Tenacity \u00b7 Fighting Spirit Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Resilience",
+      "Valor"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "tenacity-fury-purple-rhombus-stone",
+    "name": "Tenacity \u00b7 Fury Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Resilience",
+      "Wrath"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "tenacity-melee-peridot",
+    "name": "Tenacity \u00b7 Melee Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Tenacious",
+      "Strife"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "tenacity-pursuit-purple-rhombus-stone",
+    "name": "Tenacity \u00b7 Pursuit Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Resilience",
+      "Seeker"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "tenacity-ranged-attack-purple-rhombus-stone",
+    "name": "Tenacity \u00b7 Ranged Attack Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Resilience",
+      "Ranged"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "tenacity-ranged-ward-peridot",
+    "name": "Tenacity Ranged Ward Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Tenacious",
+      "Distant Ward"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "tenacity-rangeward-agate",
+    "name": "Tenacity\u00b7Rangeward Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Tenacious",
+      "Distant Ward"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "tenacity-vitality-purple-rhombus-stone",
+    "name": "Tenacity \u00b7 Vitality Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Resilience",
+      "Vitality"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "tier-i-agate",
+    "name": "Tier I Agate",
+    "shape": "agate",
+    "tier": null,
+    "affixes": [],
+    "gem_level": "1",
+    "combat_value": null,
+    "tradable": "No"
+  },
+  {
+    "slug": "tier-i-amethyst",
+    "name": "Tier I Amethyst",
+    "shape": "amethyst",
+    "tier": null,
+    "affixes": [],
+    "gem_level": "1",
+    "combat_value": null,
+    "tradable": "No"
+  },
+  {
+    "slug": "tier-i-moonstone",
+    "name": "Tier I Moonstone",
+    "shape": "moonstone",
+    "tier": null,
+    "affixes": [],
+    "gem_level": "1",
+    "combat_value": null,
+    "tradable": "No"
+  },
+  {
+    "slug": "tier-i-peridot",
+    "name": "Tier I Peridot",
+    "shape": "peridot",
+    "tier": null,
+    "affixes": [],
+    "gem_level": "1",
+    "combat_value": null,
+    "tradable": "No"
+  },
+  {
+    "slug": "tier-ii-agate",
+    "name": "Tier II Agate",
+    "shape": "agate",
+    "tier": null,
+    "affixes": [],
+    "gem_level": "2",
+    "combat_value": null,
+    "tradable": "No"
+  },
+  {
+    "slug": "tier-ii-amethyst",
+    "name": "Tier II Amethyst",
+    "shape": "amethyst",
+    "tier": null,
+    "affixes": [],
+    "gem_level": "2",
+    "combat_value": null,
+    "tradable": "No"
+  },
+  {
+    "slug": "tier-ii-moonstone",
+    "name": "Tier II Moonstone",
+    "shape": "moonstone",
+    "tier": null,
+    "affixes": [],
+    "gem_level": "2",
+    "combat_value": null,
+    "tradable": "No"
+  },
+  {
+    "slug": "tier-ii-peridot",
+    "name": "Tier II Peridot",
+    "shape": "peridot",
+    "tier": null,
+    "affixes": [],
+    "gem_level": "2",
+    "combat_value": null,
+    "tradable": "No"
+  },
+  {
+    "slug": "unity-aegis-moonstone",
+    "name": "Unity Aegis Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Brotherhood",
+      "Spirit Shield"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "unity-creation-moonstone",
+    "name": "Unity Creation Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Brotherhood",
+      "Creation"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "unity-curseward-moonstone",
+    "name": "Unity Curseward Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Brotherhood",
+      "Curse"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "unity-fervor-moonstone",
+    "name": "Unity Fervor Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Brotherhood",
+      "Fervor"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "unity-flawless-moonstone",
+    "name": "Unity Flawless Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Brotherhood",
+      "Seamless"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "unity-fury-moonstone",
+    "name": "Unity Fury Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Brotherhood",
+      "Wrath"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "unity-haste-moonstone",
+    "name": "Unity Haste Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Brotherhood",
+      "Swift"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "unity-moonstone",
+    "name": "Unity Moonstone",
+    "shape": "moonstone",
+    "tier": 1,
+    "affixes": [
+      "Brotherhood"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "unyielding-amethyst",
+    "name": "Unyielding Amethyst",
+    "shape": "amethyst",
+    "tier": 1,
+    "affixes": [
+      "Unyielding"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "unyielding-armor-pierce-purple-rhombus-stone",
+    "name": "Unyielding \u00b7 Armor Pierce Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Unyielding",
+      "Sky Piercer"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "unyielding-battle-will-purple-rhombus-stone",
+    "name": "Unyielding \u00b7 Battle Will Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Unyielding",
+      "Fervor"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "unyielding-burst-moonstone",
+    "name": "Unyielding Burst Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Unyielding",
+      "Burst"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "unyielding-creation-moonstone",
+    "name": "Unyielding Creation Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Unyielding",
+      "Creation"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "unyielding-curse-resistance-purple-rhombus-stone",
+    "name": "Unyielding \u00b7 Curse Resistance Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Unyielding",
+      "Curse"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "unyielding-curseward-moonstone",
+    "name": "Unyielding Curseward Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Unyielding",
+      "Curse"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "unyielding-fervor-purple-rhombus-stone",
+    "name": "Unyielding \u00b7 Fervor Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Unyielding",
+      "Fervid"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "unyielding-haste-moonstone",
+    "name": "Unyielding Haste Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Unyielding",
+      "Swift"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "unyielding-moonstone",
+    "name": "Unyielding Moonstone",
+    "shape": "moonstone",
+    "tier": 1,
+    "affixes": [
+      "Unyielding"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "unyielding-pursuit-purple-rhombus-stone",
+    "name": "Unyielding \u00b7 Pursuit Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Unyielding",
+      "Seeker"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "unyielding-rage-purple-rhomb-gem",
+    "name": "Unyielding\u00b7Rage Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Unyielding",
+      "Wrath"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "unyielding-ranged-attack-purple-rhombus-stone",
+    "name": "Unyielding \u00b7 Ranged Attack Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Unyielding",
+      "Ranged"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "unyielding-resilience-purple-rhomb-gem",
+    "name": "Unyielding\u00b7Resilience Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Unyielding",
+      "Resilience"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "unyielding-resolve-purple-rhomb-gem",
+    "name": "Unyielding\u00b7Resolve Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Unyielding",
+      "Valor"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "unyielding-seamless-moonstone",
+    "name": "Unyielding Seamless Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Unyielding",
+      "Seamless"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "unyielding-vitality-purple-rhombus-stone",
+    "name": "Unyielding \u00b7 Vitality Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Unyielding",
+      "Vitality"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "unyielding-wrath-moonstone",
+    "name": "Unyielding Wrath Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Unyielding",
+      "Wrath"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "unyielding-zeal-moonstone",
+    "name": "Unyielding Zeal Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Unyielding",
+      "Fervor"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "vital-peridot",
+    "name": "Vital Peridot",
+    "shape": "peridot",
+    "tier": 1,
+    "affixes": [
+      "Vitality"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "vitality-agility-peridot",
+    "name": "Vitality Agility Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Vitality",
+      "Elusive"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "vitality-amethyst",
+    "name": "Vitality Amethyst",
+    "shape": "amethyst",
+    "tier": 1,
+    "affixes": [
+      "Vitality"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "vitality-blessing-peridot",
+    "name": "Vitality Blessing Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Vitality",
+      "Blessing"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "vitality-curseward-purple-rhomb-gem",
+    "name": "Vitality\u00b7Curseward Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Vitality",
+      "Curse"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "vitality-dexterity-peridot",
+    "name": "Vitality Dexterity Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Vitality",
+      "Deft"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "vitality-fortune-peridot",
+    "name": "Vitality Fortune Peridot",
+    "shape": "peridot",
+    "tier": 2,
+    "affixes": [
+      "Vitality",
+      "Wealth"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ward-aegis-moonstone",
+    "name": "Ward\u00b7Aegis Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Aegis",
+      "Spirit Shield"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ward-brawl-agate",
+    "name": "Ward\u00b7Brawl Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Aegis",
+      "Strife"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ward-cleansing-moonstone",
+    "name": "Ward\u00b7Cleansing Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Aegis",
+      "Curse"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ward-craft-moonstone",
+    "name": "Ward\u00b7Craft Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Aegis",
+      "Creation"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ward-fervor-moonstone",
+    "name": "Ward\u00b7Fervor Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Aegis",
+      "Fervor"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ward-flawless-moonstone",
+    "name": "Ward\u00b7Flawless Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Aegis",
+      "Seamless"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ward-haste-moonstone",
+    "name": "Ward\u00b7Haste Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Aegis",
+      "Swift"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ward-light-moonstone",
+    "name": "Ward\u00b7Light Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Aegis",
+      "Ethereal"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ward-rangeward-agate",
+    "name": "Ward\u00b7Rangeward Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Aegis",
+      "Distant Ward"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ward-unity-moonstone",
+    "name": "Ward\u00b7Unity Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Aegis",
+      "Brotherhood"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "ward-wrath-moonstone",
+    "name": "Ward\u00b7Wrath Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Aegis",
+      "Wrath"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "warding-agate",
+    "name": "Warding Agate",
+    "shape": "agate",
+    "tier": 1,
+    "affixes": [
+      "Aegis"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "warding-brotherhood-agate",
+    "name": "Warding\u00b7Brotherhood Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Aegis",
+      "Brotherhood"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "warding-burst-moonstone",
+    "name": "Warding \u00b7 Burst Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Aegis",
+      "Burst"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "warding-focus-agate",
+    "name": "Warding\u00b7Focus Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Aegis",
+      "Focused"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "warding-hotblood-agate",
+    "name": "Warding\u00b7Hotblood Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Aegis",
+      "Fervid"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "warding-skysunder-agate",
+    "name": "Warding\u00b7Skysunder Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Aegis",
+      "Sky Piercer"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "warding-unyielding-moonstone",
+    "name": "Warding \u00b7 Unyielding Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Aegis",
+      "Unyielding"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "warding-zeal-agate",
+    "name": "Warding\u00b7Zeal Agate",
+    "shape": "agate",
+    "tier": 2,
+    "affixes": [
+      "Aegis",
+      "Valor"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "warspirit-amethyst",
+    "name": "Warspirit Amethyst",
+    "shape": "amethyst",
+    "tier": 1,
+    "affixes": [
+      "Fervor"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "warspirit-moonstone",
+    "name": "Warspirit Moonstone",
+    "shape": "moonstone",
+    "tier": 1,
+    "affixes": [
+      "Fervor"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "wrath-amethyst",
+    "name": "Wrath Amethyst",
+    "shape": "amethyst",
+    "tier": 1,
+    "affixes": [
+      "Wrath"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "wrath-battle-zeal-purple-rhombus-stone",
+    "name": "Wrath\u00b7Battle Zeal Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Wrath",
+      "Fervor"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "wrath-burst-moonstone",
+    "name": "Wrath Burst Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Wrath",
+      "Burst"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "wrath-cursebreak-purple-rhombus-stone",
+    "name": "Wrath\u00b7Cursebreak Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Wrath",
+      "Curse"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "wrath-hotblood-purple-rhombus-stone",
+    "name": "Wrath\u00b7Hotblood Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Wrath",
+      "Fervid"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "wrath-moonstone",
+    "name": "Wrath Moonstone",
+    "shape": "moonstone",
+    "tier": 1,
+    "affixes": [
+      "Wrath"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "wrath-pursuit-purple-rhombus-stone",
+    "name": "Wrath\u00b7Pursuit Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Wrath",
+      "Seeker"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "wrath-ranged-purple-rhombus-stone",
+    "name": "Wrath\u00b7Ranged Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Wrath",
+      "Ranged"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "wrath-vigor-purple-rhombus-stone",
+    "name": "Wrath\u00b7Vigor Purple Rhombus Stone",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Wrath",
+      "Vitality"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "zeal-burst-moonstone",
+    "name": "Zeal Burst Moonstone",
+    "shape": "moonstone",
+    "tier": 2,
+    "affixes": [
+      "Fervor",
+      "Burst"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "zeal-curseward-purple-rhomb-gem",
+    "name": "Zeal\u00b7Curseward Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Fervor",
+      "Curse"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "zeal-vitality-purple-rhomb-gem",
+    "name": "Zeal\u00b7Vitality Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Fervor",
+      "Vitality"
     ],
     "gem_level": "2",
     "combat_value": "50",
