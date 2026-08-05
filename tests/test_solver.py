@@ -5,7 +5,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from model.entities import Affix, GameData, GearItem, GearVariant, Gem  # noqa: E402
+from model.entities import Affix, GameData, GearItem, GearVariant, Gem, SocketSpec  # noqa: E402
 from solver.build_solver import find_builds  # noqa: E402
 
 
@@ -21,9 +21,10 @@ def make_game_data() -> GameData:
         Gem("valor-peridot", "Valor Peridot", "peridot", 1, ("valor",)),
         Gem("valor-elusive-rhomb", "Valor Elusive Rhomb", "purple_rhomb", 2, ("valor", "elusive")),
         Gem("stoic-agate", "Stoic Agate", "agate", 1, ("stoic",)),
+        Gem("stoic-elusive-agate-t2", "Stoic Elusive Agate", "agate", 2, ("stoic", "elusive")),
     ]
 
-    # Head slot: item A has a fixed Valor roll + one purple_rhomb socket
+    # Head slot: item A has a fixed Valor roll + one T1 purple_rhomb socket
     # (Legendary budget 3, minus 1 for the fixed affix = 2 -- but only 1
     # entered here on purpose, to also cover "fewer sockets than the rarity
     # budget allows" being handled fine since shapes are just whatever's
@@ -31,19 +32,30 @@ def make_game_data() -> GameData:
     item_a = GearItem(
         slug="item-a", name="Item A", kind="armor", classes=("Sorcerer",),
         slot="Head", rarity="Legendary",
-        variants=(GearVariant("item-a-v1", "valor", 500, "Legendary", ("purple_rhomb",)),),
+        variants=(GearVariant("item-a-v1", "valor", 500, "Legendary", (SocketSpec("purple_rhomb", 1),)),),
     )
-    # Head slot: item B has no innate affix, two purple_rhomb sockets.
+    # Head slot: item B has no innate affix, two T2 purple_rhomb sockets
+    # (needed so the T2 "Valor Elusive Rhomb" gem has somewhere to go).
     item_b = GearItem(
         slug="item-b", name="Item B", kind="armor", classes=("Sorcerer",),
         slot="Head", rarity="Legendary",
-        variants=(GearVariant("item-b-v1", None, 480, "Legendary", ("purple_rhomb", "purple_rhomb")),),
+        variants=(GearVariant(
+            "item-b-v1", None, 480, "Legendary",
+            (SocketSpec("purple_rhomb", 2), SocketSpec("purple_rhomb", 2)),
+        ),),
     )
-    # Chest slot: item C, one agate socket only, no innate affix options relevant here.
+    # Chest slot: item C, one T1 agate socket -- can hold the T1 stoic gem
+    # but NOT the T2 stoic/elusive gem (tier restriction).
     item_c = GearItem(
         slug="item-c", name="Item C", kind="armor", classes=("Sorcerer",),
         slot="Chest", rarity="Rare",
-        variants=(GearVariant("item-c-v1", None, 300, "Rare", ("agate",)),),
+        variants=(GearVariant("item-c-v1", None, 300, "Rare", (SocketSpec("agate", 1),)),),
+    )
+    # Legs slot: item D, one T2 agate socket -- can hold either stoic gem.
+    item_d = GearItem(
+        slug="item-d", name="Item D", kind="armor", classes=("Sorcerer",),
+        slot="Legs", rarity="Rare",
+        variants=(GearVariant("item-d-v1", None, 300, "Rare", (SocketSpec("agate", 2),)),),
     )
     # An item with unknown sockets (socket_shapes=None) must never appear in results.
     item_unknown = GearItem(
@@ -51,7 +63,7 @@ def make_game_data() -> GameData:
         slot="Head", rarity="Legendary",
         variants=(GearVariant("item-unknown-v1", "valor", 999, "Legendary", None),),
     )
-    data.gear = [item_a, item_b, item_c, item_unknown]
+    data.gear = [item_a, item_b, item_c, item_d, item_unknown]
     return data
 
 
@@ -86,9 +98,10 @@ def test_multi_affix_target_and_bonus_reporting():
         totals = b.total_affix_counts()
         assert totals.get("valor", 0) >= 2
         assert totals.get("elusive", 0) >= 1
-        # elusive only ever comes bundled with valor via the tier-2 gem here,
-        # so nothing outside the two targets should show up as a "bonus"
-        assert b.bonus_affixes({"valor", "elusive"}) == {}
+        # elusive is only reachable here via gems that also grant stoic (the
+        # tier-2 rhomb gem on Head, or item-d's tier-2 agate gem on Legs),
+        # so "stoic" tagging along as a bonus is expected, nothing else is
+        assert b.bonus_affixes({"valor", "elusive"}).keys() <= {"stoic"}
 
 
 def test_stoic_target_pulls_in_chest_slot():
@@ -99,6 +112,39 @@ def test_stoic_target_pulls_in_chest_slot():
         any(pick.slot == "Chest" for pick in b.picks)
         for b in builds
     )
+
+
+def test_socket_tier_accepts_rule():
+    t1_gem = Gem("g1", "G1", "agate", 1, ("stoic",))
+    t2_gem = Gem("g2", "G2", "agate", 2, ("stoic", "elusive"))
+    t1_socket = SocketSpec("agate", 1)
+    t2_socket = SocketSpec("agate", 2)
+    assert t1_socket.accepts(t1_gem)
+    assert not t1_socket.accepts(t2_gem)
+    assert t2_socket.accepts(t1_gem)
+    assert t2_socket.accepts(t2_gem)
+
+
+def test_solver_respects_socket_tier_end_to_end():
+    data = GameData()
+    data.affixes_by_slug = {
+        "stoic": Affix("stoic", "Stoic", "Defensive", stack_cap=5),
+        "elusive": Affix("elusive", "Elusive", "Utility", stack_cap=5),
+    }
+    data.gems = [
+        Gem("stoic-agate", "Stoic Agate", "agate", 1, ("stoic",)),
+        Gem("stoic-elusive-agate-t2", "Stoic Elusive Agate", "agate", 2, ("stoic", "elusive")),
+    ]
+    item_c = GearItem(
+        slug="item-c", name="Item C", kind="armor", classes=("Sorcerer",),
+        slot="Chest", rarity="Rare",
+        variants=(GearVariant("item-c-v1", None, 300, "Rare", (SocketSpec("agate", 1),)),),
+    )
+    data.gear = [item_c]
+    # a T1 socket can never hold the T2 gem that grants elusive here
+    assert find_builds(data, "Sorcerer", {"elusive": 1}, max_results=5) == []
+    # but stoic alone is reachable via the T1 gem in that same T1 socket
+    assert find_builds(data, "Sorcerer", {"stoic": 1}, max_results=5)
 
 
 if __name__ == "__main__":

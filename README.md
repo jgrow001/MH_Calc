@@ -11,7 +11,7 @@ bonus affixes come along with each option.
 - [x] Sitemap crawler + HTML cache (`scraper/fetch.py`)
 - [x] Field-mapped extractors for affixes / gems / gear (`scraper/parse_*.py`) — full crawl done: 44 affixes, 320 gems, 464 gear items (374 armor + 90 weapons)
 - [x] Typed data model (`model/entities.py`)
-- [x] Pruned-DFS feasibility/enumeration solver (`solver/build_solver.py`), 5 unit tests passing
+- [x] Pruned-DFS feasibility/enumeration solver (`solver/build_solver.py`), 7 unit tests passing
 - [x] Streamlit UI (`app.py`), smoke-tested against the full dataset
 - [ ] **Socket-shape data — not scrapable from MistfallDB, confirmed by direct inspection.** Socket shape is a property of the specific gear VARIANT (not the base item — confirmed via Raven Priest Robe, whose 9 variants each carry a different socket-shape combo). `data/processed/variant_sockets.csv` has all 1707 variants with an empty `socket_shapes` column (9 filled in so far, from Raven Priest Robe). **The solver excludes any variant with unknown sockets rather than guessing.** Socket *count* is not manual, though — see below.
 - [ ] Per-affix stack caps — also not published by MistfallDB (its "Unlocks at" field is a different mechanic, a single roll's 1-32 level breakpoint, not a stacking cap). Add known caps to `data/processed/affix_caps_override.json` (currently just `valor: 7, elusive: 5`) and rerun `scraper/parse_affixes.py`.
@@ -36,6 +36,10 @@ bonus affixes come along with each option.
 - **Socket shape is NOT derivable** — it's bespoke per variant (e.g. Raven
   Priest Robe's "Aegis" roll takes a peridot gem, its "Curse" roll takes
   amethyst). Has to be entered by hand, or pasted in bulk — see below.
+- **Sockets also have a tier**: a T2 socket accepts T1 or T2 gems; a T1
+  socket only accepts T1 gems. Encoded as a digit suffix on the shape token
+  (`amethyst2` = T2 amethyst socket); no digit defaults to T1. See
+  `SocketSpec.accepts()` in `model/entities.py`.
 
 ## Setup
 

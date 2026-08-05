@@ -18,11 +18,18 @@ budget gem sockets), where budget is fixed per rarity (confirmed by the
 user): Legendary=3, Epic/Excellent=2, Rare=1. See RARITY_SOCKET_BUDGET.
 Common/Damaged are intentionally unmodeled (confirmed not worth it); Holy
 wasn't covered by the stated rule and needs the same manual treatment.
+
+Sockets also have a TIER (confirmed 2026-08-05): a T2 socket accepts T1 or
+T2 gems, a T1 socket only accepts T1 gems. Encoded in variant_sockets.csv as
+a digit suffix on the shape token, e.g. "amethyst2" = T2 amethyst socket;
+bare "amethyst" defaults to T1 (confirmed: the Raven Priest Robe example
+given without tier suffixes was all-T1).
 """
 from __future__ import annotations
 
 import csv
 import json
+import re
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -64,12 +71,35 @@ class Gem:
 
 
 @dataclass(frozen=True)
+class SocketSpec:
+    shape: str  # moonstone/peridot/agate/onyx/amethyst/purple_rhomb/universal
+    tier: int = 1  # a T2 socket accepts T1 or T2 gems; a T1 socket only accepts T1
+
+    def accepts(self, gem: Gem) -> bool:
+        if self.shape != "universal" and gem.shape != self.shape:
+            return False
+        return (gem.tier or 1) <= self.tier
+
+
+_SOCKET_TOKEN_RE = re.compile(r"^([a-z_]+?)(\d)?$")
+
+
+def parse_socket_token(token: str) -> SocketSpec:
+    token = token.strip().lower()
+    m = _SOCKET_TOKEN_RE.match(token)
+    if not m:
+        raise ValueError(f"unrecognized socket token: {token!r}")
+    shape, tier_digit = m.group(1), m.group(2)
+    return SocketSpec(shape=shape, tier=int(tier_digit) if tier_digit else 1)
+
+
+@dataclass(frozen=True)
 class GearVariant:
     slug: str
     affix_slug: str | None  # None for "Base roll" (no innate affix)
     combat_value: int
     rarity: str | None
-    socket_shapes: tuple[str, ...] | None  # None = not yet entered in variant_sockets.csv
+    socket_shapes: tuple[SocketSpec, ...] | None  # None = not yet entered in variant_sockets.csv
 
     @property
     def expected_socket_count(self) -> int | None:
@@ -154,7 +184,7 @@ def load_game_data(data_dir: Path = DATA_DIR) -> GameData:
                 affix_slugs=affix_slugs,
             ))
 
-    shapes_by_variant_slug: dict[str, tuple[str, ...]] = {}
+    shapes_by_variant_slug: dict[str, tuple[SocketSpec, ...]] = {}
     variant_sockets_path = data_dir / "variant_sockets.csv"
     if variant_sockets_path.exists():
         with variant_sockets_path.open(newline="", encoding="utf-8") as f:
@@ -164,7 +194,7 @@ def load_game_data(data_dir: Path = DATA_DIR) -> GameData:
                     shapes_by_variant_slug[row["variant_slug"]] = ()  # confirmed zero sockets
                 elif raw:
                     shapes_by_variant_slug[row["variant_slug"]] = tuple(
-                        s.strip() for s in raw.split(",") if s.strip()
+                        parse_socket_token(s) for s in raw.split(",") if s.strip()
                     )
                 # else: blank = not yet entered, leave unset (None) so it's excluded
 

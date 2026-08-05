@@ -78,11 +78,12 @@ def render_build(i: int, build: Build, target_slugs: set[str]) -> None:
                 if pick.variant.affix_slug:
                     st.caption(f"Innate: {data.affixes_by_slug[pick.variant.affix_slug].name}")
                 for sock in pick.sockets:
+                    socket_label = f"{sock.socket.shape} T{sock.socket.tier}"
                     if sock.gem:
                         granted = ", ".join(data.affixes_by_slug[a].name for a in sock.gem.affix_slugs)
-                        st.caption(f"Gem ({sock.shape}): {sock.gem.name} → {granted}")
+                        st.caption(f"Gem ({socket_label}): {sock.gem.name} → {granted}")
                     else:
-                        st.caption(f"Empty socket ({sock.shape})")
+                        st.caption(f"Empty socket ({socket_label})")
 
         st.divider()
         for slug in target_slugs:

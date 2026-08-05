@@ -17,6 +17,10 @@ Each line is either:
   - "<shape>, <shape>[, ...]"              -- a "Base roll" variant (no affix),
     first token matches a known gem shape instead
 
+A shape token may have a trailing tier digit, e.g. "amethyst2" for a T2
+amethyst socket (a T2 socket accepts T1 or T2 gems, T1 only accepts T1).
+No digit = T1. Written to socket_shapes as-is (e.g. "amethyst2,peridot").
+
 Zero-socket rows are written as the literal "none" (not blank) in
 socket_shapes, so the loader can tell "confirmed zero sockets" apart from
 "not yet entered" -- see model/entities.py.
@@ -45,10 +49,16 @@ SOCKETS_PATH = OUT_DIR / "variant_sockets.csv"
 
 KNOWN_SHAPES = {"moonstone", "peridot", "agate", "onyx", "amethyst", "purple_rhomb", "universal"}
 LINE_PREFIX_RE = re.compile(r"^\s*\d+[.):]?\s*")
+TRAILING_TIER_RE = re.compile(r"(\d)$")
 
 
 def normalize_shape(token: str) -> str:
     return token.strip().lower().replace(" ", "_").replace("-", "_")
+
+
+def base_shape(token: str) -> str:
+    """Strip a trailing tier digit, e.g. 'amethyst2' -> 'amethyst'."""
+    return TRAILING_TIER_RE.sub("", token)
 
 
 def load_affix_names() -> set[str]:
@@ -98,7 +108,7 @@ def main() -> None:
     unmatched: list[tuple[str | None, list[str]]] = []
 
     for affix_name, shapes in entries:
-        bad_shapes = [s for s in shapes if s not in KNOWN_SHAPES]
+        bad_shapes = [s for s in shapes if base_shape(s) not in KNOWN_SHAPES]
         if bad_shapes:
             print(f"WARNING: unrecognized shape(s) {bad_shapes} in line for {affix_name or shapes!r} -- skipped")
             unmatched.append((affix_name, shapes))

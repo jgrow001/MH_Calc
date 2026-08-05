@@ -25,12 +25,12 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from model.entities import GameData, GearItem, GearVariant, Gem  # noqa: E402
+from model.entities import GameData, GearItem, GearVariant, Gem, SocketSpec  # noqa: E402
 
 
 @dataclass(frozen=True)
 class SocketPick:
-    shape: str
+    socket: SocketSpec
     gem: Gem | None  # None = left empty
 
 
@@ -74,11 +74,9 @@ def _candidate_slot_picks(
     grants at least one target affix, via innate roll and/or socketed gems."""
     items = [g for g in data.gear if g.slot == slot and g.usable_by(class_req)]
 
-    relevant_gems_by_shape: dict[str | None, list[Gem]] = {}
-    for gem in data.gems:
-        if not any(a in target_slugs for a in gem.affix_slugs):
-            continue
-        relevant_gems_by_shape.setdefault(gem.shape, []).append(gem)
+    relevant_gems = [
+        gem for gem in data.gems if any(a in target_slugs for a in gem.affix_slugs)
+    ]
 
     picks: list[SlotPick] = []
     for item in items:
@@ -88,11 +86,11 @@ def _candidate_slot_picks(
             variant_relevant = variant.affix_slug in target_slugs
 
             per_socket_options: list[list[SocketPick]] = []
-            for shape in variant.socket_shapes:
-                options = [SocketPick(shape, None)]
-                for gshape, gems in relevant_gems_by_shape.items():
-                    if shape == "universal" or gshape == shape:
-                        options.extend(SocketPick(shape, gem) for gem in gems)
+            for socket in variant.socket_shapes:
+                options = [SocketPick(socket, None)]
+                options.extend(
+                    SocketPick(socket, gem) for gem in relevant_gems if socket.accepts(gem)
+                )
                 per_socket_options.append(options)
 
             if not per_socket_options:
