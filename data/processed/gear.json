@@ -1,0 +1,59 @@
+[
+  {
+    "slug": "ace-assassin-boots",
+    "kind": "armor",
+    "name": "Ace Assassin Boots",
+    "slot": "Feet",
+    "rarity": "Legendary",
+    "class": "Shadowstrix",
+    "combat_value": "600",
+    "durability": "1500",
+    "variants": [
+      {
+        "slug": "ace-assassin-boots-1560401",
+        "affix": "Aegis",
+        "combat_value": 525
+      },
+      {
+        "slug": "ace-assassin-boots-1560402",
+        "affix": "Ethereal",
+        "combat_value": 525
+      },
+      {
+        "slug": "ace-assassin-boots-1560403",
+        "affix": "Seeker",
+        "combat_value": 525
+      },
+      {
+        "slug": "ace-assassin-boots-1560404",
+        "affix": "Fervor",
+        "combat_value": 525
+      },
+      {
+        "slug": "ace-assassin-boots-1560405",
+        "affix": "Smiting",
+        "combat_value": 525
+      },
+      {
+        "slug": "ace-assassin-boots-1560406",
+        "affix": "Elusive",
+        "combat_value": 525
+      },
+      {
+        "slug": "ace-assassin-boots-1560407",
+        "affix": "Deft",
+        "combat_value": 525
+      },
+      {
+        "slug": "ace-assassin-boots-1560408",
+        "affix": "Base roll",
+        "combat_value": 500
+      },
+      {
+        "slug": "ace-assassin-boots-1560409",
+        "affix": "Base roll",
+        "combat_value": 500
+      }
+    ]
+  }
+]

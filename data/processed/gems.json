@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "agile-peridot",
+    "name": "Agile Peridot",
+    "shape": "peridot",
+    "tier": 1,
+    "affixes": [
+      "Elusive"
+    ],
+    "gem_level": "1",
+    "combat_value": "25",
+    "tradable": "Yes"
+  },
+  {
+    "slug": "battle-spirit-battle-will-purple-rhomb-gem",
+    "name": "Battle Spirit: Battle Will Purple Rhomb Gem",
+    "shape": "purple_rhomb",
+    "tier": 2,
+    "affixes": [
+      "Valor",
+      "Fervor"
+    ],
+    "gem_level": "2",
+    "combat_value": "50",
+    "tradable": "Yes"
+  }
+]

@@ -1,0 +1,354 @@
+[
+  {
+    "slug": "aegis",
+    "name": "Aegis",
+    "category": "Defensive",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "blessing",
+    "name": "Blessing",
+    "category": "Utility",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "brotherhood",
+    "name": "Brotherhood",
+    "category": "Defensive",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "bulwark",
+    "name": "Bulwark",
+    "category": "Defensive",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "burst",
+    "name": "Burst",
+    "category": "Offensive",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "creation",
+    "name": "Creation",
+    "category": "Utility",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "curse",
+    "name": "Curse",
+    "category": "Utility",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "defence-penetration",
+    "name": "Defence Penetration",
+    "category": "Offensive",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "deft",
+    "name": "Deft",
+    "category": "Utility",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "distant-ward",
+    "name": "Distant Ward",
+    "category": "Defensive",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "eloquence",
+    "name": "Eloquence",
+    "category": "Utility",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "elusive",
+    "name": "Elusive",
+    "category": "Utility",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "ethereal",
+    "name": "Ethereal",
+    "category": "Defensive",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "fervid",
+    "name": "Fervid",
+    "category": "Offensive",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "fervor",
+    "name": "Fervor",
+    "category": "Offensive",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "focused",
+    "name": "Focused",
+    "category": "Utility",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "headshot-damage",
+    "name": "Headshot Damage",
+    "category": "Offensive",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "increased-stamina-recovery-speed",
+    "name": "Increased Stamina Recovery Speed",
+    "category": "Utility",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "iron-helmet",
+    "name": "Iron Helmet",
+    "category": "Defensive",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "lifebane",
+    "name": "Lifebane",
+    "category": "Offensive",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "magical-damage-reduction",
+    "name": "Magical Damage Reduction",
+    "category": "Defensive",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "physical-damage-reduction",
+    "name": "Physical Damage Reduction",
+    "category": "Defensive",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "powerful",
+    "name": "Powerful",
+    "category": "Offensive",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "ranged",
+    "name": "Ranged",
+    "category": "Offensive",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "reduced-block-stamina-cost",
+    "name": "Reduced Block Stamina Cost",
+    "category": "Utility",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "reduced-skill-stamina-cost",
+    "name": "Reduced Skill Stamina Cost",
+    "category": "Utility",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "resilience",
+    "name": "Resilience",
+    "category": "Defensive",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "seamless",
+    "name": "Seamless",
+    "category": "Utility",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "seeker",
+    "name": "Seeker",
+    "category": "Offensive",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "siphon",
+    "name": "Siphon",
+    "category": "Utility",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "sky-piercer",
+    "name": "Sky Piercer",
+    "category": "Offensive",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "smiting",
+    "name": "Smiting",
+    "category": "Offensive",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "spirit-shield",
+    "name": "Spirit Shield",
+    "category": "Defensive",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "spirit-spring",
+    "name": "Spirit Spring",
+    "category": "Defensive",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "stoic",
+    "name": "Stoic",
+    "category": "Defensive",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "strife",
+    "name": "Strife",
+    "category": "Offensive",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "swift",
+    "name": "Swift",
+    "category": "Utility",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "tenacious",
+    "name": "Tenacious",
+    "category": "Defensive",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "unyielding",
+    "name": "Unyielding",
+    "category": "Defensive",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "valor",
+    "name": "Valor",
+    "category": "Offensive",
+    "description": "Increases Attack. Upon reaching a certain level, also increases Defense Penetration. See every weapon and armor piece it rolls on, the gems that grant it\u2026",
+    "gear_count": "86",
+    "stack_cap": null
+  },
+  {
+    "slug": "vitality",
+    "name": "Vitality",
+    "category": "Utility",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "wealth",
+    "name": "Wealth",
+    "category": "Utility",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "wise",
+    "name": "Wise",
+    "category": "Offensive",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  },
+  {
+    "slug": "wrath",
+    "name": "Wrath",
+    "category": "Offensive",
+    "description": null,
+    "gear_count": null,
+    "stack_cap": null
+  }
+]
