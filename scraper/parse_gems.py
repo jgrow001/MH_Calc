@@ -6,12 +6,19 @@ Field sourcing, confirmed by inspecting real pages on 2026-08-05:
   - name       <h1>
   - affixes    meta description: "<Name> is an affix gem ... that grants X, Y."
   - tier       len(affixes) -- 1 affix = tier 1, 2 affixes = tier 2
-  - shape      keyword match against slug (moonstone/peridot/agate/onyx/
-               amethyst/rhomb) -- MistfallDB calls this the gem "type" but
-               it lines up with the socket-shape concept from the game
+  - shape      keyword match against slug/name, then folded down to the 5
+               real socket shapes confirmed by the user: amethyst, agate,
+               moonstone, peridot, universal. MistfallDB names gems "Onyx"
+               (always tier 1, single affix) and "Purple Rhomb" (always
+               tier 2, dual affix) -- these aren't separate shapes, they're
+               the game's flavor names for universal-socket gems at T1/T2
+               respectively (confirmed 2026-08-05: matches "four gem types
+               + a universal slot-all socket = 5 shapes" from the original
+               game description, and Onyx/Rhomb's tier split lines up
+               exactly with T1-only vs T2-only).
   - gem_level, combat_value, tradable  dt/dd stat rows
 Socket *count* per gear item is a separate, manually-curated concern (see
-sockets_ruleset.csv) -- gems.json only describes the gems themselves.
+variant_sockets.csv) -- gems.json only describes the gems themselves.
 """
 from __future__ import annotations
 
@@ -27,12 +34,12 @@ OUT_DIR = Path(__file__).resolve().parent.parent / "data" / "processed"
 GRANTS_RE = re.compile(r"that grants (.+?)\.?\s*$")
 
 SHAPE_KEYWORDS = [
-    ("purple rhomb", "purple_rhomb"),
-    ("rhomb", "purple_rhomb"),
+    ("purple rhomb", "universal"),
+    ("rhomb", "universal"),
+    ("onyx", "universal"),
     ("moonstone", "moonstone"),
     ("peridot", "peridot"),
     ("agate", "agate"),
-    ("onyx", "onyx"),
     ("amethyst", "amethyst"),
 ]
 

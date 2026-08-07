@@ -24,9 +24,11 @@ bonus affixes come along with each option.
   one stack, capped per-affix (e.g. Valor caps at 7). This is a different
   mechanic from MistfallDB's documented "affix roll level 1-32" scaling, which
   is about a single item's roll quality, not multi-item stacking.
-- Gem shapes = gem type names on MistfallDB: Moonstone, Peridot, Agate, Onyx,
-  Amethyst, Purple Rhomb (+ a universal "slot all" socket). Tier 1 gems grant
-  one affix, tier 2 gems grant two.
+- **5 real socket shapes, confirmed by the user**: amethyst, agate, moonstone,
+  peridot, universal. MistfallDB names gems "Onyx" and "Purple Rhomb" but
+  these aren't separate shapes — Onyx is always tier 1/single-affix and
+  Purple Rhomb is always tier 2/dual-affix, so both are folded into
+  `universal` at parse time (see `scraper/parse_gems.py` SHAPE_KEYWORDS).
 - **Socket count is derived, not manual**, from rarity + whether the variant
   carries an affix: budget is 3 (Legendary) / 2 (Epic, Excellent) / 1 (Rare),
   minus 1 if the variant has a named affix, 0 if it's a "Base roll." Common/
@@ -63,19 +65,22 @@ python scraper/parse_gear.py                             # -> data/processed/gea
 `data/processed/variant_sockets.csv` has one row per gear **variant** (not base item), with an
 `expected_socket_count` reference column (derived from rarity, see above) and an empty
 `socket_shapes` column to fill in:
-- comma-separated shapes, e.g. `purple_rhomb,purple_rhomb` or `agate` — must match a gem shape
-  (moonstone/peridot/agate/onyx/amethyst/purple_rhomb) or `universal`
+- comma-separated shapes with optional tier digit, e.g. `agate,amethyst2` — must match one of the
+  5 real shapes (moonstone/peridot/agate/amethyst/universal), no digit = T1
 - literal `none` for a confirmed-zero-socket variant (distinct from blank = not yet entered)
 
 No rerun needed — `model/entities.py` reads the CSV directly at load time.
 
-Fast path for bulk entry, in the compact format ("name, shape" per line, matched against real
-affix names to tell fixed-affix lines from Base-roll lines):
+Fast path for bulk entry (`scraper/ingest_variant_shapes.py`), in the compact format ("name,
+shape" per line, matched against real affix names to tell fixed-affix lines from Base-roll
+lines). Shapes can be given as full names or single-letter shorthand + tier digit:
+`r`=agate("red") `a`=amethyst `m`=moonstone `p`=peridot `u`=universal, e.g. `r1 a2 m1 p2 u1`.
+Cross-checks entered shape count against `expected_socket_count` and warns on mismatch.
 
 ```
 python scraper/ingest_variant_shapes.py raven-priest-robe <<'EOF'
 1. ethereal, agate
-2. tenacious, amethyst
+2. tenacious, a2
 ...
 EOF
 ```

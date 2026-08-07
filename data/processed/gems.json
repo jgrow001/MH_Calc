@@ -221,7 +221,7 @@
   {
     "slug": "battle-spirit-battle-will-purple-rhomb-gem",
     "name": "Battle Spirit: Battle Will Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Valor",
@@ -234,7 +234,7 @@
   {
     "slug": "battle-spirit-curse-resist-purple-rhomb-gem",
     "name": "Battle Spirit: Curse Resist Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Valor",
@@ -247,7 +247,7 @@
   {
     "slug": "battle-spirit-fervor-purple-rhomb-gem",
     "name": "Battle Spirit: Fervor Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Valor",
@@ -260,7 +260,7 @@
   {
     "slug": "battle-spirit-pierce-purple-rhomb-gem",
     "name": "Battle Spirit: Pierce Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Valor",
@@ -273,7 +273,7 @@
   {
     "slug": "battle-spirit-pursuit-purple-rhomb-gem",
     "name": "Battle Spirit: Pursuit Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Valor",
@@ -286,7 +286,7 @@
   {
     "slug": "battle-spirit-rage-purple-rhomb-gem",
     "name": "Battle Spirit: Rage Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Valor",
@@ -299,7 +299,7 @@
   {
     "slug": "battle-spirit-ranged-purple-rhomb-gem",
     "name": "Battle Spirit: Ranged Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Valor",
@@ -312,7 +312,7 @@
   {
     "slug": "battle-spirit-vitality-purple-rhomb-gem",
     "name": "Battle Spirit: Vitality Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Valor",
@@ -465,7 +465,7 @@
   {
     "slug": "brotherhood-onyx",
     "name": "Brotherhood Onyx",
-    "shape": "onyx",
+    "shape": "universal",
     "tier": 1,
     "affixes": [
       "Brotherhood"
@@ -698,7 +698,7 @@
   {
     "slug": "carnage-onyx",
     "name": "Carnage Onyx",
-    "shape": "onyx",
+    "shape": "universal",
     "tier": 1,
     "affixes": [
       "Strife"
@@ -989,7 +989,7 @@
   {
     "slug": "fervor-onyx",
     "name": "Fervor Onyx",
-    "shape": "onyx",
+    "shape": "universal",
     "tier": 1,
     "affixes": [
       "Fervid"
@@ -1156,7 +1156,7 @@
   {
     "slug": "focus-onyx",
     "name": "Focus Onyx",
-    "shape": "onyx",
+    "shape": "universal",
     "tier": 1,
     "affixes": [
       "Focused"
@@ -1180,7 +1180,7 @@
   {
     "slug": "fortitude-battle-will-purple-rhomb-gem",
     "name": "Fortitude: Battle Will Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Stoic",
@@ -1245,7 +1245,7 @@
   {
     "slug": "fortitude-curse-resist-purple-rhomb-gem",
     "name": "Fortitude: Curse Resist Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Stoic",
@@ -1284,7 +1284,7 @@
   {
     "slug": "fortitude-fervor-purple-rhomb-gem",
     "name": "Fortitude: Fervor Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Stoic",
@@ -1310,7 +1310,7 @@
   {
     "slug": "fortitude-fighting-spirit-purple-rhomb-stone",
     "name": "Fortitude \u00b7 Fighting Spirit Purple Rhomb Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Stoic",
@@ -1375,7 +1375,7 @@
   {
     "slug": "fortitude-onyx",
     "name": "Fortitude Onyx",
-    "shape": "onyx",
+    "shape": "universal",
     "tier": 1,
     "affixes": [
       "Stoic"
@@ -1387,7 +1387,7 @@
   {
     "slug": "fortitude-pierce-purple-rhomb-gem",
     "name": "Fortitude: Pierce Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Stoic",
@@ -1400,7 +1400,7 @@
   {
     "slug": "fortitude-pursuit-purple-rhomb-gem",
     "name": "Fortitude: Pursuit Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Stoic",
@@ -1413,7 +1413,7 @@
   {
     "slug": "fortitude-rage-purple-rhomb-stone",
     "name": "Fortitude \u00b7 Rage Purple Rhomb Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Stoic",
@@ -1426,7 +1426,7 @@
   {
     "slug": "fortitude-ranged-purple-rhomb-gem",
     "name": "Fortitude: Ranged Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Stoic",
@@ -1452,7 +1452,7 @@
   {
     "slug": "fortitude-resilience-purple-rhomb-gem",
     "name": "Fortitude\u00b7Resilience Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Stoic",
@@ -1491,7 +1491,7 @@
   {
     "slug": "fortitude-unyielding-purple-rhomb-gem",
     "name": "Fortitude\u00b7Unyielding Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Stoic",
@@ -1504,7 +1504,7 @@
   {
     "slug": "fortitude-vitality-purple-rhomb-gem",
     "name": "Fortitude: Vitality Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Stoic",
@@ -1618,7 +1618,7 @@
   {
     "slug": "hotblood-battle-zeal-purple-rhombus-stone",
     "name": "Hotblood\u00b7Battle Zeal Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Fervid",
@@ -1631,7 +1631,7 @@
   {
     "slug": "hotblood-curseward-purple-rhomb-gem",
     "name": "Hotblood\u00b7Curseward Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Fervid",
@@ -1644,7 +1644,7 @@
   {
     "slug": "hotblood-pursuit-purple-rhombus-stone",
     "name": "Hotblood\u00b7Pursuit Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Fervid",
@@ -1657,7 +1657,7 @@
   {
     "slug": "hotblood-ranged-purple-rhombus-stone",
     "name": "Hotblood\u00b7Ranged Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Fervid",
@@ -1670,7 +1670,7 @@
   {
     "slug": "hotblood-vigor-purple-rhombus-stone",
     "name": "Hotblood\u00b7Vigor Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Fervid",
@@ -2029,7 +2029,7 @@
   {
     "slug": "pursuit-curseward-purple-rhomb-gem",
     "name": "Pursuit\u00b7Curseward Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Seeker",
@@ -2042,7 +2042,7 @@
   {
     "slug": "pursuit-ranged-purple-rhomb-gem",
     "name": "Pursuit\u00b7Ranged Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Seeker",
@@ -2055,7 +2055,7 @@
   {
     "slug": "pursuit-vitality-purple-rhomb-gem",
     "name": "Pursuit\u00b7Vitality Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Seeker",
@@ -2068,7 +2068,7 @@
   {
     "slug": "pursuit-zeal-purple-rhomb-gem",
     "name": "Pursuit\u00b7Zeal Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Seeker",
@@ -2120,7 +2120,7 @@
   {
     "slug": "rage-pierce-purple-rhomb-gem",
     "name": "Rage: Pierce Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Wrath",
@@ -2159,7 +2159,7 @@
   {
     "slug": "ranged-curseward-purple-rhomb-gem",
     "name": "Ranged\u00b7Curseward Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Ranged",
@@ -2262,7 +2262,7 @@
   {
     "slug": "ranged-vitality-purple-rhomb-gem",
     "name": "Ranged\u00b7Vitality Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Ranged",
@@ -2418,7 +2418,7 @@
   {
     "slug": "ranged-ward-onyx",
     "name": "Ranged Ward Onyx",
-    "shape": "onyx",
+    "shape": "universal",
     "tier": 1,
     "affixes": [
       "Distant Ward"
@@ -2495,7 +2495,7 @@
   {
     "slug": "ranged-zeal-purple-rhomb-gem",
     "name": "Ranged\u00b7Zeal Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Ranged",
@@ -2532,7 +2532,7 @@
   {
     "slug": "resolve-onyx",
     "name": "Resolve Onyx",
-    "shape": "onyx",
+    "shape": "universal",
     "tier": 1,
     "affixes": [
       "Valor"
@@ -2583,7 +2583,7 @@
   {
     "slug": "skycleave-battle-zeal-purple-rhombus-stone",
     "name": "Skycleave\u00b7Battle Zeal Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Sky Piercer",
@@ -2596,7 +2596,7 @@
   {
     "slug": "skycleave-cursebreak-purple-rhombus-stone",
     "name": "Skycleave\u00b7Cursebreak Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Sky Piercer",
@@ -2609,7 +2609,7 @@
   {
     "slug": "skycleave-hotblood-purple-rhombus-stone",
     "name": "Skycleave\u00b7Hotblood Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Sky Piercer",
@@ -2622,7 +2622,7 @@
   {
     "slug": "skycleave-pursuit-purple-rhombus-stone",
     "name": "Skycleave\u00b7Pursuit Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Sky Piercer",
@@ -2635,7 +2635,7 @@
   {
     "slug": "skycleave-ranged-purple-rhombus-stone",
     "name": "Skycleave\u00b7Ranged Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Sky Piercer",
@@ -2648,7 +2648,7 @@
   {
     "slug": "skycleave-vigor-purple-rhombus-stone",
     "name": "Skycleave\u00b7Vigor Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Sky Piercer",
@@ -2673,7 +2673,7 @@
   {
     "slug": "skyshatter-onyx",
     "name": "Skyshatter Onyx",
-    "shape": "onyx",
+    "shape": "universal",
     "tier": 1,
     "affixes": [
       "Sky Piercer"
@@ -2980,7 +2980,7 @@
   {
     "slug": "tenacity-armor-pierce-purple-rhombus-stone",
     "name": "Tenacity \u00b7 Armor Pierce Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Resilience",
@@ -2993,7 +2993,7 @@
   {
     "slug": "tenacity-battle-will-purple-rhombus-stone",
     "name": "Tenacity \u00b7 Battle Will Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Resilience",
@@ -3019,7 +3019,7 @@
   {
     "slug": "tenacity-curse-resistance-purple-rhombus-stone",
     "name": "Tenacity \u00b7 Curse Resistance Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Resilience",
@@ -3032,7 +3032,7 @@
   {
     "slug": "tenacity-fervor-purple-rhombus-stone",
     "name": "Tenacity \u00b7 Fervor Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Resilience",
@@ -3045,7 +3045,7 @@
   {
     "slug": "tenacity-fighting-spirit-purple-rhombus-stone",
     "name": "Tenacity \u00b7 Fighting Spirit Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Resilience",
@@ -3058,7 +3058,7 @@
   {
     "slug": "tenacity-fury-purple-rhombus-stone",
     "name": "Tenacity \u00b7 Fury Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Resilience",
@@ -3084,7 +3084,7 @@
   {
     "slug": "tenacity-pursuit-purple-rhombus-stone",
     "name": "Tenacity \u00b7 Pursuit Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Resilience",
@@ -3097,7 +3097,7 @@
   {
     "slug": "tenacity-ranged-attack-purple-rhombus-stone",
     "name": "Tenacity \u00b7 Ranged Attack Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Resilience",
@@ -3136,7 +3136,7 @@
   {
     "slug": "tenacity-vitality-purple-rhombus-stone",
     "name": "Tenacity \u00b7 Vitality Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Resilience",
@@ -3344,7 +3344,7 @@
   {
     "slug": "unyielding-armor-pierce-purple-rhombus-stone",
     "name": "Unyielding \u00b7 Armor Pierce Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Unyielding",
@@ -3357,7 +3357,7 @@
   {
     "slug": "unyielding-battle-will-purple-rhombus-stone",
     "name": "Unyielding \u00b7 Battle Will Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Unyielding",
@@ -3396,7 +3396,7 @@
   {
     "slug": "unyielding-curse-resistance-purple-rhombus-stone",
     "name": "Unyielding \u00b7 Curse Resistance Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Unyielding",
@@ -3422,7 +3422,7 @@
   {
     "slug": "unyielding-fervor-purple-rhombus-stone",
     "name": "Unyielding \u00b7 Fervor Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Unyielding",
@@ -3460,7 +3460,7 @@
   {
     "slug": "unyielding-pursuit-purple-rhombus-stone",
     "name": "Unyielding \u00b7 Pursuit Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Unyielding",
@@ -3473,7 +3473,7 @@
   {
     "slug": "unyielding-rage-purple-rhomb-gem",
     "name": "Unyielding\u00b7Rage Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Unyielding",
@@ -3486,7 +3486,7 @@
   {
     "slug": "unyielding-ranged-attack-purple-rhombus-stone",
     "name": "Unyielding \u00b7 Ranged Attack Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Unyielding",
@@ -3499,7 +3499,7 @@
   {
     "slug": "unyielding-resilience-purple-rhomb-gem",
     "name": "Unyielding\u00b7Resilience Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Unyielding",
@@ -3512,7 +3512,7 @@
   {
     "slug": "unyielding-resolve-purple-rhomb-gem",
     "name": "Unyielding\u00b7Resolve Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Unyielding",
@@ -3538,7 +3538,7 @@
   {
     "slug": "unyielding-vitality-purple-rhombus-stone",
     "name": "Unyielding \u00b7 Vitality Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Unyielding",
@@ -3627,7 +3627,7 @@
   {
     "slug": "vitality-curseward-purple-rhomb-gem",
     "name": "Vitality\u00b7Curseward Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Vitality",
@@ -3948,7 +3948,7 @@
   {
     "slug": "wrath-battle-zeal-purple-rhombus-stone",
     "name": "Wrath\u00b7Battle Zeal Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Wrath",
@@ -3974,7 +3974,7 @@
   {
     "slug": "wrath-cursebreak-purple-rhombus-stone",
     "name": "Wrath\u00b7Cursebreak Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Wrath",
@@ -3987,7 +3987,7 @@
   {
     "slug": "wrath-hotblood-purple-rhombus-stone",
     "name": "Wrath\u00b7Hotblood Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Wrath",
@@ -4012,7 +4012,7 @@
   {
     "slug": "wrath-pursuit-purple-rhombus-stone",
     "name": "Wrath\u00b7Pursuit Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Wrath",
@@ -4025,7 +4025,7 @@
   {
     "slug": "wrath-ranged-purple-rhombus-stone",
     "name": "Wrath\u00b7Ranged Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Wrath",
@@ -4038,7 +4038,7 @@
   {
     "slug": "wrath-vigor-purple-rhombus-stone",
     "name": "Wrath\u00b7Vigor Purple Rhombus Stone",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Wrath",
@@ -4064,7 +4064,7 @@
   {
     "slug": "zeal-curseward-purple-rhomb-gem",
     "name": "Zeal\u00b7Curseward Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Fervor",
@@ -4077,7 +4077,7 @@
   {
     "slug": "zeal-vitality-purple-rhomb-gem",
     "name": "Zeal\u00b7Vitality Purple Rhomb Gem",
-    "shape": "purple_rhomb",
+    "shape": "universal",
     "tier": 2,
     "affixes": [
       "Fervor",
