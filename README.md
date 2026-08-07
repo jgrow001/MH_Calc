@@ -13,7 +13,7 @@ bonus affixes come along with each option.
 - [x] Typed data model (`model/entities.py`)
 - [x] Pruned-DFS feasibility/enumeration solver (`solver/build_solver.py`), 7 unit tests passing
 - [x] Streamlit UI (`app.py`), smoke-tested against the full dataset
-- [ ] **Socket-shape data — not scrapable from MistfallDB, confirmed by direct inspection.** Socket shape is a property of the specific gear VARIANT (not the base item — confirmed via Raven Priest Robe, whose 9 variants each carry a different socket-shape combo). `data/processed/variant_sockets.csv` has all 1707 variants with an empty `socket_shapes` column (9 filled in so far, from Raven Priest Robe). **The solver excludes any variant with unknown sockets rather than guessing.** Socket *count* is not manual, though — see below.
+- [ ] **Socket-shape data — not scrapable from MistfallDB, confirmed by direct inspection.** Socket shape is a property of the specific gear VARIANT (not the base item — confirmed via Raven Priest Robe, whose 9 variants each carry a different socket-shape combo). `data/processed/variant_sockets.csv` has all 1707 variants with an empty `socket_shapes` column — **321/1707 filled in so far** (all Sorcerer armor+weapon, plus all class-agnostic jewelry). **The solver excludes any variant with unknown sockets rather than guessing.** Socket *count* is not manual, though — see below. Other 5 classes still need their gear filled in.
 - [ ] Per-affix stack caps — also not published by MistfallDB (its "Unlocks at" field is a different mechanic, a single roll's 1-32 level breakpoint, not a stacking cap). Add known caps to `data/processed/affix_caps_override.json` (currently just `valor: 7, elusive: 5`) and rerun `scraper/parse_affixes.py`.
 
 ## Key mechanics (confirmed 2026-08-05)
@@ -85,6 +85,26 @@ python scraper/ingest_variant_shapes.py raven-priest-robe <<'EOF'
 ...
 EOF
 ```
+
+For dumps covering many base items at once — one line per variant, item name inferred by
+matching against known base names, no per-item command needed — use
+`scraper/ingest_bulk_shapes.py` instead. Space-separated, not comma-separated:
+
+```
+Moon Deity - Myriad Soul Staff fervor r2 g1
+Moon Deity - Myriad Soul Staff r2 b1 g1
+Focus Staff fervor
+Focus Staff g1
+```
+
+```
+python scraper/ingest_bulk_shapes.py data/processed/sorc.txt --class Sorcerer
+```
+
+`--class` restricts name-matching to that class (recommended when the item names might collide
+across classes); omit it for class-agnostic gear like jewelry. Prints `NOTE` for fuzzy-matched
+base names (e.g. a typo) and duplicate lines, `CONFLICT` if a repeated line disagrees with what's
+already recorded, `WARNING` for anything it couldn't match at all.
 
 ## Running the app
 
