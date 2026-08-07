@@ -56,14 +56,6 @@
     "stack_cap": 5
   },
   {
-    "slug": "defence-penetration",
-    "name": "Defence Penetration",
-    "category": "Offensive",
-    "description": "Increases Defense Penetration. See every weapon and armor piece it rolls on, the gems that grant it, and the classes it suits.",
-    "gear_count": "0",
-    "stack_cap": null
-  },
-  {
     "slug": "deft",
     "name": "Deft",
     "category": "Utility",
@@ -128,22 +120,6 @@
     "stack_cap": 7
   },
   {
-    "slug": "headshot-damage",
-    "name": "Headshot Damage",
-    "category": "Offensive",
-    "description": "Increases Critical Damage. See every weapon and armor piece it rolls on, the gems that grant it, and the classes it suits.",
-    "gear_count": "0",
-    "stack_cap": null
-  },
-  {
-    "slug": "increased-stamina-recovery-speed",
-    "name": "Increased Stamina Recovery Speed",
-    "category": "Utility",
-    "description": "Increases Energy Recovery Speed. See every weapon and armor piece it rolls on, the gems that grant it, and the classes it suits.",
-    "gear_count": "0",
-    "stack_cap": null
-  },
-  {
     "slug": "iron-helmet",
     "name": "Iron Helmet",
     "category": "Defensive",
@@ -152,60 +128,12 @@
     "stack_cap": 5
   },
   {
-    "slug": "lifebane",
-    "name": "Lifebane",
-    "category": "Offensive",
-    "description": "Hitting an enemy with more than X% Health temporarily increases Physical Damage and Magic Damage. Upon reaching a certain level, hitting an enemy with more\u2026",
-    "gear_count": "0",
-    "stack_cap": null
-  },
-  {
-    "slug": "magical-damage-reduction",
-    "name": "Magical Damage Reduction",
-    "category": "Defensive",
-    "description": "Increases Magic Resistance. See every weapon and armor piece it rolls on, the gems that grant it, and the classes it suits.",
-    "gear_count": "0",
-    "stack_cap": null
-  },
-  {
-    "slug": "physical-damage-reduction",
-    "name": "Physical Damage Reduction",
-    "category": "Defensive",
-    "description": "Increases Physical Resistance. See every weapon and armor piece it rolls on, the gems that grant it, and the classes it suits.",
-    "gear_count": "0",
-    "stack_cap": null
-  },
-  {
-    "slug": "powerful",
-    "name": "Powerful",
-    "category": "Offensive",
-    "description": "Increase Physical Damage. See every weapon and armor piece it rolls on, the gems that grant it, and the classes it suits.",
-    "gear_count": "0",
-    "stack_cap": null
-  },
-  {
     "slug": "ranged",
     "name": "Ranged",
     "category": "Offensive",
     "description": "If the distance between you and the target is greater than X meters when hit, temporarily increase Physical Damage and Magic Damage. Upon reaching a certain\u2026",
     "gear_count": "81",
     "stack_cap": 7
-  },
-  {
-    "slug": "reduced-block-stamina-cost",
-    "name": "Reduced Block Stamina Cost",
-    "category": "Utility",
-    "description": "Reduces Block Energy Cost. See every weapon and armor piece it rolls on, the gems that grant it, and the classes it suits.",
-    "gear_count": "0",
-    "stack_cap": null
-  },
-  {
-    "slug": "reduced-skill-stamina-cost",
-    "name": "Reduced Skill Stamina Cost",
-    "category": "Utility",
-    "description": "Reduces Skill Energy Cost. See every weapon and armor piece it rolls on, the gems that grant it, and the classes it suits.",
-    "gear_count": "0",
-    "stack_cap": null
   },
   {
     "slug": "resilience",
@@ -232,14 +160,6 @@
     "stack_cap": 5
   },
   {
-    "slug": "siphon",
-    "name": "Siphon",
-    "category": "Utility",
-    "description": "Killing an enemy recovers Health. Upon reaching a certain level, it also increases Attack for Xs. See every weapon and armor piece it rolls on, the gems that\u2026",
-    "gear_count": "0",
-    "stack_cap": null
-  },
-  {
     "slug": "sky-piercer",
     "name": "Sky Piercer",
     "category": "Offensive",
@@ -262,14 +182,6 @@
     "description": "Increases shield strength. Upon reaching a certain level, the shields you apply grant Magic Resistance to shielded units while active. See every weapon and\u2026",
     "gear_count": "26",
     "stack_cap": 7
-  },
-  {
-    "slug": "spirit-spring",
-    "name": "Spirit Spring",
-    "category": "Defensive",
-    "description": "Increases Springhorn Healing. Upon reaching a certain level, increase Springhorn Charge. This effect must be activated outside of combat. See every weapon\u2026",
-    "gear_count": "0",
-    "stack_cap": null
   },
   {
     "slug": "stoic",
@@ -334,14 +246,6 @@
     "description": "Increase the amount of Gyldenblod from PvE in dungeons. See every weapon and armor piece it rolls on, the gems that grant it, and the classes it suits.",
     "gear_count": "53",
     "stack_cap": 5
-  },
-  {
-    "slug": "wise",
-    "name": "Wise",
-    "category": "Offensive",
-    "description": "Increase Magic Damage. See every weapon and armor piece it rolls on, the gems that grant it, and the classes it suits.",
-    "gear_count": "0",
-    "stack_cap": null
   },
   {
     "slug": "wrath",

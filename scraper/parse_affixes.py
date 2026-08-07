@@ -7,8 +7,15 @@ IMPORTANT: the per-affix stack cap (e.g. Valor caps at 7 stacks across
 gear+gems) is NOT exposed anywhere on MistfallDB -- confirmed by direct
 inspection on 2026-08-05. MistfallDB's "Unlocks at" filter refers to a
 single item's roll-level breakpoint (1-32 scale), a different mechanic.
-`stack_cap` is written as null here and must be filled in manually in
-data/processed/affix_caps_override.json, e.g. {"valor": 7, "elusive": 5}.
+`stack_cap` comes from data/processed/affix_caps_override.json (generated
+by parse_caps.py from the user's Caps.txt).
+
+Confirmed 2026-08-07: any affix NOT in Caps.txt isn't implemented in the
+game yet, so affixes with no stack_cap are dropped entirely here rather
+than kept with stack_cap=null. Run parse_caps.py first (needs an existing
+affixes.json to resolve names -> slugs -- if bootstrapping from scratch,
+run parse_affixes.py once unfiltered first, then parse_caps.py, then this
+again to apply the filter).
 """
 from __future__ import annotations
 
@@ -40,14 +47,19 @@ def main() -> None:
     caps = load_caps_override()
 
     affixes = []
+    skipped_unimplemented = []
     for slug, name, category in CARD_RE.findall(list_html):
+        cap = caps.get(slug)
+        if cap is None:
+            skipped_unimplemented.append(name.strip())
+            continue
         entry = {
             "slug": slug,
             "name": name.strip(),
             "category": category,
             "description": None,
             "gear_count": None,
-            "stack_cap": caps.get(slug),
+            "stack_cap": cap,
         }
         detail_path = RAW_DIR / f"affixes__{slug}.html"
         if detail_path.exists():
@@ -60,12 +72,18 @@ def main() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     out_path = OUT_DIR / "affixes.json"
     out_path.write_text(json.dumps(affixes, indent=2), encoding="utf-8")
-    missing_caps = [a["slug"] for a in affixes if a["stack_cap"] is None]
     print(f"wrote {len(affixes)} affixes -> {out_path}")
-    print(
-        f"{len(missing_caps)} affixes have no stack_cap yet -- add them to "
-        f"data/processed/affix_caps_override.json as {{'slug': cap}} and rerun"
-    )
+    if skipped_unimplemented:
+        print(
+            f"skipped {len(skipped_unimplemented)} affix(es) not in Caps.txt "
+            f"(not yet implemented in-game): {skipped_unimplemented}"
+        )
+    if not caps:
+        print(
+            "WARNING: no affix_caps_override.json found -- this would drop ALL affixes. "
+            "Run without filtering first (temporarily comment out the cap check), then "
+            "scraper/parse_caps.py, then this script again."
+        )
 
 
 if __name__ == "__main__":
