@@ -22,9 +22,9 @@ amethyst socket (a T2 socket accepts T1 or T2 gems, T1 only accepts T1).
 No digit = T1.
 
 For speed, shapes can also be given as a single letter + digit (case
-insensitive), per the user's shorthand:
-    r = agate ("red")   a = amethyst   m = moonstone   p = peridot   u = universal
-e.g. "r1 a2 m1 p2 u1". Both forms are normalized to the full shape name
+insensitive), color-coded per the user's shorthand:
+    r = agate (red)   g = peridot (green)   b = moonstone (blue)   p = amethyst (purple)   w = universal
+e.g. "r1 g2 b1 p2 w1". Both forms are normalized to the full shape name
 before being written to socket_shapes (e.g. "agate,amethyst2").
 
 Zero-socket rows are written as the literal "none" (not blank) in
@@ -54,7 +54,7 @@ OUT_DIR = Path(__file__).resolve().parent.parent / "data" / "processed"
 SOCKETS_PATH = OUT_DIR / "variant_sockets.csv"
 
 KNOWN_SHAPES = {"moonstone", "peridot", "agate", "amethyst", "universal"}
-LETTER_SHAPES = {"r": "agate", "a": "amethyst", "m": "moonstone", "p": "peridot", "u": "universal"}
+LETTER_SHAPES = {"r": "agate", "g": "peridot", "b": "moonstone", "p": "amethyst", "w": "universal"}
 LINE_PREFIX_RE = re.compile(r"^\s*\d+[.):]?\s*")
 SHAPE_TOKEN_RE = re.compile(r"^([a-z_]+?)(\d)?$")
 

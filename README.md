@@ -73,9 +73,10 @@ No rerun needed — `model/entities.py` reads the CSV directly at load time.
 
 Fast path for bulk entry (`scraper/ingest_variant_shapes.py`), in the compact format ("name,
 shape" per line, matched against real affix names to tell fixed-affix lines from Base-roll
-lines). Shapes can be given as full names or single-letter shorthand + tier digit:
-`r`=agate("red") `a`=amethyst `m`=moonstone `p`=peridot `u`=universal, e.g. `r1 a2 m1 p2 u1`.
-Cross-checks entered shape count against `expected_socket_count` and warns on mismatch.
+lines). Shapes can be given as full names or single-letter shorthand + tier digit, color-coded:
+`r`=agate(red) `g`=peridot(green) `b`=moonstone(blue) `p`=amethyst(purple) `w`=universal,
+e.g. `r1 g2 b1 p2 w1`. Cross-checks entered shape count against `expected_socket_count` and
+warns on mismatch.
 
 ```
 python scraper/ingest_variant_shapes.py raven-priest-robe <<'EOF'

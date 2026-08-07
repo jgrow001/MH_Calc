@@ -1,0 +1,236 @@
+
+
+Moon Deity - Myriad Soul Staff fervor r2 g1
+Moon Deity - Myriad Soul Staff fervid g2 r1
+Moon Deity - Myriad Soul Staff seeker b2 p1
+Moon Deity - Myriad Soul Staff ranged p2 b1
+Moon Deity - Myriad Soul Staff eloquence b2 g1
+Moon Deity - Myriad Soul Staff vitality g2 p1
+Moon Deity - Myriad Soul Staff swift p2 r1
+Moon Deity - Myriad Soul Staff r2 b1 g1
+Moon Deity - Myriad Soul Staff g2 p1 b1
+Moon Deity - Myriad Soul Staff fervor r2 g1
+Moon Deity - Myriad Soul Staff fervid g2 r1
+Moon Deity - Myriad Soul Staff seeker b2 p1
+Moon Deity - Myriad Soul Staff ranged p2 b1
+Moon Deity - Myriad Soul Staff eloquence b2 g1
+Moon Deity - Myriad Soul Staff vitality g2 p1
+Moon Deity - Myriad Soul Staff swift p2 r1
+Moon Deity - Myriad Soul Staff r2 b1 g1
+Moon Deity - Myriad Soul Staff g2 p1 b1
+Blind Eye Staff fervor r2 g1
+Blind Eye Staff fervid g2 r1
+Blind Eye Staff seeker b2 p1
+Blind Eye Staff ranged p2 b1
+Blind Eye Staff eloquence b2 g1
+Blind Eye Staff vitality g2 p1
+Blind Eye Staff swift p2 r1
+Blind Eye Staff r2 b1 g1
+Blind Eye Staff g2 p1 b1
+Empyrean Rain Staff fervor p2
+Empyrean Rain Staff fervid b2
+Empyrean Rain Staff seeker r2
+Empyrean Rain Staff ranged g2
+Empyrean Rain Staff eloquence r2
+Empyrean Rain Staff vitality g2
+Empyrean Rain Staff swift b2
+Empyrean Rain Staff p2 r1
+Empyrean Rain Staff b2 p1
+Convergence staff fervor g1
+Convergence staff fervid r1
+Convergence staff seeker p1
+Convergence staff ranged b1
+Convergence staff eloquence r1
+Convergence staff vitality g1
+Convergence staff swift p1
+Convergence staff p1 b1
+Convergence staff r1 b1
+Focus Staff fervor
+Focus Staff fervid
+Focus Staff seeker
+Focus Staff ranged
+Focus Staff eloquence
+Focus Staff vitality
+Focus Staff swift
+Focus Staff g1
+Focus Staff r1
+Moon Priestess Mask g2 r1 p1
+Moon Priestess Mask Iron-Helmet b2 r1
+Moon Priestess Mask sky-piercer r2 b1
+Moon Priestess Mask seeker p2 r1
+Moon Priestess Mask ranged g2 p1
+Moon Priestess Mask eloquence r2 g1
+Moon Priestess Mask Elusive b2 r1
+Moon Priestess Mask Wealth p2 b1
+Moon Priestess Mask b2 p1 g1
+Mysteria Elser Mask iron-helmet r2
+Mysteria Elser Mask sky-piercer p2
+Mysteria Elser Mask ranged p2
+Mysteria Elser Mask eloquence r2
+Mysteria Elser Mask seeker g2
+Mysteria Elser Mask Elusive g2
+Mysteria Elser Mask wealth b2
+Mysteria Elser Mask b2 g1
+Mysteria Elser Mask p2 b1
+Raven Priest Hood iron-helmet g1
+Raven Priest Hood sky-piercer p1
+Raven Priest Hood seeker r1
+Raven Priest Hood ranged b1
+Raven Priest Hood eloquence g1
+Raven Priest Hood Elusive p1
+Raven Priest Hood wealth r1
+Raven Priest Hood b1 g1
+Raven Priest Hood r1 b1
+Practitioner Hood iron-helmet
+Practitioner Hood sky-piercer
+Practitioner Hood seeker
+Practitioner Hood ranged
+Practitioner Hood eloquence
+Practitioner Hood Elusive
+Practitioner Hood wealth
+Practitioner Hood p1
+Practitioner Hood b1
+Moon Priestess Robe Aegis r2 b1
+Moon Priestess Robe Tenacious p2 g1
+Moon Priestess Robe iron-helmet b2 p1
+Moon Priestess Robe Ethereal p2 g1
+Moon Priestess Robe ranged r2 b1
+Moon Priestess Robe vitality g2 r1
+Moon Priestess Robe curse g2 r1
+Moon Priestess Robe r2 b1 g1
+Moon Priestess Robe p2 b1 g1
+Mysteria Elder Robe Aegis r2
+Mysteria Elder Robe Tenacious g2
+Mysteria Elder Robe iron-helmet g2
+Mysteria Elder Robe Ethereal b2
+Mysteria Elder Robe ranged r2
+Mysteria Elder Robe vitality p2
+Mysteria Elder Robe curse r2
+Mysteria Elder Robe g2 r1
+Mysteria Elder Robe b2 g1
+Raven Priest Robe Aegis g1
+Raven Priest Robe Tenacious p1
+Raven Priest Robe iron-helmet p1
+Raven Priest Robe Ethereal r1
+Raven Priest Robe ranged b1
+Raven Priest Robe vitality g1
+Raven Priest Robe curse p1
+Raven Priest Robe b1 g1
+Raven Priest Rober1 p1
+Practitioner Robe Aegis
+Practitioner Robe Tenacious
+Practitioner Robe iron-helmet
+Practitioner Robe Ethereal
+Practitioner Robe ranged
+Practitioner Robe vitality
+Practitioner Robe curse
+Practitioner Robe b1 
+Practitioner Robe p1
+Moon Priestess Bracers sky-piercer b2 p1
+Moon Priestess Bracers fervid p2 r1
+Moon Priestess Bracers seeker b2 p1
+Moon Priestess Bracers wealth g2 r1
+Moon Priestess Bracers eloquence r2 b1
+Moon Priestess Bracers Elusive g2 p1
+Moon Priestess Bracers deft r2 g1
+Moon Priestess Bracers b2 r1 p1
+Moon Priestess Bracers p2 b1 g1
+Mysteria Elser Bracers sky-piercer p2
+Mysteria Elser Bracers fervid p2
+Mysteria Elser Bracers seeker r2
+Mysteria Elser Bracers wealth g2
+Mysteria Elser Bracers eloquence b2
+Mysteria Elser Bracers Elusive b2
+Mysteria Elser Bracers deft p2
+Mysteria Elser Bracers g2 p1
+Mysteria Elser Bracers r2 b1
+Raven Priest Bracers sky-piercer g1
+Raven Priest Bracers fervid b1
+Raven Priest Bracers seeker r1
+Raven Priest Bracers wealth b1
+Raven Priest Bracers eloquence g1
+Raven Priest Bracers Elusive r1
+Raven Priest Bracers deft p1
+Raven Priest Bracers r1 g1
+Raven Priest Bracers p2 b1
+Practitioner Bracers sky-piercer
+Practitioner Bracers fervid
+Practitioner Bracers seeker
+Practitioner Bracers wealth
+Practitioner Bracers eloquence
+Practitioner Bracers Elusive
+Practitioner Bracers deft
+Practitioner Bracers r1
+Practitioner Bracers g1
+Moon Priestess Pants sky-piercer r2 b1
+Moon Priestess Pants Aegis g2 p1
+Moon Priestess Pants Tenacious b2 r1
+Moon Priestess Pants iron-helmet p2 g1
+Moon Priestess Pants vitality g2 r1
+Moon Priestess Pants swift p2 g1
+Moon Priestess Pants Elusive r2 p1
+Moon Priestess Pants b2 r1 p1
+Moon Priestess Pants g2 p1 b1
+Mysteria Elder Pants Aegis g2
+Mysteria Elder Pants Tenacious b2
+Mysteria Elder Pants iron-helmet p2
+Mysteria Elder Pants sky-piercer r2
+Mysteria Elder Pants vitality g2
+Mysteria Elder Pants swift r2
+Mysteria Elder Pants Elusive b2
+Mysteria Elder Pants p2 g1
+Mysteria Elder Pants p2 r1
+Raven Priest Pants Aegis r1
+Raven Priest Pants Tenacious b1
+Raven Priest Pants iron-helmet p1
+Raven Priest Pants sky-piercer g1
+Raven Priest Pants vitality p1
+Raven Priest Pants swift b1
+Raven Priest Pants Elusive g1
+Raven Priest Pants r1 g1
+Raven Priest Pants p1 b1
+Practitioner Pants Aegis
+Practitioner Pants Tenacious
+Practitioner Pants iron-helmet
+Practitioner Pants sky-piercer
+Practitioner Pants vitality
+Practitioner Pants swift
+Practitioner Pants Elusive
+Practitioner Pants b1
+Practitioner Pants p1
+Moon Priestess Boots Ethereal r2 g1
+Moon Priestess Boots sky-piercer p2 b1
+Moon Priestess Boots fervid b2 g1
+Moon Priestess Boots ranged p2 r1
+Moon Priestess Boots eloquence r2 b1
+Moon Priestess Boots swift b2 p1
+Moon Priestess Boots curse g2 r1
+Moon Priestess Boots b2 p1 g1
+Moon Priestess Boots r2 b1 g1
+Mysteria Elder Boots Ethereal r2
+Mysteria Elder Boots sky-piercer g2
+Mysteria Elder Boots fervid b2
+Mysteria Elder Boots ranged r2
+Mysteria Elder Boots eloquence g2
+Mysteria Elder Boots swift p2
+Mysteria Elder Boots curse b2
+Mysteria Elder Boots p2 b1
+Mysteria Elder Boots r2 p1
+Raven Priest Greaves Ethereal r1
+Raven Priest Greaves sky-piercer p1
+Raven Priest Greaves fervid g1
+Raven Priest Greaves ranged r1
+Raven Priest Greaves eloquence b1
+Raven Priest Greaves swift p1
+Raven Priest Greaves curse b1
+Raven Priest Greaves r1 g1
+Raven Priest Greaves r1 p1
+Practitioner Shoes Ethereal
+Practitioner Shoes sky-piercer
+Practitioner Shoes fervid
+Practitioner Shoes ranged
+Practitioner Shoes eloquence
+Practitioner Shoes swift
+Practitioner Shoes curse
+Practitioner Shoes g1 
+Practitioner Shoes r1
