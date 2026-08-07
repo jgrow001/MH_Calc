@@ -1,9 +1,9 @@
 # MH_Calc — Mistfall Hunters build calculator
 
 Given a class and a set of target affixes + desired stack levels (e.g. Valor 7,
-Elusive 5), find every feasible combination of gear pieces (one per slot) and
-gems (socketed into that gear) that reaches those targets, plus whatever
-bonus affixes come along with each option.
+Elusive 5), find every feasible combination of gear pieces (one per slot),
+gems (socketed into that gear), and beverage that reaches those targets, plus
+whatever bonus affixes come along with each option.
 
 ## Status
 
@@ -11,7 +11,8 @@ bonus affixes come along with each option.
 - [x] Sitemap crawler + HTML cache (`scraper/fetch.py`)
 - [x] Field-mapped extractors for affixes / gems / gear (`scraper/parse_*.py`) — full crawl done: 44 affixes, 320 gems, 464 gear items (374 armor + 90 weapons)
 - [x] Typed data model (`model/entities.py`)
-- [x] Pruned-DFS feasibility/enumeration solver (`solver/build_solver.py`), 7 unit tests passing
+- [x] Pruned-DFS feasibility/enumeration solver (`solver/build_solver.py`), 11 unit tests passing
+- [x] Beverages — second, independent affix source, see below
 - [x] Streamlit UI (`app.py`), smoke-tested against the full dataset
 - [ ] **Socket-shape data — not scrapable from MistfallDB, confirmed by direct inspection.** Socket shape is a property of the specific gear VARIANT (not the base item — confirmed via Raven Priest Robe, whose 9 variants each carry a different socket-shape combo). `data/processed/variant_sockets.csv` has all 1707 variants with an empty `socket_shapes` column — **321/1707 filled in so far** (all Sorcerer armor+weapon, plus all class-agnostic jewelry). **The solver excludes any variant with unknown sockets rather than guessing.** Socket *count* is not manual, though — see below. Other 5 classes still need their gear filled in.
 - [ ] Per-affix stack caps — also not published by MistfallDB (its "Unlocks at" field is a different mechanic, a single roll's 1-32 level breakpoint, not a stacking cap). Add known caps to `data/processed/affix_caps_override.json` (currently just `valor: 7, elusive: 5`) and rerun `scraper/parse_affixes.py`.
@@ -42,6 +43,16 @@ bonus affixes come along with each option.
   socket only accepts T1 gems. Encoded as a digit suffix on the shape token
   (`amethyst2` = T2 amethyst socket); no digit defaults to T1. See
   `SocketSpec.accepts()` in `model/entities.py`.
+- **Beverages** are a second, independent affix source on top of gear+gems —
+  exactly one active at a time, confirmed by the user. Each tier grants a
+  points budget spread freely across affixes (no shape/type restriction), with
+  a per-affix cap: T1 (budget 2, ≤1/affix), T2 (budget 4, ≤1/affix), T3
+  (budget 6, ≤2/affix), T4 (budget 8, ≤2/affix). See `BEVERAGE_TIERS` /
+  `beverage_allocation_for()` in `model/entities.py`. The solver treats a
+  build's beverage allocation as fully determined by whatever gear+gems fall
+  short of the target (no extra branching), and it's a UI selector
+  (None/T1-T4), not auto-assumed-best, since lower tiers may be cheaper/
+  easier to get in-game.
 
 ## Setup
 

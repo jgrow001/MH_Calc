@@ -24,6 +24,11 @@ T2 gems, a T1 socket only accepts T1 gems. Encoded in variant_sockets.csv as
 a digit suffix on the shape token, e.g. "amethyst2" = T2 amethyst socket;
 bare "amethyst" defaults to T1 (confirmed: the Raven Priest Robe example
 given without tier suffixes was all-T1).
+
+Beverages (confirmed 2026-08-07) are a second, independent affix source:
+exactly one active at a time, each tier (T1-T4) grants a points budget to
+spread freely across affixes (no shape/type restriction, unlike gems), with
+a per-affix cap. See BEVERAGE_TIERS / beverage_allocation_for().
 """
 from __future__ import annotations
 
@@ -41,6 +46,38 @@ RARITY_SOCKET_BUDGET: dict[str, int] = {
     "Excellent": 2,
     "Rare": 1,
 }
+
+# Beverages: a second, independent affix source on top of gear+gems.
+# Exactly one active at a time (confirmed 2026-08-05). Each tier gives a
+# points budget to spread across affixes, capped per-affix -- T1/T2 cap at
+# +1/affix (so budget == number of distinct affixes touched), T3/T4 allow
+# up to +2 on a single affix.
+BEVERAGE_TIERS: dict[str, dict[str, int]] = {
+    "T1": {"budget": 2, "max_per_affix": 1},
+    "T2": {"budget": 4, "max_per_affix": 1},
+    "T3": {"budget": 6, "max_per_affix": 2},
+    "T4": {"budget": 8, "max_per_affix": 2},
+}
+
+
+def beverage_allocation_for(
+    deficits: dict[str, int], tier: str | None
+) -> dict[str, int] | None:
+    """Given remaining need per affix (after gear+gems), return how a
+    beverage of this tier would cover it, or None if it can't. Greedy is
+    exact here: there's no cost differentiation between affixes, so any
+    allocation that respects the per-affix cap and total budget works."""
+    needed = {a: d for a, d in deficits.items() if d > 0}
+    if not needed:
+        return {}
+    if tier is None:
+        return None
+    spec = BEVERAGE_TIERS[tier]
+    if any(d > spec["max_per_affix"] for d in needed.values()):
+        return None
+    if sum(needed.values()) > spec["budget"]:
+        return None
+    return needed
 
 
 def expected_socket_count(rarity: str | None, has_affix: bool) -> int | None:

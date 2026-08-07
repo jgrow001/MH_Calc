@@ -147,6 +147,67 @@ def test_solver_respects_socket_tier_end_to_end():
     assert find_builds(data, "Sorcerer", {"stoic": 1}, max_results=5)
 
 
+def test_beverage_alone_covers_target_with_no_gear_touching_it():
+    data = GameData()
+    data.affixes_by_slug = {"wealth": Affix("wealth", "Wealth", "Utility", stack_cap=5)}
+    data.gear = []  # nothing at all touches "wealth"
+    # T3: budget 6, up to +2/affix -- covers a target of 2 in a single affix
+    builds = find_builds(data, "Sorcerer", {"wealth": 2}, max_results=5, beverage_tier="T3")
+    assert builds
+    assert builds[0].picks == ()
+    assert builds[0].beverage_allocation == (("wealth", 2),)
+    # without a beverage, the same target is unreachable (no gear at all)
+    assert find_builds(data, "Sorcerer", {"wealth": 2}, max_results=5, beverage_tier=None) == []
+
+
+def test_beverage_fills_the_gap_after_gear():
+    data = GameData()
+    data.affixes_by_slug = {"wealth": Affix("wealth", "Wealth", "Utility", stack_cap=5)}
+    data.gems = []
+    # one item, innate Wealth, no sockets -- gear alone caps out at 1
+    item = GearItem(
+        slug="item-e", name="Item E", kind="armor", classes=("Sorcerer",),
+        slot="Head", rarity="Rare",
+        variants=(GearVariant("item-e-v1", "wealth", 300, "Rare", ()),),
+    )
+    data.gear = [item]
+    # target 2: unreachable by gear alone, reachable with a T1 beverage (+1)
+    assert find_builds(data, "Sorcerer", {"wealth": 2}, max_results=5, beverage_tier=None) == []
+    builds = find_builds(data, "Sorcerer", {"wealth": 2}, max_results=5, beverage_tier="T1")
+    assert builds
+    assert builds[0].total_affix_counts()["wealth"] == 2
+    assert builds[0].beverage_allocation == (("wealth", 1),)
+
+
+def test_beverage_per_affix_cap_enforced():
+    data = GameData()
+    data.affixes_by_slug = {"wealth": Affix("wealth", "Wealth", "Utility", stack_cap=5)}
+    data.gear = []
+    # T1/T2 cap at +1 per affix -- a deficit of 3 in one affix can't be
+    # covered even though the budget (2 or 4) would otherwise be enough
+    assert find_builds(data, "Sorcerer", {"wealth": 3}, max_results=5, beverage_tier="T2") == []
+    # T3/T4 allow up to +2/affix, still not enough for a deficit of 3
+    assert find_builds(data, "Sorcerer", {"wealth": 3}, max_results=5, beverage_tier="T3") == []
+    # but a deficit of 2 is fine under T3's +2/affix cap
+    assert find_builds(data, "Sorcerer", {"wealth": 2}, max_results=5, beverage_tier="T3")
+
+
+def test_beverage_budget_shared_across_affixes():
+    data = GameData()
+    data.affixes_by_slug = {
+        "wealth": Affix("wealth", "Wealth", "Utility", stack_cap=5),
+        "curse": Affix("curse", "Curse", "Offensive", stack_cap=5),
+        "swift": Affix("swift", "Swift", "Utility", stack_cap=5),
+    }
+    data.gear = []
+    # T1 budget is 2 total, max 1/affix -- two different affixes at +1 each fits exactly
+    assert find_builds(data, "Sorcerer", {"wealth": 1, "curse": 1}, max_results=5, beverage_tier="T1")
+    # a third affix needing +1 exceeds the total budget of 2, even though each is within the cap
+    assert find_builds(
+        data, "Sorcerer", {"wealth": 1, "curse": 1, "swift": 1}, max_results=5, beverage_tier="T1"
+    ) == []
+
+
 if __name__ == "__main__":
     import traceback
     tests = [v for k, v in list(globals().items()) if k.startswith("test_")]

@@ -11,7 +11,7 @@ from __future__ import annotations
 
 import streamlit as st
 
-from model.entities import load_game_data
+from model.entities import BEVERAGE_TIERS, load_game_data
 from solver.build_solver import Build, find_builds
 
 st.set_page_config(page_title="Mistfall Hunters Build Calculator", layout="wide")
@@ -62,6 +62,15 @@ for slug in chosen_slugs:
     max_val = affix.stack_cap or 10
     targets[slug] = st.sidebar.slider(f"{affix.name} level", 1, max_val, min(max_val, 1))
 
+beverage_options = ["None"] + list(BEVERAGE_TIERS)
+beverage_labels = {"None": "None"} | {
+    t: f"{t} (budget {s['budget']}, up to +{s['max_per_affix']}/affix)" for t, s in BEVERAGE_TIERS.items()
+}
+beverage_choice = st.sidebar.selectbox(
+    "Beverage", beverage_options, index=0, format_func=lambda t: beverage_labels[t]
+)
+beverage_tier = None if beverage_choice == "None" else beverage_choice
+
 max_results = st.sidebar.number_input("Max builds to show", min_value=1, max_value=100, value=25)
 run = st.sidebar.button("Calculate", type="primary", disabled=not targets)
 
@@ -85,6 +94,15 @@ def render_build(i: int, build: Build, target_slugs: set[str]) -> None:
                     else:
                         st.caption(f"Empty socket ({socket_label})")
 
+        if build.beverage_allocation:
+            chips = ", ".join(
+                f"+{n} {data.affixes_by_slug[a].name}" for a, n in build.beverage_allocation
+            )
+            st.caption(
+                f"Beverage ({build.beverage_tier}): {chips} "
+                f"— {build.beverage_points_remaining()} point(s) left unused"
+            )
+
         st.divider()
         for slug in target_slugs:
             affix = data.affixes_by_slug[slug]
@@ -99,7 +117,7 @@ def render_build(i: int, build: Build, target_slugs: set[str]) -> None:
 
 
 if run:
-    builds = find_builds(data, class_req, targets, max_results=int(max_results))
+    builds = find_builds(data, class_req, targets, max_results=int(max_results), beverage_tier=beverage_tier)
     if not builds:
         st.error(
             "No feasible build found with current data. Either the targets aren't reachable "
