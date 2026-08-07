@@ -1,0 +1,32 @@
+Valor 7
+Wrath 7
+Sky Piercer 7
+Fervid 7
+Seeker 5
+Ranged 7
+Fervor 7
+Smiting 5
+Burst 5
+Strife 7
+Aegis 7
+Tenacious 7
+Bulwark 5
+Iron Helmet 5
+Ethereal 5
+Stoic 7
+Brotherhood 7
+Spirit Shield 7
+Unyielding 7
+Distant Ward 7
+Resilience 7
+Eloquence 7
+Seamless 7
+Vitality 5
+Swift 5
+Elusive 5
+Deft 5
+Blessing 5
+Curse 5
+Wealth 5
+Focused 7
+Creation 7

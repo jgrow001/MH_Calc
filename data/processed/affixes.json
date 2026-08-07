@@ -5,7 +5,7 @@
     "category": "Defensive",
     "description": "Increase Defense. Upon reaching a certain level, increase Physical Resistance. See every weapon and armor piece it rolls on, the gems that grant it, and the\u2026",
     "gear_count": "80",
-    "stack_cap": null
+    "stack_cap": 7
   },
   {
     "slug": "blessing",
@@ -13,7 +13,7 @@
     "category": "Utility",
     "description": "Increase the duration of Buffs granted by you. See every weapon and armor piece it rolls on, the gems that grant it, and the classes it suits.",
     "gear_count": "44",
-    "stack_cap": null
+    "stack_cap": 5
   },
   {
     "slug": "brotherhood",
@@ -21,7 +21,7 @@
     "category": "Defensive",
     "description": "While alive, grants increased Defense to yourself and allies. If multiple team members have this affix, only the highest-level affix takes effect. Upon\u2026",
     "gear_count": "40",
-    "stack_cap": null
+    "stack_cap": 7
   },
   {
     "slug": "bulwark",
@@ -29,7 +29,7 @@
     "category": "Defensive",
     "description": "Increase Block Damage Reduction Rate. Upon reaching the required level, reduce Block Energy Cost. See every weapon and armor piece it rolls on, the gems that\u2026",
     "gear_count": "33",
-    "stack_cap": null
+    "stack_cap": 5
   },
   {
     "slug": "burst",
@@ -37,7 +37,7 @@
     "category": "Offensive",
     "description": "Increases the damage of Withered Knight's Wither Execution. See every weapon and armor piece it rolls on, the gems that grant it, and the classes it suits.",
     "gear_count": "8",
-    "stack_cap": null
+    "stack_cap": 5
   },
   {
     "slug": "creation",
@@ -45,7 +45,7 @@
     "category": "Utility",
     "description": "Increases the duration of Constructs. Upon reaching a certain level, successfully summoning a Construct increases Physical Damage and Magic Damage for a\u2026",
     "gear_count": "20",
-    "stack_cap": null
+    "stack_cap": 7
   },
   {
     "slug": "curse",
@@ -53,7 +53,7 @@
     "category": "Utility",
     "description": "Increase the duration of Debuffs inflicted by you. See every weapon and armor piece it rolls on, the gems that grant it, and the classes it suits.",
     "gear_count": "65",
-    "stack_cap": null
+    "stack_cap": 5
   },
   {
     "slug": "defence-penetration",
@@ -69,7 +69,7 @@
     "category": "Utility",
     "description": "Increases Interaction Speed. Interactions cannot be interrupted by minor Impacts; once triggered, this effect has a cooldown of Xs. See every weapon and\u2026",
     "gear_count": "33",
-    "stack_cap": null
+    "stack_cap": 5
   },
   {
     "slug": "distant-ward",
@@ -77,7 +77,7 @@
     "category": "Defensive",
     "description": "If the distance between you and the attacker is greater than X meters when hit, temporarily increases your Physical Resistance and Magic Resistance. Upon\u2026",
     "gear_count": "17",
-    "stack_cap": null
+    "stack_cap": 7
   },
   {
     "slug": "eloquence",
@@ -85,7 +85,7 @@
     "category": "Utility",
     "description": "Increases Chanting Speed. Upon reaching a certain level, chanting cannot be interrupted by minor Impact. Cooldown: Xs. See every weapon and armor piece it\u2026",
     "gear_count": "57",
-    "stack_cap": null
+    "stack_cap": 7
   },
   {
     "slug": "elusive",
@@ -101,7 +101,7 @@
     "category": "Defensive",
     "description": "Increase Fall Damage Resistance. Upon reaching the required level, falling no longer causes stagger. See every weapon and armor piece it rolls on, the gems\u2026",
     "gear_count": "28",
-    "stack_cap": null
+    "stack_cap": 5
   },
   {
     "slug": "fervid",
@@ -109,7 +109,7 @@
     "category": "Offensive",
     "description": "When Health is above X%, increase Physical Damage and Magic Damage. Upon reaching a certain level, when Health is above X%, reduce Skill Energy Cost. See\u2026",
     "gear_count": "112",
-    "stack_cap": null
+    "stack_cap": 7
   },
   {
     "slug": "fervor",
@@ -117,7 +117,7 @@
     "category": "Offensive",
     "description": "After hitting an enemy, increase Physical Damage and Magic Damage for Xs, stacking up to 5 times. Upon reaching the required level, when the number of stacks\u2026",
     "gear_count": "109",
-    "stack_cap": null
+    "stack_cap": 7
   },
   {
     "slug": "focused",
@@ -125,7 +125,7 @@
     "category": "Utility",
     "description": "Increases Charging Speed. Upon reaching a certain level, increases Movement Speed while charging. See every weapon and armor piece it rolls on, the gems that\u2026",
     "gear_count": "43",
-    "stack_cap": null
+    "stack_cap": 7
   },
   {
     "slug": "headshot-damage",
@@ -149,7 +149,7 @@
     "category": "Defensive",
     "description": "Increase Critical Damage Resistance. Upon reaching the required level, reduce the impact of Critical Hits received. Critical Hit: Hitting weak points deals\u2026",
     "gear_count": "76",
-    "stack_cap": null
+    "stack_cap": 5
   },
   {
     "slug": "lifebane",
@@ -189,7 +189,7 @@
     "category": "Offensive",
     "description": "If the distance between you and the target is greater than X meters when hit, temporarily increase Physical Damage and Magic Damage. Upon reaching a certain\u2026",
     "gear_count": "81",
-    "stack_cap": null
+    "stack_cap": 7
   },
   {
     "slug": "reduced-block-stamina-cost",
@@ -213,7 +213,7 @@
     "category": "Defensive",
     "description": "Reduces the duration of debuffs received. Upon reaching a certain level, suffering a crowd control debuff temporarily increases your Physical Resistance and\u2026",
     "gear_count": "16",
-    "stack_cap": null
+    "stack_cap": 7
   },
   {
     "slug": "seamless",
@@ -221,7 +221,7 @@
     "category": "Utility",
     "description": "Increases Skill Cooldown Speed. Upon reaching a certain level, knocking down a Gyldhunter reduces skill cooldowns currently in progress. See every weapon and\u2026",
     "gear_count": "37",
-    "stack_cap": null
+    "stack_cap": 7
   },
   {
     "slug": "seeker",
@@ -229,7 +229,7 @@
     "category": "Offensive",
     "description": "Hitting an enemy increases Movement Speed for Xs. Upon reaching a certain level, the Speed Boost can stack. See every weapon and armor piece it rolls on, the\u2026",
     "gear_count": "111",
-    "stack_cap": null
+    "stack_cap": 5
   },
   {
     "slug": "siphon",
@@ -245,7 +245,7 @@
     "category": "Offensive",
     "description": "Casting skills in the-air increases Physical Damage and Magic Damage. Upon reaching a certain level, aerial casting also reduces Skill Energy Cost. See every\u2026",
     "gear_count": "53",
-    "stack_cap": null
+    "stack_cap": 7
   },
   {
     "slug": "smiting",
@@ -253,7 +253,7 @@
     "category": "Offensive",
     "description": "On a Critical Hit, recover Energy. Cooldown: Xs. Upon reaching a certain level, on a Critical Hit, reduce the cooldown of all skills. Cooldown: Xs. Critical\u2026",
     "gear_count": "87",
-    "stack_cap": null
+    "stack_cap": 5
   },
   {
     "slug": "spirit-shield",
@@ -261,7 +261,7 @@
     "category": "Defensive",
     "description": "Increases shield strength. Upon reaching a certain level, the shields you apply grant Magic Resistance to shielded units while active. See every weapon and\u2026",
     "gear_count": "26",
-    "stack_cap": null
+    "stack_cap": 7
   },
   {
     "slug": "spirit-spring",
@@ -277,7 +277,7 @@
     "category": "Defensive",
     "description": "When Health is below X%, increase Physical Resistance and Magic Resistance. Upon reaching a certain level, when Health is below X%, restore Health. Cooldown\u2026",
     "gear_count": "86",
-    "stack_cap": null
+    "stack_cap": 7
   },
   {
     "slug": "strife",
@@ -285,7 +285,7 @@
     "category": "Offensive",
     "description": "Increases Melee Weapon Damage. Upon reaching a certain level, increases Melee Weapon Damage for each nearby enemy, up to 3 stacks. See every weapon and armor\u2026",
     "gear_count": "20",
-    "stack_cap": null
+    "stack_cap": 7
   },
   {
     "slug": "swift",
@@ -293,7 +293,7 @@
     "category": "Utility",
     "description": "Increases Movement Speed while Crouching, Silent-Walking, Aiming and Chanting. See every weapon and armor piece it rolls on, the gems that grant it, and the\u2026",
     "gear_count": "18",
-    "stack_cap": null
+    "stack_cap": 5
   },
   {
     "slug": "tenacious",
@@ -301,7 +301,7 @@
     "category": "Defensive",
     "description": "Increases Maximum Health. Upon reaching a certain level, increases Healing. See every weapon and armor piece it rolls on, the gems that grant it, and the\u2026",
     "gear_count": "89",
-    "stack_cap": null
+    "stack_cap": 7
   },
   {
     "slug": "unyielding",
@@ -309,7 +309,7 @@
     "category": "Defensive",
     "description": "Each time you take damage from a different enemy, you gain Physical Resistance and Magic Resistance for Xs. Entering combat refreshes this duration. Stacks\u2026",
     "gear_count": "14",
-    "stack_cap": null
+    "stack_cap": 7
   },
   {
     "slug": "valor",
@@ -325,7 +325,7 @@
     "category": "Utility",
     "description": "Increases Maximum Energy. Upon reaching a certain level, when entering a state of Energy Overdraft, you become immune to that specific instance of Energy\u2026",
     "gear_count": "96",
-    "stack_cap": null
+    "stack_cap": 5
   },
   {
     "slug": "wealth",
@@ -333,7 +333,7 @@
     "category": "Utility",
     "description": "Increase the amount of Gyldenblod from PvE in dungeons. See every weapon and armor piece it rolls on, the gems that grant it, and the classes it suits.",
     "gear_count": "53",
-    "stack_cap": null
+    "stack_cap": 5
   },
   {
     "slug": "wise",
@@ -349,6 +349,6 @@
     "category": "Offensive",
     "description": "When Health is below X%, increase Physical Damage and Magic Damage. Upon reaching a certain level, when Health is below X%, increase Attack. See every weapon\u2026",
     "gear_count": "86",
-    "stack_cap": null
+    "stack_cap": 7
   }
 ]
