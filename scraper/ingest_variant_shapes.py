@@ -74,7 +74,11 @@ def resolve_shape_token(token: str) -> str | None:
         shape = base
     else:
         return None
-    return f"{shape}{tier_digit}" if tier_digit else shape
+    # T1 always normalizes to the bare shape name (no "1" suffix), so
+    # "r1", "agate1", and "agate" all collapse to the same canonical string
+    # -- keeps duplicate/conflict detection in ingest_bulk_shapes.py working
+    # regardless of which form was typed.
+    return f"{shape}{tier_digit}" if tier_digit and tier_digit != "1" else shape
 
 
 def load_affix_names() -> set[str]:

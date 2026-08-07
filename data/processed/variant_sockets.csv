@@ -44,9 +44,9 @@ ace-assassin-pants-1460406,ace-assassin-pants,Ace Assassin Pants,armor,Shadowstr
 ace-assassin-pants-1460407,ace-assassin-pants,Ace Assassin Pants,armor,Shadowstrix,Legs,Legendary,Elusive,525,2,
 ace-assassin-pants-1460408,ace-assassin-pants,Ace Assassin Pants,armor,Shadowstrix,Legs,Legendary,Base roll,500,3,
 ace-assassin-pants-1460409,ace-assassin-pants,Ace Assassin Pants,armor,Shadowstrix,Legs,Legendary,Base roll,500,3,
-ancestral-blessing-ring-1760101,ancestral-blessing-ring,Ancestral Blessing Ring,armor,Any,Ring,Legendary,Base roll,500,3,
-ancestral-blessing-ring-1760102,ancestral-blessing-ring,Ancestral Blessing Ring,armor,Any,Ring,Legendary,Base roll,500,3,
-ancestral-blessing-ring-1760103,ancestral-blessing-ring,Ancestral Blessing Ring,armor,Any,Ring,Legendary,Base roll,500,3,
+ancestral-blessing-ring-1760101,ancestral-blessing-ring,Ancestral Blessing Ring,armor,Any,Ring,Legendary,Base roll,500,3,"agate2,amethyst,moonstone"
+ancestral-blessing-ring-1760102,ancestral-blessing-ring,Ancestral Blessing Ring,armor,Any,Ring,Legendary,Base roll,500,3,"amethyst2,agate,peridot"
+ancestral-blessing-ring-1760103,ancestral-blessing-ring,Ancestral Blessing Ring,armor,Any,Ring,Legendary,Base roll,500,3,"universal,agate,amethyst"
 apprentice-boots-1520201,apprentice-boots,Apprentice Boots,armor,"Sorcerer, Seer",Feet,Common,Base roll,200,,
 apprentice-bracers-1320201,apprentice-bracers,Apprentice Bracers,armor,"Sorcerer, Seer",Hands,Common,Base roll,200,,
 apprentice-hood-1120201,apprentice-hood,Apprentice Hood,armor,"Sorcerer, Seer",Head,Common,Base roll,200,,
@@ -57,12 +57,12 @@ artisans-eyepatch-1120301,artisans-eyepatch,Artisan's Eyepatch,armor,"Blackarrow
 artisans-leather-boots-1520301,artisans-leather-boots,Artisan's Leather Boots,armor,"Blackarrow, Shadowstrix",Feet,Common,Base roll,200,,
 artisans-pants-1420301,artisans-pants,Artisan's Pants,armor,"Blackarrow, Shadowstrix",Legs,Common,Base roll,200,,
 artisans-vest-1220301,artisans-vest,Artisan's Vest,armor,"Blackarrow, Shadowstrix",Chest,Common,Base roll,200,,
-beak-necklace-1630201,beak-necklace,Beak Necklace,armor,Any,Necklace,Rare,Base roll,275,1,
-beak-necklace-1630202,beak-necklace,Beak Necklace,armor,Any,Necklace,Rare,Base roll,275,1,
-beak-necklace-1630203,beak-necklace,Beak Necklace,armor,Any,Necklace,Rare,Base roll,275,1,
-benediction-amulet-1640101,benediction-amulet,Benediction Amulet,armor,Any,Necklace,Excellent,Base roll,350,2,
-benediction-amulet-1640102,benediction-amulet,Benediction Amulet,armor,Any,Necklace,Excellent,Base roll,350,2,
-benediction-amulet-1640103,benediction-amulet,Benediction Amulet,armor,Any,Necklace,Excellent,Base roll,350,2,
+beak-necklace-1630201,beak-necklace,Beak Necklace,armor,Any,Necklace,Rare,Base roll,275,1,moonstone
+beak-necklace-1630202,beak-necklace,Beak Necklace,armor,Any,Necklace,Rare,Base roll,275,1,peridot
+beak-necklace-1630203,beak-necklace,Beak Necklace,armor,Any,Necklace,Rare,Base roll,275,1,universal
+benediction-amulet-1640101,benediction-amulet,Benediction Amulet,armor,Any,Necklace,Excellent,Base roll,350,2,"agate,moonstone"
+benediction-amulet-1640102,benediction-amulet,Benediction Amulet,armor,Any,Necklace,Excellent,Base roll,350,2,"amethyst,peridot"
+benediction-amulet-1640103,benediction-amulet,Benediction Amulet,armor,Any,Necklace,Excellent,Base roll,350,2,"universal,agate"
 black-iris-bracers-1350601,black-iris-bracers,Black Iris Bracers,armor,Withered Knight,Hands,Epic,Aegis,450,1,
 black-iris-bracers-1350602,black-iris-bracers,Black Iris Bracers,armor,Withered Knight,Hands,Epic,Wrath,450,1,
 black-iris-bracers-1350603,black-iris-bracers,Black Iris Bracers,armor,Withered Knight,Hands,Epic,Burst,450,1,
@@ -108,9 +108,9 @@ black-iris-sabatons-1550606,black-iris-sabatons,Black Iris Sabatons,armor,Wither
 black-iris-sabatons-1550607,black-iris-sabatons,Black Iris Sabatons,armor,Withered Knight,Feet,Epic,Vitality,450,1,
 black-iris-sabatons-1550608,black-iris-sabatons,Black Iris Sabatons,armor,Withered Knight,Feet,Epic,Base roll,425,2,
 black-iris-sabatons-1550609,black-iris-sabatons,Black Iris Sabatons,armor,Withered Knight,Feet,Epic,Base roll,425,2,
-bloodborn-amulet-1640201,bloodborn-amulet,Bloodborn Amulet,armor,Any,Necklace,Excellent,Base roll,350,2,
-bloodborn-amulet-1640202,bloodborn-amulet,Bloodborn Amulet,armor,Any,Necklace,Excellent,Base roll,350,2,
-bloodborn-amulet-1640203,bloodborn-amulet,Bloodborn Amulet,armor,Any,Necklace,Excellent,Base roll,350,2,
+bloodborn-amulet-1640201,bloodborn-amulet,Bloodborn Amulet,armor,Any,Necklace,Excellent,Base roll,350,2,"agate,peridot"
+bloodborn-amulet-1640202,bloodborn-amulet,Bloodborn Amulet,armor,Any,Necklace,Excellent,Base roll,350,2,"amethyst,moonstone"
+bloodborn-amulet-1640203,bloodborn-amulet,Bloodborn Amulet,armor,Any,Necklace,Excellent,Base roll,350,2,"universal,amethyst"
 bloodwrath-general-armor-1250101,bloodwrath-general-armor,Bloodwrath General Armor,armor,Mercenary,Chest,Epic,Aegis,450,1,
 bloodwrath-general-armor-1250102,bloodwrath-general-armor,Bloodwrath General Armor,armor,Mercenary,Chest,Epic,Tenacious,450,1,
 bloodwrath-general-armor-1250103,bloodwrath-general-armor,Bloodwrath General Armor,armor,Mercenary,Chest,Epic,Bulwark,450,1,
@@ -248,9 +248,9 @@ champions-pants-1460106,champions-pants,Champion's Pants,armor,Mercenary,Legs,Le
 champions-pants-1460107,champions-pants,Champion's Pants,armor,Mercenary,Legs,Legendary,Elusive,525,2,
 champions-pants-1460108,champions-pants,Champion's Pants,armor,Mercenary,Legs,Legendary,Base roll,500,3,
 champions-pants-1460109,champions-pants,Champion's Pants,armor,Mercenary,Legs,Legendary,Base roll,500,3,
-commander-seal-ring-1750301,commander-seal-ring,Commander Seal Ring,armor,Any,Ring,Epic,Base roll,425,2,
-commander-seal-ring-1750302,commander-seal-ring,Commander Seal Ring,armor,Any,Ring,Epic,Base roll,425,2,
-commander-seal-ring-1750303,commander-seal-ring,Commander Seal Ring,armor,Any,Ring,Epic,Base roll,425,2,
+commander-seal-ring-1750301,commander-seal-ring,Commander Seal Ring,armor,Any,Ring,Epic,Base roll,425,2,"agate2,moonstone"
+commander-seal-ring-1750302,commander-seal-ring,Commander Seal Ring,armor,Any,Ring,Epic,Base roll,425,2,"amethyst2,peridot"
+commander-seal-ring-1750303,commander-seal-ring,Commander Seal Ring,armor,Any,Ring,Epic,Base roll,425,2,"universal2,moonstone"
 crude-recruit-armor-1210101,crude-recruit-armor,Crude Recruit Armor,armor,"Mercenary, Withered Knight",Chest,Damaged,Base roll,100,,
 crude-recruit-boots-1510101,crude-recruit-boots,Crude Recruit Boots,armor,"Mercenary, Withered Knight",Feet,Damaged,Base roll,100,,
 crude-recruit-bracers-1310101,crude-recruit-bracers,Crude Recruit Bracers,armor,"Mercenary, Withered Knight",Hands,Damaged,Base roll,100,,
@@ -347,24 +347,24 @@ crusader-pants-1440307,crusader-pants,Crusader Pants,armor,Blackarrow,Legs,Excel
 crusader-pants-1440308,crusader-pants,Crusader Pants,armor,Blackarrow,Legs,Excellent,Base roll,350,2,
 crusader-pants-1440309,crusader-pants,Crusader Pants,armor,Blackarrow,Legs,Excellent,Base roll,350,2,
 decorative-ring-1720201,decorative-ring,Decorative Ring,armor,Any,Ring,Common,Base roll,200,,
-demonbane-ring-1740201,demonbane-ring,Demonbane Ring,armor,Any,Ring,Excellent,Base roll,350,2,
-demonbane-ring-1740202,demonbane-ring,Demonbane Ring,armor,Any,Ring,Excellent,Base roll,350,2,
-demonbane-ring-1740203,demonbane-ring,Demonbane Ring,armor,Any,Ring,Excellent,Base roll,350,2,
-discipline-pendant-1630101,discipline-pendant,Discipline Pendant,armor,Any,Necklace,Rare,Base roll,275,1,
-discipline-pendant-1630102,discipline-pendant,Discipline Pendant,armor,Any,Necklace,Rare,Base roll,275,1,
-discipline-pendant-1630103,discipline-pendant,Discipline Pendant,armor,Any,Necklace,Rare,Base roll,275,1,
-dominance-amulet-1640301,dominance-amulet,Dominance Amulet,armor,Any,Necklace,Excellent,Base roll,350,2,
-dominance-amulet-1640302,dominance-amulet,Dominance Amulet,armor,Any,Necklace,Excellent,Base roll,350,2,
-dominance-amulet-1640303,dominance-amulet,Dominance Amulet,armor,Any,Necklace,Excellent,Base roll,350,2,
-dragon-slumber-necklace-1650201,dragon-slumber-necklace,Dragon Slumber Necklace,armor,Any,Necklace,Epic,Base roll,425,2,
-dragon-slumber-necklace-1650202,dragon-slumber-necklace,Dragon Slumber Necklace,armor,Any,Necklace,Epic,Base roll,425,2,
-dragon-slumber-necklace-1650203,dragon-slumber-necklace,Dragon Slumber Necklace,armor,Any,Necklace,Epic,Base roll,425,2,
-dragonbreath-ring-1750201,dragonbreath-ring,Dragonbreath Ring,armor,Any,Ring,Epic,Base roll,425,2,
-dragonbreath-ring-1750202,dragonbreath-ring,Dragonbreath Ring,armor,Any,Ring,Epic,Base roll,425,2,
-dragonbreath-ring-1750203,dragonbreath-ring,Dragonbreath Ring,armor,Any,Ring,Epic,Base roll,425,2,
-dreamweaver-necklace-1640401,dreamweaver-necklace,Dreamweaver Necklace,armor,Any,Necklace,Excellent,Base roll,350,2,
-dreamweaver-necklace-1640402,dreamweaver-necklace,Dreamweaver Necklace,armor,Any,Necklace,Excellent,Base roll,350,2,
-dreamweaver-necklace-1640403,dreamweaver-necklace,Dreamweaver Necklace,armor,Any,Necklace,Excellent,Base roll,350,2,
+demonbane-ring-1740201,demonbane-ring,Demonbane Ring,armor,Any,Ring,Excellent,Base roll,350,2,"agate,peridot"
+demonbane-ring-1740202,demonbane-ring,Demonbane Ring,armor,Any,Ring,Excellent,Base roll,350,2,"amethyst,moonstone"
+demonbane-ring-1740203,demonbane-ring,Demonbane Ring,armor,Any,Ring,Excellent,Base roll,350,2,"universal,amethyst"
+discipline-pendant-1630101,discipline-pendant,Discipline Pendant,armor,Any,Necklace,Rare,Base roll,275,1,agate
+discipline-pendant-1630102,discipline-pendant,Discipline Pendant,armor,Any,Necklace,Rare,Base roll,275,1,amethyst
+discipline-pendant-1630103,discipline-pendant,Discipline Pendant,armor,Any,Necklace,Rare,Base roll,275,1,universal
+dominance-amulet-1640301,dominance-amulet,Dominance Amulet,armor,Any,Necklace,Excellent,Base roll,350,2,"agate,moonstone"
+dominance-amulet-1640302,dominance-amulet,Dominance Amulet,armor,Any,Necklace,Excellent,Base roll,350,2,"amethyst,peridot"
+dominance-amulet-1640303,dominance-amulet,Dominance Amulet,armor,Any,Necklace,Excellent,Base roll,350,2,"universal,moonstone"
+dragon-slumber-necklace-1650201,dragon-slumber-necklace,Dragon Slumber Necklace,armor,Any,Necklace,Epic,Base roll,425,2,"moonstone2,amethyst"
+dragon-slumber-necklace-1650202,dragon-slumber-necklace,Dragon Slumber Necklace,armor,Any,Necklace,Epic,Base roll,425,2,"peridot2,agate"
+dragon-slumber-necklace-1650203,dragon-slumber-necklace,Dragon Slumber Necklace,armor,Any,Necklace,Epic,Base roll,425,2,"universal2,amethyst"
+dragonbreath-ring-1750201,dragonbreath-ring,Dragonbreath Ring,armor,Any,Ring,Epic,Base roll,425,2,"moonstone2,amethyst"
+dragonbreath-ring-1750202,dragonbreath-ring,Dragonbreath Ring,armor,Any,Ring,Epic,Base roll,425,2,"peridot2,agate"
+dragonbreath-ring-1750203,dragonbreath-ring,Dragonbreath Ring,armor,Any,Ring,Epic,Base roll,425,2,"universal2,amethyst"
+dreamweaver-necklace-1640401,dreamweaver-necklace,Dreamweaver Necklace,armor,Any,Necklace,Excellent,Base roll,350,2,"agate,peridot"
+dreamweaver-necklace-1640402,dreamweaver-necklace,Dreamweaver Necklace,armor,Any,Necklace,Excellent,Base roll,350,2,"amethyst,moonstone"
+dreamweaver-necklace-1640403,dreamweaver-necklace,Dreamweaver Necklace,armor,Any,Necklace,Excellent,Base roll,350,2,"universal,peridot"
 eagle-god-armor-1250301,eagle-god-armor,Eagle God Armor,armor,Blackarrow,Chest,Epic,Aegis,450,1,
 eagle-god-armor-1250302,eagle-god-armor,Eagle God Armor,armor,Blackarrow,Chest,Epic,Tenacious,450,1,
 eagle-god-armor-1250303,eagle-god-armor,Eagle God Armor,armor,Blackarrow,Chest,Epic,Iron Helmet,450,1,
@@ -410,9 +410,9 @@ eagle-god-winged-helm-1150306,eagle-god-winged-helm,Eagle God Winged Helm,armor,
 eagle-god-winged-helm-1150307,eagle-god-winged-helm,Eagle God Winged Helm,armor,Blackarrow,Head,Epic,Wealth,450,1,
 eagle-god-winged-helm-1150308,eagle-god-winged-helm,Eagle God Winged Helm,armor,Blackarrow,Head,Epic,Base roll,425,2,
 eagle-god-winged-helm-1150309,eagle-god-winged-helm,Eagle God Winged Helm,armor,Blackarrow,Head,Epic,Base roll,425,2,
-einherjars-blessing-necklace-1660201,einherjars-blessing-necklace,Einherjar's Blessing Necklace,armor,Any,Necklace,Legendary,Base roll,500,3,
-einherjars-blessing-necklace-1660202,einherjars-blessing-necklace,Einherjar's Blessing Necklace,armor,Any,Necklace,Legendary,Base roll,500,3,
-einherjars-blessing-necklace-1660203,einherjars-blessing-necklace,Einherjar's Blessing Necklace,armor,Any,Necklace,Legendary,Base roll,500,3,
+einherjars-blessing-necklace-1660201,einherjars-blessing-necklace,Einherjar's Blessing Necklace,armor,Any,Necklace,Legendary,Base roll,500,3,"moonstone2,amethyst,peridot"
+einherjars-blessing-necklace-1660202,einherjars-blessing-necklace,Einherjar's Blessing Necklace,armor,Any,Necklace,Legendary,Base roll,500,3,"peridot2,agate,moonstone"
+einherjars-blessing-necklace-1660203,einherjars-blessing-necklace,Einherjar's Blessing Necklace,armor,Any,Necklace,Legendary,Base roll,500,3,"universal2,amethyst,moonstone"
 emissary-gauntlets-1340401,emissary-gauntlets,Emissary Gauntlets,armor,Shadowstrix,Hands,Excellent,Fervid,375,1,
 emissary-gauntlets-1340402,emissary-gauntlets,Emissary Gauntlets,armor,Shadowstrix,Hands,Excellent,Seeker,375,1,
 emissary-gauntlets-1340403,emissary-gauntlets,Emissary Gauntlets,armor,Shadowstrix,Hands,Excellent,Fervor,375,1,
@@ -504,9 +504,9 @@ enlightenment-vestment-1240506,enlightenment-vestment,Enlightenment Vestment,arm
 enlightenment-vestment-1240507,enlightenment-vestment,Enlightenment Vestment,armor,Seer,Chest,Excellent,Blessing,375,1,
 enlightenment-vestment-1240508,enlightenment-vestment,Enlightenment Vestment,armor,Seer,Chest,Excellent,Base roll,350,2,
 enlightenment-vestment-1240509,enlightenment-vestment,Enlightenment Vestment,armor,Seer,Chest,Excellent,Base roll,350,2,
-eye-of-the-sea-giant-1760401,eye-of-the-sea-giant,Eye of the Sea Giant,armor,Any,Ring,Legendary,Base roll,500,3,
-eye-of-the-sea-giant-1760402,eye-of-the-sea-giant,Eye of the Sea Giant,armor,Any,Ring,Legendary,Base roll,500,3,
-eye-of-the-sea-giant-1760403,eye-of-the-sea-giant,Eye of the Sea Giant,armor,Any,Ring,Legendary,Base roll,500,3,
+eye-of-the-sea-giant-1760401,eye-of-the-sea-giant,Eye of the Sea Giant,armor,Any,Ring,Legendary,Base roll,500,3,"moonstone2,amethyst,peridot"
+eye-of-the-sea-giant-1760402,eye-of-the-sea-giant,Eye of the Sea Giant,armor,Any,Ring,Legendary,Base roll,500,3,"peridot2,agate,moonstone"
+eye-of-the-sea-giant-1760403,eye-of-the-sea-giant,Eye of the Sea Giant,armor,Any,Ring,Legendary,Base roll,500,3,"universal2,agate,peridot"
 fearless-boots-1540101,fearless-boots,Fearless Boots,armor,Mercenary,Feet,Excellent,Stoic,375,1,
 fearless-boots-1540102,fearless-boots,Fearless Boots,armor,Mercenary,Feet,Excellent,Ethereal,375,1,
 fearless-boots-1540103,fearless-boots,Fearless Boots,armor,Mercenary,Feet,Excellent,Wrath,375,1,
@@ -552,9 +552,9 @@ fearless-pants-1440106,fearless-pants,Fearless Pants,armor,Mercenary,Legs,Excell
 fearless-pants-1440107,fearless-pants,Fearless Pants,armor,Mercenary,Legs,Excellent,Elusive,375,1,
 fearless-pants-1440108,fearless-pants,Fearless Pants,armor,Mercenary,Legs,Excellent,Base roll,350,2,
 fearless-pants-1440109,fearless-pants,Fearless Pants,armor,Mercenary,Legs,Excellent,Base roll,350,2,
-frostspeaker-pendant-1660301,frostspeaker-pendant,Frostspeaker Pendant,armor,Any,Necklace,Legendary,Base roll,500,3,
-frostspeaker-pendant-1660302,frostspeaker-pendant,Frostspeaker Pendant,armor,Any,Necklace,Legendary,Base roll,500,3,
-frostspeaker-pendant-1660303,frostspeaker-pendant,Frostspeaker Pendant,armor,Any,Necklace,Legendary,Base roll,500,3,
+frostspeaker-pendant-1660301,frostspeaker-pendant,Frostspeaker Pendant,armor,Any,Necklace,Legendary,Base roll,500,3,"agate2,amethyst,moonstone"
+frostspeaker-pendant-1660302,frostspeaker-pendant,Frostspeaker Pendant,armor,Any,Necklace,Legendary,Base roll,500,3,"amethyst2,agate,peridot"
+frostspeaker-pendant-1660303,frostspeaker-pendant,Frostspeaker Pendant,armor,Any,Necklace,Legendary,Base roll,500,3,"universal2,moonstone,peridot"
 guard-armor-1220101,guard-armor,Guard Armor,armor,"Mercenary, Withered Knight",Chest,Common,Base roll,200,,
 guard-boots-1520101,guard-boots,Guard Boots,armor,"Mercenary, Withered Knight",Feet,Common,Base roll,200,,
 guard-bracers-1320101,guard-bracers,Guard Bracers,armor,"Mercenary, Withered Knight",Hands,Common,Base roll,200,,
@@ -605,18 +605,18 @@ holy-saints-vestment-1260506,holy-saints-vestment,Holy Saint's Vestment,armor,Se
 holy-saints-vestment-1260507,holy-saints-vestment,Holy Saint's Vestment,armor,Seer,Chest,Legendary,Blessing,525,2,
 holy-saints-vestment-1260508,holy-saints-vestment,Holy Saint's Vestment,armor,Seer,Chest,Legendary,Base roll,500,3,
 holy-saints-vestment-1260509,holy-saints-vestment,Holy Saint's Vestment,armor,Seer,Chest,Legendary,Base roll,500,3,
-hunters-ring-1730301,hunters-ring,Hunter's Ring,armor,Any,Ring,Rare,Base roll,275,1,
-hunters-ring-1730302,hunters-ring,Hunter's Ring,armor,Any,Ring,Rare,Base roll,275,1,
-hunters-ring-1730303,hunters-ring,Hunter's Ring,armor,Any,Ring,Rare,Base roll,275,1,
-jungle-emissary-necklace-1650301,jungle-emissary-necklace,Jungle Emissary Necklace,armor,Any,Necklace,Epic,Base roll,425,2,
-jungle-emissary-necklace-1650302,jungle-emissary-necklace,Jungle Emissary Necklace,armor,Any,Necklace,Epic,Base roll,425,2,
-jungle-emissary-necklace-1650303,jungle-emissary-necklace,Jungle Emissary Necklace,armor,Any,Necklace,Epic,Base roll,425,2,
-lovers-ring-1730101,lovers-ring,Lover's Ring,armor,Any,Ring,Rare,Base roll,275,1,
-lovers-ring-1730102,lovers-ring,Lover's Ring,armor,Any,Ring,Rare,Base roll,275,1,
-lovers-ring-1730103,lovers-ring,Lover's Ring,armor,Any,Ring,Rare,Base roll,275,1,
-mandrake-silver-ring-1740401,mandrake-silver-ring,Mandrake Silver Ring,armor,Any,Ring,Excellent,Base roll,350,2,
-mandrake-silver-ring-1740402,mandrake-silver-ring,Mandrake Silver Ring,armor,Any,Ring,Excellent,Base roll,350,2,
-mandrake-silver-ring-1740403,mandrake-silver-ring,Mandrake Silver Ring,armor,Any,Ring,Excellent,Base roll,350,2,
+hunters-ring-1730301,hunters-ring,Hunter's Ring,armor,Any,Ring,Rare,Base roll,275,1,agate
+hunters-ring-1730302,hunters-ring,Hunter's Ring,armor,Any,Ring,Rare,Base roll,275,1,amethyst
+hunters-ring-1730303,hunters-ring,Hunter's Ring,armor,Any,Ring,Rare,Base roll,275,1,universal
+jungle-emissary-necklace-1650301,jungle-emissary-necklace,Jungle Emissary Necklace,armor,Any,Necklace,Epic,Base roll,425,2,"agate2,moonstone"
+jungle-emissary-necklace-1650302,jungle-emissary-necklace,Jungle Emissary Necklace,armor,Any,Necklace,Epic,Base roll,425,2,"amethyst2,peridot"
+jungle-emissary-necklace-1650303,jungle-emissary-necklace,Jungle Emissary Necklace,armor,Any,Necklace,Epic,Base roll,425,2,"universal2,moonstone"
+lovers-ring-1730101,lovers-ring,Lover's Ring,armor,Any,Ring,Rare,Base roll,275,1,agate
+lovers-ring-1730102,lovers-ring,Lover's Ring,armor,Any,Ring,Rare,Base roll,275,1,amethyst
+lovers-ring-1730103,lovers-ring,Lover's Ring,armor,Any,Ring,Rare,Base roll,275,1,universal
+mandrake-silver-ring-1740401,mandrake-silver-ring,Mandrake Silver Ring,armor,Any,Ring,Excellent,Base roll,350,2,"agate,peridot"
+mandrake-silver-ring-1740402,mandrake-silver-ring,Mandrake Silver Ring,armor,Any,Ring,Excellent,Base roll,350,2,"amethyst,moonstone"
+mandrake-silver-ring-1740403,mandrake-silver-ring,Mandrake Silver Ring,armor,Any,Ring,Excellent,Base roll,350,2,"universal,peridot"
 martyrs-bracers-1330501,martyrs-bracers,Martyr's Bracers,armor,Seer,Hands,Rare,Brotherhood,300,0,
 martyrs-bracers-1330502,martyrs-bracers,Martyr's Bracers,armor,Seer,Hands,Rare,Ranged,300,0,
 martyrs-bracers-1330503,martyrs-bracers,Martyr's Bracers,armor,Seer,Hands,Rare,Fervor,300,0,
@@ -662,186 +662,186 @@ martyrs-vestment-1230506,martyrs-vestment,Martyr's Vestment,armor,Seer,Chest,Rar
 martyrs-vestment-1230507,martyrs-vestment,Martyr's Vestment,armor,Seer,Chest,Rare,Blessing,300,0,
 martyrs-vestment-1230508,martyrs-vestment,Martyr's Vestment,armor,Seer,Chest,Rare,Base roll,275,1,
 martyrs-vestment-1230509,martyrs-vestment,Martyr's Vestment,armor,Seer,Chest,Rare,Base roll,275,1,
-mithril-ring-1730401,mithril-ring,Mithril Ring,armor,Any,Ring,Rare,Base roll,275,1,
-mithril-ring-1730402,mithril-ring,Mithril Ring,armor,Any,Ring,Rare,Base roll,275,1,
-mithril-ring-1730403,mithril-ring,Mithril Ring,armor,Any,Ring,Rare,Base roll,275,1,
-moon-priestess-boots-1560201,moon-priestess-boots,Moon Priestess Boots,armor,Sorcerer,Feet,Legendary,Ethereal,525,2,
-moon-priestess-boots-1560202,moon-priestess-boots,Moon Priestess Boots,armor,Sorcerer,Feet,Legendary,Sky Piercer,525,2,
-moon-priestess-boots-1560203,moon-priestess-boots,Moon Priestess Boots,armor,Sorcerer,Feet,Legendary,Fervid,525,2,
-moon-priestess-boots-1560204,moon-priestess-boots,Moon Priestess Boots,armor,Sorcerer,Feet,Legendary,Ranged,525,2,
-moon-priestess-boots-1560205,moon-priestess-boots,Moon Priestess Boots,armor,Sorcerer,Feet,Legendary,Eloquence,525,2,
-moon-priestess-boots-1560206,moon-priestess-boots,Moon Priestess Boots,armor,Sorcerer,Feet,Legendary,Swift,525,2,
-moon-priestess-boots-1560207,moon-priestess-boots,Moon Priestess Boots,armor,Sorcerer,Feet,Legendary,Curse,525,2,
-moon-priestess-boots-1560208,moon-priestess-boots,Moon Priestess Boots,armor,Sorcerer,Feet,Legendary,Base roll,500,3,
-moon-priestess-boots-1560209,moon-priestess-boots,Moon Priestess Boots,armor,Sorcerer,Feet,Legendary,Base roll,500,3,
-moon-priestess-bracers-1360201,moon-priestess-bracers,Moon Priestess Bracers,armor,Sorcerer,Hands,Legendary,Sky Piercer,525,2,
-moon-priestess-bracers-1360202,moon-priestess-bracers,Moon Priestess Bracers,armor,Sorcerer,Hands,Legendary,Fervid,525,2,
-moon-priestess-bracers-1360203,moon-priestess-bracers,Moon Priestess Bracers,armor,Sorcerer,Hands,Legendary,Seeker,525,2,
-moon-priestess-bracers-1360204,moon-priestess-bracers,Moon Priestess Bracers,armor,Sorcerer,Hands,Legendary,Wealth,525,2,
-moon-priestess-bracers-1360205,moon-priestess-bracers,Moon Priestess Bracers,armor,Sorcerer,Hands,Legendary,Eloquence,525,2,
-moon-priestess-bracers-1360206,moon-priestess-bracers,Moon Priestess Bracers,armor,Sorcerer,Hands,Legendary,Elusive,525,2,
-moon-priestess-bracers-1360207,moon-priestess-bracers,Moon Priestess Bracers,armor,Sorcerer,Hands,Legendary,Deft,525,2,
-moon-priestess-bracers-1360208,moon-priestess-bracers,Moon Priestess Bracers,armor,Sorcerer,Hands,Legendary,Base roll,500,3,
-moon-priestess-bracers-1360209,moon-priestess-bracers,Moon Priestess Bracers,armor,Sorcerer,Hands,Legendary,Base roll,500,3,
-moon-priestess-mask-1160201,moon-priestess-mask,Moon Priestess Mask,armor,Sorcerer,Head,Legendary,Iron Helmet,525,2,
-moon-priestess-mask-1160202,moon-priestess-mask,Moon Priestess Mask,armor,Sorcerer,Head,Legendary,Sky Piercer,525,2,
-moon-priestess-mask-1160203,moon-priestess-mask,Moon Priestess Mask,armor,Sorcerer,Head,Legendary,Seeker,525,2,
-moon-priestess-mask-1160204,moon-priestess-mask,Moon Priestess Mask,armor,Sorcerer,Head,Legendary,Ranged,525,2,
-moon-priestess-mask-1160205,moon-priestess-mask,Moon Priestess Mask,armor,Sorcerer,Head,Legendary,Eloquence,525,2,
-moon-priestess-mask-1160206,moon-priestess-mask,Moon Priestess Mask,armor,Sorcerer,Head,Legendary,Elusive,525,2,
-moon-priestess-mask-1160207,moon-priestess-mask,Moon Priestess Mask,armor,Sorcerer,Head,Legendary,Wealth,525,2,
-moon-priestess-mask-1160208,moon-priestess-mask,Moon Priestess Mask,armor,Sorcerer,Head,Legendary,Base roll,500,3,
-moon-priestess-mask-1160209,moon-priestess-mask,Moon Priestess Mask,armor,Sorcerer,Head,Legendary,Base roll,500,3,
-moon-priestess-pants-1460201,moon-priestess-pants,Moon Priestess Pants,armor,Sorcerer,Legs,Legendary,Aegis,525,2,
-moon-priestess-pants-1460202,moon-priestess-pants,Moon Priestess Pants,armor,Sorcerer,Legs,Legendary,Tenacious,525,2,
-moon-priestess-pants-1460203,moon-priestess-pants,Moon Priestess Pants,armor,Sorcerer,Legs,Legendary,Iron Helmet,525,2,
-moon-priestess-pants-1460204,moon-priestess-pants,Moon Priestess Pants,armor,Sorcerer,Legs,Legendary,Sky Piercer,525,2,
-moon-priestess-pants-1460205,moon-priestess-pants,Moon Priestess Pants,armor,Sorcerer,Legs,Legendary,Vitality,525,2,
-moon-priestess-pants-1460206,moon-priestess-pants,Moon Priestess Pants,armor,Sorcerer,Legs,Legendary,Swift,525,2,
-moon-priestess-pants-1460207,moon-priestess-pants,Moon Priestess Pants,armor,Sorcerer,Legs,Legendary,Elusive,525,2,
-moon-priestess-pants-1460208,moon-priestess-pants,Moon Priestess Pants,armor,Sorcerer,Legs,Legendary,Base roll,500,3,
-moon-priestess-pants-1460209,moon-priestess-pants,Moon Priestess Pants,armor,Sorcerer,Legs,Legendary,Base roll,500,3,
-moon-priestess-robe-1260201,moon-priestess-robe,Moon Priestess Robe,armor,Sorcerer,Chest,Legendary,Aegis,525,2,
-moon-priestess-robe-1260202,moon-priestess-robe,Moon Priestess Robe,armor,Sorcerer,Chest,Legendary,Tenacious,525,2,
-moon-priestess-robe-1260203,moon-priestess-robe,Moon Priestess Robe,armor,Sorcerer,Chest,Legendary,Iron Helmet,525,2,
-moon-priestess-robe-1260204,moon-priestess-robe,Moon Priestess Robe,armor,Sorcerer,Chest,Legendary,Ethereal,525,2,
-moon-priestess-robe-1260205,moon-priestess-robe,Moon Priestess Robe,armor,Sorcerer,Chest,Legendary,Ranged,525,2,
-moon-priestess-robe-1260206,moon-priestess-robe,Moon Priestess Robe,armor,Sorcerer,Chest,Legendary,Vitality,525,2,
-moon-priestess-robe-1260207,moon-priestess-robe,Moon Priestess Robe,armor,Sorcerer,Chest,Legendary,Curse,525,2,
-moon-priestess-robe-1260208,moon-priestess-robe,Moon Priestess Robe,armor,Sorcerer,Chest,Legendary,Base roll,500,3,
-moon-priestess-robe-1260209,moon-priestess-robe,Moon Priestess Robe,armor,Sorcerer,Chest,Legendary,Base roll,500,3,
-mysteria-elder-boots-1550201,mysteria-elder-boots,Mysteria Elder Boots,armor,Sorcerer,Feet,Epic,Ethereal,450,1,
-mysteria-elder-boots-1550202,mysteria-elder-boots,Mysteria Elder Boots,armor,Sorcerer,Feet,Epic,Sky Piercer,450,1,
-mysteria-elder-boots-1550203,mysteria-elder-boots,Mysteria Elder Boots,armor,Sorcerer,Feet,Epic,Fervid,450,1,
-mysteria-elder-boots-1550204,mysteria-elder-boots,Mysteria Elder Boots,armor,Sorcerer,Feet,Epic,Ranged,450,1,
-mysteria-elder-boots-1550205,mysteria-elder-boots,Mysteria Elder Boots,armor,Sorcerer,Feet,Epic,Eloquence,450,1,
-mysteria-elder-boots-1550206,mysteria-elder-boots,Mysteria Elder Boots,armor,Sorcerer,Feet,Epic,Swift,450,1,
-mysteria-elder-boots-1550207,mysteria-elder-boots,Mysteria Elder Boots,armor,Sorcerer,Feet,Epic,Curse,450,1,
-mysteria-elder-boots-1550208,mysteria-elder-boots,Mysteria Elder Boots,armor,Sorcerer,Feet,Epic,Base roll,425,2,
-mysteria-elder-boots-1550209,mysteria-elder-boots,Mysteria Elder Boots,armor,Sorcerer,Feet,Epic,Base roll,425,2,
-mysteria-elder-bracers-1350201,mysteria-elder-bracers,Mysteria Elder Bracers,armor,Sorcerer,Hands,Epic,Sky Piercer,450,1,
-mysteria-elder-bracers-1350202,mysteria-elder-bracers,Mysteria Elder Bracers,armor,Sorcerer,Hands,Epic,Fervid,450,1,
-mysteria-elder-bracers-1350203,mysteria-elder-bracers,Mysteria Elder Bracers,armor,Sorcerer,Hands,Epic,Seeker,450,1,
-mysteria-elder-bracers-1350204,mysteria-elder-bracers,Mysteria Elder Bracers,armor,Sorcerer,Hands,Epic,Wealth,450,1,
-mysteria-elder-bracers-1350205,mysteria-elder-bracers,Mysteria Elder Bracers,armor,Sorcerer,Hands,Epic,Eloquence,450,1,
-mysteria-elder-bracers-1350206,mysteria-elder-bracers,Mysteria Elder Bracers,armor,Sorcerer,Hands,Epic,Elusive,450,1,
-mysteria-elder-bracers-1350207,mysteria-elder-bracers,Mysteria Elder Bracers,armor,Sorcerer,Hands,Epic,Deft,450,1,
-mysteria-elder-bracers-1350208,mysteria-elder-bracers,Mysteria Elder Bracers,armor,Sorcerer,Hands,Epic,Base roll,425,2,
-mysteria-elder-bracers-1350209,mysteria-elder-bracers,Mysteria Elder Bracers,armor,Sorcerer,Hands,Epic,Base roll,425,2,
-mysteria-elder-mask-1150201,mysteria-elder-mask,Mysteria Elder Mask,armor,Sorcerer,Head,Epic,Iron Helmet,450,1,
-mysteria-elder-mask-1150202,mysteria-elder-mask,Mysteria Elder Mask,armor,Sorcerer,Head,Epic,Sky Piercer,450,1,
-mysteria-elder-mask-1150203,mysteria-elder-mask,Mysteria Elder Mask,armor,Sorcerer,Head,Epic,Seeker,450,1,
-mysteria-elder-mask-1150204,mysteria-elder-mask,Mysteria Elder Mask,armor,Sorcerer,Head,Epic,Ranged,450,1,
-mysteria-elder-mask-1150205,mysteria-elder-mask,Mysteria Elder Mask,armor,Sorcerer,Head,Epic,Eloquence,450,1,
-mysteria-elder-mask-1150206,mysteria-elder-mask,Mysteria Elder Mask,armor,Sorcerer,Head,Epic,Elusive,450,1,
-mysteria-elder-mask-1150207,mysteria-elder-mask,Mysteria Elder Mask,armor,Sorcerer,Head,Epic,Wealth,450,1,
-mysteria-elder-mask-1150208,mysteria-elder-mask,Mysteria Elder Mask,armor,Sorcerer,Head,Epic,Base roll,425,2,
-mysteria-elder-mask-1150209,mysteria-elder-mask,Mysteria Elder Mask,armor,Sorcerer,Head,Epic,Base roll,425,2,
-mysteria-elder-pants-1450201,mysteria-elder-pants,Mysteria Elder Pants,armor,Sorcerer,Legs,Epic,Aegis,450,1,
-mysteria-elder-pants-1450202,mysteria-elder-pants,Mysteria Elder Pants,armor,Sorcerer,Legs,Epic,Tenacious,450,1,
-mysteria-elder-pants-1450203,mysteria-elder-pants,Mysteria Elder Pants,armor,Sorcerer,Legs,Epic,Iron Helmet,450,1,
-mysteria-elder-pants-1450204,mysteria-elder-pants,Mysteria Elder Pants,armor,Sorcerer,Legs,Epic,Sky Piercer,450,1,
-mysteria-elder-pants-1450205,mysteria-elder-pants,Mysteria Elder Pants,armor,Sorcerer,Legs,Epic,Vitality,450,1,
-mysteria-elder-pants-1450206,mysteria-elder-pants,Mysteria Elder Pants,armor,Sorcerer,Legs,Epic,Swift,450,1,
-mysteria-elder-pants-1450207,mysteria-elder-pants,Mysteria Elder Pants,armor,Sorcerer,Legs,Epic,Elusive,450,1,
-mysteria-elder-pants-1450208,mysteria-elder-pants,Mysteria Elder Pants,armor,Sorcerer,Legs,Epic,Base roll,425,2,
-mysteria-elder-pants-1450209,mysteria-elder-pants,Mysteria Elder Pants,armor,Sorcerer,Legs,Epic,Base roll,425,2,
-mysteria-elder-robe-1250201,mysteria-elder-robe,Mysteria Elder Robe,armor,Sorcerer,Chest,Epic,Aegis,450,1,
-mysteria-elder-robe-1250202,mysteria-elder-robe,Mysteria Elder Robe,armor,Sorcerer,Chest,Epic,Tenacious,450,1,
-mysteria-elder-robe-1250203,mysteria-elder-robe,Mysteria Elder Robe,armor,Sorcerer,Chest,Epic,Iron Helmet,450,1,
-mysteria-elder-robe-1250204,mysteria-elder-robe,Mysteria Elder Robe,armor,Sorcerer,Chest,Epic,Ethereal,450,1,
-mysteria-elder-robe-1250205,mysteria-elder-robe,Mysteria Elder Robe,armor,Sorcerer,Chest,Epic,Ranged,450,1,
-mysteria-elder-robe-1250206,mysteria-elder-robe,Mysteria Elder Robe,armor,Sorcerer,Chest,Epic,Vitality,450,1,
-mysteria-elder-robe-1250207,mysteria-elder-robe,Mysteria Elder Robe,armor,Sorcerer,Chest,Epic,Curse,450,1,
-mysteria-elder-robe-1250208,mysteria-elder-robe,Mysteria Elder Robe,armor,Sorcerer,Chest,Epic,Base roll,425,2,
-mysteria-elder-robe-1250209,mysteria-elder-robe,Mysteria Elder Robe,armor,Sorcerer,Chest,Epic,Base roll,425,2,
-practitioner-bracers-1330201,practitioner-bracers,Practitioner Bracers,armor,Sorcerer,Hands,Rare,Sky Piercer,300,0,
-practitioner-bracers-1330202,practitioner-bracers,Practitioner Bracers,armor,Sorcerer,Hands,Rare,Fervid,300,0,
-practitioner-bracers-1330203,practitioner-bracers,Practitioner Bracers,armor,Sorcerer,Hands,Rare,Seeker,300,0,
-practitioner-bracers-1330204,practitioner-bracers,Practitioner Bracers,armor,Sorcerer,Hands,Rare,Wealth,300,0,
-practitioner-bracers-1330205,practitioner-bracers,Practitioner Bracers,armor,Sorcerer,Hands,Rare,Eloquence,300,0,
-practitioner-bracers-1330206,practitioner-bracers,Practitioner Bracers,armor,Sorcerer,Hands,Rare,Elusive,300,0,
-practitioner-bracers-1330207,practitioner-bracers,Practitioner Bracers,armor,Sorcerer,Hands,Rare,Deft,300,0,
-practitioner-bracers-1330208,practitioner-bracers,Practitioner Bracers,armor,Sorcerer,Hands,Rare,Base roll,275,1,
-practitioner-bracers-1330209,practitioner-bracers,Practitioner Bracers,armor,Sorcerer,Hands,Rare,Base roll,275,1,
-practitioner-hood-1130201,practitioner-hood,Practitioner Hood,armor,Sorcerer,Head,Rare,Iron Helmet,300,0,
-practitioner-hood-1130202,practitioner-hood,Practitioner Hood,armor,Sorcerer,Head,Rare,Sky Piercer,300,0,
-practitioner-hood-1130203,practitioner-hood,Practitioner Hood,armor,Sorcerer,Head,Rare,Seeker,300,0,
-practitioner-hood-1130204,practitioner-hood,Practitioner Hood,armor,Sorcerer,Head,Rare,Ranged,300,0,
-practitioner-hood-1130205,practitioner-hood,Practitioner Hood,armor,Sorcerer,Head,Rare,Eloquence,300,0,
-practitioner-hood-1130206,practitioner-hood,Practitioner Hood,armor,Sorcerer,Head,Rare,Elusive,300,0,
-practitioner-hood-1130207,practitioner-hood,Practitioner Hood,armor,Sorcerer,Head,Rare,Wealth,300,0,
-practitioner-hood-1130208,practitioner-hood,Practitioner Hood,armor,Sorcerer,Head,Rare,Base roll,275,1,
-practitioner-hood-1130209,practitioner-hood,Practitioner Hood,armor,Sorcerer,Head,Rare,Base roll,275,1,
-practitioner-pants-1430201,practitioner-pants,Practitioner Pants,armor,Sorcerer,Legs,Rare,Aegis,300,0,
-practitioner-pants-1430202,practitioner-pants,Practitioner Pants,armor,Sorcerer,Legs,Rare,Tenacious,300,0,
-practitioner-pants-1430203,practitioner-pants,Practitioner Pants,armor,Sorcerer,Legs,Rare,Iron Helmet,300,0,
-practitioner-pants-1430204,practitioner-pants,Practitioner Pants,armor,Sorcerer,Legs,Rare,Sky Piercer,300,0,
-practitioner-pants-1430205,practitioner-pants,Practitioner Pants,armor,Sorcerer,Legs,Rare,Vitality,300,0,
-practitioner-pants-1430206,practitioner-pants,Practitioner Pants,armor,Sorcerer,Legs,Rare,Swift,300,0,
-practitioner-pants-1430207,practitioner-pants,Practitioner Pants,armor,Sorcerer,Legs,Rare,Elusive,300,0,
-practitioner-pants-1430208,practitioner-pants,Practitioner Pants,armor,Sorcerer,Legs,Rare,Base roll,275,1,
-practitioner-pants-1430209,practitioner-pants,Practitioner Pants,armor,Sorcerer,Legs,Rare,Base roll,275,1,
-practitioner-robe-1230201,practitioner-robe,Practitioner Robe,armor,Sorcerer,Chest,Rare,Aegis,300,0,
-practitioner-robe-1230202,practitioner-robe,Practitioner Robe,armor,Sorcerer,Chest,Rare,Tenacious,300,0,
-practitioner-robe-1230203,practitioner-robe,Practitioner Robe,armor,Sorcerer,Chest,Rare,Iron Helmet,300,0,
-practitioner-robe-1230204,practitioner-robe,Practitioner Robe,armor,Sorcerer,Chest,Rare,Ethereal,300,0,
-practitioner-robe-1230205,practitioner-robe,Practitioner Robe,armor,Sorcerer,Chest,Rare,Ranged,300,0,
-practitioner-robe-1230206,practitioner-robe,Practitioner Robe,armor,Sorcerer,Chest,Rare,Vitality,300,0,
-practitioner-robe-1230207,practitioner-robe,Practitioner Robe,armor,Sorcerer,Chest,Rare,Curse,300,0,
-practitioner-robe-1230208,practitioner-robe,Practitioner Robe,armor,Sorcerer,Chest,Rare,Base roll,275,1,
-practitioner-robe-1230209,practitioner-robe,Practitioner Robe,armor,Sorcerer,Chest,Rare,Base roll,275,1,
-practitioner-shoes-1530201,practitioner-shoes,Practitioner Shoes,armor,Sorcerer,Feet,Rare,Ethereal,300,0,
-practitioner-shoes-1530202,practitioner-shoes,Practitioner Shoes,armor,Sorcerer,Feet,Rare,Sky Piercer,300,0,
-practitioner-shoes-1530203,practitioner-shoes,Practitioner Shoes,armor,Sorcerer,Feet,Rare,Fervid,300,0,
-practitioner-shoes-1530204,practitioner-shoes,Practitioner Shoes,armor,Sorcerer,Feet,Rare,Ranged,300,0,
-practitioner-shoes-1530205,practitioner-shoes,Practitioner Shoes,armor,Sorcerer,Feet,Rare,Eloquence,300,0,
-practitioner-shoes-1530206,practitioner-shoes,Practitioner Shoes,armor,Sorcerer,Feet,Rare,Swift,300,0,
-practitioner-shoes-1530207,practitioner-shoes,Practitioner Shoes,armor,Sorcerer,Feet,Rare,Curse,300,0,
-practitioner-shoes-1530208,practitioner-shoes,Practitioner Shoes,armor,Sorcerer,Feet,Rare,Base roll,275,1,
-practitioner-shoes-1530209,practitioner-shoes,Practitioner Shoes,armor,Sorcerer,Feet,Rare,Base roll,275,1,
-ragons-pendant-1650101,ragons-pendant,Ragon's Pendant,armor,Any,Necklace,Epic,Base roll,425,2,
-ragons-pendant-1650102,ragons-pendant,Ragon's Pendant,armor,Any,Necklace,Epic,Base roll,425,2,
-ragons-pendant-1650103,ragons-pendant,Ragon's Pendant,armor,Any,Necklace,Epic,Base roll,425,2,
-ragons-ring-1750101,ragons-ring,Ragon's Ring,armor,Any,Ring,Epic,Base roll,425,2,
-ragons-ring-1750102,ragons-ring,Ragon's Ring,armor,Any,Ring,Epic,Base roll,425,2,
-ragons-ring-1750103,ragons-ring,Ragon's Ring,armor,Any,Ring,Epic,Base roll,425,2,
-raven-priest-bracers-1340201,raven-priest-bracers,Raven Priest Bracers,armor,Sorcerer,Hands,Excellent,Sky Piercer,375,1,
-raven-priest-bracers-1340202,raven-priest-bracers,Raven Priest Bracers,armor,Sorcerer,Hands,Excellent,Fervid,375,1,
-raven-priest-bracers-1340203,raven-priest-bracers,Raven Priest Bracers,armor,Sorcerer,Hands,Excellent,Seeker,375,1,
-raven-priest-bracers-1340204,raven-priest-bracers,Raven Priest Bracers,armor,Sorcerer,Hands,Excellent,Wealth,375,1,
-raven-priest-bracers-1340205,raven-priest-bracers,Raven Priest Bracers,armor,Sorcerer,Hands,Excellent,Eloquence,375,1,
-raven-priest-bracers-1340206,raven-priest-bracers,Raven Priest Bracers,armor,Sorcerer,Hands,Excellent,Elusive,375,1,
-raven-priest-bracers-1340207,raven-priest-bracers,Raven Priest Bracers,armor,Sorcerer,Hands,Excellent,Deft,375,1,
-raven-priest-bracers-1340208,raven-priest-bracers,Raven Priest Bracers,armor,Sorcerer,Hands,Excellent,Base roll,350,2,
-raven-priest-bracers-1340209,raven-priest-bracers,Raven Priest Bracers,armor,Sorcerer,Hands,Excellent,Base roll,350,2,
-raven-priest-greaves-1540201,raven-priest-greaves,Raven Priest Greaves,armor,Sorcerer,Feet,Excellent,Ethereal,375,1,
-raven-priest-greaves-1540202,raven-priest-greaves,Raven Priest Greaves,armor,Sorcerer,Feet,Excellent,Sky Piercer,375,1,
-raven-priest-greaves-1540203,raven-priest-greaves,Raven Priest Greaves,armor,Sorcerer,Feet,Excellent,Fervid,375,1,
-raven-priest-greaves-1540204,raven-priest-greaves,Raven Priest Greaves,armor,Sorcerer,Feet,Excellent,Ranged,375,1,
-raven-priest-greaves-1540205,raven-priest-greaves,Raven Priest Greaves,armor,Sorcerer,Feet,Excellent,Eloquence,375,1,
-raven-priest-greaves-1540206,raven-priest-greaves,Raven Priest Greaves,armor,Sorcerer,Feet,Excellent,Swift,375,1,
-raven-priest-greaves-1540207,raven-priest-greaves,Raven Priest Greaves,armor,Sorcerer,Feet,Excellent,Curse,375,1,
-raven-priest-greaves-1540208,raven-priest-greaves,Raven Priest Greaves,armor,Sorcerer,Feet,Excellent,Base roll,350,2,
-raven-priest-greaves-1540209,raven-priest-greaves,Raven Priest Greaves,armor,Sorcerer,Feet,Excellent,Base roll,350,2,
-raven-priest-hood-1140201,raven-priest-hood,Raven Priest Hood,armor,Sorcerer,Head,Excellent,Iron Helmet,375,1,
-raven-priest-hood-1140202,raven-priest-hood,Raven Priest Hood,armor,Sorcerer,Head,Excellent,Sky Piercer,375,1,
-raven-priest-hood-1140203,raven-priest-hood,Raven Priest Hood,armor,Sorcerer,Head,Excellent,Seeker,375,1,
-raven-priest-hood-1140204,raven-priest-hood,Raven Priest Hood,armor,Sorcerer,Head,Excellent,Ranged,375,1,
-raven-priest-hood-1140205,raven-priest-hood,Raven Priest Hood,armor,Sorcerer,Head,Excellent,Eloquence,375,1,
-raven-priest-hood-1140206,raven-priest-hood,Raven Priest Hood,armor,Sorcerer,Head,Excellent,Elusive,375,1,
-raven-priest-hood-1140207,raven-priest-hood,Raven Priest Hood,armor,Sorcerer,Head,Excellent,Wealth,375,1,
-raven-priest-hood-1140208,raven-priest-hood,Raven Priest Hood,armor,Sorcerer,Head,Excellent,Base roll,350,2,
-raven-priest-hood-1140209,raven-priest-hood,Raven Priest Hood,armor,Sorcerer,Head,Excellent,Base roll,350,2,
-raven-priest-pants-1440201,raven-priest-pants,Raven Priest Pants,armor,Sorcerer,Legs,Excellent,Aegis,375,1,
-raven-priest-pants-1440202,raven-priest-pants,Raven Priest Pants,armor,Sorcerer,Legs,Excellent,Tenacious,375,1,
-raven-priest-pants-1440203,raven-priest-pants,Raven Priest Pants,armor,Sorcerer,Legs,Excellent,Iron Helmet,375,1,
-raven-priest-pants-1440204,raven-priest-pants,Raven Priest Pants,armor,Sorcerer,Legs,Excellent,Sky Piercer,375,1,
-raven-priest-pants-1440205,raven-priest-pants,Raven Priest Pants,armor,Sorcerer,Legs,Excellent,Vitality,375,1,
-raven-priest-pants-1440206,raven-priest-pants,Raven Priest Pants,armor,Sorcerer,Legs,Excellent,Swift,375,1,
-raven-priest-pants-1440207,raven-priest-pants,Raven Priest Pants,armor,Sorcerer,Legs,Excellent,Elusive,375,1,
-raven-priest-pants-1440208,raven-priest-pants,Raven Priest Pants,armor,Sorcerer,Legs,Excellent,Base roll,350,2,
-raven-priest-pants-1440209,raven-priest-pants,Raven Priest Pants,armor,Sorcerer,Legs,Excellent,Base roll,350,2,
+mithril-ring-1730401,mithril-ring,Mithril Ring,armor,Any,Ring,Rare,Base roll,275,1,moonstone
+mithril-ring-1730402,mithril-ring,Mithril Ring,armor,Any,Ring,Rare,Base roll,275,1,peridot
+mithril-ring-1730403,mithril-ring,Mithril Ring,armor,Any,Ring,Rare,Base roll,275,1,universal
+moon-priestess-boots-1560201,moon-priestess-boots,Moon Priestess Boots,armor,Sorcerer,Feet,Legendary,Ethereal,525,2,"agate2,peridot"
+moon-priestess-boots-1560202,moon-priestess-boots,Moon Priestess Boots,armor,Sorcerer,Feet,Legendary,Sky Piercer,525,2,"amethyst2,moonstone"
+moon-priestess-boots-1560203,moon-priestess-boots,Moon Priestess Boots,armor,Sorcerer,Feet,Legendary,Fervid,525,2,"moonstone2,peridot"
+moon-priestess-boots-1560204,moon-priestess-boots,Moon Priestess Boots,armor,Sorcerer,Feet,Legendary,Ranged,525,2,"amethyst2,agate"
+moon-priestess-boots-1560205,moon-priestess-boots,Moon Priestess Boots,armor,Sorcerer,Feet,Legendary,Eloquence,525,2,"agate2,moonstone"
+moon-priestess-boots-1560206,moon-priestess-boots,Moon Priestess Boots,armor,Sorcerer,Feet,Legendary,Swift,525,2,"moonstone2,amethyst"
+moon-priestess-boots-1560207,moon-priestess-boots,Moon Priestess Boots,armor,Sorcerer,Feet,Legendary,Curse,525,2,"peridot2,agate"
+moon-priestess-boots-1560208,moon-priestess-boots,Moon Priestess Boots,armor,Sorcerer,Feet,Legendary,Base roll,500,3,"moonstone2,amethyst,peridot"
+moon-priestess-boots-1560209,moon-priestess-boots,Moon Priestess Boots,armor,Sorcerer,Feet,Legendary,Base roll,500,3,"agate2,moonstone,peridot"
+moon-priestess-bracers-1360201,moon-priestess-bracers,Moon Priestess Bracers,armor,Sorcerer,Hands,Legendary,Sky Piercer,525,2,"moonstone2,amethyst"
+moon-priestess-bracers-1360202,moon-priestess-bracers,Moon Priestess Bracers,armor,Sorcerer,Hands,Legendary,Fervid,525,2,"amethyst2,agate"
+moon-priestess-bracers-1360203,moon-priestess-bracers,Moon Priestess Bracers,armor,Sorcerer,Hands,Legendary,Seeker,525,2,"moonstone2,amethyst"
+moon-priestess-bracers-1360204,moon-priestess-bracers,Moon Priestess Bracers,armor,Sorcerer,Hands,Legendary,Wealth,525,2,"peridot2,agate"
+moon-priestess-bracers-1360205,moon-priestess-bracers,Moon Priestess Bracers,armor,Sorcerer,Hands,Legendary,Eloquence,525,2,"agate2,moonstone"
+moon-priestess-bracers-1360206,moon-priestess-bracers,Moon Priestess Bracers,armor,Sorcerer,Hands,Legendary,Elusive,525,2,"peridot2,amethyst"
+moon-priestess-bracers-1360207,moon-priestess-bracers,Moon Priestess Bracers,armor,Sorcerer,Hands,Legendary,Deft,525,2,"agate2,peridot"
+moon-priestess-bracers-1360208,moon-priestess-bracers,Moon Priestess Bracers,armor,Sorcerer,Hands,Legendary,Base roll,500,3,"moonstone2,agate,amethyst"
+moon-priestess-bracers-1360209,moon-priestess-bracers,Moon Priestess Bracers,armor,Sorcerer,Hands,Legendary,Base roll,500,3,"amethyst2,moonstone,peridot"
+moon-priestess-mask-1160201,moon-priestess-mask,Moon Priestess Mask,armor,Sorcerer,Head,Legendary,Iron Helmet,525,2,"moonstone2,agate"
+moon-priestess-mask-1160202,moon-priestess-mask,Moon Priestess Mask,armor,Sorcerer,Head,Legendary,Sky Piercer,525,2,"agate2,moonstone"
+moon-priestess-mask-1160203,moon-priestess-mask,Moon Priestess Mask,armor,Sorcerer,Head,Legendary,Seeker,525,2,"amethyst2,agate"
+moon-priestess-mask-1160204,moon-priestess-mask,Moon Priestess Mask,armor,Sorcerer,Head,Legendary,Ranged,525,2,"peridot2,amethyst"
+moon-priestess-mask-1160205,moon-priestess-mask,Moon Priestess Mask,armor,Sorcerer,Head,Legendary,Eloquence,525,2,"agate2,peridot"
+moon-priestess-mask-1160206,moon-priestess-mask,Moon Priestess Mask,armor,Sorcerer,Head,Legendary,Elusive,525,2,"moonstone2,agate"
+moon-priestess-mask-1160207,moon-priestess-mask,Moon Priestess Mask,armor,Sorcerer,Head,Legendary,Wealth,525,2,"amethyst2,moonstone"
+moon-priestess-mask-1160208,moon-priestess-mask,Moon Priestess Mask,armor,Sorcerer,Head,Legendary,Base roll,500,3,"peridot2,agate,amethyst"
+moon-priestess-mask-1160209,moon-priestess-mask,Moon Priestess Mask,armor,Sorcerer,Head,Legendary,Base roll,500,3,"moonstone2,amethyst,peridot"
+moon-priestess-pants-1460201,moon-priestess-pants,Moon Priestess Pants,armor,Sorcerer,Legs,Legendary,Aegis,525,2,"peridot2,amethyst"
+moon-priestess-pants-1460202,moon-priestess-pants,Moon Priestess Pants,armor,Sorcerer,Legs,Legendary,Tenacious,525,2,"moonstone2,agate"
+moon-priestess-pants-1460203,moon-priestess-pants,Moon Priestess Pants,armor,Sorcerer,Legs,Legendary,Iron Helmet,525,2,"amethyst2,peridot"
+moon-priestess-pants-1460204,moon-priestess-pants,Moon Priestess Pants,armor,Sorcerer,Legs,Legendary,Sky Piercer,525,2,"agate2,moonstone"
+moon-priestess-pants-1460205,moon-priestess-pants,Moon Priestess Pants,armor,Sorcerer,Legs,Legendary,Vitality,525,2,"peridot2,agate"
+moon-priestess-pants-1460206,moon-priestess-pants,Moon Priestess Pants,armor,Sorcerer,Legs,Legendary,Swift,525,2,"amethyst2,peridot"
+moon-priestess-pants-1460207,moon-priestess-pants,Moon Priestess Pants,armor,Sorcerer,Legs,Legendary,Elusive,525,2,"agate2,amethyst"
+moon-priestess-pants-1460208,moon-priestess-pants,Moon Priestess Pants,armor,Sorcerer,Legs,Legendary,Base roll,500,3,"moonstone2,agate,amethyst"
+moon-priestess-pants-1460209,moon-priestess-pants,Moon Priestess Pants,armor,Sorcerer,Legs,Legendary,Base roll,500,3,"peridot2,amethyst,moonstone"
+moon-priestess-robe-1260201,moon-priestess-robe,Moon Priestess Robe,armor,Sorcerer,Chest,Legendary,Aegis,525,2,"agate2,moonstone"
+moon-priestess-robe-1260202,moon-priestess-robe,Moon Priestess Robe,armor,Sorcerer,Chest,Legendary,Tenacious,525,2,"amethyst2,peridot"
+moon-priestess-robe-1260203,moon-priestess-robe,Moon Priestess Robe,armor,Sorcerer,Chest,Legendary,Iron Helmet,525,2,"moonstone2,amethyst"
+moon-priestess-robe-1260204,moon-priestess-robe,Moon Priestess Robe,armor,Sorcerer,Chest,Legendary,Ethereal,525,2,"amethyst2,peridot"
+moon-priestess-robe-1260205,moon-priestess-robe,Moon Priestess Robe,armor,Sorcerer,Chest,Legendary,Ranged,525,2,"agate2,moonstone"
+moon-priestess-robe-1260206,moon-priestess-robe,Moon Priestess Robe,armor,Sorcerer,Chest,Legendary,Vitality,525,2,"peridot2,agate"
+moon-priestess-robe-1260207,moon-priestess-robe,Moon Priestess Robe,armor,Sorcerer,Chest,Legendary,Curse,525,2,"peridot2,agate"
+moon-priestess-robe-1260208,moon-priestess-robe,Moon Priestess Robe,armor,Sorcerer,Chest,Legendary,Base roll,500,3,"agate2,moonstone,peridot"
+moon-priestess-robe-1260209,moon-priestess-robe,Moon Priestess Robe,armor,Sorcerer,Chest,Legendary,Base roll,500,3,"amethyst2,moonstone,peridot"
+mysteria-elder-boots-1550201,mysteria-elder-boots,Mysteria Elder Boots,armor,Sorcerer,Feet,Epic,Ethereal,450,1,agate2
+mysteria-elder-boots-1550202,mysteria-elder-boots,Mysteria Elder Boots,armor,Sorcerer,Feet,Epic,Sky Piercer,450,1,peridot2
+mysteria-elder-boots-1550203,mysteria-elder-boots,Mysteria Elder Boots,armor,Sorcerer,Feet,Epic,Fervid,450,1,moonstone2
+mysteria-elder-boots-1550204,mysteria-elder-boots,Mysteria Elder Boots,armor,Sorcerer,Feet,Epic,Ranged,450,1,agate2
+mysteria-elder-boots-1550205,mysteria-elder-boots,Mysteria Elder Boots,armor,Sorcerer,Feet,Epic,Eloquence,450,1,peridot2
+mysteria-elder-boots-1550206,mysteria-elder-boots,Mysteria Elder Boots,armor,Sorcerer,Feet,Epic,Swift,450,1,amethyst2
+mysteria-elder-boots-1550207,mysteria-elder-boots,Mysteria Elder Boots,armor,Sorcerer,Feet,Epic,Curse,450,1,moonstone2
+mysteria-elder-boots-1550208,mysteria-elder-boots,Mysteria Elder Boots,armor,Sorcerer,Feet,Epic,Base roll,425,2,"amethyst2,moonstone"
+mysteria-elder-boots-1550209,mysteria-elder-boots,Mysteria Elder Boots,armor,Sorcerer,Feet,Epic,Base roll,425,2,"agate2,amethyst"
+mysteria-elder-bracers-1350201,mysteria-elder-bracers,Mysteria Elder Bracers,armor,Sorcerer,Hands,Epic,Sky Piercer,450,1,amethyst2
+mysteria-elder-bracers-1350202,mysteria-elder-bracers,Mysteria Elder Bracers,armor,Sorcerer,Hands,Epic,Fervid,450,1,amethyst2
+mysteria-elder-bracers-1350203,mysteria-elder-bracers,Mysteria Elder Bracers,armor,Sorcerer,Hands,Epic,Seeker,450,1,agate2
+mysteria-elder-bracers-1350204,mysteria-elder-bracers,Mysteria Elder Bracers,armor,Sorcerer,Hands,Epic,Wealth,450,1,peridot2
+mysteria-elder-bracers-1350205,mysteria-elder-bracers,Mysteria Elder Bracers,armor,Sorcerer,Hands,Epic,Eloquence,450,1,moonstone2
+mysteria-elder-bracers-1350206,mysteria-elder-bracers,Mysteria Elder Bracers,armor,Sorcerer,Hands,Epic,Elusive,450,1,moonstone2
+mysteria-elder-bracers-1350207,mysteria-elder-bracers,Mysteria Elder Bracers,armor,Sorcerer,Hands,Epic,Deft,450,1,amethyst2
+mysteria-elder-bracers-1350208,mysteria-elder-bracers,Mysteria Elder Bracers,armor,Sorcerer,Hands,Epic,Base roll,425,2,"peridot2,amethyst"
+mysteria-elder-bracers-1350209,mysteria-elder-bracers,Mysteria Elder Bracers,armor,Sorcerer,Hands,Epic,Base roll,425,2,"agate2,moonstone"
+mysteria-elder-mask-1150201,mysteria-elder-mask,Mysteria Elder Mask,armor,Sorcerer,Head,Epic,Iron Helmet,450,1,agate2
+mysteria-elder-mask-1150202,mysteria-elder-mask,Mysteria Elder Mask,armor,Sorcerer,Head,Epic,Sky Piercer,450,1,amethyst2
+mysteria-elder-mask-1150203,mysteria-elder-mask,Mysteria Elder Mask,armor,Sorcerer,Head,Epic,Seeker,450,1,peridot2
+mysteria-elder-mask-1150204,mysteria-elder-mask,Mysteria Elder Mask,armor,Sorcerer,Head,Epic,Ranged,450,1,amethyst2
+mysteria-elder-mask-1150205,mysteria-elder-mask,Mysteria Elder Mask,armor,Sorcerer,Head,Epic,Eloquence,450,1,agate2
+mysteria-elder-mask-1150206,mysteria-elder-mask,Mysteria Elder Mask,armor,Sorcerer,Head,Epic,Elusive,450,1,peridot2
+mysteria-elder-mask-1150207,mysteria-elder-mask,Mysteria Elder Mask,armor,Sorcerer,Head,Epic,Wealth,450,1,moonstone2
+mysteria-elder-mask-1150208,mysteria-elder-mask,Mysteria Elder Mask,armor,Sorcerer,Head,Epic,Base roll,425,2,"moonstone2,peridot"
+mysteria-elder-mask-1150209,mysteria-elder-mask,Mysteria Elder Mask,armor,Sorcerer,Head,Epic,Base roll,425,2,"amethyst2,moonstone"
+mysteria-elder-pants-1450201,mysteria-elder-pants,Mysteria Elder Pants,armor,Sorcerer,Legs,Epic,Aegis,450,1,peridot2
+mysteria-elder-pants-1450202,mysteria-elder-pants,Mysteria Elder Pants,armor,Sorcerer,Legs,Epic,Tenacious,450,1,moonstone2
+mysteria-elder-pants-1450203,mysteria-elder-pants,Mysteria Elder Pants,armor,Sorcerer,Legs,Epic,Iron Helmet,450,1,amethyst2
+mysteria-elder-pants-1450204,mysteria-elder-pants,Mysteria Elder Pants,armor,Sorcerer,Legs,Epic,Sky Piercer,450,1,agate2
+mysteria-elder-pants-1450205,mysteria-elder-pants,Mysteria Elder Pants,armor,Sorcerer,Legs,Epic,Vitality,450,1,peridot2
+mysteria-elder-pants-1450206,mysteria-elder-pants,Mysteria Elder Pants,armor,Sorcerer,Legs,Epic,Swift,450,1,agate2
+mysteria-elder-pants-1450207,mysteria-elder-pants,Mysteria Elder Pants,armor,Sorcerer,Legs,Epic,Elusive,450,1,moonstone2
+mysteria-elder-pants-1450208,mysteria-elder-pants,Mysteria Elder Pants,armor,Sorcerer,Legs,Epic,Base roll,425,2,"amethyst2,peridot"
+mysteria-elder-pants-1450209,mysteria-elder-pants,Mysteria Elder Pants,armor,Sorcerer,Legs,Epic,Base roll,425,2,"amethyst2,agate"
+mysteria-elder-robe-1250201,mysteria-elder-robe,Mysteria Elder Robe,armor,Sorcerer,Chest,Epic,Aegis,450,1,agate2
+mysteria-elder-robe-1250202,mysteria-elder-robe,Mysteria Elder Robe,armor,Sorcerer,Chest,Epic,Tenacious,450,1,peridot2
+mysteria-elder-robe-1250203,mysteria-elder-robe,Mysteria Elder Robe,armor,Sorcerer,Chest,Epic,Iron Helmet,450,1,peridot2
+mysteria-elder-robe-1250204,mysteria-elder-robe,Mysteria Elder Robe,armor,Sorcerer,Chest,Epic,Ethereal,450,1,moonstone2
+mysteria-elder-robe-1250205,mysteria-elder-robe,Mysteria Elder Robe,armor,Sorcerer,Chest,Epic,Ranged,450,1,agate2
+mysteria-elder-robe-1250206,mysteria-elder-robe,Mysteria Elder Robe,armor,Sorcerer,Chest,Epic,Vitality,450,1,amethyst2
+mysteria-elder-robe-1250207,mysteria-elder-robe,Mysteria Elder Robe,armor,Sorcerer,Chest,Epic,Curse,450,1,agate2
+mysteria-elder-robe-1250208,mysteria-elder-robe,Mysteria Elder Robe,armor,Sorcerer,Chest,Epic,Base roll,425,2,"peridot2,agate"
+mysteria-elder-robe-1250209,mysteria-elder-robe,Mysteria Elder Robe,armor,Sorcerer,Chest,Epic,Base roll,425,2,"moonstone2,peridot"
+practitioner-bracers-1330201,practitioner-bracers,Practitioner Bracers,armor,Sorcerer,Hands,Rare,Sky Piercer,300,0,none
+practitioner-bracers-1330202,practitioner-bracers,Practitioner Bracers,armor,Sorcerer,Hands,Rare,Fervid,300,0,none
+practitioner-bracers-1330203,practitioner-bracers,Practitioner Bracers,armor,Sorcerer,Hands,Rare,Seeker,300,0,none
+practitioner-bracers-1330204,practitioner-bracers,Practitioner Bracers,armor,Sorcerer,Hands,Rare,Wealth,300,0,none
+practitioner-bracers-1330205,practitioner-bracers,Practitioner Bracers,armor,Sorcerer,Hands,Rare,Eloquence,300,0,none
+practitioner-bracers-1330206,practitioner-bracers,Practitioner Bracers,armor,Sorcerer,Hands,Rare,Elusive,300,0,none
+practitioner-bracers-1330207,practitioner-bracers,Practitioner Bracers,armor,Sorcerer,Hands,Rare,Deft,300,0,none
+practitioner-bracers-1330208,practitioner-bracers,Practitioner Bracers,armor,Sorcerer,Hands,Rare,Base roll,275,1,agate
+practitioner-bracers-1330209,practitioner-bracers,Practitioner Bracers,armor,Sorcerer,Hands,Rare,Base roll,275,1,peridot
+practitioner-hood-1130201,practitioner-hood,Practitioner Hood,armor,Sorcerer,Head,Rare,Iron Helmet,300,0,none
+practitioner-hood-1130202,practitioner-hood,Practitioner Hood,armor,Sorcerer,Head,Rare,Sky Piercer,300,0,none
+practitioner-hood-1130203,practitioner-hood,Practitioner Hood,armor,Sorcerer,Head,Rare,Seeker,300,0,none
+practitioner-hood-1130204,practitioner-hood,Practitioner Hood,armor,Sorcerer,Head,Rare,Ranged,300,0,none
+practitioner-hood-1130205,practitioner-hood,Practitioner Hood,armor,Sorcerer,Head,Rare,Eloquence,300,0,none
+practitioner-hood-1130206,practitioner-hood,Practitioner Hood,armor,Sorcerer,Head,Rare,Elusive,300,0,none
+practitioner-hood-1130207,practitioner-hood,Practitioner Hood,armor,Sorcerer,Head,Rare,Wealth,300,0,none
+practitioner-hood-1130208,practitioner-hood,Practitioner Hood,armor,Sorcerer,Head,Rare,Base roll,275,1,amethyst
+practitioner-hood-1130209,practitioner-hood,Practitioner Hood,armor,Sorcerer,Head,Rare,Base roll,275,1,moonstone
+practitioner-pants-1430201,practitioner-pants,Practitioner Pants,armor,Sorcerer,Legs,Rare,Aegis,300,0,none
+practitioner-pants-1430202,practitioner-pants,Practitioner Pants,armor,Sorcerer,Legs,Rare,Tenacious,300,0,none
+practitioner-pants-1430203,practitioner-pants,Practitioner Pants,armor,Sorcerer,Legs,Rare,Iron Helmet,300,0,none
+practitioner-pants-1430204,practitioner-pants,Practitioner Pants,armor,Sorcerer,Legs,Rare,Sky Piercer,300,0,none
+practitioner-pants-1430205,practitioner-pants,Practitioner Pants,armor,Sorcerer,Legs,Rare,Vitality,300,0,none
+practitioner-pants-1430206,practitioner-pants,Practitioner Pants,armor,Sorcerer,Legs,Rare,Swift,300,0,none
+practitioner-pants-1430207,practitioner-pants,Practitioner Pants,armor,Sorcerer,Legs,Rare,Elusive,300,0,none
+practitioner-pants-1430208,practitioner-pants,Practitioner Pants,armor,Sorcerer,Legs,Rare,Base roll,275,1,moonstone
+practitioner-pants-1430209,practitioner-pants,Practitioner Pants,armor,Sorcerer,Legs,Rare,Base roll,275,1,amethyst
+practitioner-robe-1230201,practitioner-robe,Practitioner Robe,armor,Sorcerer,Chest,Rare,Aegis,300,0,none
+practitioner-robe-1230202,practitioner-robe,Practitioner Robe,armor,Sorcerer,Chest,Rare,Tenacious,300,0,none
+practitioner-robe-1230203,practitioner-robe,Practitioner Robe,armor,Sorcerer,Chest,Rare,Iron Helmet,300,0,none
+practitioner-robe-1230204,practitioner-robe,Practitioner Robe,armor,Sorcerer,Chest,Rare,Ethereal,300,0,none
+practitioner-robe-1230205,practitioner-robe,Practitioner Robe,armor,Sorcerer,Chest,Rare,Ranged,300,0,none
+practitioner-robe-1230206,practitioner-robe,Practitioner Robe,armor,Sorcerer,Chest,Rare,Vitality,300,0,none
+practitioner-robe-1230207,practitioner-robe,Practitioner Robe,armor,Sorcerer,Chest,Rare,Curse,300,0,none
+practitioner-robe-1230208,practitioner-robe,Practitioner Robe,armor,Sorcerer,Chest,Rare,Base roll,275,1,moonstone
+practitioner-robe-1230209,practitioner-robe,Practitioner Robe,armor,Sorcerer,Chest,Rare,Base roll,275,1,amethyst
+practitioner-shoes-1530201,practitioner-shoes,Practitioner Shoes,armor,Sorcerer,Feet,Rare,Ethereal,300,0,none
+practitioner-shoes-1530202,practitioner-shoes,Practitioner Shoes,armor,Sorcerer,Feet,Rare,Sky Piercer,300,0,none
+practitioner-shoes-1530203,practitioner-shoes,Practitioner Shoes,armor,Sorcerer,Feet,Rare,Fervid,300,0,none
+practitioner-shoes-1530204,practitioner-shoes,Practitioner Shoes,armor,Sorcerer,Feet,Rare,Ranged,300,0,none
+practitioner-shoes-1530205,practitioner-shoes,Practitioner Shoes,armor,Sorcerer,Feet,Rare,Eloquence,300,0,none
+practitioner-shoes-1530206,practitioner-shoes,Practitioner Shoes,armor,Sorcerer,Feet,Rare,Swift,300,0,none
+practitioner-shoes-1530207,practitioner-shoes,Practitioner Shoes,armor,Sorcerer,Feet,Rare,Curse,300,0,none
+practitioner-shoes-1530208,practitioner-shoes,Practitioner Shoes,armor,Sorcerer,Feet,Rare,Base roll,275,1,peridot
+practitioner-shoes-1530209,practitioner-shoes,Practitioner Shoes,armor,Sorcerer,Feet,Rare,Base roll,275,1,agate
+ragons-pendant-1650101,ragons-pendant,Ragon's Pendant,armor,Any,Necklace,Epic,Base roll,425,2,"agate2,moonstone"
+ragons-pendant-1650102,ragons-pendant,Ragon's Pendant,armor,Any,Necklace,Epic,Base roll,425,2,"amethyst,peridot"
+ragons-pendant-1650103,ragons-pendant,Ragon's Pendant,armor,Any,Necklace,Epic,Base roll,425,2,"universal2,agate"
+ragons-ring-1750101,ragons-ring,Ragon's Ring,armor,Any,Ring,Epic,Base roll,425,2,"agate2,moonstone"
+ragons-ring-1750102,ragons-ring,Ragon's Ring,armor,Any,Ring,Epic,Base roll,425,2,"amethyst2,peridot"
+ragons-ring-1750103,ragons-ring,Ragon's Ring,armor,Any,Ring,Epic,Base roll,425,2,"universal2,agate"
+raven-priest-bracers-1340201,raven-priest-bracers,Raven Priest Bracers,armor,Sorcerer,Hands,Excellent,Sky Piercer,375,1,peridot
+raven-priest-bracers-1340202,raven-priest-bracers,Raven Priest Bracers,armor,Sorcerer,Hands,Excellent,Fervid,375,1,moonstone
+raven-priest-bracers-1340203,raven-priest-bracers,Raven Priest Bracers,armor,Sorcerer,Hands,Excellent,Seeker,375,1,agate
+raven-priest-bracers-1340204,raven-priest-bracers,Raven Priest Bracers,armor,Sorcerer,Hands,Excellent,Wealth,375,1,moonstone
+raven-priest-bracers-1340205,raven-priest-bracers,Raven Priest Bracers,armor,Sorcerer,Hands,Excellent,Eloquence,375,1,peridot
+raven-priest-bracers-1340206,raven-priest-bracers,Raven Priest Bracers,armor,Sorcerer,Hands,Excellent,Elusive,375,1,agate
+raven-priest-bracers-1340207,raven-priest-bracers,Raven Priest Bracers,armor,Sorcerer,Hands,Excellent,Deft,375,1,amethyst
+raven-priest-bracers-1340208,raven-priest-bracers,Raven Priest Bracers,armor,Sorcerer,Hands,Excellent,Base roll,350,2,"agate,peridot"
+raven-priest-bracers-1340209,raven-priest-bracers,Raven Priest Bracers,armor,Sorcerer,Hands,Excellent,Base roll,350,2,"amethyst2,moonstone"
+raven-priest-greaves-1540201,raven-priest-greaves,Raven Priest Greaves,armor,Sorcerer,Feet,Excellent,Ethereal,375,1,agate
+raven-priest-greaves-1540202,raven-priest-greaves,Raven Priest Greaves,armor,Sorcerer,Feet,Excellent,Sky Piercer,375,1,amethyst
+raven-priest-greaves-1540203,raven-priest-greaves,Raven Priest Greaves,armor,Sorcerer,Feet,Excellent,Fervid,375,1,peridot
+raven-priest-greaves-1540204,raven-priest-greaves,Raven Priest Greaves,armor,Sorcerer,Feet,Excellent,Ranged,375,1,agate
+raven-priest-greaves-1540205,raven-priest-greaves,Raven Priest Greaves,armor,Sorcerer,Feet,Excellent,Eloquence,375,1,moonstone
+raven-priest-greaves-1540206,raven-priest-greaves,Raven Priest Greaves,armor,Sorcerer,Feet,Excellent,Swift,375,1,amethyst
+raven-priest-greaves-1540207,raven-priest-greaves,Raven Priest Greaves,armor,Sorcerer,Feet,Excellent,Curse,375,1,moonstone
+raven-priest-greaves-1540208,raven-priest-greaves,Raven Priest Greaves,armor,Sorcerer,Feet,Excellent,Base roll,350,2,"agate,peridot"
+raven-priest-greaves-1540209,raven-priest-greaves,Raven Priest Greaves,armor,Sorcerer,Feet,Excellent,Base roll,350,2,"agate,amethyst"
+raven-priest-hood-1140201,raven-priest-hood,Raven Priest Hood,armor,Sorcerer,Head,Excellent,Iron Helmet,375,1,peridot
+raven-priest-hood-1140202,raven-priest-hood,Raven Priest Hood,armor,Sorcerer,Head,Excellent,Sky Piercer,375,1,amethyst
+raven-priest-hood-1140203,raven-priest-hood,Raven Priest Hood,armor,Sorcerer,Head,Excellent,Seeker,375,1,agate
+raven-priest-hood-1140204,raven-priest-hood,Raven Priest Hood,armor,Sorcerer,Head,Excellent,Ranged,375,1,moonstone
+raven-priest-hood-1140205,raven-priest-hood,Raven Priest Hood,armor,Sorcerer,Head,Excellent,Eloquence,375,1,peridot
+raven-priest-hood-1140206,raven-priest-hood,Raven Priest Hood,armor,Sorcerer,Head,Excellent,Elusive,375,1,amethyst
+raven-priest-hood-1140207,raven-priest-hood,Raven Priest Hood,armor,Sorcerer,Head,Excellent,Wealth,375,1,agate
+raven-priest-hood-1140208,raven-priest-hood,Raven Priest Hood,armor,Sorcerer,Head,Excellent,Base roll,350,2,"moonstone,peridot"
+raven-priest-hood-1140209,raven-priest-hood,Raven Priest Hood,armor,Sorcerer,Head,Excellent,Base roll,350,2,"agate,moonstone"
+raven-priest-pants-1440201,raven-priest-pants,Raven Priest Pants,armor,Sorcerer,Legs,Excellent,Aegis,375,1,agate
+raven-priest-pants-1440202,raven-priest-pants,Raven Priest Pants,armor,Sorcerer,Legs,Excellent,Tenacious,375,1,moonstone
+raven-priest-pants-1440203,raven-priest-pants,Raven Priest Pants,armor,Sorcerer,Legs,Excellent,Iron Helmet,375,1,amethyst
+raven-priest-pants-1440204,raven-priest-pants,Raven Priest Pants,armor,Sorcerer,Legs,Excellent,Sky Piercer,375,1,peridot
+raven-priest-pants-1440205,raven-priest-pants,Raven Priest Pants,armor,Sorcerer,Legs,Excellent,Vitality,375,1,amethyst
+raven-priest-pants-1440206,raven-priest-pants,Raven Priest Pants,armor,Sorcerer,Legs,Excellent,Swift,375,1,moonstone
+raven-priest-pants-1440207,raven-priest-pants,Raven Priest Pants,armor,Sorcerer,Legs,Excellent,Elusive,375,1,peridot
+raven-priest-pants-1440208,raven-priest-pants,Raven Priest Pants,armor,Sorcerer,Legs,Excellent,Base roll,350,2,"agate,peridot"
+raven-priest-pants-1440209,raven-priest-pants,Raven Priest Pants,armor,Sorcerer,Legs,Excellent,Base roll,350,2,"amethyst,moonstone"
 raven-priest-robe-1240201,raven-priest-robe,Raven Priest Robe,armor,Sorcerer,Chest,Excellent,Aegis,375,1,peridot
 raven-priest-robe-1240202,raven-priest-robe,Raven Priest Robe,armor,Sorcerer,Chest,Excellent,Tenacious,375,1,amethyst
 raven-priest-robe-1240203,raven-priest-robe,Raven Priest Robe,armor,Sorcerer,Chest,Excellent,Iron Helmet,375,1,amethyst
@@ -851,12 +851,12 @@ raven-priest-robe-1240206,raven-priest-robe,Raven Priest Robe,armor,Sorcerer,Che
 raven-priest-robe-1240207,raven-priest-robe,Raven Priest Robe,armor,Sorcerer,Chest,Excellent,Curse,375,1,amethyst
 raven-priest-robe-1240208,raven-priest-robe,Raven Priest Robe,armor,Sorcerer,Chest,Excellent,Base roll,350,2,"moonstone,peridot"
 raven-priest-robe-1240209,raven-priest-robe,Raven Priest Robe,armor,Sorcerer,Chest,Excellent,Base roll,350,2,"agate,amethyst"
-raven-war-pendant-1660401,raven-war-pendant,Raven War Pendant,armor,Any,Necklace,Legendary,Base roll,500,3,
-raven-war-pendant-1660402,raven-war-pendant,Raven War Pendant,armor,Any,Necklace,Legendary,Base roll,500,3,
-raven-war-pendant-1660403,raven-war-pendant,Raven War Pendant,armor,Any,Necklace,Legendary,Base roll,500,3,
-retribution-ring-1740301,retribution-ring,Retribution Ring,armor,Any,Ring,Excellent,Base roll,350,2,
-retribution-ring-1740302,retribution-ring,Retribution Ring,armor,Any,Ring,Excellent,Base roll,350,2,
-retribution-ring-1740303,retribution-ring,Retribution Ring,armor,Any,Ring,Excellent,Base roll,350,2,
+raven-war-pendant-1660401,raven-war-pendant,Raven War Pendant,armor,Any,Necklace,Legendary,Base roll,500,3,"moonstone2,amethyst,peridot"
+raven-war-pendant-1660402,raven-war-pendant,Raven War Pendant,armor,Any,Necklace,Legendary,Base roll,500,3,"peridot2,agate,moonstone"
+raven-war-pendant-1660403,raven-war-pendant,Raven War Pendant,armor,Any,Necklace,Legendary,Base roll,500,3,"universal2,agate,peridot"
+retribution-ring-1740301,retribution-ring,Retribution Ring,armor,Any,Ring,Excellent,Base roll,350,2,"agate,moonstone"
+retribution-ring-1740302,retribution-ring,Retribution Ring,armor,Any,Ring,Excellent,Base roll,350,2,"amethyst,peridot"
+retribution-ring-1740303,retribution-ring,Retribution Ring,armor,Any,Ring,Excellent,Base roll,350,2,"universal,moonstone"
 rosen-oath-boots-1560601,rosen-oath-boots,Rosen Oath Boots,armor,Withered Knight,Feet,Legendary,Tenacious,525,2,
 rosen-oath-boots-1560602,rosen-oath-boots,Rosen Oath Boots,armor,Withered Knight,Feet,Legendary,Ethereal,525,2,
 rosen-oath-boots-1560603,rosen-oath-boots,Rosen Oath Boots,armor,Withered Knight,Feet,Legendary,Stoic,525,2,
@@ -992,9 +992,9 @@ scaleclaw-winged-helm-1160306,scaleclaw-winged-helm,Scaleclaw Winged Helm,armor,
 scaleclaw-winged-helm-1160307,scaleclaw-winged-helm,Scaleclaw Winged Helm,armor,Blackarrow,Head,Legendary,Wealth,525,2,
 scaleclaw-winged-helm-1160308,scaleclaw-winged-helm,Scaleclaw Winged Helm,armor,Blackarrow,Head,Legendary,Base roll,500,3,
 scaleclaw-winged-helm-1160309,scaleclaw-winged-helm,Scaleclaw Winged Helm,armor,Blackarrow,Head,Legendary,Base roll,500,3,
-shadow-amberflux-ring-1760301,shadow-amberflux-ring,Shadow Amberflux Ring,armor,Any,Ring,Legendary,Base roll,500,3,
-shadow-amberflux-ring-1760302,shadow-amberflux-ring,Shadow Amberflux Ring,armor,Any,Ring,Legendary,Base roll,500,3,
-shadow-amberflux-ring-1760303,shadow-amberflux-ring,Shadow Amberflux Ring,armor,Any,Ring,Legendary,Base roll,500,3,
+shadow-amberflux-ring-1760301,shadow-amberflux-ring,Shadow Amberflux Ring,armor,Any,Ring,Legendary,Base roll,500,3,"agate2,amethyst,moonstone"
+shadow-amberflux-ring-1760302,shadow-amberflux-ring,Shadow Amberflux Ring,armor,Any,Ring,Legendary,Base roll,500,3,"amethyst2,agate,peridot"
+shadow-amberflux-ring-1760303,shadow-amberflux-ring,Shadow Amberflux Ring,armor,Any,Ring,Legendary,Base roll,500,3,"universal2,moonstone,peridot"
 shadow-skull-boots-1530401,shadow-skull-boots,Shadow Skull Boots,armor,Shadowstrix,Feet,Rare,Aegis,300,0,
 shadow-skull-boots-1530402,shadow-skull-boots,Shadow Skull Boots,armor,Shadowstrix,Feet,Rare,Ethereal,300,0,
 shadow-skull-boots-1530403,shadow-skull-boots,Shadow Skull Boots,armor,Shadowstrix,Feet,Rare,Seeker,300,0,
@@ -1090,29 +1090,29 @@ simple-leather-bracers-1310301,simple-leather-bracers,Simple Leather Bracers,arm
 simple-leather-eyepatch-1110301,simple-leather-eyepatch,Simple Leather Eyepatch,armor,"Blackarrow, Shadowstrix",Head,Damaged,Base roll,100,,
 simple-leather-pants-1410301,simple-leather-pants,Simple Leather Pants,armor,"Blackarrow, Shadowstrix",Legs,Damaged,Base roll,100,,
 simple-leather-vest-1210301,simple-leather-vest,Simple Leather Vest,armor,"Blackarrow, Shadowstrix",Chest,Damaged,Base roll,100,,
-sirius-ring-1760201,sirius-ring,Sirius Ring,armor,Any,Ring,Legendary,Base roll,500,3,
-sirius-ring-1760202,sirius-ring,Sirius Ring,armor,Any,Ring,Legendary,Base roll,500,3,
-sirius-ring-1760203,sirius-ring,Sirius Ring,armor,Any,Ring,Legendary,Base roll,500,3,
-sorcery-collar-1630401,sorcery-collar,Sorcery Collar,armor,Any,Necklace,Rare,Base roll,275,1,
-sorcery-collar-1630402,sorcery-collar,Sorcery Collar,armor,Any,Necklace,Rare,Base roll,275,1,
-sorcery-collar-1630403,sorcery-collar,Sorcery Collar,armor,Any,Necklace,Rare,Base roll,275,1,
-soulbane-necklace-1650401,soulbane-necklace,Soulbane Necklace,armor,Any,Necklace,Epic,Base roll,425,2,
-soulbane-necklace-1650402,soulbane-necklace,Soulbane Necklace,armor,Any,Necklace,Epic,Base roll,425,2,
-soulbane-necklace-1650403,soulbane-necklace,Soulbane Necklace,armor,Any,Necklace,Epic,Base roll,425,2,
-stargazing-ring-1750401,stargazing-ring,Stargazing Ring,armor,Any,Ring,Epic,Base roll,425,2,
-stargazing-ring-1750402,stargazing-ring,Stargazing Ring,armor,Any,Ring,Epic,Base roll,425,2,
-stargazing-ring-1750403,stargazing-ring,Stargazing Ring,armor,Any,Ring,Epic,Base roll,425,2,
+sirius-ring-1760201,sirius-ring,Sirius Ring,armor,Any,Ring,Legendary,Base roll,500,3,"moonstone2,amethyst,peridot"
+sirius-ring-1760202,sirius-ring,Sirius Ring,armor,Any,Ring,Legendary,Base roll,500,3,"peridot2,agate,moonstone"
+sirius-ring-1760203,sirius-ring,Sirius Ring,armor,Any,Ring,Legendary,Base roll,500,3,"universal2,amethyst,moonstone"
+sorcery-collar-1630401,sorcery-collar,Sorcery Collar,armor,Any,Necklace,Rare,Base roll,275,1,moonstone
+sorcery-collar-1630402,sorcery-collar,Sorcery Collar,armor,Any,Necklace,Rare,Base roll,275,1,peridot
+sorcery-collar-1630403,sorcery-collar,Sorcery Collar,armor,Any,Necklace,Rare,Base roll,275,1,universal
+soulbane-necklace-1650401,soulbane-necklace,Soulbane Necklace,armor,Any,Necklace,Epic,Base roll,425,2,"moonstone2,amethyst"
+soulbane-necklace-1650402,soulbane-necklace,Soulbane Necklace,armor,Any,Necklace,Epic,Base roll,425,2,"peridot2,agate"
+soulbane-necklace-1650403,soulbane-necklace,Soulbane Necklace,armor,Any,Necklace,Epic,Base roll,425,2,"universal2,peridot"
+stargazing-ring-1750401,stargazing-ring,Stargazing Ring,armor,Any,Ring,Epic,Base roll,425,2,"moonstone2,amethyst"
+stargazing-ring-1750402,stargazing-ring,Stargazing Ring,armor,Any,Ring,Epic,Base roll,425,2,"peridot2,agate"
+stargazing-ring-1750403,stargazing-ring,Stargazing Ring,armor,Any,Ring,Epic,Base roll,425,2,"universal2,peridot"
 training-apprentice-boots-1510201,training-apprentice-boots,Training Apprentice Boots,armor,"Sorcerer, Seer",Feet,Damaged,Base roll,100,,
 training-apprentice-bracers-1310201,training-apprentice-bracers,Training Apprentice Bracers,armor,"Sorcerer, Seer",Hands,Damaged,Base roll,100,,
 training-apprentice-hood-1110201,training-apprentice-hood,Training Apprentice Hood,armor,"Sorcerer, Seer",Head,Damaged,Base roll,100,,
 training-apprentice-pants-1410201,training-apprentice-pants,Training Apprentice Pants,armor,"Sorcerer, Seer",Legs,Damaged,Base roll,100,,
 training-apprentice-robe-1210201,training-apprentice-robe,Training Apprentice Robe,armor,"Sorcerer, Seer",Chest,Damaged,Base roll,100,,
-travelers-ring-1730201,travelers-ring,Traveler's Ring,armor,Any,Ring,Rare,Base roll,275,1,
-travelers-ring-1730202,travelers-ring,Traveler's Ring,armor,Any,Ring,Rare,Base roll,275,1,
-travelers-ring-1730203,travelers-ring,Traveler's Ring,armor,Any,Ring,Rare,Base roll,275,1,
-tri-phase-knot-pendant-1660101,tri-phase-knot-pendant,Tri-phase Knot Pendant,armor,Any,Necklace,Legendary,Base roll,500,3,
-tri-phase-knot-pendant-1660102,tri-phase-knot-pendant,Tri-phase Knot Pendant,armor,Any,Necklace,Legendary,Base roll,500,3,
-tri-phase-knot-pendant-1660103,tri-phase-knot-pendant,Tri-phase Knot Pendant,armor,Any,Necklace,Legendary,Base roll,500,3,
+travelers-ring-1730201,travelers-ring,Traveler's Ring,armor,Any,Ring,Rare,Base roll,275,1,moonstone
+travelers-ring-1730202,travelers-ring,Traveler's Ring,armor,Any,Ring,Rare,Base roll,275,1,peridot
+travelers-ring-1730203,travelers-ring,Traveler's Ring,armor,Any,Ring,Rare,Base roll,275,1,universal
+tri-phase-knot-pendant-1660101,tri-phase-knot-pendant,Tri-phase Knot Pendant,armor,Any,Necklace,Legendary,Base roll,500,3,"agate2,amethyst,moonstone"
+tri-phase-knot-pendant-1660102,tri-phase-knot-pendant,Tri-phase Knot Pendant,armor,Any,Necklace,Legendary,Base roll,500,3,"amethyst2,agate,peridot"
+tri-phase-knot-pendant-1660103,tri-phase-knot-pendant,Tri-phase Knot Pendant,armor,Any,Necklace,Legendary,Base roll,500,3,"universal2,agate,amethyst"
 true-prayer-bracers-1350501,true-prayer-bracers,True Prayer Bracers,armor,Seer,Hands,Epic,Brotherhood,450,1,
 true-prayer-bracers-1350502,true-prayer-bracers,True Prayer Bracers,armor,Seer,Hands,Epic,Ranged,450,1,
 true-prayer-bracers-1350503,true-prayer-bracers,True Prayer Bracers,armor,Seer,Hands,Epic,Fervor,450,1,
@@ -1203,12 +1203,12 @@ veteran-pants-1430106,veteran-pants,Veteran Pants,armor,Mercenary,Legs,Rare,Dist
 veteran-pants-1430107,veteran-pants,Veteran Pants,armor,Mercenary,Legs,Rare,Elusive,300,0,
 veteran-pants-1430108,veteran-pants,Veteran Pants,armor,Mercenary,Legs,Rare,Base roll,275,1,
 veteran-pants-1430109,veteran-pants,Veteran Pants,armor,Mercenary,Legs,Rare,Base roll,275,1,
-warrior-pendant-1630301,warrior-pendant,Warrior Pendant,armor,Any,Necklace,Rare,Base roll,275,1,
-warrior-pendant-1630302,warrior-pendant,Warrior Pendant,armor,Any,Necklace,Rare,Base roll,275,1,
-warrior-pendant-1630303,warrior-pendant,Warrior Pendant,armor,Any,Necklace,Rare,Base roll,275,1,
-woodling-guardian-ring-1740101,woodling-guardian-ring,Woodling Guardian Ring,armor,Any,Ring,Excellent,Base roll,350,2,
-woodling-guardian-ring-1740102,woodling-guardian-ring,Woodling Guardian Ring,armor,Any,Ring,Excellent,Base roll,350,2,
-woodling-guardian-ring-1740103,woodling-guardian-ring,Woodling Guardian Ring,armor,Any,Ring,Excellent,Base roll,350,2,
+warrior-pendant-1630301,warrior-pendant,Warrior Pendant,armor,Any,Necklace,Rare,Base roll,275,1,agate
+warrior-pendant-1630302,warrior-pendant,Warrior Pendant,armor,Any,Necklace,Rare,Base roll,275,1,amethyst
+warrior-pendant-1630303,warrior-pendant,Warrior Pendant,armor,Any,Necklace,Rare,Base roll,275,1,universal
+woodling-guardian-ring-1740101,woodling-guardian-ring,Woodling Guardian Ring,armor,Any,Ring,Excellent,Base roll,350,2,"agate,moonstone"
+woodling-guardian-ring-1740102,woodling-guardian-ring,Woodling Guardian Ring,armor,Any,Ring,Excellent,Base roll,350,2,"amethyst,peridot"
+woodling-guardian-ring-1740103,woodling-guardian-ring,Woodling Guardian Ring,armor,Any,Ring,Excellent,Base roll,350,2,"universal,agate"
 absolution-3060801,absolution,Absolution,weapon,Seer,Weapon,Legendary,Strife,525,2,
 absolution-3060802,absolution,Absolution,weapon,Seer,Weapon,Legendary,Fervid,525,2,
 absolution-3060803,absolution,Absolution,weapon,Seer,Weapon,Legendary,Seeker,525,2,
@@ -1255,15 +1255,15 @@ blade-of-destined-death-3050606,blade-of-destined-death,Blade of Destined Death,
 blade-of-destined-death-3050607,blade-of-destined-death,Blade of Destined Death,weapon,Shadowstrix,Weapon,Epic,Curse,450,1,
 blade-of-destined-death-3050608,blade-of-destined-death,Blade of Destined Death,weapon,Shadowstrix,Weapon,Epic,Base roll,425,2,
 blade-of-destined-death-3050609,blade-of-destined-death,Blade of Destined Death,weapon,Shadowstrix,Weapon,Epic,Base roll,425,2,
-blind-eye-staff-3060301,blind-eye-staff,Blind Eye Staff,weapon,Sorcerer,Weapon,Legendary,Fervor,525,2,
-blind-eye-staff-3060302,blind-eye-staff,Blind Eye Staff,weapon,Sorcerer,Weapon,Legendary,Fervid,525,2,
-blind-eye-staff-3060303,blind-eye-staff,Blind Eye Staff,weapon,Sorcerer,Weapon,Legendary,Seeker,525,2,
-blind-eye-staff-3060304,blind-eye-staff,Blind Eye Staff,weapon,Sorcerer,Weapon,Legendary,Ranged,525,2,
-blind-eye-staff-3060305,blind-eye-staff,Blind Eye Staff,weapon,Sorcerer,Weapon,Legendary,Eloquence,525,2,
-blind-eye-staff-3060306,blind-eye-staff,Blind Eye Staff,weapon,Sorcerer,Weapon,Legendary,Vitality,525,2,
-blind-eye-staff-3060307,blind-eye-staff,Blind Eye Staff,weapon,Sorcerer,Weapon,Legendary,Swift,525,2,
-blind-eye-staff-3060308,blind-eye-staff,Blind Eye Staff,weapon,Sorcerer,Weapon,Legendary,Base roll,500,3,
-blind-eye-staff-3060309,blind-eye-staff,Blind Eye Staff,weapon,Sorcerer,Weapon,Legendary,Base roll,500,3,
+blind-eye-staff-3060301,blind-eye-staff,Blind Eye Staff,weapon,Sorcerer,Weapon,Legendary,Fervor,525,2,"agate2,peridot"
+blind-eye-staff-3060302,blind-eye-staff,Blind Eye Staff,weapon,Sorcerer,Weapon,Legendary,Fervid,525,2,"peridot2,agate"
+blind-eye-staff-3060303,blind-eye-staff,Blind Eye Staff,weapon,Sorcerer,Weapon,Legendary,Seeker,525,2,"moonstone2,amethyst"
+blind-eye-staff-3060304,blind-eye-staff,Blind Eye Staff,weapon,Sorcerer,Weapon,Legendary,Ranged,525,2,"amethyst2,moonstone"
+blind-eye-staff-3060305,blind-eye-staff,Blind Eye Staff,weapon,Sorcerer,Weapon,Legendary,Eloquence,525,2,"moonstone2,peridot"
+blind-eye-staff-3060306,blind-eye-staff,Blind Eye Staff,weapon,Sorcerer,Weapon,Legendary,Vitality,525,2,"peridot2,amethyst"
+blind-eye-staff-3060307,blind-eye-staff,Blind Eye Staff,weapon,Sorcerer,Weapon,Legendary,Swift,525,2,"amethyst2,agate"
+blind-eye-staff-3060308,blind-eye-staff,Blind Eye Staff,weapon,Sorcerer,Weapon,Legendary,Base roll,500,3,"agate2,moonstone,peridot"
+blind-eye-staff-3060309,blind-eye-staff,Blind Eye Staff,weapon,Sorcerer,Weapon,Legendary,Base roll,500,3,"peridot2,amethyst,moonstone"
 bond-of-friendship-3060101,bond-of-friendship,Bond of Friendship,weapon,Mercenary,Weapon,Legendary,Aegis,525,2,
 bond-of-friendship-3060102,bond-of-friendship,Bond of Friendship,weapon,Mercenary,Weapon,Legendary,Tenacious,525,2,
 bond-of-friendship-3060103,bond-of-friendship,Bond of Friendship,weapon,Mercenary,Weapon,Legendary,Bulwark,525,2,
@@ -1292,15 +1292,15 @@ commander-sword-and-shield-3050106,commander-sword-and-shield,Commander Sword an
 commander-sword-and-shield-3050107,commander-sword-and-shield,Commander Sword and Shield,weapon,Mercenary,Weapon,Epic,Vitality,450,1,
 commander-sword-and-shield-3050108,commander-sword-and-shield,Commander Sword and Shield,weapon,Mercenary,Weapon,Epic,Base roll,425,2,
 commander-sword-and-shield-3050109,commander-sword-and-shield,Commander Sword and Shield,weapon,Mercenary,Weapon,Epic,Base roll,425,2,
-convergence-staff-3040301,convergence-staff,Convergence Staff,weapon,Sorcerer,Weapon,Excellent,Fervor,375,1,
-convergence-staff-3040302,convergence-staff,Convergence Staff,weapon,Sorcerer,Weapon,Excellent,Fervid,375,1,
-convergence-staff-3040303,convergence-staff,Convergence Staff,weapon,Sorcerer,Weapon,Excellent,Seeker,375,1,
-convergence-staff-3040304,convergence-staff,Convergence Staff,weapon,Sorcerer,Weapon,Excellent,Ranged,375,1,
-convergence-staff-3040305,convergence-staff,Convergence Staff,weapon,Sorcerer,Weapon,Excellent,Eloquence,375,1,
-convergence-staff-3040306,convergence-staff,Convergence Staff,weapon,Sorcerer,Weapon,Excellent,Vitality,375,1,
-convergence-staff-3040307,convergence-staff,Convergence Staff,weapon,Sorcerer,Weapon,Excellent,Swift,375,1,
-convergence-staff-3040308,convergence-staff,Convergence Staff,weapon,Sorcerer,Weapon,Excellent,Base roll,350,2,
-convergence-staff-3040309,convergence-staff,Convergence Staff,weapon,Sorcerer,Weapon,Excellent,Base roll,350,2,
+convergence-staff-3040301,convergence-staff,Convergence Staff,weapon,Sorcerer,Weapon,Excellent,Fervor,375,1,peridot
+convergence-staff-3040302,convergence-staff,Convergence Staff,weapon,Sorcerer,Weapon,Excellent,Fervid,375,1,agate
+convergence-staff-3040303,convergence-staff,Convergence Staff,weapon,Sorcerer,Weapon,Excellent,Seeker,375,1,amethyst
+convergence-staff-3040304,convergence-staff,Convergence Staff,weapon,Sorcerer,Weapon,Excellent,Ranged,375,1,moonstone
+convergence-staff-3040305,convergence-staff,Convergence Staff,weapon,Sorcerer,Weapon,Excellent,Eloquence,375,1,agate
+convergence-staff-3040306,convergence-staff,Convergence Staff,weapon,Sorcerer,Weapon,Excellent,Vitality,375,1,peridot
+convergence-staff-3040307,convergence-staff,Convergence Staff,weapon,Sorcerer,Weapon,Excellent,Swift,375,1,amethyst
+convergence-staff-3040308,convergence-staff,Convergence Staff,weapon,Sorcerer,Weapon,Excellent,Base roll,350,2,"amethyst,moonstone"
+convergence-staff-3040309,convergence-staff,Convergence Staff,weapon,Sorcerer,Weapon,Excellent,Base roll,350,2,"agate,moonstone"
 crude-hammer-3020201,crude-hammer,Crude Hammer,weapon,Mercenary,Weapon,Common,Base roll,200,,
 crusader-strongbow-3050401,crusader-strongbow,Crusader Strongbow,weapon,Blackarrow,Weapon,Epic,Sky Piercer,450,1,
 crusader-strongbow-3050402,crusader-strongbow,Crusader Strongbow,weapon,Blackarrow,Weapon,Epic,Fervid,450,1,
@@ -1320,15 +1320,15 @@ deathclaw-hunter-3060406,deathclaw-hunter,Deathclaw Hunter,weapon,Blackarrow,Wea
 deathclaw-hunter-3060407,deathclaw-hunter,Deathclaw Hunter,weapon,Blackarrow,Weapon,Legendary,Focused,525,2,
 deathclaw-hunter-3060408,deathclaw-hunter,Deathclaw Hunter,weapon,Blackarrow,Weapon,Legendary,Base roll,500,3,
 deathclaw-hunter-3060409,deathclaw-hunter,Deathclaw Hunter,weapon,Blackarrow,Weapon,Legendary,Base roll,500,3,
-empyrean-rain-staff-3050301,empyrean-rain-staff,Empyrean Rain Staff,weapon,Sorcerer,Weapon,Epic,Fervor,450,1,
-empyrean-rain-staff-3050302,empyrean-rain-staff,Empyrean Rain Staff,weapon,Sorcerer,Weapon,Epic,Fervid,450,1,
-empyrean-rain-staff-3050303,empyrean-rain-staff,Empyrean Rain Staff,weapon,Sorcerer,Weapon,Epic,Seeker,450,1,
-empyrean-rain-staff-3050304,empyrean-rain-staff,Empyrean Rain Staff,weapon,Sorcerer,Weapon,Epic,Ranged,450,1,
-empyrean-rain-staff-3050305,empyrean-rain-staff,Empyrean Rain Staff,weapon,Sorcerer,Weapon,Epic,Eloquence,450,1,
-empyrean-rain-staff-3050306,empyrean-rain-staff,Empyrean Rain Staff,weapon,Sorcerer,Weapon,Epic,Vitality,450,1,
-empyrean-rain-staff-3050307,empyrean-rain-staff,Empyrean Rain Staff,weapon,Sorcerer,Weapon,Epic,Swift,450,1,
-empyrean-rain-staff-3050308,empyrean-rain-staff,Empyrean Rain Staff,weapon,Sorcerer,Weapon,Epic,Base roll,425,2,
-empyrean-rain-staff-3050309,empyrean-rain-staff,Empyrean Rain Staff,weapon,Sorcerer,Weapon,Epic,Base roll,425,2,
+empyrean-rain-staff-3050301,empyrean-rain-staff,Empyrean Rain Staff,weapon,Sorcerer,Weapon,Epic,Fervor,450,1,amethyst2
+empyrean-rain-staff-3050302,empyrean-rain-staff,Empyrean Rain Staff,weapon,Sorcerer,Weapon,Epic,Fervid,450,1,moonstone2
+empyrean-rain-staff-3050303,empyrean-rain-staff,Empyrean Rain Staff,weapon,Sorcerer,Weapon,Epic,Seeker,450,1,agate2
+empyrean-rain-staff-3050304,empyrean-rain-staff,Empyrean Rain Staff,weapon,Sorcerer,Weapon,Epic,Ranged,450,1,peridot2
+empyrean-rain-staff-3050305,empyrean-rain-staff,Empyrean Rain Staff,weapon,Sorcerer,Weapon,Epic,Eloquence,450,1,agate2
+empyrean-rain-staff-3050306,empyrean-rain-staff,Empyrean Rain Staff,weapon,Sorcerer,Weapon,Epic,Vitality,450,1,peridot2
+empyrean-rain-staff-3050307,empyrean-rain-staff,Empyrean Rain Staff,weapon,Sorcerer,Weapon,Epic,Swift,450,1,moonstone2
+empyrean-rain-staff-3050308,empyrean-rain-staff,Empyrean Rain Staff,weapon,Sorcerer,Weapon,Epic,Base roll,425,2,"amethyst2,agate"
+empyrean-rain-staff-3050309,empyrean-rain-staff,Empyrean Rain Staff,weapon,Sorcerer,Weapon,Epic,Base roll,425,2,"moonstone2,amethyst"
 executioner-greatsword-3030901,executioner-greatsword,Executioner Greatsword,weapon,Withered Knight,Weapon,Rare,Stoic,300,0,
 executioner-greatsword-3030902,executioner-greatsword,Executioner Greatsword,weapon,Withered Knight,Weapon,Rare,Wrath,300,0,
 executioner-greatsword-3030903,executioner-greatsword,Executioner Greatsword,weapon,Withered Knight,Weapon,Rare,Fervid,300,0,
@@ -1366,15 +1366,15 @@ fine-iron-sword-and-shield-3030106,fine-iron-sword-and-shield,Fine Iron Sword an
 fine-iron-sword-and-shield-3030107,fine-iron-sword-and-shield,Fine Iron Sword and Shield,weapon,Mercenary,Weapon,Rare,Vitality,300,0,
 fine-iron-sword-and-shield-3030108,fine-iron-sword-and-shield,Fine Iron Sword and Shield,weapon,Mercenary,Weapon,Rare,Base roll,275,1,
 fine-iron-sword-and-shield-3030109,fine-iron-sword-and-shield,Fine Iron Sword and Shield,weapon,Mercenary,Weapon,Rare,Base roll,275,1,
-focus-staff-3030301,focus-staff,Focus Staff,weapon,Sorcerer,Weapon,Rare,Fervor,300,0,
-focus-staff-3030302,focus-staff,Focus Staff,weapon,Sorcerer,Weapon,Rare,Fervid,300,0,
-focus-staff-3030303,focus-staff,Focus Staff,weapon,Sorcerer,Weapon,Rare,Seeker,300,0,
-focus-staff-3030304,focus-staff,Focus Staff,weapon,Sorcerer,Weapon,Rare,Ranged,300,0,
-focus-staff-3030305,focus-staff,Focus Staff,weapon,Sorcerer,Weapon,Rare,Eloquence,300,0,
-focus-staff-3030306,focus-staff,Focus Staff,weapon,Sorcerer,Weapon,Rare,Vitality,300,0,
-focus-staff-3030307,focus-staff,Focus Staff,weapon,Sorcerer,Weapon,Rare,Swift,300,0,
-focus-staff-3030308,focus-staff,Focus Staff,weapon,Sorcerer,Weapon,Rare,Base roll,275,1,
-focus-staff-3030309,focus-staff,Focus Staff,weapon,Sorcerer,Weapon,Rare,Base roll,275,1,
+focus-staff-3030301,focus-staff,Focus Staff,weapon,Sorcerer,Weapon,Rare,Fervor,300,0,none
+focus-staff-3030302,focus-staff,Focus Staff,weapon,Sorcerer,Weapon,Rare,Fervid,300,0,none
+focus-staff-3030303,focus-staff,Focus Staff,weapon,Sorcerer,Weapon,Rare,Seeker,300,0,none
+focus-staff-3030304,focus-staff,Focus Staff,weapon,Sorcerer,Weapon,Rare,Ranged,300,0,none
+focus-staff-3030305,focus-staff,Focus Staff,weapon,Sorcerer,Weapon,Rare,Eloquence,300,0,none
+focus-staff-3030306,focus-staff,Focus Staff,weapon,Sorcerer,Weapon,Rare,Vitality,300,0,none
+focus-staff-3030307,focus-staff,Focus Staff,weapon,Sorcerer,Weapon,Rare,Swift,300,0,none
+focus-staff-3030308,focus-staff,Focus Staff,weapon,Sorcerer,Weapon,Rare,Base roll,275,1,peridot
+focus-staff-3030309,focus-staff,Focus Staff,weapon,Sorcerer,Weapon,Rare,Base roll,275,1,agate
 gem-lizard-dagger-3050501,gem-lizard-dagger,Gem Lizard Dagger,weapon,Shadowstrix,Weapon,Epic,Fervid,450,1,
 gem-lizard-dagger-3050502,gem-lizard-dagger,Gem Lizard Dagger,weapon,Shadowstrix,Weapon,Epic,Seeker,450,1,
 gem-lizard-dagger-3050503,gem-lizard-dagger,Gem Lizard Dagger,weapon,Shadowstrix,Weapon,Epic,Fervor,450,1,
@@ -1485,15 +1485,15 @@ moon-deity-invocation-catalyst-3071006,moon-deity-invocation-catalyst,Moon Deity
 moon-deity-invocation-catalyst-3071007,moon-deity-invocation-catalyst,Moon Deity - Invocation Catalyst,weapon,Seer,Weapon,Holy,Creation,625,,
 moon-deity-invocation-catalyst-3071008,moon-deity-invocation-catalyst,Moon Deity - Invocation Catalyst,weapon,Seer,Weapon,Holy,Base roll,600,,
 moon-deity-invocation-catalyst-3071009,moon-deity-invocation-catalyst,Moon Deity - Invocation Catalyst,weapon,Seer,Weapon,Holy,Base roll,600,,
-moon-deity-myriad-soul-staff-3070301,moon-deity-myriad-soul-staff,Moon Deity - Myriad Soul Staff,weapon,Sorcerer,Weapon,Holy,Fervor,625,,
-moon-deity-myriad-soul-staff-3070302,moon-deity-myriad-soul-staff,Moon Deity - Myriad Soul Staff,weapon,Sorcerer,Weapon,Holy,Fervid,625,,
-moon-deity-myriad-soul-staff-3070303,moon-deity-myriad-soul-staff,Moon Deity - Myriad Soul Staff,weapon,Sorcerer,Weapon,Holy,Seeker,625,,
-moon-deity-myriad-soul-staff-3070304,moon-deity-myriad-soul-staff,Moon Deity - Myriad Soul Staff,weapon,Sorcerer,Weapon,Holy,Ranged,625,,
-moon-deity-myriad-soul-staff-3070305,moon-deity-myriad-soul-staff,Moon Deity - Myriad Soul Staff,weapon,Sorcerer,Weapon,Holy,Eloquence,625,,
-moon-deity-myriad-soul-staff-3070306,moon-deity-myriad-soul-staff,Moon Deity - Myriad Soul Staff,weapon,Sorcerer,Weapon,Holy,Vitality,625,,
-moon-deity-myriad-soul-staff-3070307,moon-deity-myriad-soul-staff,Moon Deity - Myriad Soul Staff,weapon,Sorcerer,Weapon,Holy,Swift,625,,
-moon-deity-myriad-soul-staff-3070308,moon-deity-myriad-soul-staff,Moon Deity - Myriad Soul Staff,weapon,Sorcerer,Weapon,Holy,Base roll,600,,
-moon-deity-myriad-soul-staff-3070309,moon-deity-myriad-soul-staff,Moon Deity - Myriad Soul Staff,weapon,Sorcerer,Weapon,Holy,Base roll,600,,
+moon-deity-myriad-soul-staff-3070301,moon-deity-myriad-soul-staff,Moon Deity - Myriad Soul Staff,weapon,Sorcerer,Weapon,Holy,Fervor,625,,"agate2,peridot"
+moon-deity-myriad-soul-staff-3070302,moon-deity-myriad-soul-staff,Moon Deity - Myriad Soul Staff,weapon,Sorcerer,Weapon,Holy,Fervid,625,,"peridot2,agate"
+moon-deity-myriad-soul-staff-3070303,moon-deity-myriad-soul-staff,Moon Deity - Myriad Soul Staff,weapon,Sorcerer,Weapon,Holy,Seeker,625,,"moonstone2,amethyst"
+moon-deity-myriad-soul-staff-3070304,moon-deity-myriad-soul-staff,Moon Deity - Myriad Soul Staff,weapon,Sorcerer,Weapon,Holy,Ranged,625,,"amethyst2,moonstone"
+moon-deity-myriad-soul-staff-3070305,moon-deity-myriad-soul-staff,Moon Deity - Myriad Soul Staff,weapon,Sorcerer,Weapon,Holy,Eloquence,625,,"moonstone2,peridot"
+moon-deity-myriad-soul-staff-3070306,moon-deity-myriad-soul-staff,Moon Deity - Myriad Soul Staff,weapon,Sorcerer,Weapon,Holy,Vitality,625,,"peridot2,amethyst"
+moon-deity-myriad-soul-staff-3070307,moon-deity-myriad-soul-staff,Moon Deity - Myriad Soul Staff,weapon,Sorcerer,Weapon,Holy,Swift,625,,"amethyst2,agate"
+moon-deity-myriad-soul-staff-3070308,moon-deity-myriad-soul-staff,Moon Deity - Myriad Soul Staff,weapon,Sorcerer,Weapon,Holy,Base roll,600,,"agate2,moonstone,peridot"
+moon-deity-myriad-soul-staff-3070309,moon-deity-myriad-soul-staff,Moon Deity - Myriad Soul Staff,weapon,Sorcerer,Weapon,Holy,Base roll,600,,"peridot2,amethyst,moonstone"
 moon-deity-souleater-catalyst-3070901,moon-deity-souleater-catalyst,Moon Deity - Souleater Catalyst,weapon,Seer,Weapon,Holy,Brotherhood,625,,
 moon-deity-souleater-catalyst-3070902,moon-deity-souleater-catalyst,Moon Deity - Souleater Catalyst,weapon,Seer,Weapon,Holy,Spirit Shield,625,,
 moon-deity-souleater-catalyst-3070903,moon-deity-souleater-catalyst,Moon Deity - Souleater Catalyst,weapon,Seer,Weapon,Holy,Fervid,625,,

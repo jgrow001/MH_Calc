@@ -1,0 +1,96 @@
+Tri-phase Knot Pendant r2 p1 b1
+Tri-phase Knot Pendant p2 r1 g1
+Tri-phase Knot Pendant w2 r1 p1
+Einherjar's Blessing Necklace b2 p1 g1
+Einherjar's Blessing Necklace g2 r1 b1
+Einherjar's Blessing Necklace w2 p1 b1
+Frostspeaker Pendant r2 p1 b1
+Frostspeaker Pendant p2 r1 g1
+Frostspeaker Pendant w2 b1 g1
+Raven War Pendant b2 p1 g1
+Raven War Pendant g2 r1 b1
+Raven War Pendant w2 r1 g1
+Ragon's Pendant r2 b1
+Ragon's Pendant p1 g1
+Ragon's Pendant w2 r1
+Dragon Slumber Necklace b2 p1
+Dragon Slumber Necklace g2 r1
+Dragon Slumber Necklace w2 p1
+Jungle Emissary Necklace r2 b1
+Jungle Emissary Necklace p2 g1
+Jungle Emissary Necklace w2 b1
+Soulbane Necklace b2 p1
+Soulbane Necklace g2 r1
+Soulbane Necklace w2 g1
+Benediction Amulet r1 b1
+Benediction Amulet p1 g1
+Benediction Amulet w1 r1
+Bloodborn Amulet r1 g1
+Bloodborn Amulet p1 b1
+Bloodborn Amulet w1 p1
+Dominance Amulet r1 b1
+Dominance Amulet p1 g1
+Dominance Amulet w1 b1
+Dreamweaver Necklace r1 g1
+Dreamweaver Necklace p1 b1
+Dreamweaver Necklace w1 g1
+Discipline Pendant r1
+Discipline Pendant p1
+Discipline Pendant w1
+Beak Necklace b1
+Beak Necklace g1
+Beak Necklace w1
+Warrior Pendant r1
+Warrior Pendant p1 
+Warrior Pendant w1
+Sorcery Collar b1
+Sorcery Collar g1
+Sorcery Collar w1
+Ancestral Blessing Ring r2 p1 b1
+Ancestral Blessing Ring p2 r1 g1
+Ancestral Blessing Ring w1 r1 p1
+Sirius Ring b2 p1 g1
+Sirius Ring g2 r1 b1
+Sirius Ring w2 p1 b1
+Shadow Amberflux Ring r2 p1 b1
+Shadow Amberflux Ring p2 r1 g1
+Shadow Amberflux Ring w2 b1 g1
+Eye of the Sea Giant b2 p1 g1
+Eye of the Sea Giant g2 r1 b1
+Eye of the Sea Giant w2 r1 g1
+Ragon's Ring r2 b1
+Ragon's Ring p2 g1
+Ragon's Ring w2 r1
+Dragonbreath Ring b2 p1
+Dragonbreath Ring g2 r1
+Dragonbreath Ring w2 p1
+Commander Seal Ring r2 b1
+Commander Seal Ring p2 g1
+Commander Seal Ring w2 b1
+Stargazing Ring b2 p1
+Stargazing Ring g2 r1
+Stargazing Ring w2 g1
+Woodling Guardian Ring r1 b1
+Woodling Guardian Ring p1 g1
+Woodling Guardian Ring w1 r1
+Demonbane Ring r1 g1
+Demonbane Ring p1 b1
+Demonbane Ring w1 p1
+Retribution Ring r1 b1
+Retribution Ring p1 g1
+Retribution Ring w1 b1
+Mandrake Silver Ring r1 g1
+Mandrake Silver Ring p1 b1
+Mandrake Silver Ring w1 g1
+Lover's Ring r1
+Lover's Ring p1
+Lover's Ring w1
+Traveler's Ring b1
+Traveler's Ring g1
+Traveler's Ring w1
+Hunter's Ring r1
+Hunter's Ring p1
+Hunter's Ring w1
+Mithril Ring b1
+Mithril Ring g1
+Mithril Ring w1
