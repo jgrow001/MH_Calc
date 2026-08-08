@@ -29,6 +29,19 @@ Beverages (confirmed 2026-08-07) are a second, independent affix source:
 exactly one active at a time, each tier (T1-T4) grants a points budget to
 spread freely across affixes (no shape/type restriction, unlike gems), with
 a per-affix cap. See BEVERAGE_TIERS / beverage_allocation_for().
+
+GEMS ARE CRAFTED, NOT A FIXED CATALOG (confirmed 2026-08-08, superseding the
+earlier gems.json-catalog approach). MistfallDB's ~320 named gems are only a
+sample of pre-made combinations, not the full space -- confirmed by a real
+in-game build that needed a T1 agate "Sky Piercer" gem that doesn't exist
+anywhere in the scraped catalog. The real mechanic: each of the 4 real gem
+shapes (agate/amethyst/moonstone/peridot) has a fixed pool of ~12 affixes it
+can grant (data/processed/gems_raw.json, user-provided); a T1 gem of that
+shape lets you pick any ONE from the pool, a T2 gem lets you pick any TWO
+DIFFERENT ones (never the same affix twice). "Universal" is confirmed to be
+socket-only -- a universal socket accepts a gem crafted in any of the 4 real
+shapes, there's no separate universal gem shape/pool. gems.json (the scraped
+catalog) is no longer used by the solver; GameData.gem_pools is authoritative.
 """
 from __future__ import annotations
 
@@ -157,10 +170,14 @@ class GearItem:
         return "Any" in self.classes or class_req in self.classes
 
 
+REAL_GEM_SHAPES = ("agate", "amethyst", "moonstone", "peridot")
+
+
 @dataclass
 class GameData:
     affixes_by_slug: dict[str, Affix] = field(default_factory=dict)
-    gems: list[Gem] = field(default_factory=list)
+    gems: list[Gem] = field(default_factory=list)  # scraped named catalog -- reference only, not used by the solver
+    gem_pools: dict[str, tuple[str, ...]] = field(default_factory=dict)  # shape -> craftable affix slugs
     gear: list[GearItem] = field(default_factory=list)
     unresolved_affix_names: set[str] = field(default_factory=set)
 
@@ -220,6 +237,15 @@ def load_game_data(data_dir: Path = DATA_DIR) -> GameData:
                 tier=g.get("tier"),
                 affix_slugs=affix_slugs,
             ))
+
+    gems_raw_path = data_dir / "gems_raw.json"
+    if gems_raw_path.exists():
+        raw_pools = json.loads(gems_raw_path.read_text(encoding="utf-8"))
+        for shape, affix_names in raw_pools.items():
+            resolved = tuple(
+                s for s in (resolve_affix_name(n) for n in affix_names) if s
+            )
+            data.gem_pools[shape.strip().lower()] = resolved
 
     shapes_by_variant_slug: dict[str, tuple[SocketSpec, ...]] = {}
     variant_sockets_path = data_dir / "variant_sockets.csv"

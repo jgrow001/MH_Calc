@@ -6,53 +6,62 @@ find every combination of gear (one item+variant per affix-relevant slot),
 gems (socketed into that gear), and beverage allocation that reaches every
 target, plus whatever other affixes tag along for the ride.
 
-Deliberately not a single-objective optimizer: the ask was "show me the
-possible builds," not "the best build," so this does a pruned exhaustive
-search over the (small, once filtered to target-relevant candidates)
-combinatorial space instead of using a MIP/CP-SAT solver.
-
 Only gear VARIANTS with `socket_shapes` filled in (see variant_sockets.csv)
 are considered -- variants with unknown sockets are invisible to the solver
 until that data is entered, rather than silently assumed to have zero
 sockets.
 
-PERFORMANCE (confirmed 2026-08-07, real data): with several affix targets
-at once, per-slot candidate counts hit the thousands (many gems can grant
-any given affix, and jewelry has up to 3 sockets each) and the naive
-product across 8 slots reaches ~10^24 -- the app hung for minutes on a
-5-affix query. The per-affix independent-max pruning bound below is a very
-loose over-estimate (it assumes a slot can simultaneously max out every
-target affix via different hypothetical picks, when really it picks ONE
-candidate), so it rarely cuts anything. Three mitigations, all exact
-(no loss of correctness):
-  - dedup candidates within a (item, variant) by their affix-count
-    signature -- many distinct gem choices contribute identically for
-    feasibility purposes
-  - process slots with fewer candidates first (fail-fast, standard CSP
-    ordering heuristic) instead of alphabetically
-  - a hard cap on DFS nodes visited (max_nodes) as an absolute backstop,
-    since no pruning bound is guaranteed tight against arbitrary inputs
-An optional rarity filter (allowed_rarities) lets the caller shrink the
-base candidate pool directly, which helps far more than any of the above.
+SOLVER ENGINE (confirmed 2026-08-08, superseding an earlier hand-rolled
+pruned-DFS design): with several affix targets at once, per-slot candidate
+counts hit the hundreds to thousands, and a *tight* target (every affix
+landing exactly on target with a fully-used beverage budget, zero slack
+anywhere) turned out to defeat every DFS pruning/ordering heuristic tried --
+confirmed on a real 7-affix in-game build that a hand-verified-feasible
+combination took 8+ seconds / millions of backtracking nodes to rediscover,
+even with best-first candidate ordering. That's exactly the class of
+problem exact/near-exact equality constraints across many dimensions that
+a constraint solver is built for, so this now builds a CP-SAT model (one
+boolean var per candidate per slot, exactly-one per slot, linear >= per
+affix, beverage as bounded IntVars) and lets OR-Tools' solver find and
+enumerate solutions -- correct by construction, no pruning bound to get
+wrong, no node budget to exhaust into a false negative.
+An optional rarity filter (allowed_rarities) still lets the caller shrink
+the base candidate pool directly, which keeps the model itself smaller.
 
 A beverage (see model.entities.BEVERAGE_TIERS) is a second, independent
-affix source: whatever gear+gems fall short of the targets, the chosen
-beverage tier is checked for whether it can cover the remainder (its
-allocation is fully determined by the shortfall -- there's no freedom in
-how to split it, so it doesn't add branching, just a feasibility check at
-each candidate build).
+affix source, encoded directly in the CP-SAT model as bounded integer
+variables (0..max_per_affix each, summing to at most the tier's budget)
+added to each affix's linear constraint -- not a post-hoc check.
+
+GEMS ARE CRAFTED (confirmed 2026-08-08): a T1 gem of a given shape can be
+any ONE affix from that shape's pool (model.entities.GameData.gem_pools,
+from the user-provided gems_raw.json), a T2 gem any TWO DIFFERENT affixes
+from the pool. This replaced an earlier design that filtered MistfallDB's
+~320 scraped named gems -- that catalog turned out to be only a sample of
+combinations, not the full craftable space (a real in-game build needed a
+T1 agate "Sky Piercer" gem with no match in the scrape). Only combos where
+at least one affix is target-relevant are generated (see
+_craftable_gems_for_socket) -- for T2, only pairs where BOTH affixes are
+target-relevant, since a "wasted" filler affix never helps feasibility and
+the user doesn't care about efficiency, so there's no reason to search
+filler variations. data.gems (the scraped catalog) is only consulted to
+reuse a real gem's name/slug when one happens to match, for nicer display.
 """
 from __future__ import annotations
 
 import sys
+import time
 from dataclasses import dataclass
-from itertools import product
+from itertools import combinations, product
 from pathlib import Path
+
+from ortools.sat.python import cp_model
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from model.entities import (  # noqa: E402
     BEVERAGE_TIERS,
+    REAL_GEM_SHAPES,
     GameData,
     GearItem,
     GearVariant,
@@ -117,6 +126,56 @@ class Build:
         return {a: n for a, n in self.total_affix_counts().items() if a not in target_slugs}
 
 
+def _build_named_gem_lookup(data: GameData) -> dict[tuple[str, int, frozenset], Gem]:
+    """(shape, tier, affix set) -> a real scraped gem with that exact
+    signature, so crafted gems can borrow a real name/slug when one exists."""
+    lookup: dict[tuple[str, int, frozenset], Gem] = {}
+    for gem in data.gems:
+        if gem.shape and gem.tier:
+            lookup.setdefault((gem.shape, gem.tier, frozenset(gem.affix_slugs)), gem)
+    return lookup
+
+
+def _craft_gem(
+    data: GameData, shape: str, tier: int, affix_slugs: tuple[str, ...],
+    named_lookup: dict[tuple[str, int, frozenset], Gem],
+) -> Gem:
+    named = named_lookup.get((shape, tier, frozenset(affix_slugs)))
+    if named:
+        return named
+    names = [data.affixes_by_slug[a].name for a in affix_slugs]
+    return Gem(
+        slug=f"craft-{shape}-t{tier}-" + "-".join(affix_slugs),
+        name=f"Custom {shape.title()} ({' + '.join(names)})",
+        shape=shape,
+        tier=tier,
+        affix_slugs=affix_slugs,
+    )
+
+
+def _craftable_gems_for_socket(
+    data: GameData, socket: SocketSpec, target_slugs: set[str],
+    named_lookup: dict[tuple[str, int, frozenset], Gem],
+) -> list[Gem]:
+    """Every craftable gem that fits this socket and grants at least one
+    target affix. T1: any single target-relevant pool affix. T2: any pair of
+    target-relevant pool affixes (both members relevant -- a filler affix
+    the player doesn't care about never helps feasibility, so there's no
+    value in enumerating what it could be). A universal socket draws from
+    all 4 real shapes' pools, since it accepts a gem crafted in any of them."""
+    shapes = REAL_GEM_SHAPES if socket.shape == "universal" else (socket.shape,)
+    gems: list[Gem] = []
+    for shape in shapes:
+        pool = data.gem_pools.get(shape, ())
+        relevant = [a for a in pool if a in target_slugs]
+        for a in relevant:
+            gems.append(_craft_gem(data, shape, 1, (a,), named_lookup))
+        if socket.tier >= 2:
+            for a, b in combinations(relevant, 2):
+                gems.append(_craft_gem(data, shape, 2, (a, b), named_lookup))
+    return gems
+
+
 def _candidate_slot_picks(
     data: GameData,
     class_req: str,
@@ -134,9 +193,14 @@ def _candidate_slot_picks(
         and (allowed_rarities is None or g.rarity in allowed_rarities)
     ]
 
-    relevant_gems = [
-        gem for gem in data.gems if any(a in target_slugs for a in gem.affix_slugs)
-    ]
+    named_lookup = _build_named_gem_lookup(data)
+    gem_cache: dict[tuple[str, int], list[Gem]] = {}
+
+    def gems_for(socket: SocketSpec) -> list[Gem]:
+        key = (socket.shape, socket.tier)
+        if key not in gem_cache:
+            gem_cache[key] = _craftable_gems_for_socket(data, socket, target_slugs, named_lookup)
+        return gem_cache[key]
 
     picks: list[SlotPick] = []
     for item in items:
@@ -148,9 +212,7 @@ def _candidate_slot_picks(
             per_socket_options: list[list[SocketPick]] = []
             for socket in variant.socket_shapes:
                 options = [SocketPick(socket, None)]
-                options.extend(
-                    SocketPick(socket, gem) for gem in relevant_gems if socket.accepts(gem)
-                )
+                options.extend(SocketPick(socket, gem) for gem in gems_for(socket))
                 per_socket_options.append(options)
 
             if not per_socket_options:
@@ -188,7 +250,9 @@ def find_builds(
     max_results: int = 25,
     beverage_tier: str | None = None,
     allowed_rarities: set[str] | None = None,
-    max_nodes: int = 300_000,
+    max_nodes: int = 300_000,  # unused, kept for API compatibility with older callers
+    max_time_seconds: float = 8.0,
+    overall_time_budget_seconds: float = 15.0,
 ) -> list[Build]:
     target_slugs = set(targets)
     all_slots = sorted({
@@ -209,78 +273,64 @@ def find_builds(
         build = _try_finish_with_beverage((), {}, targets, beverage_tier)
         return [build] if build else []
 
-    # fail-fast ordering: process the most-constrained (fewest candidate)
-    # slots first -- standard CSP heuristic, makes both pruning checks below
-    # cut branches much earlier in practice
-    slots = sorted(per_slot_candidates, key=lambda s: len(per_slot_candidates[s]))
+    slots = list(per_slot_candidates)
+    per_slot_counts: dict[str, list[dict[str, int]]] = {
+        slot: [pick.affix_counts() for pick in picks]
+        for slot, picks in per_slot_candidates.items()
+    }
 
-    # per-affix best-case (independent, so still an over-estimate -- a slot
-    # can't actually max every affix at once via different hypothetical
-    # picks) and a joint best-single-candidate total, both precomputed once
-    # per slot and summed over the suffix. Together these catch both "this
-    # one affix is unreachable" and "the total need across affixes exceeds
-    # what remaining slots could jointly provide" -- the second is what a
-    # multi-affix query actually needs to prune well.
-    def best_case(slot: str) -> dict[str, int]:
-        best: dict[str, int] = {}
-        for pick in per_slot_candidates[slot]:
-            for a, n in pick.affix_counts().items():
-                if a in target_slugs:
-                    best[a] = max(best.get(a, 0), n)
-        return best
+    model = cp_model.CpModel()
+    slot_vars: dict[str, list] = {}
+    for slot in slots:
+        n = len(per_slot_candidates[slot])
+        vs = [model.NewBoolVar(f"{slot}#{k}") for k in range(n)]
+        model.AddExactlyOne(vs)
+        slot_vars[slot] = vs
 
-    def best_joint_score(slot: str) -> int:
-        return max(
-            sum(min(pick.affix_counts().get(a, 0), targets[a]) for a in target_slugs)
-            for pick in per_slot_candidates[slot]
-        )
+    beverage_vars: dict[str, cp_model.IntVar] = {}
+    if beverage_tier:
+        spec = BEVERAGE_TIERS[beverage_tier]
+        for a in target_slugs:
+            beverage_vars[a] = model.NewIntVar(0, spec["max_per_affix"], f"bev_{a}")
+        model.Add(sum(beverage_vars.values()) <= spec["budget"])
 
-    suffix_cap: list[dict[str, int]] = [{} for _ in range(len(slots) + 1)]
-    suffix_joint: list[int] = [0] * (len(slots) + 1)
-    for i in range(len(slots) - 1, -1, -1):
-        combined = dict(suffix_cap[i + 1])
-        for a, n in best_case(slots[i]).items():
-            combined[a] = combined.get(a, 0) + n
-        suffix_cap[i] = combined
-        suffix_joint[i] = suffix_joint[i + 1] + best_joint_score(slots[i])
+    for a, need in targets.items():
+        terms = [
+            counts[a] * slot_vars[slot][k]
+            for slot in slots
+            for k, counts in enumerate(per_slot_counts[slot])
+            if counts.get(a, 0)
+        ]
+        bev = beverage_vars.get(a)
+        if not terms and bev is None:
+            return []  # nothing anywhere can ever grant this affix -- guaranteed infeasible
+        expr = sum(terms) + (bev if bev is not None else 0)
+        model.Add(expr >= need)
 
-    beverage_budget = BEVERAGE_TIERS[beverage_tier]["budget"] if beverage_tier else 0
-    # safe over-estimate for the per-affix check: the most a beverage could
-    # add to any single affix (the real joint budget constraint is only
-    # checked exactly at each leaf via _try_finish_with_beverage)
-    beverage_slack = BEVERAGE_TIERS[beverage_tier]["max_per_affix"] if beverage_tier else 0
+    solver = cp_model.CpSolver()
+    solver.parameters.num_search_workers = 8
 
     results: list[Build] = []
-    nodes_visited = 0
+    start = time.monotonic()
+    for _ in range(max_results):
+        remaining = overall_time_budget_seconds - (time.monotonic() - start)
+        if remaining <= 0:
+            break  # overall wall-clock budget exhausted -- return whatever was found so far
+        solver.parameters.max_time_in_seconds = min(max_time_seconds, remaining)
+        status = solver.Solve(model)
+        if status not in (cp_model.OPTIMAL, cp_model.FEASIBLE):
+            break
+        chosen: list[SlotPick] = []
+        chosen_vars = []
+        for slot in slots:
+            for k, v in enumerate(slot_vars[slot]):
+                if solver.Value(v):
+                    chosen.append(per_slot_candidates[slot][k])
+                    chosen_vars.append(v)
+                    break
+        bev_alloc = {a: solver.Value(v) for a, v in beverage_vars.items() if solver.Value(v) > 0}
+        results.append(Build(tuple(chosen), beverage_tier, tuple(sorted(bev_alloc.items()))))
+        # block this exact gear combination so the next solve finds a different one
+        model.Add(sum(chosen_vars) <= len(slots) - 1)
 
-    def dfs(i: int, chosen: list[SlotPick], totals: dict[str, int]) -> None:
-        nonlocal nodes_visited
-        if len(results) >= max_results or nodes_visited >= max_nodes:
-            return
-        if i == len(slots):
-            build = _try_finish_with_beverage(tuple(chosen), totals, targets, beverage_tier)
-            if build:
-                results.append(build)
-            return
-        cap = suffix_cap[i + 1]
-        joint_remaining = suffix_joint[i + 1] + beverage_budget
-        for pick in per_slot_candidates[slots[i]]:
-            nodes_visited += 1
-            if nodes_visited >= max_nodes:
-                return
-            new_totals = dict(totals)
-            for a, n in pick.affix_counts().items():
-                new_totals[a] = new_totals.get(a, 0) + n
-            deficit_sum = sum(max(0, n - new_totals.get(a, 0)) for a, n in targets.items())
-            if deficit_sum > joint_remaining:
-                continue
-            if all(
-                new_totals.get(a, 0) + cap.get(a, 0) + beverage_slack >= n
-                for a, n in targets.items()
-            ):
-                dfs(i + 1, chosen + [pick], new_totals)
-                if len(results) >= max_results:
-                    return
-
-    dfs(0, [], {})
     return results

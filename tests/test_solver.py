@@ -17,14 +17,14 @@ def make_game_data() -> GameData:
         "stoic": Affix("stoic", "Stoic", "Defensive", stack_cap=5),
     }
 
-    data.gems = [
-        Gem("valor-peridot", "Valor Peridot", "peridot", 1, ("valor",)),
-        Gem("valor-elusive-rhomb", "Valor Elusive Rhomb", "purple_rhomb", 2, ("valor", "elusive")),
-        Gem("stoic-agate", "Stoic Agate", "agate", 1, ("stoic",)),
-        Gem("stoic-elusive-agate-t2", "Stoic Elusive Agate", "agate", 2, ("stoic", "elusive")),
-    ]
+    # Gems are crafted from a shape's pool now (T1 = any 1, T2 = any 2
+    # different), not a fixed catalog -- see model.entities.GameData.gem_pools.
+    data.gem_pools = {
+        "amethyst": ("valor", "elusive"),
+        "agate": ("stoic", "elusive"),
+    }
 
-    # Head slot: item A has a fixed Valor roll + one T1 purple_rhomb socket
+    # Head slot: item A has a fixed Valor roll + one T1 amethyst socket
     # (Legendary budget 3, minus 1 for the fixed affix = 2 -- but only 1
     # entered here on purpose, to also cover "fewer sockets than the rarity
     # budget allows" being handled fine since shapes are just whatever's
@@ -32,26 +32,26 @@ def make_game_data() -> GameData:
     item_a = GearItem(
         slug="item-a", name="Item A", kind="armor", classes=("Sorcerer",),
         slot="Head", rarity="Legendary",
-        variants=(GearVariant("item-a-v1", "valor", 500, "Legendary", (SocketSpec("purple_rhomb", 1),)),),
+        variants=(GearVariant("item-a-v1", "valor", 500, "Legendary", (SocketSpec("amethyst", 1),)),),
     )
-    # Head slot: item B has no innate affix, two T2 purple_rhomb sockets
-    # (needed so the T2 "Valor Elusive Rhomb" gem has somewhere to go).
+    # Head slot: item B has no innate affix, two T2 amethyst sockets
+    # (needed so a crafted T2 valor+elusive gem has somewhere to go).
     item_b = GearItem(
         slug="item-b", name="Item B", kind="armor", classes=("Sorcerer",),
         slot="Head", rarity="Legendary",
         variants=(GearVariant(
             "item-b-v1", None, 480, "Legendary",
-            (SocketSpec("purple_rhomb", 2), SocketSpec("purple_rhomb", 2)),
+            (SocketSpec("amethyst", 2), SocketSpec("amethyst", 2)),
         ),),
     )
-    # Chest slot: item C, one T1 agate socket -- can hold the T1 stoic gem
-    # but NOT the T2 stoic/elusive gem (tier restriction).
+    # Chest slot: item C, one T1 agate socket -- can craft the T1 stoic gem
+    # but NOT a T2 stoic+elusive gem (tier restriction).
     item_c = GearItem(
         slug="item-c", name="Item C", kind="armor", classes=("Sorcerer",),
         slot="Chest", rarity="Rare",
         variants=(GearVariant("item-c-v1", None, 300, "Rare", (SocketSpec("agate", 1),)),),
     )
-    # Legs slot: item D, one T2 agate socket -- can hold either stoic gem.
+    # Legs slot: item D, one T2 agate socket -- can craft either stoic gem.
     item_d = GearItem(
         slug="item-d", name="Item D", kind="armor", classes=("Sorcerer",),
         slot="Legs", rarity="Rare",
@@ -126,25 +126,35 @@ def test_socket_tier_accepts_rule():
 
 
 def test_solver_respects_socket_tier_end_to_end():
+    # T1 = pick any ONE affix from the pool, so a T1 socket alone can reach
+    # either stoic OR elusive individually -- tier restriction only bites
+    # when a single socket needs to cover BOTH at once, which requires a
+    # crafted T2 gem (pick 2 different), which a T1 socket can never hold.
     data = GameData()
     data.affixes_by_slug = {
         "stoic": Affix("stoic", "Stoic", "Defensive", stack_cap=5),
         "elusive": Affix("elusive", "Elusive", "Utility", stack_cap=5),
     }
-    data.gems = [
-        Gem("stoic-agate", "Stoic Agate", "agate", 1, ("stoic",)),
-        Gem("stoic-elusive-agate-t2", "Stoic Elusive Agate", "agate", 2, ("stoic", "elusive")),
-    ]
-    item_c = GearItem(
-        slug="item-c", name="Item C", kind="armor", classes=("Sorcerer",),
+    data.gem_pools = {"agate": ("stoic", "elusive")}
+    item_t1 = GearItem(
+        slug="item-t1", name="Item T1", kind="armor", classes=("Sorcerer",),
         slot="Chest", rarity="Rare",
-        variants=(GearVariant("item-c-v1", None, 300, "Rare", (SocketSpec("agate", 1),)),),
+        variants=(GearVariant("item-t1-v1", None, 300, "Rare", (SocketSpec("agate", 1),)),),
     )
-    data.gear = [item_c]
-    # a T1 socket can never hold the T2 gem that grants elusive here
-    assert find_builds(data, "Sorcerer", {"elusive": 1}, max_results=5) == []
-    # but stoic alone is reachable via the T1 gem in that same T1 socket
+    item_t2 = GearItem(
+        slug="item-t2", name="Item T2", kind="armor", classes=("Sorcerer",),
+        slot="Chest", rarity="Rare",
+        variants=(GearVariant("item-t2-v1", None, 300, "Rare", (SocketSpec("agate", 2),)),),
+    )
+    data.gear = [item_t1]
     assert find_builds(data, "Sorcerer", {"stoic": 1}, max_results=5)
+    assert find_builds(data, "Sorcerer", {"elusive": 1}, max_results=5)
+    # one T1 socket, one gem, one affix pick -- can't cover both at once
+    assert find_builds(data, "Sorcerer", {"stoic": 1, "elusive": 1}, max_results=5) == []
+
+    data.gear = [item_t2]
+    # a T2 socket can craft one gem with both -- now reachable
+    assert find_builds(data, "Sorcerer", {"stoic": 1, "elusive": 1}, max_results=5)
 
 
 def test_rarity_filter_excludes_other_rarities():
@@ -157,11 +167,18 @@ def test_rarity_filter_excludes_other_rarities():
 
 
 def test_candidate_dedup_by_affix_signature():
+    from collections import defaultdict
     from solver.build_solver import _candidate_slot_picks
     data = make_game_data()
     cands = _candidate_slot_picks(data, "Sorcerer", "Head", {"valor", "elusive"})
-    sigs = [tuple(sorted(c.affix_counts().items())) for c in cands]
-    assert len(sigs) == len(set(sigs)), "expected no duplicate affix-signatures within a slot"
+    # dedup is scoped to within a single (item, variant) -- different items
+    # legitimately can produce the same net affix contribution and both
+    # must stay, since the player cares which physical item to equip
+    by_item_variant = defaultdict(list)
+    for c in cands:
+        by_item_variant[(c.item.slug, c.variant.slug)].append(tuple(sorted(c.affix_counts().items())))
+    for key, sigs in by_item_variant.items():
+        assert len(sigs) == len(set(sigs)), f"duplicate affix-signatures within {key}"
 
 
 def test_max_nodes_bounds_search_without_crashing():

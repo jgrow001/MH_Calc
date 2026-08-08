@@ -11,11 +11,12 @@ whatever bonus affixes come along with each option.
 - [x] Sitemap crawler + HTML cache (`scraper/fetch.py`)
 - [x] Field-mapped extractors for affixes / gems / gear (`scraper/parse_*.py`) — full crawl done: 44 affixes, 320 gems, 464 gear items (374 armor + 90 weapons)
 - [x] Typed data model (`model/entities.py`)
-- [x] Pruned-DFS feasibility/enumeration solver (`solver/build_solver.py`), 11 unit tests passing
+- [x] CP-SAT feasibility/enumeration solver (`solver/build_solver.py`, OR-Tools), 14 unit tests passing
 - [x] Beverages — second, independent affix source, see below
+- [x] Gems are crafted from a shape's affix pool, not a fixed catalog — see below
 - [x] Streamlit UI (`app.py`), smoke-tested against the full dataset
+- [x] Per-affix stack caps — 32/44 affixes, from the user's `data/processed/Caps.txt` (see `scraper/parse_caps.py`); the other 12 aren't implemented in the game yet and are dropped entirely from `affixes.json`
 - [ ] **Socket-shape data — not scrapable from MistfallDB, confirmed by direct inspection.** Socket shape is a property of the specific gear VARIANT (not the base item — confirmed via Raven Priest Robe, whose 9 variants each carry a different socket-shape combo). `data/processed/variant_sockets.csv` has all 1707 variants with an empty `socket_shapes` column — **321/1707 filled in so far** (all Sorcerer armor+weapon, plus all class-agnostic jewelry). **The solver excludes any variant with unknown sockets rather than guessing.** Socket *count* is not manual, though — see below. Other 5 classes still need their gear filled in.
-- [ ] Per-affix stack caps — also not published by MistfallDB (its "Unlocks at" field is a different mechanic, a single roll's 1-32 level breakpoint, not a stacking cap). Add known caps to `data/processed/affix_caps_override.json` (currently just `valor: 7, elusive: 5`) and rerun `scraper/parse_affixes.py`.
 
 ## Key mechanics (confirmed 2026-08-05)
 
@@ -47,12 +48,37 @@ whatever bonus affixes come along with each option.
   exactly one active at a time, confirmed by the user. Each tier grants a
   points budget spread freely across affixes (no shape/type restriction), with
   a per-affix cap: T1 (budget 2, ≤1/affix), T2 (budget 4, ≤1/affix), T3
-  (budget 6, ≤2/affix), T4 (budget 8, ≤2/affix). See `BEVERAGE_TIERS` /
-  `beverage_allocation_for()` in `model/entities.py`. The solver treats a
-  build's beverage allocation as fully determined by whatever gear+gems fall
-  short of the target (no extra branching), and it's a UI selector
-  (None/T1-T4), not auto-assumed-best, since lower tiers may be cheaper/
-  easier to get in-game.
+  (budget 6, ≤2/affix), T4 (budget 8, ≤2/affix). See `BEVERAGE_TIERS` in
+  `model/entities.py`. It's a UI selector (None/T1-T4), not auto-assumed-best,
+  since lower tiers may be cheaper/easier to get in-game.
+- **Gems are crafted, not a fixed catalog** (confirmed 2026-08-08). MistfallDB's
+  ~320 scraped named gems turned out to be only a *sample* of combinations —
+  a real in-game build needed a T1 agate "Sky Piercer" gem with no match
+  anywhere in the scrape. The real mechanic: each of the 4 real gem shapes
+  (agate/amethyst/moonstone/peridot) has a fixed pool of ~12 affixes it can
+  grant (`data/processed/gems_raw.json`, user-provided); a T1 gem lets you
+  pick any ONE from the pool, a T2 gem any TWO *different* ones (never the
+  same affix twice). Universal is socket-only — a universal socket accepts a
+  gem crafted in any of the 4 real shapes, there's no separate universal
+  pool. See `GameData.gem_pools` and `solver.build_solver._craftable_gems_for_socket`.
+  The scraped catalog (`gems.json`) is only consulted to reuse a real gem's
+  name when one happens to match, for nicer display.
+
+## Solver engine
+
+`solver/build_solver.py` builds a CP-SAT model (OR-Tools) — one boolean variable per candidate
+gear+gem combo per slot, exactly-one constraint per slot, a linear `>=` constraint per target
+affix, beverage encoded as bounded integer variables — and enumerates feasible solutions by
+solving, then blocking the found gear combination and re-solving. This replaced an earlier
+hand-rolled pruned-DFS design: with several affix targets at once a *tight* target (every affix
+landing exactly on target, beverage budget fully used, zero slack anywhere) defeated every DFS
+pruning/ordering heuristic tried — confirmed on a real 7-affix in-game build that took 8+ seconds
+and millions of backtracking nodes to rediscover even with best-first candidate ordering. That's
+exactly the class of problem (near-equality constraints across many dimensions) a real constraint
+solver is built for; CP-SAT finds the same query in well under a second, correct by construction.
+A per-solve time limit plus an overall wall-clock budget (`max_time_seconds` /
+`overall_time_budget_seconds`, defaults 8s / 15s) bound total search time regardless of how many
+affixes are targeted at once.
 
 ## Setup
 
