@@ -182,15 +182,23 @@ def _candidate_slot_picks(
     slot: str,
     target_slugs: set[str],
     allowed_rarities: set[str] | None = None,
+    required_item_slug: str | None = None,
 ) -> list[SlotPick]:
     """Every (item, variant, socket-assignment) combo for one slot that
     grants at least one target affix, via innate roll and/or socketed gems.
     Deduped within each (item, variant) by affix-count signature -- many
-    different gem choices are interchangeable for feasibility purposes."""
+    different gem choices are interchangeable for feasibility purposes.
+
+    If required_item_slug is set, candidates are restricted to that one
+    item (e.g. "must use Raven War Pendant in Necklace") -- and unlike the
+    normal case, combos that don't touch any target affix are still kept
+    (an all-empty-sockets combo included), since the item must be usable in
+    the build even if none of its sockets end up helping the target."""
     items = [
         g for g in data.gear
         if g.slot == slot and g.usable_by(class_req)
         and (allowed_rarities is None or g.rarity in allowed_rarities)
+        and (required_item_slug is None or g.slug == required_item_slug)
     ]
 
     named_lookup = _build_named_gem_lookup(data)
@@ -216,13 +224,13 @@ def _candidate_slot_picks(
                 per_socket_options.append(options)
 
             if not per_socket_options:
-                if variant_relevant:
+                if variant_relevant or required_item_slug:
                     picks.append(SlotPick(slot, item, variant, ()))
                 continue
 
             seen_signatures: set[tuple] = set()
             for combo in product(*per_socket_options):
-                if not (variant_relevant or any(s.gem for s in combo)):
+                if not required_item_slug and not (variant_relevant or any(s.gem for s in combo)):
                     continue
                 pick = SlotPick(slot, item, variant, combo)
                 sig = tuple(sorted(pick.affix_counts().items()))
@@ -253,18 +261,28 @@ def find_builds(
     max_nodes: int = 300_000,  # unused, kept for API compatibility with older callers
     max_time_seconds: float = 8.0,
     overall_time_budget_seconds: float = 15.0,
+    locked_items: dict[str, str] | None = None,
 ) -> list[Build]:
+    """locked_items: {slot: item_slug} forces that specific base item into
+    the build for that slot (e.g. {"Necklace": "raven-war-pendant"}) --
+    still lets the solver pick which variant/gems, just not which item."""
     target_slugs = set(targets)
     all_slots = sorted({
         g.slot for g in data.gear
         if g.slot and g.usable_by(class_req)
     })
+    locked_items = locked_items or {}
 
     per_slot_candidates: dict[str, list[SlotPick]] = {}
     for slot in all_slots:
-        cands = _candidate_slot_picks(data, class_req, slot, target_slugs, allowed_rarities)
+        cands = _candidate_slot_picks(
+            data, class_req, slot, target_slugs, allowed_rarities,
+            required_item_slug=locked_items.get(slot),
+        )
         if cands:
             per_slot_candidates[slot] = cands
+        elif slot in locked_items:
+            return []  # the locked item has no usable variant here (e.g. missing socket data) -- infeasible
 
     if not per_slot_candidates:
         # no gear/gem touches any target affix -- still feasible if the
@@ -281,11 +299,27 @@ def find_builds(
 
     model = cp_model.CpModel()
     slot_vars: dict[str, list] = {}
+    all_decision_vars: dict[str, list] = {}  # includes the skip var, for blocking-constraint purposes
     for slot in slots:
         n = len(per_slot_candidates[slot])
         vs = [model.NewBoolVar(f"{slot}#{k}") for k in range(n)]
-        model.AddExactlyOne(vs)
         slot_vars[slot] = vs
+        if slot in locked_items:
+            # a locked slot has no skip option -- the whole point is that
+            # something from this specific item must be equipped
+            model.AddExactlyOne(vs)
+            all_decision_vars[slot] = vs
+        else:
+            # every other touching slot is OPTIONAL: without this, a slot
+            # that only has affix-granting candidates (e.g. because the
+            # target is a single narrow affix) would be forced to
+            # contribute, and with several such slots mandatory, total
+            # contribution could be forced above the affix's own stack cap
+            # -- a real bug this surfaced (curse cap 5, but 8 slots all
+            # forced to grant >=1 curse each = impossible under the cap).
+            skip = model.NewBoolVar(f"{slot}#skip")
+            model.AddExactlyOne(vs + [skip])
+            all_decision_vars[slot] = vs + [skip]
 
     beverage_vars: dict[str, cp_model.IntVar] = {}
     if beverage_tier:
@@ -306,6 +340,13 @@ def find_builds(
             return []  # nothing anywhere can ever grant this affix -- guaranteed infeasible
         expr = sum(terms) + (bev if bev is not None else 0)
         model.Add(expr >= need)
+        # hard cap: a beverage (or, in principle, redundant gear/gems) can't
+        # push an affix's total past its real in-game stack cap -- without
+        # this the solver would happily "achieve" e.g. eloquence 8 against a
+        # cap of 7, wasting a beverage point that could cover something else
+        cap = data.affixes_by_slug[a].stack_cap
+        if cap is not None:
+            model.Add(expr <= cap)
 
     solver = cp_model.CpSolver()
     solver.parameters.num_search_workers = 8
@@ -321,16 +362,19 @@ def find_builds(
         if status not in (cp_model.OPTIMAL, cp_model.FEASIBLE):
             break
         chosen: list[SlotPick] = []
-        chosen_vars = []
+        decision_true_vars = []  # exactly one per slot, whether a real candidate or skip
         for slot in slots:
             for k, v in enumerate(slot_vars[slot]):
                 if solver.Value(v):
                     chosen.append(per_slot_candidates[slot][k])
-                    chosen_vars.append(v)
+                    decision_true_vars.append(v)
                     break
+            else:
+                decision_true_vars.append(all_decision_vars[slot][-1])  # the skip var was chosen
         bev_alloc = {a: solver.Value(v) for a, v in beverage_vars.items() if solver.Value(v) > 0}
         results.append(Build(tuple(chosen), beverage_tier, tuple(sorted(bev_alloc.items()))))
-        # block this exact gear combination so the next solve finds a different one
-        model.Add(sum(chosen_vars) <= len(slots) - 1)
+        # block this exact combination (including which slots were skipped)
+        # so the next solve is forced to differ in at least one decision
+        model.Add(sum(decision_true_vars) <= len(slots) - 1)
 
     return results

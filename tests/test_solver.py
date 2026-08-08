@@ -104,14 +104,20 @@ def test_multi_affix_target_and_bonus_reporting():
         assert b.bonus_affixes({"valor", "elusive"}).keys() <= {"stoic"}
 
 
-def test_stoic_target_pulls_in_chest_slot():
+def test_stoic_source_slots_are_independently_optional():
+    # Chest (item-c) and Legs (item-d) are independent stoic sources. Slots
+    # that merely COULD contribute are optional, not force-included (fixed
+    # 2026-08-08 -- mandatory participation across many touching slots was
+    # colliding with the stack-cap constraint, forcing infeasibility even
+    # for trivially-achievable single-affix targets), so a minimal build
+    # should be able to use just one of them.
     data = make_game_data()
     builds = find_builds(data, "Sorcerer", {"stoic": 1}, max_results=25)
     assert builds
-    assert all(
-        any(pick.slot == "Chest" for pick in b.picks)
-        for b in builds
-    )
+    for b in builds:
+        assert b.total_affix_counts().get("stoic", 0) >= 1
+    slot_sets = [{pick.slot for pick in b.picks} for b in builds]
+    assert any(s == {"Chest"} for s in slot_sets) or any(s == {"Legs"} for s in slot_sets)
 
 
 def test_socket_tier_accepts_rule():
@@ -186,6 +192,37 @@ def test_max_nodes_bounds_search_without_crashing():
     # an absurdly low node budget should just return early, not error out
     builds = find_builds(data, "Sorcerer", {"valor": 2}, max_results=25, max_nodes=1)
     assert isinstance(builds, list)
+
+
+def test_beverage_cannot_push_affix_past_its_stack_cap():
+    data = make_game_data()
+    # elusive caps at 5; target it right at the cap with a generous (T4)
+    # beverage so there's every incentive for the solver to overshoot if
+    # the cap constraint weren't there
+    builds = find_builds(data, "Sorcerer", {"elusive": 5}, max_results=10, beverage_tier="T4")
+    assert builds
+    for b in builds:
+        assert b.total_affix_counts()["elusive"] <= 5
+
+
+def test_locked_item_forces_specific_gear_into_slot():
+    data = make_game_data()
+    builds = find_builds(
+        data, "Sorcerer", {"stoic": 1}, max_results=10, locked_items={"Chest": "item-c"}
+    )
+    assert builds
+    for b in builds:
+        chest_picks = [p for p in b.picks if p.slot == "Chest"]
+        assert len(chest_picks) == 1
+        assert chest_picks[0].item.slug == "item-c"
+
+
+def test_locked_item_with_no_usable_variant_is_infeasible():
+    data = make_game_data()
+    # item-unknown has no socket data at all -- locking to it can never work
+    assert find_builds(
+        data, "Sorcerer", {"valor": 1}, max_results=5, locked_items={"Head": "item-unknown"}
+    ) == []
 
 
 def test_beverage_alone_covers_target_with_no_gear_touching_it():

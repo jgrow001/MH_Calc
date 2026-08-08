@@ -73,6 +73,23 @@ rarity_choices = st.sidebar.multiselect(
 )
 allowed_rarities = set(rarity_choices) if rarity_choices else None
 
+with st.sidebar.expander("Lock specific gear (optional)"):
+    st.caption("Force a specific item into a slot — useful for jewelry, where pieces with the same "
+               "socket layout can differ in base stats. Still lets the solver pick gems.")
+    locked_items: dict[str, str] = {}
+    for slot in data.slots():
+        slot_items = sorted(
+            (g for g in data.gear if g.slot == slot and g.usable_by(class_req)),
+            key=lambda g: g.name,
+        )
+        if not slot_items:
+            continue
+        options = ["Any"] + [g.slug for g in slot_items]
+        labels = {"Any": "Any"} | {g.slug: f"{g.name} ({g.rarity})" for g in slot_items}
+        choice = st.selectbox(slot, options, index=0, format_func=lambda s: labels[s], key=f"lock_{slot}")
+        if choice != "Any":
+            locked_items[slot] = choice
+
 beverage_options = ["None"] + list(BEVERAGE_TIERS)
 beverage_labels = {"None": "None"} | {
     t: f"{t} (budget {s['budget']}, up to +{s['max_per_affix']}/affix)" for t, s in BEVERAGE_TIERS.items()
@@ -132,6 +149,7 @@ if run:
         builds = find_builds(
             data, class_req, targets, max_results=int(max_results),
             beverage_tier=beverage_tier, allowed_rarities=allowed_rarities,
+            locked_items=locked_items,
         )
     if not builds:
         st.error(

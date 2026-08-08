@@ -11,9 +11,11 @@ whatever bonus affixes come along with each option.
 - [x] Sitemap crawler + HTML cache (`scraper/fetch.py`)
 - [x] Field-mapped extractors for affixes / gems / gear (`scraper/parse_*.py`) — full crawl done: 44 affixes, 320 gems, 464 gear items (374 armor + 90 weapons)
 - [x] Typed data model (`model/entities.py`)
-- [x] CP-SAT feasibility/enumeration solver (`solver/build_solver.py`, OR-Tools), 14 unit tests passing
+- [x] CP-SAT feasibility/enumeration solver (`solver/build_solver.py`, OR-Tools), 17 unit tests passing
 - [x] Beverages — second, independent affix source, see below
 - [x] Gems are crafted from a shape's affix pool, not a fixed catalog — see below
+- [x] Hard per-affix stack caps enforced in the solver (gear+gems+beverage can't exceed the real cap)
+- [x] Lock specific gear into a slot (`locked_items`) — for items with the same socket layout but different base stats, e.g. jewelry
 - [x] Streamlit UI (`app.py`), smoke-tested against the full dataset
 - [x] Per-affix stack caps — 32/44 affixes, from the user's `data/processed/Caps.txt` (see `scraper/parse_caps.py`); the other 12 aren't implemented in the game yet and are dropped entirely from `affixes.json`
 - [ ] **Socket-shape data — not scrapable from MistfallDB, confirmed by direct inspection.** Socket shape is a property of the specific gear VARIANT (not the base item — confirmed via Raven Priest Robe, whose 9 variants each carry a different socket-shape combo). `data/processed/variant_sockets.csv` has all 1707 variants with an empty `socket_shapes` column — **321/1707 filled in so far** (all Sorcerer armor+weapon, plus all class-agnostic jewelry). **The solver excludes any variant with unknown sockets rather than guessing.** Socket *count* is not manual, though — see below. Other 5 classes still need their gear filled in.
@@ -80,6 +82,15 @@ A per-solve time limit plus an overall wall-clock budget (`max_time_seconds` /
 `overall_time_budget_seconds`, defaults 8s / 15s) bound total search time regardless of how many
 affixes are targeted at once.
 
+**Slots that could contribute to a target are optional, not mandatory** (fixed 2026-08-08). Every
+slot touching a target affix gets an explicit "skip" boolean alongside its real candidates, chosen
+via `AddExactlyOne(candidates + [skip])`. Without this, a single narrow target (e.g. just Curse)
+forced *every* slot capable of granting it to participate — and once the hard stack-cap constraint
+was added, that mandatory participation could force a total above the affix's own cap (8 slots each
+forced to contribute Curse, cap 5 → guaranteed infeasible), breaking even trivially-achievable
+single-affix queries. Locked slots (see `locked_items`) are the one exception — no skip there, since
+locking means the item must appear.
+
 ## Setup
 
 ```
@@ -142,6 +153,20 @@ python scraper/ingest_bulk_shapes.py data/processed/sorc.txt --class Sorcerer
 across classes); omit it for class-agnostic gear like jewelry. Prints `NOTE` for fuzzy-matched
 base names (e.g. a typo) and duplicate lines, `CONFLICT` if a repeated line disagrees with what's
 already recorded, `WARNING` for anything it couldn't match at all.
+
+## Locking specific gear into a slot
+
+Useful for items with identical socket layouts but different base stats (jewelry especially — see
+`data/processed/jewelry.txt`). In the app, the "Lock specific gear" sidebar section has a
+per-slot dropdown. Programmatically, pass `locked_items` to `find_builds`:
+
+```python
+find_builds(data, "Sorcerer", targets, locked_items={"Necklace": "raven-war-pendant", "Ring": "eye-of-the-sea-giant"})
+```
+
+The solver still picks which variant/gems for that item — locking only fixes *which base item*
+fills the slot. Locking to an item with no usable socket data (see coverage above) returns no
+builds rather than silently ignoring the lock.
 
 ## Running the app
 
