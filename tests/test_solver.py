@@ -147,6 +147,30 @@ def test_solver_respects_socket_tier_end_to_end():
     assert find_builds(data, "Sorcerer", {"stoic": 1}, max_results=5)
 
 
+def test_rarity_filter_excludes_other_rarities():
+    data = make_game_data()
+    # valor only comes from item-a/item-b, both Legendary
+    assert find_builds(data, "Sorcerer", {"valor": 1}, max_results=5, allowed_rarities={"Legendary"})
+    assert find_builds(data, "Sorcerer", {"valor": 1}, max_results=5, allowed_rarities={"Rare"}) == []
+    # None means no filter (same as omitting it)
+    assert find_builds(data, "Sorcerer", {"valor": 1}, max_results=5, allowed_rarities=None)
+
+
+def test_candidate_dedup_by_affix_signature():
+    from solver.build_solver import _candidate_slot_picks
+    data = make_game_data()
+    cands = _candidate_slot_picks(data, "Sorcerer", "Head", {"valor", "elusive"})
+    sigs = [tuple(sorted(c.affix_counts().items())) for c in cands]
+    assert len(sigs) == len(set(sigs)), "expected no duplicate affix-signatures within a slot"
+
+
+def test_max_nodes_bounds_search_without_crashing():
+    data = make_game_data()
+    # an absurdly low node budget should just return early, not error out
+    builds = find_builds(data, "Sorcerer", {"valor": 2}, max_results=25, max_nodes=1)
+    assert isinstance(builds, list)
+
+
 def test_beverage_alone_covers_target_with_no_gear_touching_it():
     data = GameData()
     data.affixes_by_slug = {"wealth": Affix("wealth", "Wealth", "Utility", stack_cap=5)}

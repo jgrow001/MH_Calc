@@ -62,6 +62,17 @@ for slug in chosen_slugs:
     max_val = affix.stack_cap or 10
     targets[slug] = st.sidebar.slider(f"{affix.name} level", 1, max_val, min(max_val, 1))
 
+all_rarities = sorted(
+    {g.rarity for g in data.gear if g.rarity}, key=lambda r: -(len(r))  # stable, arbitrary order
+)
+rarity_choices = st.sidebar.multiselect(
+    "Gear rarity (narrows search, faster)",
+    options=all_rarities,
+    default=all_rarities,
+    help="Fewer rarities = fewer candidates to search, useful if Calculate is slow for a broad target.",
+)
+allowed_rarities = set(rarity_choices) if rarity_choices else None
+
 beverage_options = ["None"] + list(BEVERAGE_TIERS)
 beverage_labels = {"None": "None"} | {
     t: f"{t} (budget {s['budget']}, up to +{s['max_per_affix']}/affix)" for t, s in BEVERAGE_TIERS.items()
@@ -117,11 +128,16 @@ def render_build(i: int, build: Build, target_slugs: set[str]) -> None:
 
 
 if run:
-    builds = find_builds(data, class_req, targets, max_results=int(max_results), beverage_tier=beverage_tier)
+    with st.spinner("Searching…"):
+        builds = find_builds(
+            data, class_req, targets, max_results=int(max_results),
+            beverage_tier=beverage_tier, allowed_rarities=allowed_rarities,
+        )
     if not builds:
         st.error(
-            "No feasible build found with current data. Either the targets aren't reachable "
-            "with known gear/gems, or the relevant items don't have socket data filled in yet."
+            "No feasible build found within the search budget. Either the targets aren't reachable "
+            "with known gear/gems, the relevant items don't have socket data filled in yet, or the "
+            "search hit its safety limit — try narrowing target affixes or gear rarity."
         )
     else:
         st.success(f"Found {len(builds)} feasible build(s) (capped at {max_results}).")
