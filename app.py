@@ -73,6 +73,20 @@ rarity_choices = st.sidebar.multiselect(
 )
 allowed_rarities = set(rarity_choices) if rarity_choices else None
 
+weapon_types_here = sorted({
+    g.weapon_type for g in data.gear
+    if g.slot == "Weapon" and g.usable_by(class_req) and g.weapon_type
+})
+weapon_type: str | None = None
+if len(weapon_types_here) > 1:
+    wt_choice = st.sidebar.selectbox(
+        "Weapon type",
+        ["Any"] + weapon_types_here,
+        help="Some classes can equip either of two weapon categories in the same slot, but only "
+             "one actually grants its affixes when equipped — pick which one to build around.",
+    )
+    weapon_type = None if wt_choice == "Any" else wt_choice
+
 with st.sidebar.expander("Lock specific gear (optional)"):
     st.caption("Force a specific item into a slot — useful for jewelry, where pieces with the same "
                "socket layout can differ in base stats. Still lets the solver pick gems.")
@@ -149,7 +163,7 @@ if run:
         builds = find_builds(
             data, class_req, targets, max_results=int(max_results),
             beverage_tier=beverage_tier, allowed_rarities=allowed_rarities,
-            locked_items=locked_items,
+            locked_items=locked_items, weapon_type=weapon_type,
         )
     if not builds:
         st.error(

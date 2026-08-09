@@ -11,14 +11,15 @@ whatever bonus affixes come along with each option.
 - [x] Sitemap crawler + HTML cache (`scraper/fetch.py`)
 - [x] Field-mapped extractors for affixes / gems / gear (`scraper/parse_*.py`) — full crawl done: 44 affixes, 320 gems, 464 gear items (374 armor + 90 weapons)
 - [x] Typed data model (`model/entities.py`)
-- [x] CP-SAT feasibility/enumeration solver (`solver/build_solver.py`, OR-Tools), 17 unit tests passing
+- [x] CP-SAT feasibility/enumeration solver (`solver/build_solver.py`, OR-Tools), 18 unit tests passing
 - [x] Beverages — second, independent affix source, see below
 - [x] Gems are crafted from a shape's affix pool, not a fixed catalog — see below
 - [x] Hard per-affix stack caps enforced in the solver (gear+gems+beverage can't exceed the real cap)
 - [x] Lock specific gear into a slot (`locked_items`) — for items with the same socket layout but different base stats, e.g. jewelry
+- [x] Weapon category filter (`weapon_type`) — for classes with two mutually-exclusive weapon types filling one slot, see below
 - [x] Streamlit UI (`app.py`), smoke-tested against the full dataset
 - [x] Per-affix stack caps — 32/44 affixes, from the user's `data/processed/Caps.txt` (see `scraper/parse_caps.py`); the other 12 aren't implemented in the game yet and are dropped entirely from `affixes.json`
-- [ ] **Socket-shape data — not scrapable from MistfallDB, confirmed by direct inspection.** Socket shape is a property of the specific gear VARIANT (not the base item — confirmed via Raven Priest Robe, whose 9 variants each carry a different socket-shape combo). `data/processed/variant_sockets.csv` has all 1707 variants with an empty `socket_shapes` column — **321/1707 filled in so far** (all Sorcerer armor+weapon, plus all class-agnostic jewelry). **The solver excludes any variant with unknown sockets rather than guessing.** Socket *count* is not manual, though — see below. Other 5 classes still need their gear filled in.
+- [ ] **Socket-shape data — not scrapable from MistfallDB, confirmed by direct inspection.** Socket shape is a property of the specific gear VARIANT (not the base item — confirmed via Raven Priest Robe, whose 9 variants each carry a different socket-shape combo). `data/processed/variant_sockets.csv` has all 1707 variants with an empty `socket_shapes` column — **527/1707 filled in so far** (Sorcerer + Shadowstrix armor+weapon, plus all class-agnostic jewelry). **The solver excludes any variant with unknown sockets rather than guessing.** Socket *count* is not manual, though — see below. Other 4 classes still need their gear filled in.
 
 ## Key mechanics (confirmed 2026-08-05)
 
@@ -65,6 +66,15 @@ whatever bonus affixes come along with each option.
   pool. See `GameData.gem_pools` and `solver.build_solver._craftable_gems_for_socket`.
   The scraped catalog (`gems.json`) is only consulted to reuse a real gem's
   name when one happens to match, for nicer display.
+- **Some classes have two mutually-exclusive weapon categories** filling the
+  same Weapon slot (confirmed 2026-08-09, Shadowstrix: Dagger vs Dual Blade)
+  — both are equippable, but only one actually grants its affixes, so a
+  build has to commit to one type rather than mixing candidates from both.
+  Captured as `GearItem.weapon_type`, sourced from `(Category)` section
+  headers in bulk dumps like `shadowstrix.txt` (see `scraper/ingest_bulk_shapes.py`)
+  and written to `data/processed/weapon_types.json`. `find_builds(...,
+  weapon_type="Dagger")` restricts the Weapon slot to that category; the app
+  shows a selector automatically when a class has more than one.
 
 ## Solver engine
 

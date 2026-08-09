@@ -18,6 +18,15 @@ A line with no affix token (first remaining token isn't a known affix name)
 is treated as a "Base roll" (no-affix) variant. A line with an affix and no
 shape tokens confirms zero sockets for that variant (written as "none").
 
+A line consisting of just "(Category Name)" (e.g. "(Dagger)", "(Dual Blade)")
+tags every subsequent weapon item as belonging to that category, until the
+next such line or a blank line (which resets to no category) -- for classes
+like Shadowstrix where multiple weapon *types* fill the same Weapon slot but
+aren't interchangeable in-game (confirmed 2026-08-09: only one of the two
+equipped weapons actually grants its affixes, so a build has to pick one
+type, not mix-and-match). Written to data/processed/weapon_types.json
+(base_slug -> category), merged with any existing content.
+
 Usage:
     python scraper/ingest_bulk_shapes.py data/processed/sorc.txt
     python scraper/ingest_bulk_shapes.py data/processed/sorc.txt --class Sorcerer
@@ -28,6 +37,7 @@ import argparse
 import csv
 import difflib
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -36,8 +46,10 @@ from ingest_variant_shapes import resolve_shape_token  # noqa: E402
 
 OUT_DIR = Path(__file__).resolve().parent.parent / "data" / "processed"
 SOCKETS_PATH = OUT_DIR / "variant_sockets.csv"
+WEAPON_TYPES_PATH = OUT_DIR / "weapon_types.json"
 
 FUZZY_MATCH_THRESHOLD = 0.82
+CATEGORY_HEADER_RE = re.compile(r"^\((.+)\)$")
 
 
 def load_affix_names() -> set[str]:
@@ -65,24 +77,47 @@ def match_base_name(line: str, names_by_length: list[str]) -> tuple[str | None, 
     return None, False
 
 
-def parse_line(line: str, affix_names: set[str]) -> tuple[str | None, list[str]]:
+MAX_AFFIX_WORDS = 3  # longest real affix name is 2 words (e.g. "Iron Helmet"), +1 margin
+
+
+def _resolve_affix_prefix(tokens: list[str], affix_names: set[str]) -> tuple[str | None, int, bool]:
+    """Try to match a (possibly multi-word, possibly hyphenated) affix name
+    at the start of tokens -- some dumps write "iron-helmet" as one token,
+    others "Iron Helmet" as two. Returns (affix_name, tokens_consumed,
+    was_fuzzy); (None, 0, False) if nothing matched well enough."""
+    n_max = min(MAX_AFFIX_WORDS, len(tokens))
+    for n in range(n_max, 0, -1):
+        candidate = " ".join(tokens[:n]).replace("-", " ")
+        if candidate.lower() in affix_names:
+            return candidate, n, False
+
+    best_name, best_n, best_ratio = None, 0, 0.0
+    for n in range(n_max, 0, -1):
+        candidate = " ".join(tokens[:n]).replace("-", " ")
+        for name in affix_names:
+            ratio = difflib.SequenceMatcher(None, candidate.lower(), name).ratio()
+            if ratio > best_ratio:
+                best_name, best_n, best_ratio = name, n, ratio  # canonical matched name, not the typo'd text
+    if best_ratio >= FUZZY_MATCH_THRESHOLD:
+        return best_name, best_n, True
+    return None, 0, False
+
+
+def parse_line(line: str, affix_names: set[str]) -> tuple[str | None, list[str], bool]:
     """Given the remainder of a line after the base item name is stripped,
-    return (affix_name_or_None, [canonical_shape_token, ...])."""
-    tokens = line.split()
+    return (affix_name_or_None, [canonical_shape_token, ...], affix_was_fuzzy).
+    Standalone "-" separator tokens (some dumps write "Item - Affix shape",
+    others "Item Affix shape") are dropped before matching."""
+    tokens = [t for t in line.split() if t != "-"]
     if not tokens:
-        return None, []
-    first_normalized = tokens[0].replace("-", " ").lower()
-    if first_normalized in affix_names:
-        # keep the hyphen->space normalization so it matches CSV affix names
-        # like "Iron Helmet" even though the source writes "iron-helmet"
-        affix_name, rest = tokens[0].replace("-", " "), tokens[1:]
-    else:
-        affix_name, rest = None, tokens
+        return None, [], False
+    affix_name, consumed, was_fuzzy = _resolve_affix_prefix(tokens, affix_names)
+    rest = tokens[consumed:] if affix_name is not None else tokens
     shapes = []
     for t in rest:
         resolved = resolve_shape_token(t)
         shapes.append(resolved if resolved else f"?{t}")
-    return affix_name, shapes
+    return affix_name, shapes, was_fuzzy
 
 
 def main() -> None:
@@ -109,12 +144,25 @@ def main() -> None:
 
     matched = 0
     skipped: list[str] = []
+    weapon_types: dict[str, str] = {}
+    if WEAPON_TYPES_PATH.exists():
+        weapon_types = json.loads(WEAPON_TYPES_PATH.read_text(encoding="utf-8"))
+    current_category: str | None = None
 
     for raw_line in args.file.read_text(encoding="utf-8").splitlines():
         line = raw_line.strip()
         if not line:
+            current_category = None
+            continue
+        header = CATEGORY_HEADER_RE.match(line)
+        if header:
+            current_category = header.group(1).strip()
             continue
         base_name, was_fuzzy = match_base_name(line, names_by_length)
+        if base_name and current_category:
+            slug = rows_by_base_name[base_name][0]["base_slug"]
+            if rows_by_base_name[base_name][0]["slot"] == "Weapon":
+                weapon_types[slug] = current_category
         if was_fuzzy:
             print(f"NOTE: fuzzy-matched {line[:len(base_name)+5]!r}... -> {base_name!r}")
         if base_name is None:
@@ -122,7 +170,9 @@ def main() -> None:
             skipped.append(line)
             continue
         remainder = line[len(base_name):].strip()
-        affix_name, shapes = parse_line(remainder, affix_names)
+        affix_name, shapes, affix_was_fuzzy = parse_line(remainder, affix_names)
+        if affix_was_fuzzy:
+            print(f"NOTE: fuzzy-matched affix {remainder!r} -> {affix_name!r} in line: {line!r}")
 
         bad = [s for s in shapes if s.startswith("?")]
         if bad:
@@ -182,6 +232,10 @@ def main() -> None:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(rows)
+
+    if weapon_types:
+        WEAPON_TYPES_PATH.write_text(json.dumps(weapon_types, indent=2, sort_keys=True), encoding="utf-8")
+        print(f"weapon_types.json: {len(weapon_types)} weapon(s) categorized -> {WEAPON_TYPES_PATH}")
 
     print(f"\nmatched {matched} lines, skipped {len(skipped)}")
 

@@ -165,6 +165,7 @@ class GearItem:
     slot: str | None
     rarity: str | None
     variants: tuple[GearVariant, ...]
+    weapon_type: str | None = None  # e.g. "Dagger"/"Dual Blade" -- see data/processed/weapon_types.json
 
     def usable_by(self, class_req: str) -> bool:
         return "Any" in self.classes or class_req in self.classes
@@ -261,6 +262,11 @@ def load_game_data(data_dir: Path = DATA_DIR) -> GameData:
                     )
                 # else: blank = not yet entered, leave unset (None) so it's excluded
 
+    weapon_types_path = data_dir / "weapon_types.json"
+    weapon_types: dict[str, str] = {}
+    if weapon_types_path.exists():
+        weapon_types = json.loads(weapon_types_path.read_text(encoding="utf-8"))
+
     gear_path = data_dir / "gear.json"
     if gear_path.exists():
         for it in json.loads(gear_path.read_text(encoding="utf-8")):
@@ -287,6 +293,7 @@ def load_game_data(data_dir: Path = DATA_DIR) -> GameData:
                 slot=it.get("slot"),
                 rarity=rarity,
                 variants=variants,
+                weapon_type=weapon_types.get(it["slug"]),
             ))
 
     return data

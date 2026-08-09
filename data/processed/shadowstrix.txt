@@ -1,0 +1,215 @@
+(Dagger)
+Moon Deity - Crescent Dagger Fervid b2 r1 
+Moon Deity - Crescent Dagger Seeker p2 g1 
+Moon Deity - Crescent Dagger Fervor g2 b1
+Moon Deity - Crescent Dagger Smiting g2 b1
+Moon Deity - Crescent Dagger Vitality p2 b1
+Moon Deity - Crescent Dagger Deft b2 g1
+Moon Deity - Crescent Dagger Blessing g2 p1 
+Moon Deity - Crescent Dagger r2 p1 b1 
+Moon Deity - Crescent Dagger g2 r1 b1
+Serpent's Whisper - Fervid b2 r1 
+Serpent's Whisper - Seeker p2 g1
+Serpent's Whisper - Fervor g2 b1 
+Serpent's Whisper - Smiting r2 p1 
+Serpent's Whisper - Vitality p2 b1
+Serpent's Whisper - Deft b2 g1 
+Serpent's Whisper - Blessing g2 p1 
+Serpent's Whisper - r2 p1 b1
+Serpent's Whisper - g2 p1 b1
+Gem Lizard Dagger - Fervid r2 
+Gem Lizard Dagger - Seeker g2 
+Gem Lizard Dagger -  Fervor b2
+Gem Lizard Dagger - Smiting p2
+Gem Lizard Dagger - Vitality p2
+Gem Lizard Dagger - Deft gf2
+Gem Lizard Dagger - Blessing r2
+Gem Lizard Dagger - b2 r1
+Gem Lizard Dagger - b2 g1
+Venomfang Dagger - Fervid g1 
+Venomfang Dagger - Seeker b1
+Venomfang Dagger - Fervor p1
+Venomfang Dagger - Smiting r1 
+Venomfang Dagger - Vitality g1
+Venomfang Dagger - Deft r1
+Venomfang Dagger - Blessing p1
+Venomfang Dagger - r1 b1
+Venomfang Dagger - b1 g1
+
+(Dual Blade)
+Wulfen Einherjar - Splitclaw Wrath b2 r1 
+Wulfen Einherjar - Splitclaw Seeker p2 g1 
+Wulfen Einherjar - Splitclaw Fervor r2 g1 
+Wulfen Einherjar - Splitclaw Smiting g2 r1
+Wulfen Einherjar - Splitclaw Vitality b2 p1 
+Wulfen Einherjar - Splitclaw Elusive r2 p1 
+Wulfen Einherjar - Splitclaw Curse p2 g1 
+Wulfen Einherjar - Splitclaw p2 r1 b1
+Wulfen Einherjar - Splitclaw r2 b1 g1 
+Venomfang - Wrath b2 r1 
+Venomfang - Seeker p2 g1 
+Venomfang - Fervor r2 g1
+Venomfang - Smiting g2 r1 
+Venomfang -  Vitality b2 p1 
+Venomfang - Elusive r2 p1
+Venomfang - Curse p2 g1
+Venomfang - p2 r1 b1
+Venomfang - r2 b1 g1
+Blade of Destined Death - Wrath r2
+Blade of Destined Death - Seeker p2
+Blade of Destined Death - Fervor g2
+Blade of Destined Death - Smiting p2
+Blade of Destined Death - Vitality b2
+Blade of Destined Death - Elusive g2
+Blade of Destined Death - Curse r2 
+Blade of Destined Death - g2 p1
+Blade of Destined Death - r2 b1
+Veil Dual Blades - Wrath p1 
+Veil Dual Blades - Seeker p1
+Veil Dual Blades - Fervor r1
+Veil Dual Blades - Smiting b1 
+Veil Dual Blades - Vitality g1
+Veil Dual Blades - Elusive p1 
+Veil Dual Blades - Curse b1
+Veil Dual Blades - r1 g1
+Veil Dual Blades - p1 b1
+
+Ace Assassin Mask - Aegis b2 p1 
+Ace Assassin Mask - Tenacious g2 r1
+Ace Assassin Mask - Iron Helmet g2 r1
+Ace Assassin Mask - Fervor r2 p1
+Ace Assassin Mask - Elusive b2 g1
+Ace Assassin Mask - Blessing p2 b1
+Ace Assassin Mask - Wealth b2 p1
+Ace Assassin Mask - g2 r1 b1
+Ace Assassin Mask - p2 r1 g1
+Shadowstrix Mask - Aegis p2 
+Shadowstrix Mask - Tenacious b2
+Shadowstrix Mask - Iron Helmet r2
+Shadowstrix Mask - Fervor b2
+Shadowstrix Mask - Elusive g2
+Shadowstrix Mask - Blessing p2
+Shadowstrix Mask - Wealth p2
+Shadowstrix Mask - r2 g1
+Shadowstrix Mask - b2 p1
+Emissary Mask - Aegis g1 
+Emissary Mask - Tenacious r1 
+Emissary Mask - Iron Helmet b1 
+Emissary Mask - Fervor p1 
+Emissary Mask - Elusive g1 
+Emissary Mask - Blessing r1 
+Emissary Mask - Wealth p1 
+Emissary Mask - b1 g1 
+Emissary Mask - r1 p1 
+
+Ace Assassin Garb - Aegis r2 b1 
+Ace Assassin Garb - Tenacious g2 p1
+Ace Assassin Garb - Iron Helmet p2 g1
+Ace Assassin Garb - Resilience r2 g1
+Ace Assassin Garb - Curse - r2 b1
+Ace Assassin Garb - Wealth p2 r1
+Ace Assassin Garb - Vitality b2 p1
+Ace Assassin Garb - g2 p1 b1
+Ace Assassin Garb - b2 p1 g1
+Shadowstrix Vigor - Aegis g2 
+Shadowstrix Vigor - Tenacious p2
+Shadowstrix Vigor - Iron Helmet g2
+Shadowstrix Vigor - Resilience r2
+Shadowstrix Vigor - Vitality b2
+Shadowstrix Vigor - Curse r2
+Shadowstrix Vigor - Wealth b2 
+Shadowstrix Vigor - p2 r1 
+Shadowstrix Vigor - g2 b1
+Emissary Leather Armor  - Aegis r1 
+Emissary Leather Armor  - Tenacious g1 
+Emissary Leather Armor  - Iron Helmet b1 
+Emissary Leather Armor  - Resilience b1 
+Emissary Leather Armor  - Vitality g1 
+Emissary Leather Armor  - Curse r1 
+Emissary Leather Armor  - Wealth p1 
+Emissary Leather Armor  - p1 g1 
+Emissary Leather Armor  - r1 b1
+
+Ace Assassin Bracers - Fervid b2 g1 
+Ace Assassin Bracers - Seeker r2 b1
+Ace Assassin Bracers - Fervor p2 r1 
+Ace Assassin Bracers - Deft g2 p1
+Ace Assassin Bracers - Blessing g2 r1
+Ace Assassin Bracers - Curse p2 b1
+Ace Assassin Bracers - Wealth r2 g1 
+Ace Assassin Bracers - r2 p1 g1
+Ace Assassin Bracers - g2 p1 r1
+Shadowstrix Bracers - Fervid p2 
+Shadowstrix Bracers - Seeker r2
+Shadowstrix Bracers - Fervor g2
+Shadowstrix Bracers - Deft b2
+Shadowstrix Bracers - Blessing g2
+Shadowstrix Bracers - Curse b2
+Shadowstrix Bracers - Wealth r2
+Shadowstrix Bracers - p2 b1
+Shadowstrix Bracers - r2 g1
+Emissary Gauntlets - Ferivd b1 
+Emissary Gauntlets - Seeker r1 
+Emissary Gauntlets - Fervor g1 
+Emissary Gauntlets - Deft p1 
+Emissary Gauntlets - Blessing g1 
+Emissary Gauntlets - Curse p1 
+Emissary Gauntlets - Wealth b1 
+Emissary Gauntlets - r1 p1
+Emissary Gauntlets - r1 b1 
+
+Ace Assassin Pants - Aegis b2 r1
+Ace Assassin Pants - Tenacious p2 g1
+Ace Assassin Pants - Iron Helmet r2 b1
+Ace Assassin Pants - Fervid b2 r1
+Ace Assassin Pants - Smiting g2 p1
+Ace Assassin Pants - Vitality p2 g1
+Ace Assassin Pants - Elusive p2 g1 
+Ace Assassin Pants - r2 p1 b1
+Ace Assassin Pants - b2 r1 p1
+Shadowstrix Pants - Aegis p2 
+Shadowstrix Pants - Tenacious b2
+Shadowstrix Pants - Iron Helmet g2 
+Shadowstrix Pants - Fervid g2 
+Shadowstrix Pants - Smiting b2 
+Shadowstrix Pants - Vitality p2 
+Shadowstrix Pants - Elusive r2 
+Shadowstrix Pants - r2 p1
+Shadowstrix Pants - p2 r1
+Emissary Tights - Aegis g1 
+Emissary Tights - Tenacious b1 
+Emissary Tights - Iron Helmet g1 
+Emissary Tights - Fervid p1 
+Emissary Tights - Smiting r1 
+Emissary Tights - Vitality r1 
+Emissary Tights - Elusive p1 
+Emissary Tights - b1 g1 
+Emissary Tights - p1 b1 
+
+Ace Assassin Boots - Aegis g2 r1
+Ace Assassin Boots - Ethereal p2 g1
+Ace Assassin Boots - Seeker r2 p1 
+Ace Assassin Boots - Fervor g2 r1
+Ace Assassin Boots - Smiting b2 g1 
+Ace Assassin Boots - Elusive p2 b1 
+Ace Assassin Boots - Deft g2 p1
+Ace Assassin Boots - b2 r1 g1 
+Ace Assassin Boots - p2 b1 g1 
+Shadowstrix Leather Boots - Aegis b2 
+Shadowstrix Leather Boots - Ethereal g2 
+Shadowstrix Leather Boots - Seeker r2
+Shadowstrix Leather Boots - Fervor p2 
+Shadowstrix Leather Boots - Smiting g2 
+Shadowstrix Leather Boots - Elusive b2 
+Shadowstrix Leather Boots - Deft g2
+Shadowstrix Leather Boots - p2 g1 
+Shadowstrix Leather Boots - b2 r1
+Emissary Long Boots - Aegis g1 
+Emissary Long Boots - Ethereal r1 
+Emissary Long Boots - Seeker b1 
+Emissary Long Boots - Fervor g1 
+Emissary Long Boots - Smiting p1 
+Emissary Long Boots - Elusive r1 
+Emissary Long Boots - Deft b1 
+Emissary Long Boots - r1 g1 
+Emissary Long Boots - p1 b1

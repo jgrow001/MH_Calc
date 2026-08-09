@@ -1,49 +1,49 @@
 variant_slug,base_slug,base_name,kind,class,slot,rarity,affix,combat_value,expected_socket_count,socket_shapes
-ace-assassin-boots-1560401,ace-assassin-boots,Ace Assassin Boots,armor,Shadowstrix,Feet,Legendary,Aegis,525,2,
-ace-assassin-boots-1560402,ace-assassin-boots,Ace Assassin Boots,armor,Shadowstrix,Feet,Legendary,Ethereal,525,2,
-ace-assassin-boots-1560403,ace-assassin-boots,Ace Assassin Boots,armor,Shadowstrix,Feet,Legendary,Seeker,525,2,
-ace-assassin-boots-1560404,ace-assassin-boots,Ace Assassin Boots,armor,Shadowstrix,Feet,Legendary,Fervor,525,2,
-ace-assassin-boots-1560405,ace-assassin-boots,Ace Assassin Boots,armor,Shadowstrix,Feet,Legendary,Smiting,525,2,
-ace-assassin-boots-1560406,ace-assassin-boots,Ace Assassin Boots,armor,Shadowstrix,Feet,Legendary,Elusive,525,2,
-ace-assassin-boots-1560407,ace-assassin-boots,Ace Assassin Boots,armor,Shadowstrix,Feet,Legendary,Deft,525,2,
-ace-assassin-boots-1560408,ace-assassin-boots,Ace Assassin Boots,armor,Shadowstrix,Feet,Legendary,Base roll,500,3,
-ace-assassin-boots-1560409,ace-assassin-boots,Ace Assassin Boots,armor,Shadowstrix,Feet,Legendary,Base roll,500,3,
-ace-assassin-bracers-1360401,ace-assassin-bracers,Ace Assassin Bracers,armor,Shadowstrix,Hands,Legendary,Fervid,525,2,
-ace-assassin-bracers-1360402,ace-assassin-bracers,Ace Assassin Bracers,armor,Shadowstrix,Hands,Legendary,Seeker,525,2,
-ace-assassin-bracers-1360403,ace-assassin-bracers,Ace Assassin Bracers,armor,Shadowstrix,Hands,Legendary,Fervor,525,2,
-ace-assassin-bracers-1360404,ace-assassin-bracers,Ace Assassin Bracers,armor,Shadowstrix,Hands,Legendary,Deft,525,2,
-ace-assassin-bracers-1360405,ace-assassin-bracers,Ace Assassin Bracers,armor,Shadowstrix,Hands,Legendary,Blessing,525,2,
-ace-assassin-bracers-1360406,ace-assassin-bracers,Ace Assassin Bracers,armor,Shadowstrix,Hands,Legendary,Curse,525,2,
-ace-assassin-bracers-1360407,ace-assassin-bracers,Ace Assassin Bracers,armor,Shadowstrix,Hands,Legendary,Wealth,525,2,
-ace-assassin-bracers-1360408,ace-assassin-bracers,Ace Assassin Bracers,armor,Shadowstrix,Hands,Legendary,Base roll,500,3,
-ace-assassin-bracers-1360409,ace-assassin-bracers,Ace Assassin Bracers,armor,Shadowstrix,Hands,Legendary,Base roll,500,3,
-ace-assassin-garb-1260401,ace-assassin-garb,Ace Assassin Garb,armor,Shadowstrix,Chest,Legendary,Aegis,525,2,
-ace-assassin-garb-1260402,ace-assassin-garb,Ace Assassin Garb,armor,Shadowstrix,Chest,Legendary,Tenacious,525,2,
-ace-assassin-garb-1260403,ace-assassin-garb,Ace Assassin Garb,armor,Shadowstrix,Chest,Legendary,Iron Helmet,525,2,
-ace-assassin-garb-1260404,ace-assassin-garb,Ace Assassin Garb,armor,Shadowstrix,Chest,Legendary,Resilience,525,2,
-ace-assassin-garb-1260405,ace-assassin-garb,Ace Assassin Garb,armor,Shadowstrix,Chest,Legendary,Vitality,525,2,
-ace-assassin-garb-1260406,ace-assassin-garb,Ace Assassin Garb,armor,Shadowstrix,Chest,Legendary,Curse,525,2,
-ace-assassin-garb-1260407,ace-assassin-garb,Ace Assassin Garb,armor,Shadowstrix,Chest,Legendary,Wealth,525,2,
-ace-assassin-garb-1260408,ace-assassin-garb,Ace Assassin Garb,armor,Shadowstrix,Chest,Legendary,Base roll,500,3,
-ace-assassin-garb-1260409,ace-assassin-garb,Ace Assassin Garb,armor,Shadowstrix,Chest,Legendary,Base roll,500,3,
-ace-assassin-mask-1160401,ace-assassin-mask,Ace Assassin Mask,armor,Shadowstrix,Head,Legendary,Aegis,525,2,
-ace-assassin-mask-1160402,ace-assassin-mask,Ace Assassin Mask,armor,Shadowstrix,Head,Legendary,Tenacious,525,2,
-ace-assassin-mask-1160403,ace-assassin-mask,Ace Assassin Mask,armor,Shadowstrix,Head,Legendary,Iron Helmet,525,2,
-ace-assassin-mask-1160404,ace-assassin-mask,Ace Assassin Mask,armor,Shadowstrix,Head,Legendary,Fervor,525,2,
-ace-assassin-mask-1160405,ace-assassin-mask,Ace Assassin Mask,armor,Shadowstrix,Head,Legendary,Elusive,525,2,
-ace-assassin-mask-1160406,ace-assassin-mask,Ace Assassin Mask,armor,Shadowstrix,Head,Legendary,Blessing,525,2,
-ace-assassin-mask-1160407,ace-assassin-mask,Ace Assassin Mask,armor,Shadowstrix,Head,Legendary,Wealth,525,2,
-ace-assassin-mask-1160408,ace-assassin-mask,Ace Assassin Mask,armor,Shadowstrix,Head,Legendary,Base roll,500,3,
-ace-assassin-mask-1160409,ace-assassin-mask,Ace Assassin Mask,armor,Shadowstrix,Head,Legendary,Base roll,500,3,
-ace-assassin-pants-1460401,ace-assassin-pants,Ace Assassin Pants,armor,Shadowstrix,Legs,Legendary,Aegis,525,2,
-ace-assassin-pants-1460402,ace-assassin-pants,Ace Assassin Pants,armor,Shadowstrix,Legs,Legendary,Tenacious,525,2,
-ace-assassin-pants-1460403,ace-assassin-pants,Ace Assassin Pants,armor,Shadowstrix,Legs,Legendary,Iron Helmet,525,2,
-ace-assassin-pants-1460404,ace-assassin-pants,Ace Assassin Pants,armor,Shadowstrix,Legs,Legendary,Fervid,525,2,
-ace-assassin-pants-1460405,ace-assassin-pants,Ace Assassin Pants,armor,Shadowstrix,Legs,Legendary,Smiting,525,2,
-ace-assassin-pants-1460406,ace-assassin-pants,Ace Assassin Pants,armor,Shadowstrix,Legs,Legendary,Vitality,525,2,
-ace-assassin-pants-1460407,ace-assassin-pants,Ace Assassin Pants,armor,Shadowstrix,Legs,Legendary,Elusive,525,2,
-ace-assassin-pants-1460408,ace-assassin-pants,Ace Assassin Pants,armor,Shadowstrix,Legs,Legendary,Base roll,500,3,
-ace-assassin-pants-1460409,ace-assassin-pants,Ace Assassin Pants,armor,Shadowstrix,Legs,Legendary,Base roll,500,3,
+ace-assassin-boots-1560401,ace-assassin-boots,Ace Assassin Boots,armor,Shadowstrix,Feet,Legendary,Aegis,525,2,"peridot2,agate"
+ace-assassin-boots-1560402,ace-assassin-boots,Ace Assassin Boots,armor,Shadowstrix,Feet,Legendary,Ethereal,525,2,"amethyst2,peridot"
+ace-assassin-boots-1560403,ace-assassin-boots,Ace Assassin Boots,armor,Shadowstrix,Feet,Legendary,Seeker,525,2,"agate2,amethyst"
+ace-assassin-boots-1560404,ace-assassin-boots,Ace Assassin Boots,armor,Shadowstrix,Feet,Legendary,Fervor,525,2,"peridot2,agate"
+ace-assassin-boots-1560405,ace-assassin-boots,Ace Assassin Boots,armor,Shadowstrix,Feet,Legendary,Smiting,525,2,"moonstone2,peridot"
+ace-assassin-boots-1560406,ace-assassin-boots,Ace Assassin Boots,armor,Shadowstrix,Feet,Legendary,Elusive,525,2,"amethyst2,moonstone"
+ace-assassin-boots-1560407,ace-assassin-boots,Ace Assassin Boots,armor,Shadowstrix,Feet,Legendary,Deft,525,2,"peridot2,amethyst"
+ace-assassin-boots-1560408,ace-assassin-boots,Ace Assassin Boots,armor,Shadowstrix,Feet,Legendary,Base roll,500,3,"moonstone2,agate,peridot"
+ace-assassin-boots-1560409,ace-assassin-boots,Ace Assassin Boots,armor,Shadowstrix,Feet,Legendary,Base roll,500,3,"amethyst2,moonstone,peridot"
+ace-assassin-bracers-1360401,ace-assassin-bracers,Ace Assassin Bracers,armor,Shadowstrix,Hands,Legendary,Fervid,525,2,"moonstone2,peridot"
+ace-assassin-bracers-1360402,ace-assassin-bracers,Ace Assassin Bracers,armor,Shadowstrix,Hands,Legendary,Seeker,525,2,"agate2,moonstone"
+ace-assassin-bracers-1360403,ace-assassin-bracers,Ace Assassin Bracers,armor,Shadowstrix,Hands,Legendary,Fervor,525,2,"amethyst2,agate"
+ace-assassin-bracers-1360404,ace-assassin-bracers,Ace Assassin Bracers,armor,Shadowstrix,Hands,Legendary,Deft,525,2,"peridot2,amethyst"
+ace-assassin-bracers-1360405,ace-assassin-bracers,Ace Assassin Bracers,armor,Shadowstrix,Hands,Legendary,Blessing,525,2,"peridot2,agate"
+ace-assassin-bracers-1360406,ace-assassin-bracers,Ace Assassin Bracers,armor,Shadowstrix,Hands,Legendary,Curse,525,2,"amethyst2,moonstone"
+ace-assassin-bracers-1360407,ace-assassin-bracers,Ace Assassin Bracers,armor,Shadowstrix,Hands,Legendary,Wealth,525,2,"agate2,peridot"
+ace-assassin-bracers-1360408,ace-assassin-bracers,Ace Assassin Bracers,armor,Shadowstrix,Hands,Legendary,Base roll,500,3,"agate2,amethyst,peridot"
+ace-assassin-bracers-1360409,ace-assassin-bracers,Ace Assassin Bracers,armor,Shadowstrix,Hands,Legendary,Base roll,500,3,"peridot2,amethyst,agate"
+ace-assassin-garb-1260401,ace-assassin-garb,Ace Assassin Garb,armor,Shadowstrix,Chest,Legendary,Aegis,525,2,"agate2,moonstone"
+ace-assassin-garb-1260402,ace-assassin-garb,Ace Assassin Garb,armor,Shadowstrix,Chest,Legendary,Tenacious,525,2,"peridot2,amethyst"
+ace-assassin-garb-1260403,ace-assassin-garb,Ace Assassin Garb,armor,Shadowstrix,Chest,Legendary,Iron Helmet,525,2,"amethyst2,peridot"
+ace-assassin-garb-1260404,ace-assassin-garb,Ace Assassin Garb,armor,Shadowstrix,Chest,Legendary,Resilience,525,2,"agate2,peridot"
+ace-assassin-garb-1260405,ace-assassin-garb,Ace Assassin Garb,armor,Shadowstrix,Chest,Legendary,Vitality,525,2,"moonstone2,amethyst"
+ace-assassin-garb-1260406,ace-assassin-garb,Ace Assassin Garb,armor,Shadowstrix,Chest,Legendary,Curse,525,2,"agate2,moonstone"
+ace-assassin-garb-1260407,ace-assassin-garb,Ace Assassin Garb,armor,Shadowstrix,Chest,Legendary,Wealth,525,2,"amethyst2,agate"
+ace-assassin-garb-1260408,ace-assassin-garb,Ace Assassin Garb,armor,Shadowstrix,Chest,Legendary,Base roll,500,3,"peridot2,amethyst,moonstone"
+ace-assassin-garb-1260409,ace-assassin-garb,Ace Assassin Garb,armor,Shadowstrix,Chest,Legendary,Base roll,500,3,"moonstone2,amethyst,peridot"
+ace-assassin-mask-1160401,ace-assassin-mask,Ace Assassin Mask,armor,Shadowstrix,Head,Legendary,Aegis,525,2,"moonstone2,amethyst"
+ace-assassin-mask-1160402,ace-assassin-mask,Ace Assassin Mask,armor,Shadowstrix,Head,Legendary,Tenacious,525,2,"peridot2,agate"
+ace-assassin-mask-1160403,ace-assassin-mask,Ace Assassin Mask,armor,Shadowstrix,Head,Legendary,Iron Helmet,525,2,"peridot2,agate"
+ace-assassin-mask-1160404,ace-assassin-mask,Ace Assassin Mask,armor,Shadowstrix,Head,Legendary,Fervor,525,2,"agate2,amethyst"
+ace-assassin-mask-1160405,ace-assassin-mask,Ace Assassin Mask,armor,Shadowstrix,Head,Legendary,Elusive,525,2,"moonstone2,peridot"
+ace-assassin-mask-1160406,ace-assassin-mask,Ace Assassin Mask,armor,Shadowstrix,Head,Legendary,Blessing,525,2,"amethyst2,moonstone"
+ace-assassin-mask-1160407,ace-assassin-mask,Ace Assassin Mask,armor,Shadowstrix,Head,Legendary,Wealth,525,2,"moonstone2,amethyst"
+ace-assassin-mask-1160408,ace-assassin-mask,Ace Assassin Mask,armor,Shadowstrix,Head,Legendary,Base roll,500,3,"peridot2,agate,moonstone"
+ace-assassin-mask-1160409,ace-assassin-mask,Ace Assassin Mask,armor,Shadowstrix,Head,Legendary,Base roll,500,3,"amethyst2,agate,peridot"
+ace-assassin-pants-1460401,ace-assassin-pants,Ace Assassin Pants,armor,Shadowstrix,Legs,Legendary,Aegis,525,2,"moonstone2,agate"
+ace-assassin-pants-1460402,ace-assassin-pants,Ace Assassin Pants,armor,Shadowstrix,Legs,Legendary,Tenacious,525,2,"amethyst2,peridot"
+ace-assassin-pants-1460403,ace-assassin-pants,Ace Assassin Pants,armor,Shadowstrix,Legs,Legendary,Iron Helmet,525,2,"agate2,moonstone"
+ace-assassin-pants-1460404,ace-assassin-pants,Ace Assassin Pants,armor,Shadowstrix,Legs,Legendary,Fervid,525,2,"moonstone2,agate"
+ace-assassin-pants-1460405,ace-assassin-pants,Ace Assassin Pants,armor,Shadowstrix,Legs,Legendary,Smiting,525,2,"peridot2,amethyst"
+ace-assassin-pants-1460406,ace-assassin-pants,Ace Assassin Pants,armor,Shadowstrix,Legs,Legendary,Vitality,525,2,"amethyst2,peridot"
+ace-assassin-pants-1460407,ace-assassin-pants,Ace Assassin Pants,armor,Shadowstrix,Legs,Legendary,Elusive,525,2,"amethyst2,peridot"
+ace-assassin-pants-1460408,ace-assassin-pants,Ace Assassin Pants,armor,Shadowstrix,Legs,Legendary,Base roll,500,3,"agate2,amethyst,moonstone"
+ace-assassin-pants-1460409,ace-assassin-pants,Ace Assassin Pants,armor,Shadowstrix,Legs,Legendary,Base roll,500,3,"moonstone2,agate,amethyst"
 ancestral-blessing-ring-1760101,ancestral-blessing-ring,Ancestral Blessing Ring,armor,Any,Ring,Legendary,Base roll,500,3,"agate2,amethyst,moonstone"
 ancestral-blessing-ring-1760102,ancestral-blessing-ring,Ancestral Blessing Ring,armor,Any,Ring,Legendary,Base roll,500,3,"amethyst2,agate,peridot"
 ancestral-blessing-ring-1760103,ancestral-blessing-ring,Ancestral Blessing Ring,armor,Any,Ring,Legendary,Base roll,500,3,"universal,agate,amethyst"
@@ -413,51 +413,51 @@ eagle-god-winged-helm-1150309,eagle-god-winged-helm,Eagle God Winged Helm,armor,
 einherjars-blessing-necklace-1660201,einherjars-blessing-necklace,Einherjar's Blessing Necklace,armor,Any,Necklace,Legendary,Base roll,500,3,"moonstone2,amethyst,peridot"
 einherjars-blessing-necklace-1660202,einherjars-blessing-necklace,Einherjar's Blessing Necklace,armor,Any,Necklace,Legendary,Base roll,500,3,"peridot2,agate,moonstone"
 einherjars-blessing-necklace-1660203,einherjars-blessing-necklace,Einherjar's Blessing Necklace,armor,Any,Necklace,Legendary,Base roll,500,3,"universal2,amethyst,moonstone"
-emissary-gauntlets-1340401,emissary-gauntlets,Emissary Gauntlets,armor,Shadowstrix,Hands,Excellent,Fervid,375,1,
-emissary-gauntlets-1340402,emissary-gauntlets,Emissary Gauntlets,armor,Shadowstrix,Hands,Excellent,Seeker,375,1,
-emissary-gauntlets-1340403,emissary-gauntlets,Emissary Gauntlets,armor,Shadowstrix,Hands,Excellent,Fervor,375,1,
-emissary-gauntlets-1340404,emissary-gauntlets,Emissary Gauntlets,armor,Shadowstrix,Hands,Excellent,Deft,375,1,
-emissary-gauntlets-1340405,emissary-gauntlets,Emissary Gauntlets,armor,Shadowstrix,Hands,Excellent,Blessing,375,1,
-emissary-gauntlets-1340406,emissary-gauntlets,Emissary Gauntlets,armor,Shadowstrix,Hands,Excellent,Curse,375,1,
-emissary-gauntlets-1340407,emissary-gauntlets,Emissary Gauntlets,armor,Shadowstrix,Hands,Excellent,Wealth,375,1,
-emissary-gauntlets-1340408,emissary-gauntlets,Emissary Gauntlets,armor,Shadowstrix,Hands,Excellent,Base roll,350,2,
-emissary-gauntlets-1340409,emissary-gauntlets,Emissary Gauntlets,armor,Shadowstrix,Hands,Excellent,Base roll,350,2,
-emissary-leather-armor-1240401,emissary-leather-armor,Emissary Leather Armor,armor,Shadowstrix,Chest,Excellent,Aegis,375,1,
-emissary-leather-armor-1240402,emissary-leather-armor,Emissary Leather Armor,armor,Shadowstrix,Chest,Excellent,Tenacious,375,1,
-emissary-leather-armor-1240403,emissary-leather-armor,Emissary Leather Armor,armor,Shadowstrix,Chest,Excellent,Iron Helmet,375,1,
-emissary-leather-armor-1240404,emissary-leather-armor,Emissary Leather Armor,armor,Shadowstrix,Chest,Excellent,Resilience,375,1,
-emissary-leather-armor-1240405,emissary-leather-armor,Emissary Leather Armor,armor,Shadowstrix,Chest,Excellent,Vitality,375,1,
-emissary-leather-armor-1240406,emissary-leather-armor,Emissary Leather Armor,armor,Shadowstrix,Chest,Excellent,Curse,375,1,
-emissary-leather-armor-1240407,emissary-leather-armor,Emissary Leather Armor,armor,Shadowstrix,Chest,Excellent,Wealth,375,1,
-emissary-leather-armor-1240408,emissary-leather-armor,Emissary Leather Armor,armor,Shadowstrix,Chest,Excellent,Base roll,350,2,
-emissary-leather-armor-1240409,emissary-leather-armor,Emissary Leather Armor,armor,Shadowstrix,Chest,Excellent,Base roll,350,2,
-emissary-long-boots-1540401,emissary-long-boots,Emissary Long Boots,armor,Shadowstrix,Feet,Excellent,Aegis,375,1,
-emissary-long-boots-1540402,emissary-long-boots,Emissary Long Boots,armor,Shadowstrix,Feet,Excellent,Ethereal,375,1,
-emissary-long-boots-1540403,emissary-long-boots,Emissary Long Boots,armor,Shadowstrix,Feet,Excellent,Seeker,375,1,
-emissary-long-boots-1540404,emissary-long-boots,Emissary Long Boots,armor,Shadowstrix,Feet,Excellent,Fervor,375,1,
-emissary-long-boots-1540405,emissary-long-boots,Emissary Long Boots,armor,Shadowstrix,Feet,Excellent,Smiting,375,1,
-emissary-long-boots-1540406,emissary-long-boots,Emissary Long Boots,armor,Shadowstrix,Feet,Excellent,Elusive,375,1,
-emissary-long-boots-1540407,emissary-long-boots,Emissary Long Boots,armor,Shadowstrix,Feet,Excellent,Deft,375,1,
-emissary-long-boots-1540408,emissary-long-boots,Emissary Long Boots,armor,Shadowstrix,Feet,Excellent,Base roll,350,2,
-emissary-long-boots-1540409,emissary-long-boots,Emissary Long Boots,armor,Shadowstrix,Feet,Excellent,Base roll,350,2,
-emissary-mask-1140401,emissary-mask,Emissary Mask,armor,Shadowstrix,Head,Excellent,Aegis,375,1,
-emissary-mask-1140402,emissary-mask,Emissary Mask,armor,Shadowstrix,Head,Excellent,Tenacious,375,1,
-emissary-mask-1140403,emissary-mask,Emissary Mask,armor,Shadowstrix,Head,Excellent,Iron Helmet,375,1,
-emissary-mask-1140404,emissary-mask,Emissary Mask,armor,Shadowstrix,Head,Excellent,Fervor,375,1,
-emissary-mask-1140405,emissary-mask,Emissary Mask,armor,Shadowstrix,Head,Excellent,Elusive,375,1,
-emissary-mask-1140406,emissary-mask,Emissary Mask,armor,Shadowstrix,Head,Excellent,Blessing,375,1,
-emissary-mask-1140407,emissary-mask,Emissary Mask,armor,Shadowstrix,Head,Excellent,Wealth,375,1,
-emissary-mask-1140408,emissary-mask,Emissary Mask,armor,Shadowstrix,Head,Excellent,Base roll,350,2,
-emissary-mask-1140409,emissary-mask,Emissary Mask,armor,Shadowstrix,Head,Excellent,Base roll,350,2,
-emissary-tights-1440401,emissary-tights,Emissary Tights,armor,Shadowstrix,Legs,Excellent,Aegis,375,1,
-emissary-tights-1440402,emissary-tights,Emissary Tights,armor,Shadowstrix,Legs,Excellent,Tenacious,375,1,
-emissary-tights-1440403,emissary-tights,Emissary Tights,armor,Shadowstrix,Legs,Excellent,Iron Helmet,375,1,
-emissary-tights-1440404,emissary-tights,Emissary Tights,armor,Shadowstrix,Legs,Excellent,Fervid,375,1,
-emissary-tights-1440405,emissary-tights,Emissary Tights,armor,Shadowstrix,Legs,Excellent,Smiting,375,1,
-emissary-tights-1440406,emissary-tights,Emissary Tights,armor,Shadowstrix,Legs,Excellent,Vitality,375,1,
-emissary-tights-1440407,emissary-tights,Emissary Tights,armor,Shadowstrix,Legs,Excellent,Elusive,375,1,
-emissary-tights-1440408,emissary-tights,Emissary Tights,armor,Shadowstrix,Legs,Excellent,Base roll,350,2,
-emissary-tights-1440409,emissary-tights,Emissary Tights,armor,Shadowstrix,Legs,Excellent,Base roll,350,2,
+emissary-gauntlets-1340401,emissary-gauntlets,Emissary Gauntlets,armor,Shadowstrix,Hands,Excellent,Fervid,375,1,moonstone
+emissary-gauntlets-1340402,emissary-gauntlets,Emissary Gauntlets,armor,Shadowstrix,Hands,Excellent,Seeker,375,1,agate
+emissary-gauntlets-1340403,emissary-gauntlets,Emissary Gauntlets,armor,Shadowstrix,Hands,Excellent,Fervor,375,1,peridot
+emissary-gauntlets-1340404,emissary-gauntlets,Emissary Gauntlets,armor,Shadowstrix,Hands,Excellent,Deft,375,1,amethyst
+emissary-gauntlets-1340405,emissary-gauntlets,Emissary Gauntlets,armor,Shadowstrix,Hands,Excellent,Blessing,375,1,peridot
+emissary-gauntlets-1340406,emissary-gauntlets,Emissary Gauntlets,armor,Shadowstrix,Hands,Excellent,Curse,375,1,amethyst
+emissary-gauntlets-1340407,emissary-gauntlets,Emissary Gauntlets,armor,Shadowstrix,Hands,Excellent,Wealth,375,1,moonstone
+emissary-gauntlets-1340408,emissary-gauntlets,Emissary Gauntlets,armor,Shadowstrix,Hands,Excellent,Base roll,350,2,"agate,amethyst"
+emissary-gauntlets-1340409,emissary-gauntlets,Emissary Gauntlets,armor,Shadowstrix,Hands,Excellent,Base roll,350,2,"agate,moonstone"
+emissary-leather-armor-1240401,emissary-leather-armor,Emissary Leather Armor,armor,Shadowstrix,Chest,Excellent,Aegis,375,1,agate
+emissary-leather-armor-1240402,emissary-leather-armor,Emissary Leather Armor,armor,Shadowstrix,Chest,Excellent,Tenacious,375,1,peridot
+emissary-leather-armor-1240403,emissary-leather-armor,Emissary Leather Armor,armor,Shadowstrix,Chest,Excellent,Iron Helmet,375,1,moonstone
+emissary-leather-armor-1240404,emissary-leather-armor,Emissary Leather Armor,armor,Shadowstrix,Chest,Excellent,Resilience,375,1,moonstone
+emissary-leather-armor-1240405,emissary-leather-armor,Emissary Leather Armor,armor,Shadowstrix,Chest,Excellent,Vitality,375,1,peridot
+emissary-leather-armor-1240406,emissary-leather-armor,Emissary Leather Armor,armor,Shadowstrix,Chest,Excellent,Curse,375,1,agate
+emissary-leather-armor-1240407,emissary-leather-armor,Emissary Leather Armor,armor,Shadowstrix,Chest,Excellent,Wealth,375,1,amethyst
+emissary-leather-armor-1240408,emissary-leather-armor,Emissary Leather Armor,armor,Shadowstrix,Chest,Excellent,Base roll,350,2,"amethyst,peridot"
+emissary-leather-armor-1240409,emissary-leather-armor,Emissary Leather Armor,armor,Shadowstrix,Chest,Excellent,Base roll,350,2,"agate,moonstone"
+emissary-long-boots-1540401,emissary-long-boots,Emissary Long Boots,armor,Shadowstrix,Feet,Excellent,Aegis,375,1,peridot
+emissary-long-boots-1540402,emissary-long-boots,Emissary Long Boots,armor,Shadowstrix,Feet,Excellent,Ethereal,375,1,agate
+emissary-long-boots-1540403,emissary-long-boots,Emissary Long Boots,armor,Shadowstrix,Feet,Excellent,Seeker,375,1,moonstone
+emissary-long-boots-1540404,emissary-long-boots,Emissary Long Boots,armor,Shadowstrix,Feet,Excellent,Fervor,375,1,peridot
+emissary-long-boots-1540405,emissary-long-boots,Emissary Long Boots,armor,Shadowstrix,Feet,Excellent,Smiting,375,1,amethyst
+emissary-long-boots-1540406,emissary-long-boots,Emissary Long Boots,armor,Shadowstrix,Feet,Excellent,Elusive,375,1,agate
+emissary-long-boots-1540407,emissary-long-boots,Emissary Long Boots,armor,Shadowstrix,Feet,Excellent,Deft,375,1,moonstone
+emissary-long-boots-1540408,emissary-long-boots,Emissary Long Boots,armor,Shadowstrix,Feet,Excellent,Base roll,350,2,"agate,peridot"
+emissary-long-boots-1540409,emissary-long-boots,Emissary Long Boots,armor,Shadowstrix,Feet,Excellent,Base roll,350,2,"amethyst,moonstone"
+emissary-mask-1140401,emissary-mask,Emissary Mask,armor,Shadowstrix,Head,Excellent,Aegis,375,1,peridot
+emissary-mask-1140402,emissary-mask,Emissary Mask,armor,Shadowstrix,Head,Excellent,Tenacious,375,1,agate
+emissary-mask-1140403,emissary-mask,Emissary Mask,armor,Shadowstrix,Head,Excellent,Iron Helmet,375,1,moonstone
+emissary-mask-1140404,emissary-mask,Emissary Mask,armor,Shadowstrix,Head,Excellent,Fervor,375,1,amethyst
+emissary-mask-1140405,emissary-mask,Emissary Mask,armor,Shadowstrix,Head,Excellent,Elusive,375,1,peridot
+emissary-mask-1140406,emissary-mask,Emissary Mask,armor,Shadowstrix,Head,Excellent,Blessing,375,1,agate
+emissary-mask-1140407,emissary-mask,Emissary Mask,armor,Shadowstrix,Head,Excellent,Wealth,375,1,amethyst
+emissary-mask-1140408,emissary-mask,Emissary Mask,armor,Shadowstrix,Head,Excellent,Base roll,350,2,"moonstone,peridot"
+emissary-mask-1140409,emissary-mask,Emissary Mask,armor,Shadowstrix,Head,Excellent,Base roll,350,2,"agate,amethyst"
+emissary-tights-1440401,emissary-tights,Emissary Tights,armor,Shadowstrix,Legs,Excellent,Aegis,375,1,peridot
+emissary-tights-1440402,emissary-tights,Emissary Tights,armor,Shadowstrix,Legs,Excellent,Tenacious,375,1,moonstone
+emissary-tights-1440403,emissary-tights,Emissary Tights,armor,Shadowstrix,Legs,Excellent,Iron Helmet,375,1,peridot
+emissary-tights-1440404,emissary-tights,Emissary Tights,armor,Shadowstrix,Legs,Excellent,Fervid,375,1,amethyst
+emissary-tights-1440405,emissary-tights,Emissary Tights,armor,Shadowstrix,Legs,Excellent,Smiting,375,1,agate
+emissary-tights-1440406,emissary-tights,Emissary Tights,armor,Shadowstrix,Legs,Excellent,Vitality,375,1,agate
+emissary-tights-1440407,emissary-tights,Emissary Tights,armor,Shadowstrix,Legs,Excellent,Elusive,375,1,amethyst
+emissary-tights-1440408,emissary-tights,Emissary Tights,armor,Shadowstrix,Legs,Excellent,Base roll,350,2,"moonstone,peridot"
+emissary-tights-1440409,emissary-tights,Emissary Tights,armor,Shadowstrix,Legs,Excellent,Base roll,350,2,"amethyst,moonstone"
 engraved-ring-1720101,engraved-ring,Engraved Ring,armor,Any,Ring,Common,Base roll,200,,
 enlightenment-bracers-1340501,enlightenment-bracers,Enlightenment Bracers,armor,Seer,Hands,Excellent,Brotherhood,375,1,
 enlightenment-bracers-1340502,enlightenment-bracers,Enlightenment Bracers,armor,Seer,Hands,Excellent,Ranged,375,1,
@@ -1040,51 +1040,51 @@ shadow-skull-top-1230406,shadow-skull-top,Shadow Skull Top,armor,Shadowstrix,Che
 shadow-skull-top-1230407,shadow-skull-top,Shadow Skull Top,armor,Shadowstrix,Chest,Rare,Wealth,300,0,
 shadow-skull-top-1230408,shadow-skull-top,Shadow Skull Top,armor,Shadowstrix,Chest,Rare,Base roll,275,1,
 shadow-skull-top-1230409,shadow-skull-top,Shadow Skull Top,armor,Shadowstrix,Chest,Rare,Base roll,275,1,
-shadowstrix-bracers-1350401,shadowstrix-bracers,Shadowstrix Bracers,armor,Shadowstrix,Hands,Epic,Fervid,450,1,
-shadowstrix-bracers-1350402,shadowstrix-bracers,Shadowstrix Bracers,armor,Shadowstrix,Hands,Epic,Seeker,450,1,
-shadowstrix-bracers-1350403,shadowstrix-bracers,Shadowstrix Bracers,armor,Shadowstrix,Hands,Epic,Fervor,450,1,
-shadowstrix-bracers-1350404,shadowstrix-bracers,Shadowstrix Bracers,armor,Shadowstrix,Hands,Epic,Deft,450,1,
-shadowstrix-bracers-1350405,shadowstrix-bracers,Shadowstrix Bracers,armor,Shadowstrix,Hands,Epic,Blessing,450,1,
-shadowstrix-bracers-1350406,shadowstrix-bracers,Shadowstrix Bracers,armor,Shadowstrix,Hands,Epic,Curse,450,1,
-shadowstrix-bracers-1350407,shadowstrix-bracers,Shadowstrix Bracers,armor,Shadowstrix,Hands,Epic,Wealth,450,1,
-shadowstrix-bracers-1350408,shadowstrix-bracers,Shadowstrix Bracers,armor,Shadowstrix,Hands,Epic,Base roll,425,2,
-shadowstrix-bracers-1350409,shadowstrix-bracers,Shadowstrix Bracers,armor,Shadowstrix,Hands,Epic,Base roll,425,2,
-shadowstrix-leather-boots-1550401,shadowstrix-leather-boots,Shadowstrix Leather Boots,armor,Shadowstrix,Feet,Epic,Aegis,450,1,
-shadowstrix-leather-boots-1550402,shadowstrix-leather-boots,Shadowstrix Leather Boots,armor,Shadowstrix,Feet,Epic,Ethereal,450,1,
-shadowstrix-leather-boots-1550403,shadowstrix-leather-boots,Shadowstrix Leather Boots,armor,Shadowstrix,Feet,Epic,Seeker,450,1,
-shadowstrix-leather-boots-1550404,shadowstrix-leather-boots,Shadowstrix Leather Boots,armor,Shadowstrix,Feet,Epic,Fervor,450,1,
-shadowstrix-leather-boots-1550405,shadowstrix-leather-boots,Shadowstrix Leather Boots,armor,Shadowstrix,Feet,Epic,Smiting,450,1,
-shadowstrix-leather-boots-1550406,shadowstrix-leather-boots,Shadowstrix Leather Boots,armor,Shadowstrix,Feet,Epic,Elusive,450,1,
-shadowstrix-leather-boots-1550407,shadowstrix-leather-boots,Shadowstrix Leather Boots,armor,Shadowstrix,Feet,Epic,Deft,450,1,
-shadowstrix-leather-boots-1550408,shadowstrix-leather-boots,Shadowstrix Leather Boots,armor,Shadowstrix,Feet,Epic,Base roll,425,2,
-shadowstrix-leather-boots-1550409,shadowstrix-leather-boots,Shadowstrix Leather Boots,armor,Shadowstrix,Feet,Epic,Base roll,425,2,
-shadowstrix-mask-1150401,shadowstrix-mask,Shadowstrix Mask,armor,Shadowstrix,Head,Epic,Aegis,450,1,
-shadowstrix-mask-1150402,shadowstrix-mask,Shadowstrix Mask,armor,Shadowstrix,Head,Epic,Tenacious,450,1,
-shadowstrix-mask-1150403,shadowstrix-mask,Shadowstrix Mask,armor,Shadowstrix,Head,Epic,Iron Helmet,450,1,
-shadowstrix-mask-1150404,shadowstrix-mask,Shadowstrix Mask,armor,Shadowstrix,Head,Epic,Fervor,450,1,
-shadowstrix-mask-1150405,shadowstrix-mask,Shadowstrix Mask,armor,Shadowstrix,Head,Epic,Elusive,450,1,
-shadowstrix-mask-1150406,shadowstrix-mask,Shadowstrix Mask,armor,Shadowstrix,Head,Epic,Blessing,450,1,
-shadowstrix-mask-1150407,shadowstrix-mask,Shadowstrix Mask,armor,Shadowstrix,Head,Epic,Wealth,450,1,
-shadowstrix-mask-1150408,shadowstrix-mask,Shadowstrix Mask,armor,Shadowstrix,Head,Epic,Base roll,425,2,
-shadowstrix-mask-1150409,shadowstrix-mask,Shadowstrix Mask,armor,Shadowstrix,Head,Epic,Base roll,425,2,
-shadowstrix-pants-1450401,shadowstrix-pants,Shadowstrix Pants,armor,Shadowstrix,Legs,Epic,Aegis,450,1,
-shadowstrix-pants-1450402,shadowstrix-pants,Shadowstrix Pants,armor,Shadowstrix,Legs,Epic,Tenacious,450,1,
-shadowstrix-pants-1450403,shadowstrix-pants,Shadowstrix Pants,armor,Shadowstrix,Legs,Epic,Iron Helmet,450,1,
-shadowstrix-pants-1450404,shadowstrix-pants,Shadowstrix Pants,armor,Shadowstrix,Legs,Epic,Fervid,450,1,
-shadowstrix-pants-1450405,shadowstrix-pants,Shadowstrix Pants,armor,Shadowstrix,Legs,Epic,Smiting,450,1,
-shadowstrix-pants-1450406,shadowstrix-pants,Shadowstrix Pants,armor,Shadowstrix,Legs,Epic,Vitality,450,1,
-shadowstrix-pants-1450407,shadowstrix-pants,Shadowstrix Pants,armor,Shadowstrix,Legs,Epic,Elusive,450,1,
-shadowstrix-pants-1450408,shadowstrix-pants,Shadowstrix Pants,armor,Shadowstrix,Legs,Epic,Base roll,425,2,
-shadowstrix-pants-1450409,shadowstrix-pants,Shadowstrix Pants,armor,Shadowstrix,Legs,Epic,Base roll,425,2,
-shadowstrix-vigor-1250401,shadowstrix-vigor,Shadowstrix Vigor,armor,Shadowstrix,Chest,Epic,Aegis,450,1,
-shadowstrix-vigor-1250402,shadowstrix-vigor,Shadowstrix Vigor,armor,Shadowstrix,Chest,Epic,Tenacious,450,1,
-shadowstrix-vigor-1250403,shadowstrix-vigor,Shadowstrix Vigor,armor,Shadowstrix,Chest,Epic,Iron Helmet,450,1,
-shadowstrix-vigor-1250404,shadowstrix-vigor,Shadowstrix Vigor,armor,Shadowstrix,Chest,Epic,Resilience,450,1,
-shadowstrix-vigor-1250405,shadowstrix-vigor,Shadowstrix Vigor,armor,Shadowstrix,Chest,Epic,Vitality,450,1,
-shadowstrix-vigor-1250406,shadowstrix-vigor,Shadowstrix Vigor,armor,Shadowstrix,Chest,Epic,Curse,450,1,
-shadowstrix-vigor-1250407,shadowstrix-vigor,Shadowstrix Vigor,armor,Shadowstrix,Chest,Epic,Wealth,450,1,
-shadowstrix-vigor-1250408,shadowstrix-vigor,Shadowstrix Vigor,armor,Shadowstrix,Chest,Epic,Base roll,425,2,
-shadowstrix-vigor-1250409,shadowstrix-vigor,Shadowstrix Vigor,armor,Shadowstrix,Chest,Epic,Base roll,425,2,
+shadowstrix-bracers-1350401,shadowstrix-bracers,Shadowstrix Bracers,armor,Shadowstrix,Hands,Epic,Fervid,450,1,amethyst2
+shadowstrix-bracers-1350402,shadowstrix-bracers,Shadowstrix Bracers,armor,Shadowstrix,Hands,Epic,Seeker,450,1,agate2
+shadowstrix-bracers-1350403,shadowstrix-bracers,Shadowstrix Bracers,armor,Shadowstrix,Hands,Epic,Fervor,450,1,peridot2
+shadowstrix-bracers-1350404,shadowstrix-bracers,Shadowstrix Bracers,armor,Shadowstrix,Hands,Epic,Deft,450,1,moonstone2
+shadowstrix-bracers-1350405,shadowstrix-bracers,Shadowstrix Bracers,armor,Shadowstrix,Hands,Epic,Blessing,450,1,peridot2
+shadowstrix-bracers-1350406,shadowstrix-bracers,Shadowstrix Bracers,armor,Shadowstrix,Hands,Epic,Curse,450,1,moonstone2
+shadowstrix-bracers-1350407,shadowstrix-bracers,Shadowstrix Bracers,armor,Shadowstrix,Hands,Epic,Wealth,450,1,agate2
+shadowstrix-bracers-1350408,shadowstrix-bracers,Shadowstrix Bracers,armor,Shadowstrix,Hands,Epic,Base roll,425,2,"amethyst2,moonstone"
+shadowstrix-bracers-1350409,shadowstrix-bracers,Shadowstrix Bracers,armor,Shadowstrix,Hands,Epic,Base roll,425,2,"agate2,peridot"
+shadowstrix-leather-boots-1550401,shadowstrix-leather-boots,Shadowstrix Leather Boots,armor,Shadowstrix,Feet,Epic,Aegis,450,1,moonstone2
+shadowstrix-leather-boots-1550402,shadowstrix-leather-boots,Shadowstrix Leather Boots,armor,Shadowstrix,Feet,Epic,Ethereal,450,1,peridot2
+shadowstrix-leather-boots-1550403,shadowstrix-leather-boots,Shadowstrix Leather Boots,armor,Shadowstrix,Feet,Epic,Seeker,450,1,agate2
+shadowstrix-leather-boots-1550404,shadowstrix-leather-boots,Shadowstrix Leather Boots,armor,Shadowstrix,Feet,Epic,Fervor,450,1,amethyst2
+shadowstrix-leather-boots-1550405,shadowstrix-leather-boots,Shadowstrix Leather Boots,armor,Shadowstrix,Feet,Epic,Smiting,450,1,peridot2
+shadowstrix-leather-boots-1550406,shadowstrix-leather-boots,Shadowstrix Leather Boots,armor,Shadowstrix,Feet,Epic,Elusive,450,1,moonstone2
+shadowstrix-leather-boots-1550407,shadowstrix-leather-boots,Shadowstrix Leather Boots,armor,Shadowstrix,Feet,Epic,Deft,450,1,peridot2
+shadowstrix-leather-boots-1550408,shadowstrix-leather-boots,Shadowstrix Leather Boots,armor,Shadowstrix,Feet,Epic,Base roll,425,2,"amethyst2,peridot"
+shadowstrix-leather-boots-1550409,shadowstrix-leather-boots,Shadowstrix Leather Boots,armor,Shadowstrix,Feet,Epic,Base roll,425,2,"moonstone2,agate"
+shadowstrix-mask-1150401,shadowstrix-mask,Shadowstrix Mask,armor,Shadowstrix,Head,Epic,Aegis,450,1,amethyst2
+shadowstrix-mask-1150402,shadowstrix-mask,Shadowstrix Mask,armor,Shadowstrix,Head,Epic,Tenacious,450,1,moonstone2
+shadowstrix-mask-1150403,shadowstrix-mask,Shadowstrix Mask,armor,Shadowstrix,Head,Epic,Iron Helmet,450,1,agate2
+shadowstrix-mask-1150404,shadowstrix-mask,Shadowstrix Mask,armor,Shadowstrix,Head,Epic,Fervor,450,1,moonstone2
+shadowstrix-mask-1150405,shadowstrix-mask,Shadowstrix Mask,armor,Shadowstrix,Head,Epic,Elusive,450,1,peridot2
+shadowstrix-mask-1150406,shadowstrix-mask,Shadowstrix Mask,armor,Shadowstrix,Head,Epic,Blessing,450,1,amethyst2
+shadowstrix-mask-1150407,shadowstrix-mask,Shadowstrix Mask,armor,Shadowstrix,Head,Epic,Wealth,450,1,amethyst2
+shadowstrix-mask-1150408,shadowstrix-mask,Shadowstrix Mask,armor,Shadowstrix,Head,Epic,Base roll,425,2,"agate2,peridot"
+shadowstrix-mask-1150409,shadowstrix-mask,Shadowstrix Mask,armor,Shadowstrix,Head,Epic,Base roll,425,2,"moonstone2,amethyst"
+shadowstrix-pants-1450401,shadowstrix-pants,Shadowstrix Pants,armor,Shadowstrix,Legs,Epic,Aegis,450,1,amethyst2
+shadowstrix-pants-1450402,shadowstrix-pants,Shadowstrix Pants,armor,Shadowstrix,Legs,Epic,Tenacious,450,1,moonstone2
+shadowstrix-pants-1450403,shadowstrix-pants,Shadowstrix Pants,armor,Shadowstrix,Legs,Epic,Iron Helmet,450,1,peridot2
+shadowstrix-pants-1450404,shadowstrix-pants,Shadowstrix Pants,armor,Shadowstrix,Legs,Epic,Fervid,450,1,peridot2
+shadowstrix-pants-1450405,shadowstrix-pants,Shadowstrix Pants,armor,Shadowstrix,Legs,Epic,Smiting,450,1,moonstone2
+shadowstrix-pants-1450406,shadowstrix-pants,Shadowstrix Pants,armor,Shadowstrix,Legs,Epic,Vitality,450,1,amethyst2
+shadowstrix-pants-1450407,shadowstrix-pants,Shadowstrix Pants,armor,Shadowstrix,Legs,Epic,Elusive,450,1,agate2
+shadowstrix-pants-1450408,shadowstrix-pants,Shadowstrix Pants,armor,Shadowstrix,Legs,Epic,Base roll,425,2,"agate2,amethyst"
+shadowstrix-pants-1450409,shadowstrix-pants,Shadowstrix Pants,armor,Shadowstrix,Legs,Epic,Base roll,425,2,"amethyst2,agate"
+shadowstrix-vigor-1250401,shadowstrix-vigor,Shadowstrix Vigor,armor,Shadowstrix,Chest,Epic,Aegis,450,1,peridot2
+shadowstrix-vigor-1250402,shadowstrix-vigor,Shadowstrix Vigor,armor,Shadowstrix,Chest,Epic,Tenacious,450,1,amethyst2
+shadowstrix-vigor-1250403,shadowstrix-vigor,Shadowstrix Vigor,armor,Shadowstrix,Chest,Epic,Iron Helmet,450,1,peridot2
+shadowstrix-vigor-1250404,shadowstrix-vigor,Shadowstrix Vigor,armor,Shadowstrix,Chest,Epic,Resilience,450,1,agate2
+shadowstrix-vigor-1250405,shadowstrix-vigor,Shadowstrix Vigor,armor,Shadowstrix,Chest,Epic,Vitality,450,1,moonstone2
+shadowstrix-vigor-1250406,shadowstrix-vigor,Shadowstrix Vigor,armor,Shadowstrix,Chest,Epic,Curse,450,1,agate2
+shadowstrix-vigor-1250407,shadowstrix-vigor,Shadowstrix Vigor,armor,Shadowstrix,Chest,Epic,Wealth,450,1,moonstone2
+shadowstrix-vigor-1250408,shadowstrix-vigor,Shadowstrix Vigor,armor,Shadowstrix,Chest,Epic,Base roll,425,2,"amethyst2,agate"
+shadowstrix-vigor-1250409,shadowstrix-vigor,Shadowstrix Vigor,armor,Shadowstrix,Chest,Epic,Base roll,425,2,"peridot2,moonstone"
 simple-leather-boots-1510301,simple-leather-boots,Simple Leather Boots,armor,"Blackarrow, Shadowstrix",Feet,Damaged,Base roll,100,,
 simple-leather-bracers-1310301,simple-leather-bracers,Simple Leather Bracers,armor,"Blackarrow, Shadowstrix",Hands,Damaged,Base roll,100,,
 simple-leather-eyepatch-1110301,simple-leather-eyepatch,Simple Leather Eyepatch,armor,"Blackarrow, Shadowstrix",Head,Damaged,Base roll,100,,
@@ -1246,15 +1246,15 @@ beast-spirit-catalyst-3030706,beast-spirit-catalyst,Beast Spirit Catalyst,weapon
 beast-spirit-catalyst-3030707,beast-spirit-catalyst,Beast Spirit Catalyst,weapon,Seer,Weapon,Rare,Creation,300,0,
 beast-spirit-catalyst-3030708,beast-spirit-catalyst,Beast Spirit Catalyst,weapon,Seer,Weapon,Rare,Base roll,275,1,
 beast-spirit-catalyst-3030709,beast-spirit-catalyst,Beast Spirit Catalyst,weapon,Seer,Weapon,Rare,Base roll,275,1,
-blade-of-destined-death-3050601,blade-of-destined-death,Blade of Destined Death,weapon,Shadowstrix,Weapon,Epic,Wrath,450,1,
-blade-of-destined-death-3050602,blade-of-destined-death,Blade of Destined Death,weapon,Shadowstrix,Weapon,Epic,Seeker,450,1,
-blade-of-destined-death-3050603,blade-of-destined-death,Blade of Destined Death,weapon,Shadowstrix,Weapon,Epic,Fervor,450,1,
-blade-of-destined-death-3050604,blade-of-destined-death,Blade of Destined Death,weapon,Shadowstrix,Weapon,Epic,Smiting,450,1,
-blade-of-destined-death-3050605,blade-of-destined-death,Blade of Destined Death,weapon,Shadowstrix,Weapon,Epic,Vitality,450,1,
-blade-of-destined-death-3050606,blade-of-destined-death,Blade of Destined Death,weapon,Shadowstrix,Weapon,Epic,Elusive,450,1,
-blade-of-destined-death-3050607,blade-of-destined-death,Blade of Destined Death,weapon,Shadowstrix,Weapon,Epic,Curse,450,1,
-blade-of-destined-death-3050608,blade-of-destined-death,Blade of Destined Death,weapon,Shadowstrix,Weapon,Epic,Base roll,425,2,
-blade-of-destined-death-3050609,blade-of-destined-death,Blade of Destined Death,weapon,Shadowstrix,Weapon,Epic,Base roll,425,2,
+blade-of-destined-death-3050601,blade-of-destined-death,Blade of Destined Death,weapon,Shadowstrix,Weapon,Epic,Wrath,450,1,agate2
+blade-of-destined-death-3050602,blade-of-destined-death,Blade of Destined Death,weapon,Shadowstrix,Weapon,Epic,Seeker,450,1,amethyst2
+blade-of-destined-death-3050603,blade-of-destined-death,Blade of Destined Death,weapon,Shadowstrix,Weapon,Epic,Fervor,450,1,peridot2
+blade-of-destined-death-3050604,blade-of-destined-death,Blade of Destined Death,weapon,Shadowstrix,Weapon,Epic,Smiting,450,1,amethyst2
+blade-of-destined-death-3050605,blade-of-destined-death,Blade of Destined Death,weapon,Shadowstrix,Weapon,Epic,Vitality,450,1,moonstone2
+blade-of-destined-death-3050606,blade-of-destined-death,Blade of Destined Death,weapon,Shadowstrix,Weapon,Epic,Elusive,450,1,peridot2
+blade-of-destined-death-3050607,blade-of-destined-death,Blade of Destined Death,weapon,Shadowstrix,Weapon,Epic,Curse,450,1,agate2
+blade-of-destined-death-3050608,blade-of-destined-death,Blade of Destined Death,weapon,Shadowstrix,Weapon,Epic,Base roll,425,2,"peridot2,amethyst"
+blade-of-destined-death-3050609,blade-of-destined-death,Blade of Destined Death,weapon,Shadowstrix,Weapon,Epic,Base roll,425,2,"agate2,moonstone"
 blind-eye-staff-3060301,blind-eye-staff,Blind Eye Staff,weapon,Sorcerer,Weapon,Legendary,Fervor,525,2,"agate2,peridot"
 blind-eye-staff-3060302,blind-eye-staff,Blind Eye Staff,weapon,Sorcerer,Weapon,Legendary,Fervid,525,2,"peridot2,agate"
 blind-eye-staff-3060303,blind-eye-staff,Blind Eye Staff,weapon,Sorcerer,Weapon,Legendary,Seeker,525,2,"moonstone2,amethyst"
@@ -1375,15 +1375,15 @@ focus-staff-3030306,focus-staff,Focus Staff,weapon,Sorcerer,Weapon,Rare,Vitality
 focus-staff-3030307,focus-staff,Focus Staff,weapon,Sorcerer,Weapon,Rare,Swift,300,0,none
 focus-staff-3030308,focus-staff,Focus Staff,weapon,Sorcerer,Weapon,Rare,Base roll,275,1,peridot
 focus-staff-3030309,focus-staff,Focus Staff,weapon,Sorcerer,Weapon,Rare,Base roll,275,1,agate
-gem-lizard-dagger-3050501,gem-lizard-dagger,Gem Lizard Dagger,weapon,Shadowstrix,Weapon,Epic,Fervid,450,1,
-gem-lizard-dagger-3050502,gem-lizard-dagger,Gem Lizard Dagger,weapon,Shadowstrix,Weapon,Epic,Seeker,450,1,
-gem-lizard-dagger-3050503,gem-lizard-dagger,Gem Lizard Dagger,weapon,Shadowstrix,Weapon,Epic,Fervor,450,1,
-gem-lizard-dagger-3050504,gem-lizard-dagger,Gem Lizard Dagger,weapon,Shadowstrix,Weapon,Epic,Smiting,450,1,
-gem-lizard-dagger-3050505,gem-lizard-dagger,Gem Lizard Dagger,weapon,Shadowstrix,Weapon,Epic,Vitality,450,1,
+gem-lizard-dagger-3050501,gem-lizard-dagger,Gem Lizard Dagger,weapon,Shadowstrix,Weapon,Epic,Fervid,450,1,agate2
+gem-lizard-dagger-3050502,gem-lizard-dagger,Gem Lizard Dagger,weapon,Shadowstrix,Weapon,Epic,Seeker,450,1,peridot2
+gem-lizard-dagger-3050503,gem-lizard-dagger,Gem Lizard Dagger,weapon,Shadowstrix,Weapon,Epic,Fervor,450,1,moonstone2
+gem-lizard-dagger-3050504,gem-lizard-dagger,Gem Lizard Dagger,weapon,Shadowstrix,Weapon,Epic,Smiting,450,1,amethyst2
+gem-lizard-dagger-3050505,gem-lizard-dagger,Gem Lizard Dagger,weapon,Shadowstrix,Weapon,Epic,Vitality,450,1,amethyst2
 gem-lizard-dagger-3050506,gem-lizard-dagger,Gem Lizard Dagger,weapon,Shadowstrix,Weapon,Epic,Deft,450,1,
-gem-lizard-dagger-3050507,gem-lizard-dagger,Gem Lizard Dagger,weapon,Shadowstrix,Weapon,Epic,Blessing,450,1,
-gem-lizard-dagger-3050508,gem-lizard-dagger,Gem Lizard Dagger,weapon,Shadowstrix,Weapon,Epic,Base roll,425,2,
-gem-lizard-dagger-3050509,gem-lizard-dagger,Gem Lizard Dagger,weapon,Shadowstrix,Weapon,Epic,Base roll,425,2,
+gem-lizard-dagger-3050507,gem-lizard-dagger,Gem Lizard Dagger,weapon,Shadowstrix,Weapon,Epic,Blessing,450,1,agate2
+gem-lizard-dagger-3050508,gem-lizard-dagger,Gem Lizard Dagger,weapon,Shadowstrix,Weapon,Epic,Base roll,425,2,"moonstone2,agate"
+gem-lizard-dagger-3050509,gem-lizard-dagger,Gem Lizard Dagger,weapon,Shadowstrix,Weapon,Epic,Base roll,425,2,"moonstone2,peridot"
 guard-polearm-and-shield-3031001,guard-polearm-and-shield,Guard Polearm and Shield,weapon,Withered Knight,Weapon,Rare,Unyielding,300,0,
 guard-polearm-and-shield-3031002,guard-polearm-and-shield,Guard Polearm and Shield,weapon,Withered Knight,Weapon,Rare,Tenacious,300,0,
 guard-polearm-and-shield-3031003,guard-polearm-and-shield,Guard Polearm and Shield,weapon,Withered Knight,Weapon,Rare,Bulwark,300,0,
@@ -1467,15 +1467,15 @@ moon-deity-convergence-staff-3070406,moon-deity-convergence-staff,Moon Deity - C
 moon-deity-convergence-staff-3070407,moon-deity-convergence-staff,Moon Deity - Convergence Staff,weapon,Sorcerer,Weapon,Holy,Swift,625,,
 moon-deity-convergence-staff-3070408,moon-deity-convergence-staff,Moon Deity - Convergence Staff,weapon,Sorcerer,Weapon,Holy,Base roll,600,,
 moon-deity-convergence-staff-3070409,moon-deity-convergence-staff,Moon Deity - Convergence Staff,weapon,Sorcerer,Weapon,Holy,Base roll,600,,
-moon-deity-crescent-dagger-3070701,moon-deity-crescent-dagger,Moon Deity - Crescent Dagger,weapon,Shadowstrix,Weapon,Holy,Fervid,625,,
-moon-deity-crescent-dagger-3070702,moon-deity-crescent-dagger,Moon Deity - Crescent Dagger,weapon,Shadowstrix,Weapon,Holy,Seeker,625,,
-moon-deity-crescent-dagger-3070703,moon-deity-crescent-dagger,Moon Deity - Crescent Dagger,weapon,Shadowstrix,Weapon,Holy,Fervor,625,,
-moon-deity-crescent-dagger-3070704,moon-deity-crescent-dagger,Moon Deity - Crescent Dagger,weapon,Shadowstrix,Weapon,Holy,Smiting,625,,
-moon-deity-crescent-dagger-3070705,moon-deity-crescent-dagger,Moon Deity - Crescent Dagger,weapon,Shadowstrix,Weapon,Holy,Vitality,625,,
-moon-deity-crescent-dagger-3070706,moon-deity-crescent-dagger,Moon Deity - Crescent Dagger,weapon,Shadowstrix,Weapon,Holy,Deft,625,,
-moon-deity-crescent-dagger-3070707,moon-deity-crescent-dagger,Moon Deity - Crescent Dagger,weapon,Shadowstrix,Weapon,Holy,Blessing,625,,
-moon-deity-crescent-dagger-3070708,moon-deity-crescent-dagger,Moon Deity - Crescent Dagger,weapon,Shadowstrix,Weapon,Holy,Base roll,600,,
-moon-deity-crescent-dagger-3070709,moon-deity-crescent-dagger,Moon Deity - Crescent Dagger,weapon,Shadowstrix,Weapon,Holy,Base roll,600,,
+moon-deity-crescent-dagger-3070701,moon-deity-crescent-dagger,Moon Deity - Crescent Dagger,weapon,Shadowstrix,Weapon,Holy,Fervid,625,,"moonstone2,agate"
+moon-deity-crescent-dagger-3070702,moon-deity-crescent-dagger,Moon Deity - Crescent Dagger,weapon,Shadowstrix,Weapon,Holy,Seeker,625,,"amethyst2,peridot"
+moon-deity-crescent-dagger-3070703,moon-deity-crescent-dagger,Moon Deity - Crescent Dagger,weapon,Shadowstrix,Weapon,Holy,Fervor,625,,"peridot2,moonstone"
+moon-deity-crescent-dagger-3070704,moon-deity-crescent-dagger,Moon Deity - Crescent Dagger,weapon,Shadowstrix,Weapon,Holy,Smiting,625,,"peridot2,moonstone"
+moon-deity-crescent-dagger-3070705,moon-deity-crescent-dagger,Moon Deity - Crescent Dagger,weapon,Shadowstrix,Weapon,Holy,Vitality,625,,"amethyst2,moonstone"
+moon-deity-crescent-dagger-3070706,moon-deity-crescent-dagger,Moon Deity - Crescent Dagger,weapon,Shadowstrix,Weapon,Holy,Deft,625,,"moonstone2,peridot"
+moon-deity-crescent-dagger-3070707,moon-deity-crescent-dagger,Moon Deity - Crescent Dagger,weapon,Shadowstrix,Weapon,Holy,Blessing,625,,"peridot2,amethyst"
+moon-deity-crescent-dagger-3070708,moon-deity-crescent-dagger,Moon Deity - Crescent Dagger,weapon,Shadowstrix,Weapon,Holy,Base roll,600,,"agate2,amethyst,moonstone"
+moon-deity-crescent-dagger-3070709,moon-deity-crescent-dagger,Moon Deity - Crescent Dagger,weapon,Shadowstrix,Weapon,Holy,Base roll,600,,"peridot2,agate,moonstone"
 moon-deity-invocation-catalyst-3071001,moon-deity-invocation-catalyst,Moon Deity - Invocation Catalyst,weapon,Seer,Weapon,Holy,Brotherhood,625,,
 moon-deity-invocation-catalyst-3071002,moon-deity-invocation-catalyst,Moon Deity - Invocation Catalyst,weapon,Seer,Weapon,Holy,Spirit Shield,625,,
 moon-deity-invocation-catalyst-3071003,moon-deity-invocation-catalyst,Moon Deity - Invocation Catalyst,weapon,Seer,Weapon,Holy,Fervid,625,,
@@ -1565,15 +1565,15 @@ sacred-heart-greatsword-3050906,sacred-heart-greatsword,Sacred Heart Greatsword,
 sacred-heart-greatsword-3050907,sacred-heart-greatsword,Sacred Heart Greatsword,weapon,Withered Knight,Weapon,Epic,Strife,450,1,
 sacred-heart-greatsword-3050908,sacred-heart-greatsword,Sacred Heart Greatsword,weapon,Withered Knight,Weapon,Epic,Base roll,425,2,
 sacred-heart-greatsword-3050909,sacred-heart-greatsword,Sacred Heart Greatsword,weapon,Withered Knight,Weapon,Epic,Base roll,425,2,
-serpents-whisper-3060501,serpents-whisper,Serpent's Whisper,weapon,Shadowstrix,Weapon,Legendary,Fervid,525,2,
-serpents-whisper-3060502,serpents-whisper,Serpent's Whisper,weapon,Shadowstrix,Weapon,Legendary,Seeker,525,2,
-serpents-whisper-3060503,serpents-whisper,Serpent's Whisper,weapon,Shadowstrix,Weapon,Legendary,Fervor,525,2,
-serpents-whisper-3060504,serpents-whisper,Serpent's Whisper,weapon,Shadowstrix,Weapon,Legendary,Smiting,525,2,
-serpents-whisper-3060505,serpents-whisper,Serpent's Whisper,weapon,Shadowstrix,Weapon,Legendary,Vitality,525,2,
-serpents-whisper-3060506,serpents-whisper,Serpent's Whisper,weapon,Shadowstrix,Weapon,Legendary,Deft,525,2,
-serpents-whisper-3060507,serpents-whisper,Serpent's Whisper,weapon,Shadowstrix,Weapon,Legendary,Blessing,525,2,
-serpents-whisper-3060508,serpents-whisper,Serpent's Whisper,weapon,Shadowstrix,Weapon,Legendary,Base roll,500,3,
-serpents-whisper-3060509,serpents-whisper,Serpent's Whisper,weapon,Shadowstrix,Weapon,Legendary,Base roll,500,3,
+serpents-whisper-3060501,serpents-whisper,Serpent's Whisper,weapon,Shadowstrix,Weapon,Legendary,Fervid,525,2,"moonstone2,agate"
+serpents-whisper-3060502,serpents-whisper,Serpent's Whisper,weapon,Shadowstrix,Weapon,Legendary,Seeker,525,2,"amethyst2,peridot"
+serpents-whisper-3060503,serpents-whisper,Serpent's Whisper,weapon,Shadowstrix,Weapon,Legendary,Fervor,525,2,"peridot2,moonstone"
+serpents-whisper-3060504,serpents-whisper,Serpent's Whisper,weapon,Shadowstrix,Weapon,Legendary,Smiting,525,2,"agate2,amethyst"
+serpents-whisper-3060505,serpents-whisper,Serpent's Whisper,weapon,Shadowstrix,Weapon,Legendary,Vitality,525,2,"amethyst2,moonstone"
+serpents-whisper-3060506,serpents-whisper,Serpent's Whisper,weapon,Shadowstrix,Weapon,Legendary,Deft,525,2,"moonstone2,peridot"
+serpents-whisper-3060507,serpents-whisper,Serpent's Whisper,weapon,Shadowstrix,Weapon,Legendary,Blessing,525,2,"peridot2,amethyst"
+serpents-whisper-3060508,serpents-whisper,Serpent's Whisper,weapon,Shadowstrix,Weapon,Legendary,Base roll,500,3,"agate2,amethyst,moonstone"
+serpents-whisper-3060509,serpents-whisper,Serpent's Whisper,weapon,Shadowstrix,Weapon,Legendary,Base roll,500,3,"peridot2,amethyst,moonstone"
 skullcrusher-3060201,skullcrusher,Skullcrusher,weapon,Mercenary,Weapon,Legendary,Strife,525,2,
 skullcrusher-3060202,skullcrusher,Skullcrusher,weapon,Mercenary,Weapon,Legendary,Elusive,525,2,
 skullcrusher-3060203,skullcrusher,Skullcrusher,weapon,Mercenary,Weapon,Legendary,Wrath,525,2,
@@ -1632,33 +1632,33 @@ true-intent-catalyst-3050707,true-intent-catalyst,True Intent Catalyst,weapon,Se
 true-intent-catalyst-3050708,true-intent-catalyst,True Intent Catalyst,weapon,Seer,Weapon,Epic,Base roll,425,2,
 true-intent-catalyst-3050709,true-intent-catalyst,True Intent Catalyst,weapon,Seer,Weapon,Epic,Base roll,425,2,
 twilight-knot-catalyst-3010701,twilight-knot-catalyst,Twilight Knot Catalyst,weapon,Seer,Weapon,Damaged,Base roll,100,,
-veil-dual-blades-3040601,veil-dual-blades,Veil Dual Blades,weapon,Shadowstrix,Weapon,Excellent,Wrath,375,1,
-veil-dual-blades-3040602,veil-dual-blades,Veil Dual Blades,weapon,Shadowstrix,Weapon,Excellent,Seeker,375,1,
-veil-dual-blades-3040603,veil-dual-blades,Veil Dual Blades,weapon,Shadowstrix,Weapon,Excellent,Fervor,375,1,
-veil-dual-blades-3040604,veil-dual-blades,Veil Dual Blades,weapon,Shadowstrix,Weapon,Excellent,Smiting,375,1,
-veil-dual-blades-3040605,veil-dual-blades,Veil Dual Blades,weapon,Shadowstrix,Weapon,Excellent,Vitality,375,1,
-veil-dual-blades-3040606,veil-dual-blades,Veil Dual Blades,weapon,Shadowstrix,Weapon,Excellent,Elusive,375,1,
-veil-dual-blades-3040607,veil-dual-blades,Veil Dual Blades,weapon,Shadowstrix,Weapon,Excellent,Curse,375,1,
-veil-dual-blades-3040608,veil-dual-blades,Veil Dual Blades,weapon,Shadowstrix,Weapon,Excellent,Base roll,350,2,
-veil-dual-blades-3040609,veil-dual-blades,Veil Dual Blades,weapon,Shadowstrix,Weapon,Excellent,Base roll,350,2,
-venomfang-dagger-3040501,venomfang-dagger,Venomfang Dagger,weapon,Shadowstrix,Weapon,Excellent,Fervid,375,1,
-venomfang-dagger-3040502,venomfang-dagger,Venomfang Dagger,weapon,Shadowstrix,Weapon,Excellent,Seeker,375,1,
-venomfang-dagger-3040503,venomfang-dagger,Venomfang Dagger,weapon,Shadowstrix,Weapon,Excellent,Fervor,375,1,
-venomfang-dagger-3040504,venomfang-dagger,Venomfang Dagger,weapon,Shadowstrix,Weapon,Excellent,Smiting,375,1,
-venomfang-dagger-3040505,venomfang-dagger,Venomfang Dagger,weapon,Shadowstrix,Weapon,Excellent,Vitality,375,1,
-venomfang-dagger-3040506,venomfang-dagger,Venomfang Dagger,weapon,Shadowstrix,Weapon,Excellent,Deft,375,1,
-venomfang-dagger-3040507,venomfang-dagger,Venomfang Dagger,weapon,Shadowstrix,Weapon,Excellent,Blessing,375,1,
-venomfang-dagger-3040508,venomfang-dagger,Venomfang Dagger,weapon,Shadowstrix,Weapon,Excellent,Base roll,350,2,
-venomfang-dagger-3040509,venomfang-dagger,Venomfang Dagger,weapon,Shadowstrix,Weapon,Excellent,Base roll,350,2,
-venomfang-3060601,venomfang,Venomfang,weapon,Shadowstrix,Weapon,Legendary,Wrath,525,2,
-venomfang-3060602,venomfang,Venomfang,weapon,Shadowstrix,Weapon,Legendary,Seeker,525,2,
-venomfang-3060603,venomfang,Venomfang,weapon,Shadowstrix,Weapon,Legendary,Fervor,525,2,
-venomfang-3060604,venomfang,Venomfang,weapon,Shadowstrix,Weapon,Legendary,Smiting,525,2,
-venomfang-3060605,venomfang,Venomfang,weapon,Shadowstrix,Weapon,Legendary,Vitality,525,2,
-venomfang-3060606,venomfang,Venomfang,weapon,Shadowstrix,Weapon,Legendary,Elusive,525,2,
-venomfang-3060607,venomfang,Venomfang,weapon,Shadowstrix,Weapon,Legendary,Curse,525,2,
-venomfang-3060608,venomfang,Venomfang,weapon,Shadowstrix,Weapon,Legendary,Base roll,500,3,
-venomfang-3060609,venomfang,Venomfang,weapon,Shadowstrix,Weapon,Legendary,Base roll,500,3,
+veil-dual-blades-3040601,veil-dual-blades,Veil Dual Blades,weapon,Shadowstrix,Weapon,Excellent,Wrath,375,1,amethyst
+veil-dual-blades-3040602,veil-dual-blades,Veil Dual Blades,weapon,Shadowstrix,Weapon,Excellent,Seeker,375,1,amethyst
+veil-dual-blades-3040603,veil-dual-blades,Veil Dual Blades,weapon,Shadowstrix,Weapon,Excellent,Fervor,375,1,agate
+veil-dual-blades-3040604,veil-dual-blades,Veil Dual Blades,weapon,Shadowstrix,Weapon,Excellent,Smiting,375,1,moonstone
+veil-dual-blades-3040605,veil-dual-blades,Veil Dual Blades,weapon,Shadowstrix,Weapon,Excellent,Vitality,375,1,peridot
+veil-dual-blades-3040606,veil-dual-blades,Veil Dual Blades,weapon,Shadowstrix,Weapon,Excellent,Elusive,375,1,amethyst
+veil-dual-blades-3040607,veil-dual-blades,Veil Dual Blades,weapon,Shadowstrix,Weapon,Excellent,Curse,375,1,moonstone
+veil-dual-blades-3040608,veil-dual-blades,Veil Dual Blades,weapon,Shadowstrix,Weapon,Excellent,Base roll,350,2,"agate,peridot"
+veil-dual-blades-3040609,veil-dual-blades,Veil Dual Blades,weapon,Shadowstrix,Weapon,Excellent,Base roll,350,2,"amethyst,moonstone"
+venomfang-dagger-3040501,venomfang-dagger,Venomfang Dagger,weapon,Shadowstrix,Weapon,Excellent,Fervid,375,1,peridot
+venomfang-dagger-3040502,venomfang-dagger,Venomfang Dagger,weapon,Shadowstrix,Weapon,Excellent,Seeker,375,1,moonstone
+venomfang-dagger-3040503,venomfang-dagger,Venomfang Dagger,weapon,Shadowstrix,Weapon,Excellent,Fervor,375,1,amethyst
+venomfang-dagger-3040504,venomfang-dagger,Venomfang Dagger,weapon,Shadowstrix,Weapon,Excellent,Smiting,375,1,agate
+venomfang-dagger-3040505,venomfang-dagger,Venomfang Dagger,weapon,Shadowstrix,Weapon,Excellent,Vitality,375,1,peridot
+venomfang-dagger-3040506,venomfang-dagger,Venomfang Dagger,weapon,Shadowstrix,Weapon,Excellent,Deft,375,1,agate
+venomfang-dagger-3040507,venomfang-dagger,Venomfang Dagger,weapon,Shadowstrix,Weapon,Excellent,Blessing,375,1,amethyst
+venomfang-dagger-3040508,venomfang-dagger,Venomfang Dagger,weapon,Shadowstrix,Weapon,Excellent,Base roll,350,2,"agate,moonstone"
+venomfang-dagger-3040509,venomfang-dagger,Venomfang Dagger,weapon,Shadowstrix,Weapon,Excellent,Base roll,350,2,"moonstone,peridot"
+venomfang-3060601,venomfang,Venomfang,weapon,Shadowstrix,Weapon,Legendary,Wrath,525,2,"moonstone2,agate"
+venomfang-3060602,venomfang,Venomfang,weapon,Shadowstrix,Weapon,Legendary,Seeker,525,2,"amethyst2,peridot"
+venomfang-3060603,venomfang,Venomfang,weapon,Shadowstrix,Weapon,Legendary,Fervor,525,2,"agate2,peridot"
+venomfang-3060604,venomfang,Venomfang,weapon,Shadowstrix,Weapon,Legendary,Smiting,525,2,"peridot2,agate"
+venomfang-3060605,venomfang,Venomfang,weapon,Shadowstrix,Weapon,Legendary,Vitality,525,2,"moonstone2,amethyst"
+venomfang-3060606,venomfang,Venomfang,weapon,Shadowstrix,Weapon,Legendary,Elusive,525,2,"agate2,amethyst"
+venomfang-3060607,venomfang,Venomfang,weapon,Shadowstrix,Weapon,Legendary,Curse,525,2,"amethyst2,peridot"
+venomfang-3060608,venomfang,Venomfang,weapon,Shadowstrix,Weapon,Legendary,Base roll,500,3,"amethyst2,agate,moonstone"
+venomfang-3060609,venomfang,Venomfang,weapon,Shadowstrix,Weapon,Legendary,Base roll,500,3,"agate2,moonstone,peridot"
 wooden-handled-dual-blades-3020601,wooden-handled-dual-blades,Wooden-Handled Dual Blades,weapon,Shadowstrix,Weapon,Common,Base roll,200,,
 worn-carved-dagger-3010501,worn-carved-dagger,Worn Carved Dagger,weapon,Shadowstrix,Weapon,Damaged,Base roll,100,,
 wulfen-einherjar-blade-of-inquisition-3071201,wulfen-einherjar-blade-of-inquisition,Wulfen Einherjar - Blade of Inquisition,weapon,Withered Knight,Weapon,Holy,Stoic,625,,
@@ -1679,15 +1679,15 @@ wulfen-einherjar-oathkeeper-3070106,wulfen-einherjar-oathkeeper,Wulfen Einherjar
 wulfen-einherjar-oathkeeper-3070107,wulfen-einherjar-oathkeeper,Wulfen Einherjar - Oathkeeper,weapon,Mercenary,Weapon,Holy,Vitality,625,,
 wulfen-einherjar-oathkeeper-3070108,wulfen-einherjar-oathkeeper,Wulfen Einherjar - Oathkeeper,weapon,Mercenary,Weapon,Holy,Base roll,600,,
 wulfen-einherjar-oathkeeper-3070109,wulfen-einherjar-oathkeeper,Wulfen Einherjar - Oathkeeper,weapon,Mercenary,Weapon,Holy,Base roll,600,,
-wulfen-einherjar-splitclaw-3070801,wulfen-einherjar-splitclaw,Wulfen Einherjar - Splitclaw,weapon,Shadowstrix,Weapon,Holy,Wrath,625,,
-wulfen-einherjar-splitclaw-3070802,wulfen-einherjar-splitclaw,Wulfen Einherjar - Splitclaw,weapon,Shadowstrix,Weapon,Holy,Seeker,625,,
-wulfen-einherjar-splitclaw-3070803,wulfen-einherjar-splitclaw,Wulfen Einherjar - Splitclaw,weapon,Shadowstrix,Weapon,Holy,Fervor,625,,
-wulfen-einherjar-splitclaw-3070804,wulfen-einherjar-splitclaw,Wulfen Einherjar - Splitclaw,weapon,Shadowstrix,Weapon,Holy,Smiting,625,,
-wulfen-einherjar-splitclaw-3070805,wulfen-einherjar-splitclaw,Wulfen Einherjar - Splitclaw,weapon,Shadowstrix,Weapon,Holy,Vitality,625,,
-wulfen-einherjar-splitclaw-3070806,wulfen-einherjar-splitclaw,Wulfen Einherjar - Splitclaw,weapon,Shadowstrix,Weapon,Holy,Elusive,625,,
-wulfen-einherjar-splitclaw-3070807,wulfen-einherjar-splitclaw,Wulfen Einherjar - Splitclaw,weapon,Shadowstrix,Weapon,Holy,Curse,625,,
-wulfen-einherjar-splitclaw-3070808,wulfen-einherjar-splitclaw,Wulfen Einherjar - Splitclaw,weapon,Shadowstrix,Weapon,Holy,Base roll,600,,
-wulfen-einherjar-splitclaw-3070809,wulfen-einherjar-splitclaw,Wulfen Einherjar - Splitclaw,weapon,Shadowstrix,Weapon,Holy,Base roll,600,,
+wulfen-einherjar-splitclaw-3070801,wulfen-einherjar-splitclaw,Wulfen Einherjar - Splitclaw,weapon,Shadowstrix,Weapon,Holy,Wrath,625,,"moonstone2,agate"
+wulfen-einherjar-splitclaw-3070802,wulfen-einherjar-splitclaw,Wulfen Einherjar - Splitclaw,weapon,Shadowstrix,Weapon,Holy,Seeker,625,,"amethyst2,peridot"
+wulfen-einherjar-splitclaw-3070803,wulfen-einherjar-splitclaw,Wulfen Einherjar - Splitclaw,weapon,Shadowstrix,Weapon,Holy,Fervor,625,,"agate2,peridot"
+wulfen-einherjar-splitclaw-3070804,wulfen-einherjar-splitclaw,Wulfen Einherjar - Splitclaw,weapon,Shadowstrix,Weapon,Holy,Smiting,625,,"peridot2,agate"
+wulfen-einherjar-splitclaw-3070805,wulfen-einherjar-splitclaw,Wulfen Einherjar - Splitclaw,weapon,Shadowstrix,Weapon,Holy,Vitality,625,,"moonstone2,amethyst"
+wulfen-einherjar-splitclaw-3070806,wulfen-einherjar-splitclaw,Wulfen Einherjar - Splitclaw,weapon,Shadowstrix,Weapon,Holy,Elusive,625,,"agate2,amethyst"
+wulfen-einherjar-splitclaw-3070807,wulfen-einherjar-splitclaw,Wulfen Einherjar - Splitclaw,weapon,Shadowstrix,Weapon,Holy,Curse,625,,"amethyst2,peridot"
+wulfen-einherjar-splitclaw-3070808,wulfen-einherjar-splitclaw,Wulfen Einherjar - Splitclaw,weapon,Shadowstrix,Weapon,Holy,Base roll,600,,"amethyst2,agate,moonstone"
+wulfen-einherjar-splitclaw-3070809,wulfen-einherjar-splitclaw,Wulfen Einherjar - Splitclaw,weapon,Shadowstrix,Weapon,Holy,Base roll,600,,"agate2,moonstone,peridot"
 wulfen-einherjar-warcry-spike-3071101,wulfen-einherjar-warcry-spike,Wulfen Einherjar - Warcry Spike,weapon,Seer,Weapon,Holy,Strife,625,,
 wulfen-einherjar-warcry-spike-3071102,wulfen-einherjar-warcry-spike,Wulfen Einherjar - Warcry Spike,weapon,Seer,Weapon,Holy,Fervid,625,,
 wulfen-einherjar-warcry-spike-3071103,wulfen-einherjar-warcry-spike,Wulfen Einherjar - Warcry Spike,weapon,Seer,Weapon,Holy,Seeker,625,,

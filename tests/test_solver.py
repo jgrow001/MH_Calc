@@ -15,6 +15,7 @@ def make_game_data() -> GameData:
         "valor": Affix("valor", "Valor", "Offensive", stack_cap=7),
         "elusive": Affix("elusive", "Elusive", "Utility", stack_cap=5),
         "stoic": Affix("stoic", "Stoic", "Defensive", stack_cap=5),
+        "wrath": Affix("wrath", "Wrath", "Offensive", stack_cap=7),
     }
 
     # Gems are crafted from a shape's pool now (T1 = any 1, T2 = any 2
@@ -63,7 +64,23 @@ def make_game_data() -> GameData:
         slot="Head", rarity="Legendary",
         variants=(GearVariant("item-unknown-v1", "valor", 999, "Legendary", None),),
     )
-    data.gear = [item_a, item_b, item_c, item_d, item_unknown]
+    # Weapon slot: two incompatible weapon categories, both granting Wrath
+    # innately -- only source of Wrath in this fixture, so a Wrath target
+    # forces the Weapon slot to be used, letting weapon_type filtering be
+    # tested cleanly against which item actually gets picked.
+    item_dagger = GearItem(
+        slug="item-dagger", name="Item Dagger", kind="weapon", classes=("Sorcerer",),
+        slot="Weapon", rarity="Legendary",
+        variants=(GearVariant("item-dagger-v1", "wrath", 500, "Legendary", ()),),
+        weapon_type="Dagger",
+    )
+    item_dual_blade = GearItem(
+        slug="item-dual-blade", name="Item Dual Blade", kind="weapon", classes=("Sorcerer",),
+        slot="Weapon", rarity="Legendary",
+        variants=(GearVariant("item-dual-blade-v1", "wrath", 500, "Legendary", ()),),
+        weapon_type="Dual Blade",
+    )
+    data.gear = [item_a, item_b, item_c, item_d, item_unknown, item_dagger, item_dual_blade]
     return data
 
 
@@ -215,6 +232,30 @@ def test_locked_item_forces_specific_gear_into_slot():
         chest_picks = [p for p in b.picks if p.slot == "Chest"]
         assert len(chest_picks) == 1
         assert chest_picks[0].item.slug == "item-c"
+
+
+def test_weapon_type_filter_restricts_weapon_slot():
+    # wrath only comes from the two weapons (item-dagger / item-dual-blade),
+    # both otherwise identical -- so the weapon_type filter is the only
+    # thing that determines which one is eligible
+    data = make_game_data()
+    unfiltered = find_builds(data, "Sorcerer", {"wrath": 1}, max_results=10)
+    weapon_slugs = {p.item.slug for b in unfiltered for p in b.picks if p.slot == "Weapon"}
+    assert weapon_slugs == {"item-dagger", "item-dual-blade"}
+
+    dagger_only = find_builds(data, "Sorcerer", {"wrath": 1}, max_results=10, weapon_type="Dagger")
+    assert dagger_only
+    for b in dagger_only:
+        for p in b.picks:
+            if p.slot == "Weapon":
+                assert p.item.weapon_type == "Dagger"
+
+    dual_blade_only = find_builds(data, "Sorcerer", {"wrath": 1}, max_results=10, weapon_type="Dual Blade")
+    assert dual_blade_only
+    for b in dual_blade_only:
+        for p in b.picks:
+            if p.slot == "Weapon":
+                assert p.item.weapon_type == "Dual Blade"
 
 
 def test_locked_item_with_no_usable_variant_is_infeasible():
