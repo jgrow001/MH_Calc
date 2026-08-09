@@ -120,16 +120,113 @@ def parse_line(line: str, affix_names: set[str]) -> tuple[str | None, list[str],
     return affix_name, shapes, was_fuzzy
 
 
+def resolve_affix_cell(text: str, affix_names: set[str]) -> tuple[str | None, bool]:
+    """Exact-or-fuzzy match a single cell/token against known affix names --
+    for formats (like CSV) that keep the whole affix name in one field, so
+    no multi-word prefix search is needed. Returns (canonical_name, was_fuzzy)."""
+    normalized = text.replace("-", " ").strip()
+    if normalized.lower() in affix_names:
+        return normalized, False
+    best_name, best_ratio = None, 0.0
+    for name in affix_names:
+        ratio = difflib.SequenceMatcher(None, normalized.lower(), name).ratio()
+        if ratio > best_ratio:
+            best_name, best_ratio = name, ratio
+    if best_ratio >= FUZZY_MATCH_THRESHOLD:
+        return best_name, True
+    return None, False
+
+
+def load_sockets_rows() -> tuple[list[dict], list[str]]:
+    with SOCKETS_PATH.open(newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        return list(reader), list(reader.fieldnames)
+
+
+def write_sockets_rows(rows: list[dict], fieldnames: list[str]) -> None:
+    with SOCKETS_PATH.open("w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def load_weapon_types() -> dict[str, str]:
+    if WEAPON_TYPES_PATH.exists():
+        return json.loads(WEAPON_TYPES_PATH.read_text(encoding="utf-8"))
+    return {}
+
+
+def save_weapon_types(weapon_types: dict[str, str]) -> None:
+    if weapon_types:
+        WEAPON_TYPES_PATH.write_text(json.dumps(weapon_types, indent=2, sort_keys=True), encoding="utf-8")
+        print(f"weapon_types.json: {len(weapon_types)} weapon(s) categorized -> {WEAPON_TYPES_PATH}")
+
+
+def apply_entry(
+    rows_by_base_name: dict[str, list[dict]],
+    base_name: str,
+    affix_name: str | None,
+    shapes: list[str],
+    entry_repr: str,
+) -> bool:
+    """Match one parsed (affix, shapes) entry to an un-filled variant row
+    for base_name and write its socket_shapes. Prints its own NOTE/WARNING/
+    CONFLICT diagnostics. Returns True iff it counted as newly matched --
+    caller is responsible for calling write_sockets_rows() afterwards."""
+    computed = ",".join(shapes) if shapes else "none"
+    item_rows = rows_by_base_name[base_name]
+    if affix_name is not None:
+        target = next(
+            (r for r in item_rows if r["affix"].lower() == affix_name.lower() and not r["socket_shapes"]),
+            None,
+        )
+        if target is None:
+            already = next(
+                (r for r in item_rows if r["affix"].lower() == affix_name.lower() and r["socket_shapes"]),
+                None,
+            )
+            if already and already["socket_shapes"] == computed:
+                print(f"NOTE: duplicate entry, already recorded and consistent: {entry_repr}")
+            elif already:
+                print(
+                    f"CONFLICT: {base_name!r} affix {affix_name!r} already recorded as "
+                    f"{already['socket_shapes']!r} but this entry says {computed!r} -- {entry_repr}"
+                )
+            else:
+                print(f"WARNING: no un-filled row for {base_name!r} affix {affix_name!r} -- skipped: {entry_repr}")
+            return False
+    else:
+        target = next(
+            (r for r in item_rows if r["affix"] == "Base roll" and not r["socket_shapes"]),
+            None,
+        )
+        if target is None:
+            dupe = any(
+                r["affix"] == "Base roll" and r["socket_shapes"] == computed for r in item_rows
+            )
+            if dupe:
+                print(f"NOTE: duplicate entry, already recorded and consistent: {entry_repr}")
+            else:
+                print(f"WARNING: no remaining un-filled 'Base roll' row for {base_name!r} -- skipped: {entry_repr}")
+            return False
+
+    target["socket_shapes"] = computed
+    expected = target.get("expected_socket_count")
+    if expected and expected.isdigit() and int(expected) != len(shapes):
+        print(
+            f"WARNING: {target['variant_slug']} ({target['affix']}) got {len(shapes)} shape(s) "
+            f"but expected_socket_count says {expected} -- double check: {entry_repr}"
+        )
+    return True
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("file", type=Path)
     ap.add_argument("--class", dest="class_filter", default=None, help="restrict matching to this class, e.g. Sorcerer")
     args = ap.parse_args()
 
-    with SOCKETS_PATH.open(newline="", encoding="utf-8") as f:
-        reader = csv.DictReader(f)
-        rows = list(reader)
-        fieldnames = reader.fieldnames
+    rows, fieldnames = load_sockets_rows()
 
     candidate_rows = rows
     if args.class_filter:
@@ -144,9 +241,7 @@ def main() -> None:
 
     matched = 0
     skipped: list[str] = []
-    weapon_types: dict[str, str] = {}
-    if WEAPON_TYPES_PATH.exists():
-        weapon_types = json.loads(WEAPON_TYPES_PATH.read_text(encoding="utf-8"))
+    weapon_types = load_weapon_types()
     current_category: str | None = None
 
     for raw_line in args.file.read_text(encoding="utf-8").splitlines():
@@ -180,63 +275,13 @@ def main() -> None:
             skipped.append(line)
             continue
 
-        computed = ",".join(shapes) if shapes else "none"
-        item_rows = rows_by_base_name[base_name]
-        if affix_name is not None:
-            target = next(
-                (r for r in item_rows if r["affix"].lower() == affix_name.lower() and not r["socket_shapes"]),
-                None,
-            )
-            if target is None:
-                already = next(
-                    (r for r in item_rows if r["affix"].lower() == affix_name.lower() and r["socket_shapes"]),
-                    None,
-                )
-                if already and already["socket_shapes"] == computed:
-                    print(f"NOTE: duplicate line, already recorded and consistent: {line!r}")
-                elif already:
-                    print(
-                        f"CONFLICT: {base_name!r} affix {affix_name!r} already recorded as "
-                        f"{already['socket_shapes']!r} but this line says {computed!r} -- {line!r}"
-                    )
-                else:
-                    print(f"WARNING: no un-filled row for {base_name!r} affix {affix_name!r} -- skipped: {line!r}")
-                skipped.append(line)
-                continue
+        if apply_entry(rows_by_base_name, base_name, affix_name, shapes, line):
+            matched += 1
         else:
-            target = next(
-                (r for r in item_rows if r["affix"] == "Base roll" and not r["socket_shapes"]),
-                None,
-            )
-            if target is None:
-                dupe = any(
-                    r["affix"] == "Base roll" and r["socket_shapes"] == computed for r in item_rows
-                )
-                if dupe:
-                    print(f"NOTE: duplicate line, already recorded and consistent: {line!r}")
-                else:
-                    print(f"WARNING: no remaining un-filled 'Base roll' row for {base_name!r} -- skipped: {line!r}")
-                skipped.append(line)
-                continue
+            skipped.append(line)
 
-        target["socket_shapes"] = computed
-        expected = target.get("expected_socket_count")
-        if expected and expected.isdigit() and int(expected) != len(shapes):
-            print(
-                f"WARNING: {target['variant_slug']} ({target['affix']}) got {len(shapes)} shape(s) "
-                f"but expected_socket_count says {expected} -- double check: {line!r}"
-            )
-        matched += 1
-
-    with SOCKETS_PATH.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
-        writer.writerows(rows)
-
-    if weapon_types:
-        WEAPON_TYPES_PATH.write_text(json.dumps(weapon_types, indent=2, sort_keys=True), encoding="utf-8")
-        print(f"weapon_types.json: {len(weapon_types)} weapon(s) categorized -> {WEAPON_TYPES_PATH}")
-
+    write_sockets_rows(rows, fieldnames)
+    save_weapon_types(weapon_types)
     print(f"\nmatched {matched} lines, skipped {len(skipped)}")
 
 

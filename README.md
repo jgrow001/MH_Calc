@@ -20,7 +20,7 @@ whatever bonus affixes come along with each option.
 - [x] Weapon category filter (`weapon_type`) — for classes with two mutually-exclusive weapon types filling one slot, see below
 - [x] Streamlit UI (`app.py`), smoke-tested against the full dataset
 - [x] Per-affix stack caps — 32/44 affixes, from the user's `data/processed/Caps.txt` (see `scraper/parse_caps.py`); the other 12 aren't implemented in the game yet and are dropped entirely from `affixes.json`
-- [ ] **Socket-shape data — not scrapable from MistfallDB, confirmed by direct inspection.** Socket shape is a property of the specific gear VARIANT (not the base item — confirmed via Raven Priest Robe, whose 9 variants each carry a different socket-shape combo). `data/processed/variant_sockets.csv` has all 1707 variants with an empty `socket_shapes` column — **527/1707 filled in so far** (Sorcerer + Shadowstrix armor+weapon, plus all class-agnostic jewelry). **The solver excludes any variant with unknown sockets rather than guessing.** Socket *count* is not manual, though — see below. Other 4 classes still need their gear filled in.
+- [ ] **Socket-shape data — not scrapable from MistfallDB, confirmed by direct inspection.** Socket shape is a property of the specific gear VARIANT (not the base item — confirmed via Raven Priest Robe, whose 9 variants each carry a different socket-shape combo). `data/processed/variant_sockets.csv` has all 1707 variants with an empty `socket_shapes` column — **761/1707 filled in so far** (Sorcerer + Shadowstrix + Blackarrow armor+weapon, plus all class-agnostic jewelry). **The solver excludes any variant with unknown sockets rather than guessing.** Socket *count* is not manual, though — see below. Other 3 classes still need their gear filled in.
 
 ## Key mechanics (confirmed 2026-08-05)
 
@@ -174,6 +174,26 @@ python scraper/ingest_bulk_shapes.py data/processed/sorc.txt --class Sorcerer
 across classes); omit it for class-agnostic gear like jewelry. Prints `NOTE` for fuzzy-matched
 base names (e.g. a typo) and duplicate lines, `CONFLICT` if a repeated line disagrees with what's
 already recorded, `WARNING` for anything it couldn't match at all.
+
+**Preferred format going forward: CSV**, via `scraper/ingest_csv_shapes.py` — comma delimiting
+removes the ambiguity the space-separated format needed heuristics for (dash separators,
+multi-word affix names, prefix-matching item names), so it's the most reliable to fill in by hand.
+One row per variant, up to 4 columns (`item_name,affix_or_shape,shape,shape`), empty trailing
+cells are fine:
+
+```
+Insatiable Heart - Soulseeker Bow,Sky Piercer,p2,g1
+Insatiable Heart - Soulseeker Bow,g2,r1,b1
+Oil-soaked Wooden Bow,Sky Piercer,,
+```
+
+```
+python scraper/ingest_csv_shapes.py data/processed/BA.csv --class Blackarrow
+```
+
+Same `(Category Name)` row convention for weapon types (a row with just that in column 1, rest
+empty). Shares its matching/dedup/conflict logic with `ingest_bulk_shapes.py` (see `apply_entry`
+et al. in that module) — only the per-row tokenizing differs between the two formats.
 
 ## Locking specific gear into a slot
 
