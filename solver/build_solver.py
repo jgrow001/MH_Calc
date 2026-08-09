@@ -361,6 +361,21 @@ def find_builds(
         if cap is not None:
             model.Add(expr <= cap)
 
+    # group each slot's candidates by base item (ignoring which variant/roll
+    # and which specific gems were chosen) -- used below so enumeration
+    # blocks on GEAR identity, not on the exact candidate. Without this,
+    # solutions that use the same base item but a different affix roll, or
+    # the same roll with a different (often equally-valid) leftover-socket
+    # gem, all counted as "different" builds -- confirmed 2026-08-09 on real
+    # data: locking one item still surfaced it 3x, once per drop variant,
+    # though it's the same physical item to go get in-game.
+    item_group_vars: dict[str, dict[str, list]] = {}
+    for slot in slots:
+        groups: dict[str, list] = {}
+        for idx, pick in enumerate(per_slot_candidates[slot]):
+            groups.setdefault(pick.item.slug, []).append(slot_vars[slot][idx])
+        item_group_vars[slot] = groups
+
     solver = cp_model.CpSolver()
     solver.parameters.num_search_workers = 8
 
@@ -375,19 +390,21 @@ def find_builds(
         if status not in (cp_model.OPTIMAL, cp_model.FEASIBLE):
             break
         chosen: list[SlotPick] = []
-        decision_true_vars = []  # exactly one per slot, whether a real candidate or skip
+        decision_true_vars = []  # one per slot: sum of that slot's active item-group (0/1), or the skip var
         for slot in slots:
             for k, v in enumerate(slot_vars[slot]):
                 if solver.Value(v):
-                    chosen.append(per_slot_candidates[slot][k])
-                    decision_true_vars.append(v)
+                    pick = per_slot_candidates[slot][k]
+                    chosen.append(pick)
+                    decision_true_vars.append(sum(item_group_vars[slot][pick.item.slug]))
                     break
             else:
                 decision_true_vars.append(all_decision_vars[slot][-1])  # the skip var was chosen
         bev_alloc = {a: solver.Value(v) for a, v in beverage_vars.items() if solver.Value(v) > 0}
         results.append(Build(tuple(chosen), beverage_tier, tuple(sorted(bev_alloc.items()))))
-        # block this exact combination (including which slots were skipped)
-        # so the next solve is forced to differ in at least one decision
+        # block this exact GEAR combination (which base item per slot, or
+        # skipped) so the next solve is forced to use a different item
+        # somewhere, rather than just a different roll/gem arrangement
         model.Add(sum(decision_true_vars) <= len(slots) - 1)
 
     return results

@@ -234,6 +234,28 @@ def test_locked_item_forces_specific_gear_into_slot():
         assert chest_picks[0].item.slug == "item-c"
 
 
+def test_builds_deduped_by_base_item_not_variant_or_gems():
+    # one base item, two variants -- like jewelry, where the same physical
+    # item drops with different possible socket-shape rolls but no affix
+    # difference -- both able to satisfy the target on their own
+    data = GameData()
+    data.affixes_by_slug = {"wealth": Affix("wealth", "Wealth", "Utility", stack_cap=5)}
+    data.gem_pools = {"agate": ("wealth",), "peridot": ("wealth",)}
+    item = GearItem(
+        slug="item-e", name="Item E", kind="armor", classes=("Sorcerer",),
+        slot="Necklace", rarity="Legendary",
+        variants=(
+            GearVariant("item-e-v1", None, 500, "Legendary", (SocketSpec("agate", 1),)),
+            GearVariant("item-e-v2", None, 500, "Legendary", (SocketSpec("peridot", 1),)),
+        ),
+    )
+    data.gear = [item]
+    builds = find_builds(data, "Sorcerer", {"wealth": 1}, max_results=10)
+    assert builds
+    assert {p.item.slug for b in builds for p in b.picks} == {"item-e"}
+    assert len(builds) == 1, "same base item across variants/gems should collapse to one build"
+
+
 def test_weapon_type_filter_restricts_weapon_slot():
     # wrath only comes from the two weapons (item-dagger / item-dual-blade),
     # both otherwise identical -- so the weapon_type filter is the only
