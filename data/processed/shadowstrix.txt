@@ -137,7 +137,7 @@ Ace Assassin Bracers - Deft g2 p1
 Ace Assassin Bracers - Blessing g2 r1
 Ace Assassin Bracers - Curse p2 b1
 Ace Assassin Bracers - Wealth r2 g1 
-Ace Assassin Bracers - r2 p1 g1
+Ace Assassin Bracers - b2 p1 g1
 Ace Assassin Bracers - g2 p1 r1
 Shadowstrix Bracers - Fervid p2 
 Shadowstrix Bracers - Seeker r2
@@ -164,7 +164,7 @@ Ace Assassin Pants - Iron Helmet r2 b1
 Ace Assassin Pants - Fervid b2 r1
 Ace Assassin Pants - Smiting g2 p1
 Ace Assassin Pants - Vitality p2 g1
-Ace Assassin Pants - Elusive p2 g1 
+Ace Assassin Pants - Elusive r2 b1
 Ace Assassin Pants - r2 p1 b1
 Ace Assassin Pants - b2 r1 p1
 Shadowstrix Pants - Aegis p2 
