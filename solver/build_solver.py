@@ -361,19 +361,22 @@ def find_builds(
         if cap is not None:
             model.Add(expr <= cap)
 
-    # group each slot's candidates by base item (ignoring which variant/roll
-    # and which specific gems were chosen) -- used below so enumeration
-    # blocks on GEAR identity, not on the exact candidate. Without this,
-    # solutions that use the same base item but a different affix roll, or
-    # the same roll with a different (often equally-valid) leftover-socket
-    # gem, all counted as "different" builds -- confirmed 2026-08-09 on real
-    # data: locking one item still surfaced it 3x, once per drop variant,
-    # though it's the same physical item to go get in-game.
-    item_group_vars: dict[str, dict[str, list]] = {}
+    # group each slot's candidates by (base item, innate affix roll) --
+    # ignoring only which specific gems were chosen -- used below so
+    # enumeration blocks on GEAR identity, not on the exact candidate.
+    # Grouping by item alone would also hide genuinely different rolls of
+    # the same item (e.g. an Aegis roll vs an Elusive roll of the same
+    # named piece are different physical drops); grouping by the full
+    # variant slug would under-collapse "Base roll" variants, which have no
+    # affix and differ only by socket shape (jewelry: 3 rolls of the same
+    # conceptual item) -- keying on affix_slug handles both correctly,
+    # since every "Base roll" variant shares affix_slug=None.
+    item_group_vars: dict[str, dict[tuple[str, str | None], list]] = {}
     for slot in slots:
-        groups: dict[str, list] = {}
+        groups: dict[tuple[str, str | None], list] = {}
         for idx, pick in enumerate(per_slot_candidates[slot]):
-            groups.setdefault(pick.item.slug, []).append(slot_vars[slot][idx])
+            key = (pick.item.slug, pick.variant.affix_slug)
+            groups.setdefault(key, []).append(slot_vars[slot][idx])
         item_group_vars[slot] = groups
 
     solver = cp_model.CpSolver()
@@ -396,7 +399,8 @@ def find_builds(
                 if solver.Value(v):
                     pick = per_slot_candidates[slot][k]
                     chosen.append(pick)
-                    decision_true_vars.append(sum(item_group_vars[slot][pick.item.slug]))
+                    key = (pick.item.slug, pick.variant.affix_slug)
+                    decision_true_vars.append(sum(item_group_vars[slot][key]))
                     break
             else:
                 decision_true_vars.append(all_decision_vars[slot][-1])  # the skip var was chosen

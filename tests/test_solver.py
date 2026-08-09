@@ -234,10 +234,12 @@ def test_locked_item_forces_specific_gear_into_slot():
         assert chest_picks[0].item.slug == "item-c"
 
 
-def test_builds_deduped_by_base_item_not_variant_or_gems():
-    # one base item, two variants -- like jewelry, where the same physical
-    # item drops with different possible socket-shape rolls but no affix
-    # difference -- both able to satisfy the target on their own
+def test_builds_deduped_by_base_item_and_roll_not_gems():
+    # one base item, two "Base roll" (no-affix) variants -- like jewelry,
+    # where the same physical item drops with different possible socket-
+    # shape rolls but no affix difference -- both able to satisfy the
+    # target on their own. Dedup is by (item, innate affix roll), and every
+    # Base-roll variant shares affix_slug=None, so these still collapse.
     data = GameData()
     data.affixes_by_slug = {"wealth": Affix("wealth", "Wealth", "Utility", stack_cap=5)}
     data.gem_pools = {"agate": ("wealth",), "peridot": ("wealth",)}
@@ -253,7 +255,47 @@ def test_builds_deduped_by_base_item_not_variant_or_gems():
     builds = find_builds(data, "Sorcerer", {"wealth": 1}, max_results=10)
     assert builds
     assert {p.item.slug for b in builds for p in b.picks} == {"item-e"}
-    assert len(builds) == 1, "same base item across variants/gems should collapse to one build"
+    assert len(builds) == 1, "same item, both Base-roll variants, should collapse to one build"
+
+
+def test_different_affix_rolls_of_same_item_are_not_deduped():
+    # confirmed 2026-08-11: dedup should be by (item, innate affix roll),
+    # not by item name alone -- two different rolls of the same named piece
+    # are different physical drops in-game and both should be shown,
+    # while gem-arrangement-only differences within ONE roll still collapse
+    data = GameData()
+    data.affixes_by_slug = {
+        "aegis": Affix("aegis", "Aegis", "Defensive", stack_cap=7),
+        "elusive": Affix("elusive", "Elusive", "Utility", stack_cap=5),
+    }
+    data.gem_pools = {"agate": ("elusive",), "peridot": ("elusive",)}
+    item = GearItem(
+        slug="item-f", name="Item F", kind="armor", classes=("Sorcerer",),
+        slot="Necklace", rarity="Legendary",
+        variants=(
+            # two different rolls, each independently sufficient for a
+            # target of just aegis>=1 or elusive>=1
+            GearVariant("item-f-aegis", "aegis", 525, "Legendary", (SocketSpec("agate", 1),)),
+            GearVariant("item-f-elusive", "elusive", 525, "Legendary", (SocketSpec("peridot", 1),)),
+        ),
+    )
+    data.gear = [item]
+
+    # elusive is reachable via EITHER roll (elusive innately, or aegis roll's
+    # agate socket crafted with elusive) -- both rolls should surface
+    builds = find_builds(data, "Sorcerer", {"elusive": 1}, max_results=10)
+    rolls_seen = {p.variant.affix_slug for b in builds for p in b.picks if p.item.slug == "item-f"}
+    assert rolls_seen == {"aegis", "elusive"}, "expected both distinct rolls to show up, not just one"
+
+    # gem-arrangement-only variation within the SAME roll still collapses:
+    # the aegis roll's one socket has only one relevant gem choice here, so
+    # there's nothing to over-count, but confirm we don't get duplicate
+    # entries for the same (item, roll) pair
+    signatures = [
+        (p.item.slug, p.variant.affix_slug)
+        for b in builds for p in b.picks if p.item.slug == "item-f"
+    ]
+    assert len(signatures) == len(set(signatures))
 
 
 def test_weapon_type_filter_restricts_weapon_slot():

@@ -11,7 +11,7 @@ whatever bonus affixes come along with each option.
 - [x] Sitemap crawler + HTML cache (`scraper/fetch.py`)
 - [x] Field-mapped extractors for affixes / gems / gear (`scraper/parse_*.py`) — full crawl done: 44 affixes, 320 gems, 464 gear items (374 armor + 90 weapons)
 - [x] Typed data model (`model/entities.py`)
-- [x] CP-SAT feasibility/enumeration solver (`solver/build_solver.py`, OR-Tools), 19 unit tests passing
+- [x] CP-SAT feasibility/enumeration solver (`solver/build_solver.py`, OR-Tools), 20 unit tests passing
 - [x] Enumerated builds are deduped by base item, not by roll/variant or gem arrangement — see below
 - [x] Beverages — second, independent affix source, see below
 - [x] Gems are crafted from a shape's affix pool, not a fixed catalog — see below
@@ -102,15 +102,21 @@ forced to contribute Curse, cap 5 → guaranteed infeasible), breaking even triv
 single-affix queries. Locked slots (see `locked_items`) are the one exception — no skip there, since
 locking means the item must appear.
 
-**Enumerated builds are unique by base item, not by roll or gem arrangement** (fixed 2026-08-09).
-When re-solving to find the next build, the blocking constraint used to key on the exact candidate
-chosen per slot — which includes the specific variant (affix roll) *and* the specific gem
-arrangement. In practice this meant a locked item could still show up several times in a row, once
-per drop variant (jewelry rolls differ only by socket shape, not by anything meaningful to show
-separately), and items with slack sockets could repeat with just a different "extra" gem in the
-leftover slot. The blocking constraint now sums each slot's candidates by *base item* (`pick.item.slug`)
-before blocking, so the next solve is forced to use a different item somewhere rather than just a
-different roll or leftover-socket filler of the same one.
+**Enumerated builds are unique by (base item, innate affix roll), not by gem arrangement**
+(fixed 2026-08-09, refined 2026-08-11). When re-solving to find the next build, the blocking
+constraint used to key on the exact candidate chosen per slot — which includes the specific
+variant (affix roll) *and* the specific gem arrangement. In practice this meant a locked item
+could still show up several times in a row, once per drop variant (jewelry rolls differ only by
+socket shape, not by anything meaningful to show separately), and items with slack sockets could
+repeat with just a different "extra" gem in the leftover slot. The blocking constraint now sums
+each slot's candidates by `(pick.item.slug, pick.variant.affix_slug)` before blocking, so the next
+solve is forced to use either a different item or a different roll of the same item, never just a
+different leftover-socket gem of the one already shown. Grouping by item name alone (an earlier,
+too-aggressive version of this fix) was rejected: two different rolls of the same named piece are
+different physical drops in-game and both are worth surfacing — e.g. Raven Priest Robe's Curse and
+Ethereal rolls are different items to go get, not a permutation of the same one. Keying on
+`affix_slug` still collapses every "Base roll" (no-affix) variant of an item together, since they
+all share `affix_slug=None` — exactly the jewelry case this was meant to fix.
 
 ## Setup
 
