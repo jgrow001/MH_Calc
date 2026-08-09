@@ -138,7 +138,7 @@ Ace Assassin Bracers - Blessing g2 r1
 Ace Assassin Bracers - Curse p2 b1
 Ace Assassin Bracers - Wealth r2 g1 
 Ace Assassin Bracers - b2 p1 g1
-Ace Assassin Bracers - g2 p1 r1
+Ace Assassin Bracers - g2 p1 b1
 Shadowstrix Bracers - Fervid p2 
 Shadowstrix Bracers - Seeker r2
 Shadowstrix Bracers - Fervor g2
