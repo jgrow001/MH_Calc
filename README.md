@@ -11,12 +11,12 @@ whatever bonus affixes come along with each option.
 - [x] Sitemap crawler + HTML cache (`scraper/fetch.py`)
 - [x] Field-mapped extractors for affixes / gems / gear (`scraper/parse_*.py`) — full crawl done: 44 affixes, 320 gems, 464 gear items (374 armor + 90 weapons)
 - [x] Typed data model (`model/entities.py`)
-- [x] CP-SAT feasibility/enumeration solver (`solver/build_solver.py`, OR-Tools), 20 unit tests passing
+- [x] CP-SAT feasibility/enumeration solver (`solver/build_solver.py`, OR-Tools), 21 unit tests passing
 - [x] Enumerated builds are deduped by base item, not by roll/variant or gem arrangement — see below
 - [x] Beverages — second, independent affix source, see below
 - [x] Gems are crafted from a shape's affix pool, not a fixed catalog — see below
 - [x] Hard per-affix stack caps enforced in the solver (gear+gems+beverage can't exceed the real cap)
-- [x] Lock specific gear into a slot (`locked_items`) — for items with the same socket layout but different base stats, e.g. jewelry
+- [x] Lock specific gear into a slot (`locked_items`), optionally narrowed to specific rolls (`allowed_variants`) — see below
 - [x] Weapon category filter (`weapon_type`) — for classes with two mutually-exclusive weapon types filling one slot, see below
 - [x] Streamlit UI (`app.py`), smoke-tested against the full dataset
 - [x] Per-affix stack caps — 32/44 affixes, from the user's `data/processed/Caps.txt` (see `scraper/parse_caps.py`); the other 12 aren't implemented in the game yet and are dropped entirely from `affixes.json`
@@ -220,6 +220,22 @@ find_builds(data, "Sorcerer", targets, locked_items={"Necklace": "raven-war-pend
 The solver still picks which variant/gems for that item — locking only fixes *which base item*
 fills the slot. Locking to an item with no usable socket data (see coverage above) returns no
 builds rather than silently ignoring the lock.
+
+**Narrowing to specific rolls** (added 2026-08-11): once an item is locked, the app shows a
+multiselect of that item's known rolls (innate affix + socket shapes), defaulting to all of them —
+deselect down to the one(s) you actually want. Programmatically, `allowed_variants`:
+
+```python
+find_builds(
+    data, "Sorcerer", targets,
+    locked_items={"Chest": "raven-priest-robe"},
+    allowed_variants={"Chest": {"raven-priest-robe-1240207"}},  # just the Curse roll
+)
+```
+
+This only restricts *that slot*: other target-relevant slots are still searched independently, so
+narrowing Chest to one roll doesn't prevent a different slot from covering an affix that roll
+doesn't grant — locking scopes one slot's occupant, not the whole build's affix sourcing.
 
 ## Running the app
 

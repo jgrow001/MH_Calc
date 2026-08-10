@@ -87,10 +87,19 @@ if len(weapon_types_here) > 1:
     )
     weapon_type = None if wt_choice == "Any" else wt_choice
 
+def variant_label(v) -> str:
+    if v.socket_shapes is None:
+        return "no socket data yet"
+    shapes = ", ".join(f"{s.shape} T{s.tier}" for s in v.socket_shapes) or "no sockets"
+    affix_name = data.affixes_by_slug[v.affix_slug].name if v.affix_slug else "Base roll"
+    return f"{affix_name} ({shapes})"
+
+
 with st.sidebar.expander("Lock specific gear (optional)"):
     st.caption("Force a specific item into a slot — useful for jewelry, where pieces with the same "
                "socket layout can differ in base stats. Still lets the solver pick gems.")
     locked_items: dict[str, str] = {}
+    allowed_variants: dict[str, set[str]] = {}
     for slot in data.slots():
         slot_items = sorted(
             (g for g in data.gear if g.slot == slot and g.usable_by(class_req)),
@@ -101,8 +110,25 @@ with st.sidebar.expander("Lock specific gear (optional)"):
         options = ["Any"] + [g.slug for g in slot_items]
         labels = {"Any": "Any"} | {g.slug: f"{g.name} ({g.rarity})" for g in slot_items}
         choice = st.selectbox(slot, options, index=0, format_func=lambda s: labels[s], key=f"lock_{slot}")
-        if choice != "Any":
-            locked_items[slot] = choice
+        if choice == "Any":
+            continue
+        locked_items[slot] = choice
+
+        item = next(g for g in slot_items if g.slug == choice)
+        known_variants = [v for v in item.variants if v.socket_shapes is not None]
+        if len(known_variants) > 1:
+            variant_slugs = [v.slug for v in known_variants]
+            variant_labels = {v.slug: variant_label(v) for v in known_variants}
+            chosen_variants = st.multiselect(
+                f"{item.name} — which roll(s)?",
+                options=variant_slugs,
+                default=variant_slugs,
+                format_func=lambda s: variant_labels[s],
+                key=f"variants_{slot}",
+            )
+            allowed_variants[slot] = set(chosen_variants)
+            if not chosen_variants:
+                st.warning(f"No roll selected for {item.name} — this build will be infeasible until you pick at least one.")
 
 beverage_options = ["None"] + list(BEVERAGE_TIERS)
 beverage_labels = {"None": "None"} | {
@@ -164,6 +190,7 @@ if run:
             data, class_req, targets, max_results=int(max_results),
             beverage_tier=beverage_tier, allowed_rarities=allowed_rarities,
             locked_items=locked_items, weapon_type=weapon_type,
+            allowed_variants=allowed_variants,
         )
     if not builds:
         st.error(

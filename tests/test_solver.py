@@ -234,6 +234,45 @@ def test_locked_item_forces_specific_gear_into_slot():
         assert chest_picks[0].item.slug == "item-c"
 
 
+def test_allowed_variants_narrows_a_locked_item_to_specific_rolls():
+    data = GameData()
+    data.affixes_by_slug = {
+        "aegis": Affix("aegis", "Aegis", "Defensive", stack_cap=7),
+        "elusive": Affix("elusive", "Elusive", "Utility", stack_cap=5),
+    }
+    item = GearItem(
+        slug="item-g", name="Item G", kind="armor", classes=("Sorcerer",),
+        slot="Necklace", rarity="Legendary",
+        variants=(
+            GearVariant("item-g-aegis", "aegis", 525, "Legendary", ()),
+            GearVariant("item-g-elusive", "elusive", 525, "Legendary", ()),
+        ),
+    )
+    data.gear = [item]
+
+    # locked but not narrowed: the solver is free to pick whichever roll fits
+    builds = find_builds(data, "Sorcerer", {"aegis": 1}, max_results=5, locked_items={"Necklace": "item-g"})
+    assert builds
+    assert all(p.variant.slug == "item-g-aegis" for b in builds for p in b.picks)
+
+    # narrowed to only the elusive roll -- the aegis target becomes
+    # unreachable even though the item itself is still usable
+    assert find_builds(
+        data, "Sorcerer", {"aegis": 1}, max_results=5,
+        locked_items={"Necklace": "item-g"},
+        allowed_variants={"Necklace": {"item-g-elusive"}},
+    ) == []
+
+    # narrowed to the roll that DOES match -- feasible, and uses that roll
+    builds = find_builds(
+        data, "Sorcerer", {"elusive": 1}, max_results=5,
+        locked_items={"Necklace": "item-g"},
+        allowed_variants={"Necklace": {"item-g-elusive"}},
+    )
+    assert builds
+    assert all(p.variant.slug == "item-g-elusive" for b in builds for p in b.picks)
+
+
 def test_builds_deduped_by_base_item_and_roll_not_gems():
     # one base item, two "Base roll" (no-affix) variants -- like jewelry,
     # where the same physical item drops with different possible socket-

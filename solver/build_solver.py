@@ -184,6 +184,7 @@ def _candidate_slot_picks(
     allowed_rarities: set[str] | None = None,
     required_item_slug: str | None = None,
     weapon_type: str | None = None,
+    allowed_variant_slugs: set[str] | None = None,
 ) -> list[SlotPick]:
     """Every (item, variant, socket-assignment) combo for one slot that
     grants at least one target affix, via innate roll and/or socketed gems.
@@ -195,6 +196,12 @@ def _candidate_slot_picks(
     normal case, combos that don't touch any target affix are still kept
     (an all-empty-sockets combo included), since the item must be usable in
     the build even if none of its sockets end up helping the target.
+
+    allowed_variant_slugs further restricts which of that item's specific
+    rolls/variants are eligible (e.g. only the "Aegis" and "Curse" rolls of
+    Raven Priest Robe, not all 9) -- lets the user narrow down to one or a
+    few known variants after locking an item, rather than the solver being
+    free to pick any roll.
 
     weapon_type (e.g. "Dagger"/"Dual Blade") only applies to the Weapon
     slot -- some classes can equip either of two incompatible weapon
@@ -223,6 +230,8 @@ def _candidate_slot_picks(
         for variant in item.variants:
             if variant.socket_shapes is None:
                 continue  # not yet entered in variant_sockets.csv
+            if allowed_variant_slugs is not None and variant.slug not in allowed_variant_slugs:
+                continue
             variant_relevant = variant.affix_slug in target_slugs
 
             per_socket_options: list[list[SocketPick]] = []
@@ -271,19 +280,24 @@ def find_builds(
     overall_time_budget_seconds: float = 15.0,
     locked_items: dict[str, str] | None = None,
     weapon_type: str | None = None,
+    allowed_variants: dict[str, set[str]] | None = None,
 ) -> list[Build]:
     """locked_items: {slot: item_slug} forces that specific base item into
     the build for that slot (e.g. {"Necklace": "raven-war-pendant"}) --
     still lets the solver pick which variant/gems, just not which item.
     weapon_type restricts the Weapon slot to one category (e.g. "Dagger" vs
     "Dual Blade") for classes where only one equipped weapon type actually
-    grants its affixes -- see model.entities.GearItem.weapon_type."""
+    grants its affixes -- see model.entities.GearItem.weapon_type.
+    allowed_variants: {slot: {variant_slug, ...}} further narrows a locked
+    slot to one or a few specific rolls of that item, rather than leaving
+    the solver free to pick any of its variants."""
     target_slugs = set(targets)
     all_slots = sorted({
         g.slot for g in data.gear
         if g.slot and g.usable_by(class_req)
     })
     locked_items = locked_items or {}
+    allowed_variants = allowed_variants or {}
 
     per_slot_candidates: dict[str, list[SlotPick]] = {}
     for slot in all_slots:
@@ -291,6 +305,7 @@ def find_builds(
             data, class_req, slot, target_slugs, allowed_rarities,
             required_item_slug=locked_items.get(slot),
             weapon_type=weapon_type,
+            allowed_variant_slugs=allowed_variants.get(slot),
         )
         if cands:
             per_slot_candidates[slot] = cands
