@@ -21,7 +21,7 @@ whatever bonus affixes come along with each option.
 - [x] Weapon category filter (`weapon_type`) — for classes with two mutually-exclusive weapon types filling one slot, see below
 - [x] Streamlit UI (`app.py`), smoke-tested against the full dataset
 - [x] Per-affix stack caps — 32/44 affixes, from the user's `data/processed/Caps.txt` (see `scraper/parse_caps.py`); the other 12 aren't implemented in the game yet and are dropped entirely from `affixes.json`
-- [ ] **Socket-shape data — not scrapable from MistfallDB, confirmed by direct inspection.** Socket shape is a property of the specific gear VARIANT (not the base item — confirmed via Raven Priest Robe, whose 9 variants each carry a different socket-shape combo). `data/processed/variant_sockets.csv` has all 1707 variants with an empty `socket_shapes` column — **1301/1707 filled in so far** (Sorcerer + Shadowstrix + Blackarrow + Mercenary + Withered Knight armor+weapon, plus all class-agnostic jewelry; Withered Knight is 270/274, missing only the Common/Damaged "Squire"/"Rusty Squire" Greatsword and Polearm and Shield). **The solver excludes any variant with unknown sockets rather than guessing.** Socket *count* is not manual, though — see below. Seer still needs its gear filled in.
+- [ ] **Socket-shape data — not scrapable from MistfallDB, confirmed by direct inspection.** Socket shape is a property of the specific gear VARIANT (not the base item — confirmed via Raven Priest Robe, whose 9 variants each carry a different socket-shape combo). `data/processed/variant_sockets.csv` has all 1707 variants with an empty `socket_shapes` column — **1580/1707 filled in so far, all 6 classes covered** (Sorcerer + Shadowstrix + Blackarrow + Mercenary + Withered Knight + Seer armor+weapon, plus all class-agnostic jewelry). Remaining gaps are all Common/Damaged-tier weapons that weren't in the source data: Withered Knight's Squire/Rusty Squire Greatsword+Polearm and Shield (270/274), Seer's Magical/Twilight Knot Catalyst and Spiked/Rusty Spiked Mace (279/283). **The solver excludes any variant with unknown sockets rather than guessing.** Socket *count* is not manual, though — see below.
 
 ## Key mechanics (confirmed 2026-08-05)
 
@@ -71,7 +71,7 @@ whatever bonus affixes come along with each option.
 - **Some classes have two mutually-exclusive weapon categories** filling the
   same Weapon slot (confirmed 2026-08-09, Shadowstrix: Dagger vs Dual Blade;
   Mercenary: Hammer vs Sword and Shield; Withered Knight: Greatsword vs
-  Polearm and Shield) — both are equippable, but only one
+  Polearm and Shield; Seer: Catalyst vs Mace) — both are equippable, but only one
   actually grants its affixes, so a build has to commit to one type rather
   than mixing candidates from both. Captured as `GearItem.weapon_type`,
   written to `data/processed/weapon_types.json` (base_slug -> category).
