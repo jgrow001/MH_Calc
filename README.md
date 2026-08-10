@@ -21,7 +21,7 @@ whatever bonus affixes come along with each option.
 - [x] Weapon category filter (`weapon_type`) — for classes with two mutually-exclusive weapon types filling one slot, see below
 - [x] Streamlit UI (`app.py`), smoke-tested against the full dataset
 - [x] Per-affix stack caps — 32/44 affixes, from the user's `data/processed/Caps.txt` (see `scraper/parse_caps.py`); the other 12 aren't implemented in the game yet and are dropped entirely from `affixes.json`
-- [ ] **Socket-shape data — not scrapable from MistfallDB, confirmed by direct inspection.** Socket shape is a property of the specific gear VARIANT (not the base item — confirmed via Raven Priest Robe, whose 9 variants each carry a different socket-shape combo). `data/processed/variant_sockets.csv` has all 1707 variants with an empty `socket_shapes` column — **1031/1707 filled in so far** (Sorcerer + Shadowstrix + Blackarrow + Mercenary armor+weapon, plus all class-agnostic jewelry). **The solver excludes any variant with unknown sockets rather than guessing.** Socket *count* is not manual, though — see below. Other 2 classes still need their gear filled in.
+- [ ] **Socket-shape data — not scrapable from MistfallDB, confirmed by direct inspection.** Socket shape is a property of the specific gear VARIANT (not the base item — confirmed via Raven Priest Robe, whose 9 variants each carry a different socket-shape combo). `data/processed/variant_sockets.csv` has all 1707 variants with an empty `socket_shapes` column — **1301/1707 filled in so far** (Sorcerer + Shadowstrix + Blackarrow + Mercenary + Withered Knight armor+weapon, plus all class-agnostic jewelry; Withered Knight is 270/274, missing only the Common/Damaged "Squire"/"Rusty Squire" Greatsword and Polearm and Shield). **The solver excludes any variant with unknown sockets rather than guessing.** Socket *count* is not manual, though — see below. Seer still needs its gear filled in.
 
 ## Key mechanics (confirmed 2026-08-05)
 
@@ -70,7 +70,8 @@ whatever bonus affixes come along with each option.
   name when one happens to match, for nicer display.
 - **Some classes have two mutually-exclusive weapon categories** filling the
   same Weapon slot (confirmed 2026-08-09, Shadowstrix: Dagger vs Dual Blade;
-  Mercenary: Hammer vs Sword and Shield) — both are equippable, but only one
+  Mercenary: Hammer vs Sword and Shield; Withered Knight: Greatsword vs
+  Polearm and Shield) — both are equippable, but only one
   actually grants its affixes, so a build has to commit to one type rather
   than mixing candidates from both. Captured as `GearItem.weapon_type`,
   written to `data/processed/weapon_types.json` (base_slug -> category).
@@ -82,7 +83,13 @@ whatever bonus affixes come along with each option.
   doesn't (Mercenary's `merc.csv` had no such grouping, and item names alone
   aren't reliably self-describing, e.g. "Bond of Friendship" gives no clue
   which category it is — confirm ambiguous cases with the user rather than
-  guessing from the name).
+  guessing from the name). A third option when neither name nor an explicit
+  header is available: cross-reference the affix/shape pattern against
+  lower-tier items of the same set whose names ARE self-describing (used for
+  Withered Knight's Legendary/Holy weapons — "Mercy" and "Wulfen Einherjar -
+  Blade of Inquisition" share their exact affix+shape table with the
+  unambiguous "Sacred Heart Greatsword," confirming they're the Greatsword
+  side, not Polearm and Shield).
 - **Total-stack cap** (confirmed 2026-08-11): on top of the per-affix caps,
   there's a hard ceiling on the SUM of every affix stack in the whole build —
   gear innate rolls + gems + beverage, target *and* bonus affixes combined,
