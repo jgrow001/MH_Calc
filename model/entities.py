@@ -92,6 +92,13 @@ TOTAL_CAP_SLOT_BUDGET: dict[str, int] = {
 
 GEAR_SLOT_COUNT = 8  # Weapon/Head/Chest/Hands/Legs/Feet/Necklace/Ring
 
+# Canonical display order (confirmed 2026-08-11) -- weapon, then head-to-toe,
+# then jewelry. Purely a presentation concern: solver/build_solver.py doesn't
+# care what order slots are processed or picks are returned in.
+GEAR_SLOT_ORDER: tuple[str, ...] = (
+    "Weapon", "Head", "Chest", "Hands", "Legs", "Feet", "Necklace", "Ring",
+)
+
 
 def total_stack_cap(rarity: str | None, beverage_tier: str | None) -> int | None:
     """Hard ceiling on the combined total of every affix stack (gear+gems+

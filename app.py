@@ -11,7 +11,7 @@ from __future__ import annotations
 
 import streamlit as st
 
-from model.entities import BEVERAGE_TIERS, load_game_data, total_stack_cap
+from model.entities import BEVERAGE_TIERS, GEAR_SLOT_ORDER, load_game_data, total_stack_cap
 from solver.build_solver import Build, find_builds
 
 st.set_page_config(page_title="Mistfall Hunters Build Calculator", layout="wide")
@@ -100,7 +100,7 @@ with st.sidebar.expander("Lock specific gear (optional)"):
                "socket layout can differ in base stats. Still lets the solver pick gems.")
     locked_items: dict[str, str] = {}
     allowed_variants: dict[str, set[str]] = {}
-    for slot in data.slots():
+    for slot in sorted(data.slots(), key=GEAR_SLOT_ORDER.index):
         slot_items = sorted(
             (g for g in data.gear if g.slot == slot and g.usable_by(class_req)),
             key=lambda g: g.name,
@@ -157,8 +157,9 @@ def render_build(i: int, build: Build, target_slugs: set[str]) -> None:
     totals = build.total_affix_counts()
     header = " · ".join(f"{data.affixes_by_slug[a].name} {totals.get(a, 0)}" for a in target_slugs)
     with st.expander(f"Build {i}: {header}", expanded=(i == 1)):
-        cols = st.columns(len(build.picks)) if build.picks else []
-        for col, pick in zip(cols, build.picks):
+        ordered_picks = sorted(build.picks, key=lambda p: GEAR_SLOT_ORDER.index(p.slot))
+        cols = st.columns(len(ordered_picks)) if ordered_picks else []
+        for col, pick in zip(cols, ordered_picks):
             with col:
                 st.markdown(f"**{pick.slot}**")
                 st.write(pick.item.name)
