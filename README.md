@@ -20,7 +20,7 @@ whatever bonus affixes come along with each option.
 - [x] Weapon category filter (`weapon_type`) — for classes with two mutually-exclusive weapon types filling one slot, see below
 - [x] Streamlit UI (`app.py`), smoke-tested against the full dataset
 - [x] Per-affix stack caps — 32/44 affixes, from the user's `data/processed/Caps.txt` (see `scraper/parse_caps.py`); the other 12 aren't implemented in the game yet and are dropped entirely from `affixes.json`
-- [ ] **Socket-shape data — not scrapable from MistfallDB, confirmed by direct inspection.** Socket shape is a property of the specific gear VARIANT (not the base item — confirmed via Raven Priest Robe, whose 9 variants each carry a different socket-shape combo). `data/processed/variant_sockets.csv` has all 1707 variants with an empty `socket_shapes` column — **761/1707 filled in so far** (Sorcerer + Shadowstrix + Blackarrow armor+weapon, plus all class-agnostic jewelry). **The solver excludes any variant with unknown sockets rather than guessing.** Socket *count* is not manual, though — see below. Other 3 classes still need their gear filled in.
+- [ ] **Socket-shape data — not scrapable from MistfallDB, confirmed by direct inspection.** Socket shape is a property of the specific gear VARIANT (not the base item — confirmed via Raven Priest Robe, whose 9 variants each carry a different socket-shape combo). `data/processed/variant_sockets.csv` has all 1707 variants with an empty `socket_shapes` column — **1031/1707 filled in so far** (Sorcerer + Shadowstrix + Blackarrow + Mercenary armor+weapon, plus all class-agnostic jewelry). **The solver excludes any variant with unknown sockets rather than guessing.** Socket *count* is not manual, though — see below. Other 2 classes still need their gear filled in.
 
 ## Key mechanics (confirmed 2026-08-05)
 
@@ -68,14 +68,20 @@ whatever bonus affixes come along with each option.
   The scraped catalog (`gems.json`) is only consulted to reuse a real gem's
   name when one happens to match, for nicer display.
 - **Some classes have two mutually-exclusive weapon categories** filling the
-  same Weapon slot (confirmed 2026-08-09, Shadowstrix: Dagger vs Dual Blade)
-  — both are equippable, but only one actually grants its affixes, so a
-  build has to commit to one type rather than mixing candidates from both.
-  Captured as `GearItem.weapon_type`, sourced from `(Category)` section
-  headers in bulk dumps like `shadowstrix.txt` (see `scraper/ingest_bulk_shapes.py`)
-  and written to `data/processed/weapon_types.json`. `find_builds(...,
-  weapon_type="Dagger")` restricts the Weapon slot to that category; the app
-  shows a selector automatically when a class has more than one.
+  same Weapon slot (confirmed 2026-08-09, Shadowstrix: Dagger vs Dual Blade;
+  Mercenary: Hammer vs Sword and Shield) — both are equippable, but only one
+  actually grants its affixes, so a build has to commit to one type rather
+  than mixing candidates from both. Captured as `GearItem.weapon_type`,
+  written to `data/processed/weapon_types.json` (base_slug -> category).
+  `find_builds(..., weapon_type="Dagger")` restricts the Weapon slot to
+  that category; the app shows a selector automatically when a class has
+  more than one. Two ways to populate it: `(Category)` section headers in
+  bulk dumps (see `scraper/ingest_bulk_shapes.py`), when the source data
+  groups items that way — or hand-edit `weapon_types.json` directly when it
+  doesn't (Mercenary's `merc.csv` had no such grouping, and item names alone
+  aren't reliably self-describing, e.g. "Bond of Friendship" gives no clue
+  which category it is — confirm ambiguous cases with the user rather than
+  guessing from the name).
 
 ## Solver engine
 
