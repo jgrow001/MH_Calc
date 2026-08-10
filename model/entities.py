@@ -92,6 +92,21 @@ TOTAL_CAP_SLOT_BUDGET: dict[str, int] = {
 
 GEAR_SLOT_COUNT = 8  # Weapon/Head/Chest/Hands/Legs/Feet/Necklace/Ring
 
+# UI display names for rarity (confirmed 2026-08-11) -- the game refers to
+# these by color/material, not the internal names scraped from MistfallDB.
+# Also doubles as the allowlist of which rarities the app exposes at all:
+# Common/Damaged are excluded here on purpose (not worth building around),
+# though they remain in the underlying data/model for anything that reads
+# it directly rather than going through this table. Low-to-high order.
+RARITY_UI_ORDER: tuple[str, ...] = ("Rare", "Excellent", "Epic", "Legendary", "Holy")
+RARITY_DISPLAY_NAMES: dict[str, str] = {
+    "Rare": "Green",
+    "Excellent": "Blue",
+    "Epic": "Purple",
+    "Legendary": "Gold",
+    "Holy": "Holy",
+}
+
 # Canonical display order (confirmed 2026-08-11) -- weapon, then head-to-toe,
 # then jewelry. Purely a presentation concern: solver/build_solver.py doesn't
 # care what order slots are processed or picks are returned in.

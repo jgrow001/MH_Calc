@@ -11,7 +11,14 @@ from __future__ import annotations
 
 import streamlit as st
 
-from model.entities import BEVERAGE_TIERS, GEAR_SLOT_ORDER, load_game_data, total_stack_cap
+from model.entities import (
+    BEVERAGE_TIERS,
+    GEAR_SLOT_ORDER,
+    RARITY_DISPLAY_NAMES,
+    RARITY_UI_ORDER,
+    load_game_data,
+    total_stack_cap,
+)
 from solver.build_solver import Build, find_builds
 
 st.set_page_config(page_title="Mistfall Hunters Build Calculator", layout="wide")
@@ -62,13 +69,13 @@ for slug in chosen_slugs:
     max_val = affix.stack_cap or 10
     targets[slug] = st.sidebar.slider(f"{affix.name} level", 1, max_val, min(max_val, 1))
 
-all_rarities = sorted(
-    {g.rarity for g in data.gear if g.rarity}, key=lambda r: -(len(r))  # stable, arbitrary order
-)
+present_rarities = {g.rarity for g in data.gear if g.rarity}
+all_rarities = [r for r in RARITY_UI_ORDER if r in present_rarities]
 rarity_choices = st.sidebar.multiselect(
     "Gear rarity (narrows search, faster)",
     options=all_rarities,
     default=all_rarities,
+    format_func=lambda r: RARITY_DISPLAY_NAMES.get(r, r),
     help="Fewer rarities = fewer candidates to search, useful if Calculate is slow for a broad target.",
 )
 allowed_rarities = set(rarity_choices) if rarity_choices else None
@@ -108,7 +115,9 @@ with st.sidebar.expander("Lock specific gear (optional)"):
         if not slot_items:
             continue
         options = ["Any"] + [g.slug for g in slot_items]
-        labels = {"Any": "Any"} | {g.slug: f"{g.name} ({g.rarity})" for g in slot_items}
+        labels = {"Any": "Any"} | {
+            g.slug: f"{g.name} ({RARITY_DISPLAY_NAMES.get(g.rarity, g.rarity)})" for g in slot_items
+        }
         choice = st.selectbox(slot, options, index=0, format_func=lambda s: labels[s], key=f"lock_{slot}")
         if choice == "Any":
             continue
@@ -144,7 +153,7 @@ if allowed_rarities is not None and len(allowed_rarities) == 1:
     cap_total = total_stack_cap(kit_rarity, beverage_tier)
     if cap_total is not None:
         st.sidebar.caption(
-            f"Total-cap enforced: full {kit_rarity} kit"
+            f"Total-cap enforced: full {RARITY_DISPLAY_NAMES.get(kit_rarity, kit_rarity)} kit"
             + (f" + {beverage_tier}" if beverage_tier else "")
             + f" caps at {cap_total} combined affix stacks (gear+gems+beverage, all affixes)."
         )

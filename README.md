@@ -90,6 +90,14 @@ whatever bonus affixes come along with each option.
   Blade of Inquisition" share their exact affix+shape table with the
   unambiguous "Sacred Heart Greatsword," confirming they're the Greatsword
   side, not Polearm and Shield).
+- **Rarity is shown by color in the UI, not its internal name** (confirmed
+  2026-08-11): Rare/Excellent/Epic/Legendary/Holy display as
+  Green/Blue/Purple/Gold/Holy respectively — see `RARITY_DISPLAY_NAMES` in
+  `model/entities.py`. Purely a display-layer mapping; the internal rarity
+  strings are unchanged everywhere else (data files, solver, tests). Common
+  and Damaged are excluded from the UI entirely (`RARITY_UI_ORDER` doesn't
+  include them) — not worth building around, though they remain in the
+  underlying data for anything reading it directly.
 - **Total-stack cap** (confirmed 2026-08-11): on top of the per-affix caps,
   there's a hard ceiling on the SUM of every affix stack in the whole build —
   gear innate rolls + gems + beverage, target *and* bonus affixes combined,
