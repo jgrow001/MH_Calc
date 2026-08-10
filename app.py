@@ -11,7 +11,7 @@ from __future__ import annotations
 
 import streamlit as st
 
-from model.entities import BEVERAGE_TIERS, load_game_data
+from model.entities import BEVERAGE_TIERS, load_game_data, total_stack_cap
 from solver.build_solver import Build, find_builds
 
 st.set_page_config(page_title="Mistfall Hunters Build Calculator", layout="wide")
@@ -138,6 +138,16 @@ beverage_choice = st.sidebar.selectbox(
     "Beverage", beverage_options, index=0, format_func=lambda t: beverage_labels[t]
 )
 beverage_tier = None if beverage_choice == "None" else beverage_choice
+
+if allowed_rarities is not None and len(allowed_rarities) == 1:
+    kit_rarity = next(iter(allowed_rarities))
+    cap_total = total_stack_cap(kit_rarity, beverage_tier)
+    if cap_total is not None:
+        st.sidebar.caption(
+            f"Total-cap enforced: full {kit_rarity} kit"
+            + (f" + {beverage_tier}" if beverage_tier else "")
+            + f" caps at {cap_total} combined affix stacks (gear+gems+beverage, all affixes)."
+        )
 
 max_results = st.sidebar.number_input("Max builds to show", min_value=1, max_value=100, value=25)
 run = st.sidebar.button("Calculate", type="primary", disabled=not targets)

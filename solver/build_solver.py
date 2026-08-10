@@ -68,6 +68,7 @@ from model.entities import (  # noqa: E402
     Gem,
     SocketSpec,
     beverage_allocation_for,
+    total_stack_cap,
 )
 
 
@@ -290,7 +291,15 @@ def find_builds(
     grants its affixes -- see model.entities.GearItem.weapon_type.
     allowed_variants: {slot: {variant_slug, ...}} further narrows a locked
     slot to one or a few specific rolls of that item, rather than leaving
-    the solver free to pick any of its variants."""
+    the solver free to pick any of its variants.
+
+    Total-cap: when allowed_rarities narrows the search to exactly ONE
+    rarity, that's treated as a commitment to a uniform "kit tier" (e.g. "I'm
+    running full Legendary"), and model.entities.total_stack_cap()'s hard
+    ceiling on the combined total of every affix stack in the build (gear +
+    gems + beverage, target and bonus alike) is enforced as an extra CP-SAT
+    constraint. Left unenforced for a mixed/unfiltered rarity search, since
+    there's no single kit tier to compute the cap from."""
     target_slugs = set(targets)
     all_slots = sorted({
         g.slot for g in data.gear
@@ -375,6 +384,18 @@ def find_builds(
         cap = data.affixes_by_slug[a].stack_cap
         if cap is not None:
             model.Add(expr <= cap)
+
+    if allowed_rarities is not None and len(allowed_rarities) == 1:
+        kit_rarity = next(iter(allowed_rarities))
+        cap_total = total_stack_cap(kit_rarity, beverage_tier)
+        if cap_total is not None:
+            all_terms = [
+                sum(counts.values()) * slot_vars[slot][k]
+                for slot in slots
+                for k, counts in enumerate(per_slot_counts[slot])
+            ]
+            bev_total = sum(beverage_vars.values()) if beverage_vars else 0
+            model.Add(sum(all_terms) + bev_total <= cap_total)
 
     # group each slot's candidates by (base item, innate affix roll) --
     # ignoring only which specific gems were chosen -- used below so

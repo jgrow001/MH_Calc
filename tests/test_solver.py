@@ -414,6 +414,72 @@ def test_beverage_per_affix_cap_enforced():
     assert find_builds(data, "Sorcerer", {"wealth": 2}, max_results=5, beverage_tier="T3")
 
 
+def _legendary_triple_t2_socket_gear() -> list[GearItem]:
+    # No innate affix, three T2 sockets each (full Legendary budget, no
+    # affix to eat into it) -- a T2 gem grants 2 DIFFERENT affixes from one
+    # socket, so one item can reach 3*2=6 stacks, well above the total-cap
+    # per-slot budget of 4. This is the scenario the total-cap constraint
+    # actually needs to bind on -- a single socket's worth of budget can
+    # smuggle in more stacks than the "one socket ~= one slot-budget unit"
+    # assumption alone would naturally prevent.
+    return [
+        GearItem(
+            slug=f"item-{i}", name=f"Item {i}", kind="armor", classes=("Sorcerer",),
+            slot=slot, rarity="Legendary",
+            variants=(GearVariant(
+                f"item-{i}-v1", None, 500, "Legendary",
+                (SocketSpec("agate", 2), SocketSpec("agate", 2), SocketSpec("agate", 2)),
+            ),),
+        )
+        for i, slot in enumerate(["Head", "Chest", "Hands", "Legs", "Feet", "Necklace", "Ring", "Weapon"])
+    ]
+
+
+def test_total_cap_enforced_when_rarity_narrowed_to_one():
+    # full Legendary kit, no beverage: total_stack_cap("Legendary", None) = 4*8 = 32
+    data = GameData()
+    data.affixes_by_slug = {
+        "wealth": Affix("wealth", "Wealth", "Utility", stack_cap=50),
+        "curse": Affix("curse", "Curse", "Offensive", stack_cap=50),
+    }
+    data.gem_pools = {"agate": ("wealth", "curse")}
+    data.gear = _legendary_triple_t2_socket_gear()
+
+    # unconstrained max is 8 slots * 6 = 48, so a target sum of 40 is well
+    # within gear capacity but above the total cap of 32 -- infeasible
+    assert find_builds(
+        data, "Sorcerer", {"wealth": 20, "curse": 20}, max_results=5,
+        allowed_rarities={"Legendary"}, beverage_tier=None,
+    ) == []
+
+    # right at the cap -- feasible
+    builds = find_builds(
+        data, "Sorcerer", {"wealth": 16, "curse": 16}, max_results=5,
+        allowed_rarities={"Legendary"}, beverage_tier=None,
+    )
+    assert builds
+    for b in builds:
+        assert sum(b.total_affix_counts().values()) <= 32
+
+
+def test_total_cap_not_enforced_for_mixed_rarity_search():
+    data = GameData()
+    data.affixes_by_slug = {
+        "wealth": Affix("wealth", "Wealth", "Utility", stack_cap=50),
+        "curse": Affix("curse", "Curse", "Offensive", stack_cap=50),
+    }
+    data.gem_pools = {"agate": ("wealth", "curse")}
+    data.gear = _legendary_triple_t2_socket_gear()
+
+    # same target that was infeasible with allowed_rarities={"Legendary"}
+    # above is feasible with no rarity filter (ambiguous kit tier -- the
+    # total cap can't be computed, so it's simply not enforced)
+    assert find_builds(
+        data, "Sorcerer", {"wealth": 20, "curse": 20}, max_results=5,
+        allowed_rarities=None, beverage_tier=None,
+    )
+
+
 def test_beverage_budget_shared_across_affixes():
     data = GameData()
     data.affixes_by_slug = {

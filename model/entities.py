@@ -72,6 +72,38 @@ BEVERAGE_TIERS: dict[str, dict[str, int]] = {
     "T4": {"budget": 8, "max_per_affix": 2},
 }
 
+# Total-cap mechanic (confirmed 2026-08-11): a hard ceiling on the SUM of
+# every affix stack in the whole build -- gear innate rolls + gems + beverage,
+# target affixes and incidental/bonus ones alike -- not just per-affix caps.
+# User-confirmed formula: (per-slot budget * 8 gear slots) + beverage budget.
+# The per-slot budget here is one HIGHER than RARITY_SOCKET_BUDGET above --
+# that table only counts GEM sockets, this one also counts the slot's own
+# innate-affix contribution. Verified against two given examples: full
+# Legendary + T4 = 4*8+8 = 40, full Epic + T4 = 3*8+8 = 32. Only meaningful
+# for a build where every slot is assumed to be the same rarity (a "kit
+# tier"), so this is only applied when the caller has committed to a single
+# rarity, not a mixed search -- see find_builds' allowed_rarities handling.
+TOTAL_CAP_SLOT_BUDGET: dict[str, int] = {
+    "Legendary": 4,
+    "Epic": 3,
+    "Excellent": 3,
+    "Rare": 2,
+}
+
+GEAR_SLOT_COUNT = 8  # Weapon/Head/Chest/Hands/Legs/Feet/Necklace/Ring
+
+
+def total_stack_cap(rarity: str | None, beverage_tier: str | None) -> int | None:
+    """Hard ceiling on the combined total of every affix stack (gear+gems+
+    beverage, target and bonus alike) for a kit uniformly of this rarity.
+    None if the rarity isn't in TOTAL_CAP_SLOT_BUDGET (unmodeled tier, e.g.
+    Common/Damaged/Holy) -- caller should treat that as "no cap enforced"."""
+    budget = TOTAL_CAP_SLOT_BUDGET.get(rarity or "")
+    if budget is None:
+        return None
+    bev_budget = BEVERAGE_TIERS[beverage_tier]["budget"] if beverage_tier else 0
+    return GEAR_SLOT_COUNT * budget + bev_budget
+
 
 def beverage_allocation_for(
     deficits: dict[str, int], tier: str | None

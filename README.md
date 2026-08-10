@@ -11,11 +11,12 @@ whatever bonus affixes come along with each option.
 - [x] Sitemap crawler + HTML cache (`scraper/fetch.py`)
 - [x] Field-mapped extractors for affixes / gems / gear (`scraper/parse_*.py`) — full crawl done: 44 affixes, 320 gems, 464 gear items (374 armor + 90 weapons)
 - [x] Typed data model (`model/entities.py`)
-- [x] CP-SAT feasibility/enumeration solver (`solver/build_solver.py`, OR-Tools), 21 unit tests passing
+- [x] CP-SAT feasibility/enumeration solver (`solver/build_solver.py`, OR-Tools), 23 unit tests passing
 - [x] Enumerated builds are deduped by base item, not by roll/variant or gem arrangement — see below
 - [x] Beverages — second, independent affix source, see below
 - [x] Gems are crafted from a shape's affix pool, not a fixed catalog — see below
 - [x] Hard per-affix stack caps enforced in the solver (gear+gems+beverage can't exceed the real cap)
+- [x] Hard total-stack cap enforced when a single gear rarity is selected (a "kit tier") — see below
 - [x] Lock specific gear into a slot (`locked_items`), optionally narrowed to specific rolls (`allowed_variants`) — see below
 - [x] Weapon category filter (`weapon_type`) — for classes with two mutually-exclusive weapon types filling one slot, see below
 - [x] Streamlit UI (`app.py`), smoke-tested against the full dataset
@@ -82,6 +83,22 @@ whatever bonus affixes come along with each option.
   aren't reliably self-describing, e.g. "Bond of Friendship" gives no clue
   which category it is — confirm ambiguous cases with the user rather than
   guessing from the name).
+- **Total-stack cap** (confirmed 2026-08-11): on top of the per-affix caps,
+  there's a hard ceiling on the SUM of every affix stack in the whole build —
+  gear innate rolls + gems + beverage, target *and* bonus affixes combined,
+  not just the ones being searched for. User-confirmed formula: `(per-slot
+  budget × 8 slots) + beverage budget`, where the per-slot budget is one
+  higher than `RARITY_SOCKET_BUDGET` (that table only counts gem sockets,
+  this one also counts the slot's own innate-affix contribution): Legendary
+  4, Epic/Excellent 3, Rare 2. Verified examples: full Legendary + T4 =
+  4×8+8 = 40; full Epic + T4 = 3×8+8 = 32. See `TOTAL_CAP_SLOT_BUDGET` /
+  `total_stack_cap()` in `model/entities.py`. This is only meaningful for a
+  build assumed to be uniformly one rarity (a "kit tier") — the app/solver
+  only enforce it when the "Gear rarity" filter is narrowed to exactly one
+  rarity; a mixed/unfiltered rarity search leaves it unenforced, since
+  there's no single tier to compute the cap from. Common/Damaged/Holy aren't
+  in the table (unmodeled, same as the per-item socket budget) — narrowing
+  to one of those disables the cap rather than guessing a number.
 
 ## Solver engine
 
